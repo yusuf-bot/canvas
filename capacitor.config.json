@@ -1,0 +1,10 @@
+{
+  "appId": "com.yusuf.canvas",
+  "appName": "Canvas App",
+  "webDir": "public",
+  "bundledWebRuntime": false,
+  "server": {
+    "url": "http://152.67.8.174:3000",
+    "cleartext": true
+  }
+}

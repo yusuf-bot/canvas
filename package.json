@@ -13,6 +13,9 @@
   "license": "ISC",
   "type": "commonjs",
   "dependencies": {
+    "@capacitor/android": "^7.4.3",
+    "@capacitor/cli": "^7.4.3",
+    "@capacitor/core": "^7.4.3",
     "express": "^5.1.0",
     "socket.io": "^4.8.1"
   },
