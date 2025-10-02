@@ -1,0 +1,18 @@
+#sizeSlider::-webkit-slider-thumb {
+    appearance: none;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: #06b6d4;
+    cursor: pointer;
+    border: 2px solid white;
+}
+
+#sizeSlider::-moz-range-thumb {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: #06b6d4;
+    cursor: pointer;
+    border: 2px solid white;
+}

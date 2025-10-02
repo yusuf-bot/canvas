@@ -13,6 +13,8 @@ const io = socketIo(server, {
     }
 });
 
+
+global.lastResetDate = new Date().toDateString();
 // Middleware
 app.use(express.json({ limit: '50mb' }));
 app.use(express.static(path.join(__dirname, 'public')));
@@ -50,6 +52,15 @@ async function loadCanvasData() {
         const data = await fs.readFile(CANVAS_DATA_FILE, 'utf8');
         canvasData = JSON.parse(data);
         console.log(`Loaded ${canvasData.length} canvas strokes from disk`);
+                // Check if data is from previous day
+        const today = new Date().toDateString();
+        if (canvasData.length > 0 && canvasData[0].timestamp) {
+            const dataDate = new Date(canvasData[0].timestamp).toDateString();
+    if (dataDate !== today) {
+        console.log('Canvas data from previous day, clearing...');
+        canvasData = [];
+    }
+}
     } catch (error) {
         console.log('No existing canvas data found, starting fresh');
         canvasData = [];
@@ -127,7 +138,21 @@ io.on('connection', (socket) => {
             socket.emit('error', { message: 'Failed to process draw event' });
         }
     });
-    
+    socket.on('daily-reset', () => {
+        try {
+            const today = new Date().toDateString();
+            // Check if we've already reset today
+            if (!global.lastResetDate || global.lastResetDate !== today) {
+                global.lastResetDate = today;
+                canvasData = [];
+                console.log(`Daily canvas reset triggered for ${today}`);
+                io.emit('canvas-cleared');
+                saveCanvasData();
+            }
+        } catch (error) {
+            console.error('Error handling daily reset:', error);
+        }
+    });
     // Handle erase events
     socket.on('erase', (data) => {
         try {
