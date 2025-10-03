@@ -1,0 +1,88 @@
+{
+  "servers": {
+    "weather": {
+      "name": "Weather Server",
+      "package": "@modelcontextprotocol/server-weather",
+      "install_commands": ["npm install @modelcontextprotocol/server-weather"],
+      "requires_api_key": true,
+      "env_vars": ["WEATHER_API_KEY"],
+      "api_key_info": "Get from OpenWeatherMap (openweathermap.org/api)",
+      "capabilities": ["weather_forecast", "current_weather", "weather_alerts"],
+      "command": "node",
+      "args": ["/mnt/bigvolume/node_modules/@modelcontextprotocol/server-weather/dist/index.js"],
+      "env": {"WEATHER_API_KEY": "${WEATHER_API_KEY}"},
+      "description": "Weather information and forecasts"
+    },
+    "github": {
+      "name": "GitHub Server", 
+      "package": "@modelcontextprotocol/server-github",
+      "install_commands": ["npm install @modelcontextprotocol/server-github"],
+      "requires_api_key": true,
+      "env_vars": ["GITHUB_PERSONAL_ACCESS_TOKEN"],
+      "api_key_info": "Create at GitHub Settings > Developer settings > Personal access tokens",
+      "capabilities": ["github_repos", "github_issues", "github_search"],
+      "command": "node",
+      "args": ["/mnt/bigvolume/node_modules/@modelcontextprotocol/server-github/dist/index.js"],
+      "env": {"GITHUB_PERSONAL_ACCESS_TOKEN": "${GITHUB_PERSONAL_ACCESS_TOKEN}"},
+      "description": "GitHub repository and issue management"
+    },
+    "postgres": {
+      "name": "PostgreSQL Server",
+      "package": "@modelcontextprotocol/server-postgres", 
+      "install_commands": ["npm install @modelcontextprotocol/server-postgres"],
+      "requires_api_key": false,
+      "env_vars": ["POSTGRES_CONNECTION_STRING"],
+      "api_key_info": "Provide PostgreSQL connection string",
+      "capabilities": ["database_query", "sql_execution"],
+      "command": "node",
+      "args": ["/mnt/bigvolume/node_modules/@modelcontextprotocol/server-postgres/dist/index.js"],
+      "env": {"POSTGRES_CONNECTION_STRING": "${POSTGRES_CONNECTION_STRING}"},
+      "description": "PostgreSQL database operations"
+    },
+    "slack": {
+      "name": "Slack Server",
+      "package": "@modelcontextprotocol/server-slack",
+      "install_commands": ["npm install @modelcontextprotocol/server-slack"],
+      "requires_api_key": true,
+      "env_vars": ["SLACK_BOT_TOKEN"],
+      "api_key_info": "Create Slack app and get bot token from api.slack.com",
+      "capabilities": ["slack_messaging", "slack_channels"],
+      "command": "node", 
+      "args": ["/mnt/bigvolume/node_modules/@modelcontextprotocol/server-slack/dist/index.js"],
+      "env": {"SLACK_BOT_TOKEN": "${SLACK_BOT_TOKEN}"},
+      "description": "Slack messaging and channel management"
+    },
+    "sqlite": {
+      "name": "SQLite Server",
+      "package": "@modelcontextprotocol/server-sqlite",
+      "install_commands": ["npm install @modelcontextprotocol/server-sqlite"],
+      "requires_api_key": false,
+      "env_vars": [],
+      "capabilities": ["sqlite_query", "database_operations"],
+      "command": "node",
+      "args": ["/mnt/bigvolume/node_modules/@modelcontextprotocol/server-sqlite/dist/index.js"],
+      "env": {},
+      "description": "SQLite database operations"
+    },
+    "puppeteer": {
+      "name": "Puppeteer Server",
+      "package": "@modelcontextprotocol/server-puppeteer",
+      "install_commands": ["npm install @modelcontextprotocol/server-puppeteer"],
+      "requires_api_key": false,
+      "env_vars": [],
+      "capabilities": ["web_scraping", "pdf_generation", "screenshots"],
+      "command": "node",
+      "args": ["/mnt/bigvolume/node_modules/@modelcontextprotocol/server-puppeteer/dist/index.js"],
+      "env": {},
+      "description": "Advanced web scraping and PDF generation"
+    }
+  },
+  "capability_mapping": {
+    "weather": ["weather"],
+    "github": ["github", "version_control", "repositories"],
+    "database": ["postgres", "sqlite"],
+    "messaging": ["slack"],
+    "web_scraping": ["puppeteer"],
+    "automation": ["puppeteer", "playwright"]
+  }
+}

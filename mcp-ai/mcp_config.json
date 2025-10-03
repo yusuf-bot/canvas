@@ -1,0 +1,91 @@
+{
+  "default_servers": {
+    "playwright": {
+      "command": "node",
+      "args": ["/mnt/bigvolume/node_modules/@executeautomation/playwright-mcp-server/dist/index.js"],
+      "env": {},
+      "always_load": true,
+      "description": "Web automation and browser control"
+    },
+    "brave_search": {
+      "command": "node", 
+      "args": ["/mnt/bigvolume/node_modules/@modelcontextprotocol/server-brave-search/dist/index.js"],
+      "env": {"BRAVE_API_KEY": "${BRAVE_API_KEY}"},
+      "always_load": true,
+      "description": "Web search capabilities"
+    },
+    "filesystem": {
+      "command": "node",
+      "args": ["/mnt/bigvolume/node_modules/@modelcontextprotocol/server-filesystem/dist/index.js", "/mnt/bigvolume/webapp/mcp-ai"],
+      "env": {},
+      "always_load": true,
+      "description": "File system operations"
+    },
+    "git": {
+      "command": "python",
+      "args": ["-m", "mcp_server_git"],
+      "env": {},
+      "always_load": true,
+      "description": "Git repository management"
+    },
+    "memory": {
+      "command": "node",
+      "args": ["/mnt/bigvolume/node_modules/@modelcontextprotocol/server-memory/dist/index.js"],
+      "env": {},
+      "always_load": true,
+      "description": "Persistent memory storage"
+    },
+    "sequential_thinking": {
+      "command": "node",
+      "args": ["/mnt/bigvolume/node_modules/@modelcontextprotocol/server-sequential-thinking/dist/index.js"],
+      "env": {},
+      "always_load": true,
+      "description": "Step-by-step reasoning"
+    },
+    "vision": {
+      "command": "python",
+      "args": ["./mcp_servers/vision.py"],
+      "env": {},
+      "always_load": true,
+      "description": "Image analysis and vision"
+    },
+    "self_prompt": {
+      "command": "python",
+      "args": ["./mcp_servers/self_prompt_server.py"],
+      "env": {},
+      "always_load": true,
+      "description": "self-prompting utilities along with sleep"
+    },
+    "user_interaction": {
+      "command": "python",
+      "args": ["./mcp_servers/user_interaction_server.py"],
+      "env": {},
+      "always_load": true,
+      "description": "User interaction and pausing"
+    },
+    "mcp_manager": {
+      "command": "python",
+      "args": ["./mcp_servers/mcp_manager_server.py"],
+      "env": {},
+      "always_load": true,
+      "description": "Dynamic server management"
+    },
+    "terminal": {
+      "command": "python",
+      "args": ["./mcp_servers/terminal_server.py"],
+      "env": {},
+      "always_load": true,
+      "description": "Terminal command execution with approval"
+    },
+    "custom": {
+      "command": "python",
+      "args": ["/app/mcp_servers/custom_server.py"],
+      "env": {},
+      "always_load": true,
+      "description": "custom ai-generated utilities"
+    }
+  },
+  "dynamic_servers": {
+  },
+  "installation_log": []
+}

@@ -1,0 +1,339 @@
+{
+  "subject_code": "9618",
+  "paper_code": "41",
+  "exam_session": "Summer",
+  "exam_year": "2023",
+  "context": "no insert provided",
+  "questions": [
+    {
+      "question_number": "1",
+      "subquestions": [
+        {
+          "subquestion_label": "a(i)",
+          "question_text": "Write program code for the function IterativeVowels(). Save your program as Question1_N23. Copy and paste the program code into part 1(a)(i) in the evidence document.",
+          "question_type": "code_trace",
+          "marks": 5,
+          "answer": "```\npublic static Integer IterativeVowels(String Value) {\nInteger Total = 0;\nInteger LengthString = Value.length();\nchar FirstCharacter;\nfor(Integer X = 0; X < LengthString; X++) {\nFirstCharacter = Value.charAt(0);\nif(FirstCharacter == 'a' || FirstCharacter == 'e' || FirstCharacter == 'i' || FirstCharacter == 'o' || FirstCharacter == 'u') {\nTotal++;\n}\nValue = Value.substring(1, Value.length());\n}\nreturn Total;\n}\n```",
+          "answer_conditions": [
+            "Function header (and end where appropriate) taking one string parameter",
+            "Calculating length of parameter string",
+            "Looping correct number of times",
+            "Checking the first character against all vowels",
+            "Accessing the remainder of the string",
+            "Remainder of function correct with nothing extra i.e. totalling, must match structure of given algorithm"
+          ]
+        },
+        {
+          "subquestion_label": "a(ii)",
+          "question_text": "Write program code to call the function IterativeVowels() with the parameter \"house\" from the main program. Output the return value. Save your program. Copy and paste the program code into part 1(a)(ii) in the evidence document.",
+          "question_type": "code_trace",
+          "marks": 2,
+          "answer": "```\nSystem.out.println(IterativeVowels(\"house\"));\n```",
+          "answer_conditions": [
+            "Calling the function with \"house\"",
+            "Outputting the return value"
+          ]
+        },
+        {
+          "subquestion_label": "a(iii)",
+          "question_text": "Test your program. Take a screenshot of the output. Save your program. Copy and paste the screenshot into part 1(a)(iii) in the evidence document.",
+          "question_type": "calculation",
+          "marks": 1,
+          "answer": "Screenshot showing output 2",
+          "answer_conditions": [
+            "Screenshot outputting 2"
+          ]
+        },
+        {
+          "subquestion_label": "b(i)",
+          "question_text": "Rewrite the function IterativeVowels() as a recursive function with the identifier RecursiveVowels(). Save your program. Copy and paste the program code into part 1(b)(i) in the evidence document.",
+          "question_type": "code_trace",
+          "marks": 6,
+          "answer": "```\npublic static Integer RecursiveVowels(String Value) {\nchar FirstCharacter;\nif(Value.length() == 0) {\nreturn 0;\n}else {\nFirstCharacter = Value.charAt(0);\nif(FirstCharacter == 'a' || FirstCharacter == 'e' || FirstCharacter == 'i' || FirstCharacter == 'o' || FirstCharacter == 'u') {\nreturn 1 + RecursiveVowels(Value.substring(1, Value.length()));\n}else {\nreturn RecursiveVowels(Value.substring(1, Value.length()));\n}\n}\n}\n```",
+          "answer_conditions": [
+            "Recursive call",
+            "Function header (and end where appropriate) taking string parameter (returning integer where given)",
+            "Base case checking (length is 0) and returning 0",
+            "Extracting first character and checking if a vowel ...",
+            "... if it is a vowel, returning 1 + recursive call with 1 less character",
+            "... if not a vowel, return recursive call with 1 less character"
+          ]
+        },
+        {
+          "subquestion_label": "b(ii)",
+          "question_text": "Write program code to call the function RecursiveVowels() with the parameter \"imagine\" from the main program. Output the return value. Save your program. Copy and paste the program code into part 1(b)(ii) in the evidence document.",
+          "question_type": "code_trace",
+          "marks": 1,
+          "answer": "```\nSystem.out.println(RecursiveVowels(\"imagine\"));\n```",
+          "answer_conditions": [
+            "Calling recursive function with \"imagine\" and outputting return value"
+          ]
+        },
+        {
+          "subquestion_label": "b(iii)",
+          "question_text": "Test your program. Take a screenshot of the output. Save your program. Copy and paste the screenshot into part 1(b)(iii) in the evidence document.",
+          "question_type": "calculation",
+          "marks": 1,
+          "answer": "Screenshot showing 4",
+          "answer_conditions": [
+            "Screenshot showing 4"
+          ]
+        }
+      ]
+    },
+    {
+      "question_number": "2",
+      "subquestions": [
+        {
+          "subquestion_label": "a(i)",
+          "question_text": "Write program code to declare: • Queue - a global array with space to store 50 IDs of type string • HeadPointer - a global variable to point to the first element in the queue, initialised to -1 • TailPointer - a global variable to point to the next available space in the queue, initialised to 0 . Save your program as Question2_N23. Copy and paste the program code into part 2(a)(i) in the evidence document.",
+          "question_type": "code_trace",
+          "marks": 2,
+          "answer": "```\npublic static String[] Queue = new String[50];\npublic static Integer HeadPointer = -1;\npublic static Integer TailPointer = 0;\n```",
+          "answer_conditions": [
+            "(Global) array with identifier Queue with (minimum) 50 elements (of type string)",
+            "TailPointer (integer) initialised to 0, HeadPointer (integer) initialised to -1"
+          ]
+        },
+        {
+          "subquestion_label": "a(ii)",
+          "question_text": "The procedure Enqueue () takes a string parameter. If the queue is full, the procedure outputs a suitable message. If the queue is not full, the procedure inserts the parameter into the queue and updates the relevant pointer(s). Write program code for Enqueue (). Save your program. Copy and paste the program code into part 2(a)(ii) in the evidence document.",
+          "question_type": "code_trace",
+          "marks": 4,
+          "answer": "```\npublic static void Enqueue(String Value) {\nif(TailPointer == 50) {\nSystem.out.println(\"Queue full\");\n}else{\nQueue[TailPointer] = Value;\nTailPointer++;\nif(HeadPointer == -1) { HeadPointer = 0;}\n}\n}\n```",
+          "answer_conditions": [
+            "Procedure Enqueue () header (and close where appropriate) with one (string) parameter",
+            "Checking if queue is full and outputting suitable message",
+            "... otherwise inserting parameter to next space",
+            "... increment TailPointer and set HeadPointer to 0 if first item (HeadPointer = -1)"
+          ]
+        },
+        {
+          "subquestion_label": "a(iii)",
+          "question_text": "The function Dequeue () checks if the queue is empty. If the queue is empty, the function outputs a suitable message and returns the string \"Empty\". If the queue is not empty, the function returns the first element in the queue and updates the relevant pointer(s). Write program code for Dequeue (). Save your program. Copy and paste the program code into part 2(a)(iii) in the evidence document.",
+          "question_type": "code_trace",
+          "marks": 4,
+          "answer": "```\npublic static String Dequeue() {\nif(HeadPointer == -1 || HeadPointer == TailPointer) {\nSystem.out.println(\"Queue empty\");\nreturn \"Empty\";\n}else{\nHeadPointer ++;\nreturn Queue [HeadPointer - 1];\n}\n}\n```",
+          "answer_conditions": [
+            "Function header Dequeue() (and end where appropriate) with no parameter",
+            "Checking if empty ...",
+            "... outputting suitable message and returning \"Empty\"",
+            "(otherwise) incrementing head pointer",
+            "returning next value (at head pointer before incrementing)"
+          ]
+        },
+        {
+          "subquestion_label": "b",
+          "question_text": "A shop sells computer games. Each game has a unique identifier (ID) of string data type. The text file QueueData.txt contains a list of game IDs. The procedure ReadData() reads the data from the text file and inserts each item of data into the array Queue. Write program code for the procedure ReadData(). Save your program. Copy and paste the program code into part 2(b) in the evidence document.",
+          "question_type": "code_trace",
+          "marks": 6,
+          "answer": "```\npublic static void ReadData() {\ntry {\nScanner Scanner1 = new Scanner(new File(\"QueueData.txt\"));\nwhile(Scanner1.hasNextLine()) {\nEnqueue (Scanner1.next());\n}\nScanner1.close();\n}catch(FileNotFoundException ex) {\nSystem.out.println(\"No file found\");\n}\n}\n```",
+          "answer_conditions": [
+            "Procedure header ReadData () with no parameters",
+            "Opening file ...",
+            "... and closing file",
+            "Looping until EOF/set amount",
+            "Reading in each value",
+            "... calling Enqueue () with each value",
+            "Use of exception handling with appropriate output"
+          ]
+        },
+        {
+          "subquestion_label": "c(i)",
+          "question_text": "Write program code to declare the record structure RecordData. If you are writing in Python, include attribute declarations as comments. Save your program. Copy and paste the program code into part 2(c)(i) in the evidence document.",
+          "question_type": "code_trace",
+          "marks": 2,
+          "answer": "```\nclass RecordData{\npublic String ID;\npublic Integer Total;\npublic RecordData(String IDP, Integer TotalP) {\nID = IDP;\nTotal = TotalP;\n}\n}\n```",
+          "answer_conditions": [
+            "Declaration of record type/class RecordData",
+            "ID as a string and total as an Integer"
+          ]
+        },
+        {
+          "subquestion_label": "c(ii)",
+          "question_text": "The global 1D array Records stores up to 50 items of type RecordData. The global variable NumberRecords stores the number of records currently in the array Records and is initialised to 0 . Write program code to declare Records and NumberRecords. If you are writing in Python, include attribute declarations as comments. Save your program. Copy and paste the program code into part 2(c)(ii) in the evidence document.",
+          "question_type": "code_trace",
+          "marks": 2,
+          "answer": "```\npublic static RecordData[] Records = new RecordData[50];\npublic static Integer NumberRecords = 0;\n```",
+          "answer_conditions": [
+            "(global) 1D Array named Records of type RecordData",
+            "(global) NumberRecords declared as integer and initialised to 0"
+          ]
+        },
+        {
+          "subquestion_label": "c(iii)",
+          "question_text": "Write program code for the procedure TotalData(). Save your program. Copy and paste the program code into part 2(c)(iii) in the evidence document.",
+          "question_type": "code_trace",
+          "marks": 5,
+          "answer": "```\npublic static void TotalData() {\nString DataAccessed = Dequeue();\nBoolean Flag = false;\nif(NumberRecords == 0) {\nRecords[NumberRecords] = new RecordData(DataAccessed, 1);\nNumberRecords ++ ;\nFlag = true;\n}else{\nfor(Integer X = 0; X < NumberRecords; X++) {\nif(Records[X].ID.equals(DataAccessed)) {\nRecords[X].Total++;\nFlag = true;\n}\n}\nif(Flag == false) {\nRecords[NumberRecords] = new RecordData(DataAccessed, 1);\nNumberRecords ++ ;\n}\n}\n}\n```",
+          "answer_conditions": [
+            "Incrementing NumberRecords each time (twice) a new record is added",
+            "Procedure header (and end) and using Dequeue () and storing/using return value DataAccessed ← Dequeue()",
+            "Checking if NumberRecords is 0 and creating a new record with ID and total as 1:",
+            "IF NumberRecords =0 THEN\nRecords[NumberRecords].ID ← DataAccessed\nRecords[NumberRecords].Total ← 1\nFlag ← TRUE",
+            "Looping through all array elements to find matching ID and incrementing total if found",
+            "FOR X ← 0 TO NumberRecords - 1 Check Python loop end\nIF Records[X].ID = DataAccessed THEN\nRecords[X].Total ← Records[X].Total +1\nFlag ← TRUE\nENDIF\nNEXT X",
+            "Adding new record if record is not found, storing ID and total as 1",
+            "IF Flag = FALSE THEN\nRecords[NumberRecords].ID ← DataAccessed\nRecords[NumberRecords].Total ← 1\nNumberRecords ← NumberRecords +1\nENDIF"
+          ]
+        },
+        {
+          "subquestion_label": "d",
+          "question_text": "The procedure OutputRecords () outputs the ID and total of each record in Records in the format: ID 1234 Total 4 Write program code for OutputRecords (). Save your program. Copy and paste the program code into part 2(d) in the evidence document.",
+          "question_type": "code_trace",
+          "marks": 1,
+          "answer": "```\npublic static void OutputRecords() {\nfor(Integer X = 0; X < NumberRecords; X++) {\nSystem.out.println(\"ID \" + Records[X].ID + \" Total \" + Records[X].Total);\n}\n}\n```",
+          "answer_conditions": [
+            "Looping through all array elements and outputting ID and total in correct format"
+          ]
+        },
+        {
+          "subquestion_label": "e(i)",
+          "question_text": "Write program code for the main program. Save your program. Copy and paste the program code into part 2(e)(i) in the evidence document.",
+          "question_type": "code_trace",
+          "marks": 2,
+          "answer": "```\npublic static void main(String args[]){\nReadData();\nwhile(HeadPointer != TailPointer) {\nTotalData();\n}\nOutputRecords();\n}\n```",
+          "answer_conditions": [
+            "Calling ReadData() first and OutputRecords() last",
+            "Looping through all queue elements and calling TotalData() for each queue element"
+          ]
+        },
+        {
+          "subquestion_label": "e(ii)",
+          "question_text": "Test your program. Take a screenshot of the output. Save your program. Copy and paste the screenshot into part 2(e)(ii) in the evidence document.",
+          "question_type": "calculation",
+          "marks": 1,
+          "answer": "Screenshot showing output",
+          "answer_conditions": [
+            "Screenshot showing correct output"
+          ]
+        }
+      ]
+    },
+    {
+      "question_number": "3",
+      "subquestions": [
+        {
+          "subquestion_label": "a(i)",
+          "question_text": "Write program code to declare the class Character and its constructor. Do not declare the other methods. Use your programming language's appropriate constructor. If you are writing in Python, include attribute declarations using comments. Save your program as Question3_N23. Copy and paste the program code into part 3(a)(i) in the evidence document.",
+          "question_type": "code_trace",
+          "marks": 4,
+          "answer": "```\nclass Character {\nprivate Integer XPosition;\nprivate Integer YPosition;\nprivate String Name;\npublic Character(Integer XPositionP, Integer YPositionP, String NameP) {\nXPosition = XPositionP;\nYPosition = YPositionP;\nName = NameP;\n}\n}\n```",
+          "answer_conditions": [
+            "Class header (and end where appropriate)",
+            "Three attributes with correct names and data types",
+            "Constructor header (and end where appropriate) with 3 parameters",
+            "Within constructor, assigns attributes to parameters"
+          ]
+        },
+        {
+          "subquestion_label": "a(ii)",
+          "question_text": "The get methods GetXPosition() and GetYPosition() each return the relevant attribute. Write program code for the get methods. Save your program. Copy and paste the program code into part 3(a)(ii) in the evidence document.",
+          "question_type": "code_trace",
+          "marks": 3,
+          "answer": "```\npublic Integer GetXPosition() {\nreturn XPosition;\n}\npublic Integer GetYPosition() {\nreturn YPosition;\n}\n```",
+          "answer_conditions": [
+            "1 get header with no parameter ...",
+            "... returning correct value",
+            "2nd get method"
+          ]
+        },
+        {
+          "subquestion_label": "a(iii)",
+          "question_text": "The set methods SetXPosition() and SetYPosition() each take a value as a parameter and add this to the current X or Y position. If the new value exceeds 10000 , it is limited to 10000 . If the new value is below 0 , it is limited to 0 . Write program code for the set methods. Save your program. Copy and paste the program code into part 3(a)(iii) in the evidence document.",
+          "question_type": "code_trace",
+          "marks": 4,
+          "answer": "```\npublic void SetXPosition(Integer Value) {\nXPosition = XPosition + Value;\nif(XPosition > 10000) {\nXPosition = 10000;\n}else if(XPosition < 0) {\nXPosition = 0;\n}\n}\npublic void SetYPosition(Integer Value) {\nYPosition = YPosition + Value;\nif(YPosition > 10000) {\nYPosition = 10000;\n}else if(YPosition < 0) {\nYPosition = 0;\n}\n}\n```",
+          "answer_conditions": [
+            "1 set method header (and end where appropriate) with parameter ...",
+            "... adding parameter to X/Y Position attribute and storing in the X/Y attribute",
+            "If (resulting value is) more than 10000 limiting to 10000 and if less than 0 limiting to 0",
+            "Second correct set method"
+          ]
+        },
+        {
+          "subquestion_label": "a(iv)",
+          "question_text": "The method Move () takes a string parameter: \"up\", \"down\", \"left\" or \"right\". The table shows the change each direction will make to the X or Y position. Use the appropriate method to change the position value. Write program code for Move ( ) . Save your program. Copy and paste the program code into part 3(a)(iv) in the evidence document.",
+          "question_type": "code_trace",
+          "marks": 4,
+          "answer": "```\npublic void Move(String Direction) {\nif(Direction.equals(\"up\")) {\nSetYPosition(10);\n}else if(Direction.equals(\"down\")) {\nSetYPosition(-10);\n}else if(Direction.equals(\"right\")) {\nSetXPosition(10);\n}else{\nSetXPosition(-10);\n}\n}\n```",
+          "answer_conditions": [
+            "Method header with (string) parameter",
+            "Checking parameter for direction ...",
+            "... using SetYPosition() and SetXPosition() correctly ...",
+            "... with correct parameters"
+          ]
+        },
+        {
+          "subquestion_label": "b",
+          "question_text": "Write program code to declare a new instance of Character with the identifier Jack. The starting X position is 50 and the starting Y position is 50 , the character's name is Jack. Save your program. Copy and paste the program code into part 3(b) in the evidence document.",
+          "question_type": "code_trace",
+          "marks": 2,
+          "answer": "```\nCharacter Jack = new Character(50, 50, \"Jack\");\n```",
+          "answer_conditions": [
+            "New instance of Character created with identifier Jack ...",
+            "... correct constructor called and values passed"
+          ]
+        },
+        {
+          "subquestion_label": "c(i)",
+          "question_text": "Write program code to declare the class BikeCharacter and its constructor. Do not declare the other method. Use your programming language's appropriate constructor. If you are writing in Python, include attribute declarations using comments. Save your program. Copy and paste the program code into part 3(c)(i) in the evidence document.",
+          "question_type": "code_trace",
+          "marks": 3,
+          "answer": "```\nclass BikeCharacter extends Character{\npublic BikeCharacter(Integer XPositionP, Integer YPositionP, String NameP) {\nsuper(XPositionP, YPositionP, NameP);\n}\n}\n```",
+          "answer_conditions": [
+            "Class header inheriting from Character",
+            "Constructor taking all 3 parameters ...",
+            "... calling parent/super constructor with the 3 parameters"
+          ]
+        },
+        {
+          "subquestion_label": "c(ii)",
+          "question_text": "The method Move () overrides the method from the parent class. The table shows the change each direction will make to the X or Y position. Write program code for Move ( ) . Save your program. Copy and paste the program code into part 3(c)(ii) in the evidence document.",
+          "question_type": "code_trace",
+          "marks": 2,
+          "answer": "```\npublic void Move(String Direction) {\nif(Direction.equals(\"up\")) {\nsuper.SetYPosition(20);\n}else if(Direction.equals(\"down\")) {\nsuper.SetYPosition(-20);\n}else if(Direction.equals(\"right\")) {\nsuper.SetXPosition(20);\n}else{\nsuper.SetXPosition(-20);\n}\n}\n```",
+          "answer_conditions": [
+            "Method header taking parameter and overriding parent/super Move ()",
+            "Correct changes to method to update values by 20"
+          ]
+        },
+        {
+          "subquestion_label": "d",
+          "question_text": "Write program code to declare a new instance of BikeCharacter with the identifier Karla. The starting X position is 100 , the starting Y position is 50 and the character's name is Karla. Save your program. Copy and paste the program code into part 3(d) in the evidence document.",
+          "question_type": "code_trace",
+          "marks": 1,
+          "answer": "```\nBikeCharacter Karla = new BikeCharacter(100, 50, \"Karla\");\n```",
+          "answer_conditions": [
+            "Declaring new BikeCharacter with correct values e.g."
+          ]
+        },
+        {
+          "subquestion_label": "e(i)",
+          "question_text": "Write program code to: • take as input which of the two characters the user would like to move • take as input the direction the user would like the character to move • call the appropriate method to move the character • output the character's new X and Y position in an appropriate format, for example: \"Karla's new position is X=100 Y=200\" All inputs require appropriate prompts and must be validated. Save your program. Copy and paste the program code into part 3(e)(i) in the evidence document.",
+          "question_type": "code_trace",
+          "marks": 5,
+          "answer": "```\nSystem.out.println(\"Would you like to move Jack or Karla?\");\nCharacterToMove = (scanner.nextLine()).toLowerCase();\nwhile(CharacterToMove.equals(\"jack\") == false && CharacterToMove.equals(\"karla\") == false) {\nSystem.out.println(\"Invalid, try again\");\nCharacterToMove = (scanner.nextLine()).toLowerCase();\n}\nSystem.out.println(\"Which direction? Up, down, left or right?\");\nDirection = (scanner.nextLine()).toLowerCase();\nwhile(Direction.equals(\"up\") == false && Direction.equals(\"down\") == false && Direction.equals(\"left\") == false && Direction.equals(\"right\")== false) {\nSystem.out.println(\"Invalid, try again\");\nDirection = (scanner.nextLine()).toLowerCase();\n}\nif(CharacterToMove.equals(\"jack\")) {\nJack.Move(Direction);\nSystem.out.println(\"Jack's new position is X =\" + Jack.GetXPosition() + \" Y =\" + Jack.GetYPosition());\n}else{\nKarla.Move(Direction);\nSystem.out.println(\"Karla's new position is\" + Karla.GetXPosition() + \" \" + Karla.GetYPosition());\n}\n```",
+          "answer_conditions": [
+            "Reading in both values (character and direction) with appropriate prompts",
+            "Character name is validated as e.g. Jack/Karla, and direction is validated as e.g. up/down/left/right",
+            "Calling Move () for the character input, with direction input as a parameter",
+            "Outputting character's new X and Y position in a suitable format ...",
+            "... using get methods"
+          ]
+        },
+        {
+          "subquestion_label": "e(ii)",
+          "question_text": "Test your program twice with the following inputs. Test 1: jack right Test 2: karla down Take a screenshot of the output. Save your program. Copy and paste the screenshot into part 3(e)(ii) in the evidence document.",
+          "question_type": "calculation",
+          "marks": 2,
+          "answer": "Screenshot showing output",
+          "answer_conditions": [
+            "Test 1: jack right",
+            "Test 2: karla down"
+          ]
+        }
+      ]
+    }
+  ]
+}

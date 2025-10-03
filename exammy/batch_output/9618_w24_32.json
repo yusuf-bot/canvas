@@ -1,0 +1,417 @@
+{
+  "subject_code": "9608",
+  "paper_code": "31",
+  "exam_session": "Winter",
+  "exam_year": "2024",
+  "context": "no insert provided",
+  "questions": [
+    {
+      "question_number": "1",
+      "subquestions": [
+        {
+          "subquestion_label": "a",
+          "question_text": "Describe how packet switching is used to transmit messages across a network.",
+          "question_type": "long_answer",
+          "marks": 3,
+          "answer": "The data to be transmitted is divided into equal sized packets; A packet header is attached to each packet containing key information; such as source/destination IP addresses, packet number, etc; Packets are transmitted independently; and may travel though different routes/paths to the destination; Routes are determined using a routing table//Packets take the optimum route depending on congestion; The packets usually arrive out of order; The packets are reassembled in the correct order at the destination // The packets are re-ordered using the sequence number/the header; If packets are missing/corrupted a re-transmission request is sent / packets are re-sent.",
+          "answer_conditions": [
+            "The data to be transmitted is divided into equal sized packets",
+            "A packet header is attached to each packet containing key information",
+            "such as source/destination IP addresses, packet number, etc",
+            "Packets are transmitted independently",
+            "and may travel though different routes/paths to the destination",
+            "Routes are determined using a routing table//Packets take the optimum route depending on congestion",
+            "The packets usually arrive out of order",
+            "The packets are reassembled in the correct order at the destination // The packets are re-ordered using the sequence number/the header",
+            "If packets are missing/corrupted a re-transmission request is sent / packets are re-sent."
+          ]
+        },
+        {
+          "subquestion_label": "b",
+          "question_text": "State two benefits and two drawbacks of packet switching as a method of transmitting messages across a network.",
+          "question_type": "short_answer",
+          "marks": 4,
+          "answer": "Packets are more likely to arrive because they can be re-routed if a problem occurs with one of the routes//Packets are more likely to arrive because if a packet is lost, it can be re-transmitted; Bandwidth can be shared allowing packets from different messages to share the same path; Time delay because packets need to be re-ordered/reassembled at the destination//Time delay caused by missing packets needing to be re-sent//Time delay because it has to share the bandwidth of the circuit / channel with other packets; Requires a complex algorithm to function; Needs lots of RAM to handle large amounts of data.",
+          "answer_conditions": [
+            "Packets are more likely to arrive because they can be re-routed if a problem occurs with one of the routes//Packets are more likely to arrive because if a packet is lost, it can be re-transmitted",
+            "Bandwidth can be shared allowing packets from different messages to share the same path",
+            "Considered secure as the packets generally travel via different routes",
+            "High data transmission rate is possible",
+            "Time delay because packets need to be re-ordered/reassembled at the destination//Time delay caused by missing packets needing to be re-sent//Time delay because it has to share the bandwidth of the circuit / channel with other packets",
+            "Requires a complex algorithm to function",
+            "Needs lots of RAM to handle large amounts of data."
+          ]
+        }
+      ]
+    },
+    {
+      "question_number": "2",
+      "subquestions": [
+        {
+          "subquestion_label": "a",
+          "question_text": "Describe serial file organisation as a method of storing data records in a file.",
+          "question_type": "long_answer",
+          "marks": 2,
+          "answer": "Records are stored one after the other as they are collected // records are stored in chronological order; New records are appended to the end of the file.",
+          "answer_conditions": [
+            "Records are stored one after the other as they are collected // records are stored in chronological order",
+            "New records are appended to the end of the file."
+          ]
+        },
+        {
+          "subquestion_label": "b",
+          "question_text": "State one example of a use for serial file organisation.",
+          "question_type": "short_answer",
+          "marks": 1,
+          "answer": "Creating unsorted / temporary transaction files; Creating data logging files",
+          "answer_conditions": [
+            "Creating unsorted / temporary transaction files",
+            "Creating data logging files"
+          ]
+        }
+      ]
+    },
+    {
+      "question_number": "3",
+      "subquestions": [
+        {
+          "subquestion_label": "a",
+          "question_text": "Describe the user-defined data type record.",
+          "question_type": "long_answer",
+          "marks": 3,
+          "answer": "A user-defined record data type is a composite data type; It uses other data types in its definition to form a single new data type; The data types referenced may be primitive data types from a programming language or they may be other userdefined data types; Includes related items; Includes a fixed number of items.",
+          "answer_conditions": [
+            "A user-defined record data type is a composite data type",
+            "It uses other data types in its definition to form a single new data type",
+            "The data types referenced may be primitive data types from a programming language or they may be other userdefined data types.",
+            "Includes related items",
+            "Includes a fixed number of items."
+          ]
+        },
+        {
+          "subquestion_label": "b",
+          "question_text": "A programmer defines a record, Order, to store the following data: account number, order number, order price, order date. Write pseudocode statements to define this record.",
+          "question_type": "code_trace",
+          "marks": 4,
+          "answer": "TYPE Order\nDECLARE AccountNumber : INTEGER\nDECLARE OrderNumber : INTEGER\nDECLARE OrderPrice : REAL\nDECLARE OrderDate : DATE\nENDTYPE",
+          "answer_conditions": [
+            "TYPE Order",
+            "DECLARE AccountNumber : INTEGER",
+            "DECLARE OrderNumber : INTEGER",
+            "DECLARE OrderPrice : REAL",
+            "DECLARE OrderDate : DATE",
+            "ENDTYPE"
+          ]
+        }
+      ]
+    },
+    {
+      "question_number": "4",
+      "subquestions": [
+        {
+          "subquestion_label": "a",
+          "question_text": "Calculate the denary value of the given normalised binary floating-point number.\n\nShow your working.\n\n[Diagram: binary floating-point representation]\n\nWorking",
+          "question_type": "calculation",
+          "marks": 2,
+          "answer": "application of exponent to mantissa to go from 0.10001110111 to 01000111.0111 // moving the binary point 7 places // multiplying by $2^{7} / 128$ in the fractions method // $64+4+2+1+.25+.125+.0625$ seen; 71.4375 $/ / 71^{7} / 16$",
+          "answer_conditions": [
+            "application of exponent to mantissa to go from 0.10001110111 to 01000111.0111 // moving the binary point 7 places // multiplying by $2^{7} / 128$ in the fractions method // $64+4+2+1+.25+.125+.0625$ seen",
+            "71.4375 $/ / 71^{7} / 16$"
+          ]
+        },
+        {
+          "subquestion_label": "b",
+          "question_text": "Calculate the normalised binary floating-point representation of -49.1875 in this system.\n\nShow your working.\n\n[Diagram: binary floating-point representation]\n\nWorking",
+          "question_type": "calculation",
+          "marks": 4,
+          "answer": "correct mantissa - exact answer only; correct exponent - exact answer only; Mantissa\n\n| 1 | 0 | 0 |\n\nOne mark per mark point for working (Max 2)\n\nnumber converted to binary e.g., positive binary version of $49.1875=0110001.0011 / /$ two's complement version bits flipped and 1 added $=1001110.1101 / /$ $-64+8+4+2+.5+.25+.0625 / /$ $-64+14.8125$; use of the exponent e.g. moving the binary point 6 places $/ \\times 2^{6}$.",
+          "answer_conditions": [
+            "correct mantissa - exact answer only",
+            "correct exponent - exact answer only",
+            "Mantissa\n\n| 1 | 0 | 0 |",
+            "number converted to binary e.g., positive binary version of $49.1875=0110001.0011 / /$ two's complement version bits flipped and 1 added $=1001110.1101 / /$ $-64+8+4+2+.5+.25+.0625 / /$ $-64+14.8125$",
+            "use of the exponent e.g. moving the binary point 6 places $/ \\times 2^{6}$."
+          ]
+        }
+      ]
+    },
+    {
+      "question_number": "5",
+      "subquestions": [
+        {
+          "subquestion_label": "a",
+          "question_text": "Name and describe two protocols used by the Application Layer of the TCP/IP protocol suite.",
+          "question_type": "short_answer",
+          "marks": 4,
+          "answer": "HTTP/HTTPS; For sending and receiving / transferring web pages / hypertext; FTP; For sending and receiving files over a network / between devices; POP3; Pull protocol / for receiving / downloading emails; IMAP; Pull protocol / for receiving / downloading emails; SMTP; Push protocol / for sending / uploading emails; BitTorrent; Peer-to-peer file sharing over a network",
+          "answer_conditions": [
+            "HTTP/HTTPS",
+            "For sending and receiving / transferring web pages / hypertext",
+            "FTP",
+            "For sending and receiving files over a network / between devices",
+            "POP3",
+            "Pull protocol / for receiving / downloading emails",
+            "IMAP",
+            "Pull protocol / for receiving / downloading emails",
+            "SMTP",
+            "Push protocol / for sending / uploading emails",
+            "BitTorrent",
+            "Peer-to-peer file sharing over a network"
+          ]
+        },
+        {
+          "subquestion_label": "b",
+          "question_text": "Explain the purpose and function of the Application Layer in the TCP/IP protocol suite.",
+          "question_type": "long_answer",
+          "marks": 3,
+          "answer": "The application layer provides access to all the programs that exchange data // Interacts directly with user. used by, for example, web browsers, server software.; Communicates/enables data transfer to/from Transport layer // It allows applications to access the services used in other TCP/IP layers.; It defines the protocols that any application uses to allow the exchange of data.",
+          "answer_conditions": [
+            "The application layer provides access to all the programs that exchange data // Interacts directly with user. used by, for example, web browsers, server software.",
+            "Communicates/enables data transfer to/from Transport layer // It allows applications to access the services used in other TCP/IP layers.",
+            "It defines the protocols that any application uses to allow the exchange of data."
+          ]
+        }
+      ]
+    },
+    {
+      "question_number": "6",
+      "subquestions": [
+        {
+          "subquestion_label": "a",
+          "question_text": "Write the Boolean logic expression that corresponds to the given truth table as the sum-of-products.\n\n$\\mathbf{X}=$",
+          "question_type": "short_answer",
+          "marks": 3,
+          "answer": "$(\\mathrm{X}=)\\overline{\\mathrm{A}} . \\overline{\\mathrm{B}} . \\overline{\\mathrm{C}} . \\mathrm{D}+\\overline{\\mathrm{A}} . \\overline{\\mathrm{B}} . \\mathrm{C} . \\overline{\\mathrm{D}}+\\overline{\\mathrm{A}} . \\mathrm{B} . \\overline{\\mathrm{C}} . \\mathrm{D} .+\\overline{\\mathrm{A}} . \\mathrm{B} . \\mathrm{C} . \\overline{\\mathrm{D}}+\\mathrm{A} . \\overline{\\mathrm{B}} . \\mathrm{C} . \\overline{\\mathrm{D}}+\\mathrm{A} . \\mathrm{B} . \\overline{\\mathrm{C}} . \\mathrm{D}+\\mathrm{A} . \\mathrm{B} . \\mathrm{C} . \\overline{\\mathrm{D}}$",
+          "answer_conditions": [
+            "$(\\mathrm{X}=)\\overline{\\mathrm{A}} . \\overline{\\mathrm{B}} . \\overline{\\mathrm{C}} . \\mathrm{D}+\\overline{\\mathrm{A}} . \\overline{\\mathrm{B}} . \\mathrm{C} . \\overline{\\mathrm{D}}+\\overline{\\mathrm{A}} . \\mathrm{B} . \\overline{\\mathrm{C}} . \\mathrm{D} .+\\overline{\\mathrm{A}} . \\mathrm{B} . \\mathrm{C} . \\overline{\\mathrm{D}}+\\mathrm{A} . \\overline{\\mathrm{B}} . \\mathrm{C} . \\overline{\\mathrm{D}}+\\mathrm{A} . \\mathrm{B} . \\overline{\\mathrm{C}} . \\mathrm{D}+\\mathrm{A} . \\mathrm{B} . \\mathrm{C} . \\overline{\\mathrm{D}}$"
+          ]
+        },
+        {
+          "subquestion_label": "b",
+          "question_text": "Complete the Karnaugh map (K-map) for the given truth table.",
+          "question_type": "table_completion",
+          "marks": 2,
+          "answer": "K-map",
+          "answer_conditions": [
+            "K-map"
+          ]
+        },
+        {
+          "subquestion_label": "c",
+          "question_text": "Draw loop(s) around appropriate group(s) in the K-map to produce an optimal sum-of-products.",
+          "question_type": "table_completion",
+          "marks": 2,
+          "answer": "Loop(s) around appropriate group(s) in the K-map to produce an optimal sum-of-products.",
+          "answer_conditions": [
+            "Loop(s) around appropriate group(s) in the K-map to produce an optimal sum-of-products."
+          ]
+        },
+        {
+          "subquestion_label": "d",
+          "question_text": "Write the Boolean logic expression from your answer to part (c) as the simplified sum-of-products.\n\n$\\mathrm{X}=$",
+          "question_type": "short_answer",
+          "marks": 2,
+          "answer": "$(\\mathrm{X}=)\\mathrm{C} . \\overline{\\mathrm{D}}+\\overline{\\mathrm{C}} . \\mathrm{D} / / \\overline{\\mathrm{C}} . \\mathrm{D} .+\\mathrm{C} . \\overline{\\mathrm{D}}$",
+          "answer_conditions": [
+            "Any correct relevant Boolean term",
+            "$(\\mathrm{X}=)\\mathrm{C} . \\overline{\\mathrm{D}}+\\overline{\\mathrm{C}} . \\mathrm{D} / / \\overline{\\mathrm{C}} . \\mathrm{D} .+\\mathrm{C} . \\overline{\\mathrm{D}}$"
+          ]
+        }
+      ]
+    },
+    {
+      "question_number": "7",
+      "subquestions": [
+        {
+          "subquestion_label": "a",
+          "question_text": "State why each number is invalid for the given syntax diagrams.\n\n21\nReason\n\n123\nReason",
+          "question_type": "short_answer",
+          "marks": 2,
+          "answer": "21 - a number must begin with an odd digit, 2 is even; 123 - a number can only be one or two digits in length not three",
+          "answer_conditions": [
+            "21 - a number must begin with an odd digit, 2 is even",
+            "123 - a number can only be one or two digits in length not three"
+          ]
+        },
+        {
+          "subquestion_label": "b",
+          "question_text": "Complete the Backus-Naur Form (BNF) for the given syntax diagrams.\n\n<symbol> : : =\n\n<number> : : =",
+          "question_type": "short_answer",
+          "marks": 2,
+          "answer": "<symbol> : : =\n\n<number> : : =",
+          "answer_conditions": [
+            "<symbol> : : =",
+            "<number> : : ="
+          ]
+        },
+        {
+          "subquestion_label": "c",
+          "question_text": "(i) Draw a syntax diagram for code.\n\n(ii) Write the BNF for code.",
+          "question_type": "short_answer",
+          "marks": 3,
+          "answer": "(i) Syntax diagram for code; (ii) <code> : : = <letter><number><symbol>|<letter><number><number><symbol> OR <code> : : = <letter><number><number><symbol>|<letter><number><symbol> Alternative Answer One mark per correct line (Max 2) <digits> : : = <number><number> <code> : : = <letter><digits><symbol>",
+          "answer_conditions": [
+            "(i) Syntax diagram for code",
+            "(ii) <code> : : = <letter><number><symbol>|<letter><number><number><symbol> OR <code> : : = <letter><number><number><symbol>|<letter><number><symbol> Alternative Answer One mark per correct line (Max 2) <digits> : : = <number><number> <code> : : = <letter><digits><symbol>"
+          ]
+        }
+      ]
+    },
+    {
+      "question_number": "8",
+      "subquestions": [
+        {
+          "subquestion_label": "",
+          "question_text": "Identify four features of a CISC processor.",
+          "question_type": "short_answer",
+          "marks": 4,
+          "answer": "many instruction formats possible; large instruction set; many addressing modes available; uses variable length/multi-operation instructions; multi-clock cycle instructions; complex decoding of instructions; uses complex circuits; makes frequent use of cache memory; uses programmable control unit // uses micro-programmed control unit // uses hardwired control unit; hardware needs to be able to handle more complex instructions convert into sub-instructions // Design emphasis is on the hardware.",
+          "answer_conditions": [
+            "many instruction formats possible",
+            "large instruction set",
+            "many addressing modes available",
+            "uses variable length/multi-operation instructions",
+            "multi-clock cycle instructions",
+            "complex decoding of instructions",
+            "uses complex circuits",
+            "makes frequent use of cache memory",
+            "uses programmable control unit // uses micro-programmed control unit // uses hardwired control unit",
+            "hardware needs to be able to handle more complex instructions convert into sub-instructions // Design emphasis is on the hardware."
+          ]
+        }
+      ]
+    },
+    {
+      "question_number": "9",
+      "subquestions": [
+        {
+          "subquestion_label": "a",
+          "question_text": "Outline how the kernel of an OS acts as an interrupt handler.",
+          "question_type": "long_answer",
+          "marks": 2,
+          "answer": "the kernel receives a signal when an interrupt is generated; the kernel checks the priority and reviews the status/priority of the current interrupts; system enters kernel mode if the type of interrupt is of higher priority than the current process; the kernel consults the interrupt dispatch table / IDT; ... and saves the state of the interrupted process / contents of the registers on the kernel stack; the kernel restores the process state e.g. contents of registers once the interrupt is serviced",
+          "answer_conditions": [
+            "the kernel receives a signal when an interrupt is generated",
+            "the kernel checks the priority and reviews the status/priority of the current interrupts",
+            "system enters kernel mode if the type of interrupt is of higher priority than the current process",
+            "the kernel consults the interrupt dispatch table / IDT",
+            "and saves the state of the interrupted process / contents of the registers on the kernel stack",
+            "the kernel restores the process state e.g. contents of registers once the interrupt is serviced"
+          ]
+        },
+        {
+          "subquestion_label": "b(i)",
+          "question_text": "State what is meant by the term multi-tasking in an Operating System.",
+          "question_type": "short_answer",
+          "marks": 1,
+          "answer": "multi-tasking allows computers to carry out / seem to carry out more than one process at a time",
+          "answer_conditions": [
+            "multi-tasking allows computers to carry out / seem to carry out more than one process at a time"
+          ]
+        },
+        {
+          "subquestion_label": "b(ii)",
+          "question_text": "Describe how multi-tasking is implemented in an Operating System.",
+          "question_type": "long_answer",
+          "marks": 2,
+          "answer": "processor time/common hardware and resources is/are shared between tasks; scheduling is used to decide on the processes to be carried out to ensure multi-tasking operates correctly / efficiently / without clashes; one task of a higher priority can interrupt another task that is currently running",
+          "answer_conditions": [
+            "processor time/common hardware and resources is/are shared between tasks",
+            "scheduling is used to decide on the processes to be carried out to ensure multi-tasking operates correctly / efficiently / without clashes",
+            "one task of a higher priority can interrupt another task that is currently running"
+          ]
+        }
+      ]
+    },
+    {
+      "question_number": "10",
+      "subquestions": [
+        {
+          "subquestion_label": "a",
+          "question_text": "Outline the structure of a class.",
+          "question_type": "long_answer",
+          "marks": 3,
+          "answer": "Attributes/properties ...; ... with their data types // ... are variables bound to the class; Methods ...; ... that are subroutines / functions / procedures that act upon the attributes; Getters/setters ...; ... are methods that can fetch / update the contents of attributes; A constructor ...; ... that is used to create instances / objects of this class.",
+          "answer_conditions": [
+            "Attributes/properties ...",
+            "with their data types // ... are variables bound to the class",
+            "Methods ...",
+            "that are subroutines / functions / procedures that act upon the attributes",
+            "Getters/setters ...",
+            "are methods that can fetch / update the contents of attributes",
+            "A constructor ...",
+            "that is used to create instances / objects of this class."
+          ]
+        },
+        {
+          "subquestion_label": "b",
+          "question_text": "Give three differences between an object and a class.",
+          "question_type": "short_answer",
+          "marks": 3,
+          "answer": "A class is only defined once but many objects can be created from that class // A class is a template / blueprint from which objects are created // An object is an instance of a class; No memory is allocated when a class is defined, but objects are allocated memory space whenever they are created; A class cannot be manipulated as it is not available in the memory, but objects can be manipulated; A class is defined but an object is declared / created / instantiated.; A class can use inheritance. An object cannot.",
+          "answer_conditions": [
+            "A class is only defined once but many objects can be created from that class // A class is a template / blueprint from which objects are created // An object is an instance of a class",
+            "No memory is allocated when a class is defined, but objects are allocated memory space whenever they are created",
+            "A class cannot be manipulated as it is not available in the memory, but objects can be manipulated",
+            "A class is defined but an object is declared / created / instantiated.",
+            "A class can use inheritance. An object cannot."
+          ]
+        }
+      ]
+    },
+    {
+      "question_number": "11",
+      "subquestions": [
+        {
+          "subquestion_label": "a",
+          "question_text": "Complete this linked list to represent the given binary tree organisation.\n\n[Diagram: binary tree]",
+          "question_type": "table_completion",
+          "marks": 4,
+          "answer": "Five additional nodes with correct data values; Correct null pointers in all nodes (7) – no extra null pointers where the arrow points to the next node; Correct arrows to represent pointers joining parent nodes to child nodes – must come from the correct left or right pointer not the middle; All nodes in correct order and no additional data in left/right pointer boxes.",
+          "answer_conditions": [
+            "Five additional nodes with correct data values",
+            "Correct null pointers in all nodes (7) – no extra null pointers where the arrow points to the next node",
+            "Correct arrows to represent pointers joining parent nodes to child nodes – must come from the correct left or right pointer not the middle",
+            "All nodes in correct order and no additional data in left/right pointer boxes."
+          ]
+        },
+        {
+          "subquestion_label": "b",
+          "question_text": "Complete the diagram using your answer for part (a).\n\n| RootPtr | Index | LeftPtr | Data | RightPtr |\n| :--: | :--: | :--: | :--: | :--: |\n| 0 | 0 |  | 25 |  |\n| FreePtr | 1 |  | 4 |  |\n|  | 2 |  | 36 |  |\n|  | 3 |  | 1 |  |\n|  | 4 |  | 16 |  |\n|  | 5 |  | 64 |  |\n|  | 6 |  | 9 |  |\n|  | 7 |  | 49 |  |\n|  | 8 |  |  |  |",
+          "question_type": "table_completion",
+          "marks": 4,
+          "answer": "RootPt r 0 0 25 \nFreePt r 1 4 \n2 36 \n3 1 \n3 16 \n4 64 \n5 9 \n6 49 \n8",
+          "answer_conditions": [
+            "First eight rows of table (Max 3) Three marks for all eight correct rows Two marks for six or seven correct rows One mark for three, four or five correct rows",
+            "Last row of table and FreePtr (Max 1) One mark for correct FreePtr with last row of table completely blank"
+          ]
+        },
+        {
+          "subquestion_label": "c",
+          "question_text": "Complete the pseudocode for the function.\n\nFUNCTION SearchList(Item : INTEGER) RETURNS INTEGER\nNullPtr $\\leftarrow-1$\nNowPtr $\\leftarrow$ RootPtr\nWHILE NowPtr <> NullPtr\nIF LinkList[NowPtr].Data < Item THEN\nNowPtr $\\leftarrow$ LinkList[NowPtr].RightPtr\nELSE\n\n\n\n\nIF THEN\n\nNowPtr $\\leftarrow$\nELSE\nRETURN NowPtr\nENDIF\nENDIF\nENDWHILE\nRETURN NullPtr\nENDFUNCTION",
+          "question_type": "code_trace",
+          "marks": 4,
+          "answer": "FUNCTION SearchList(Item : INTEGER) RETURNS INTEGER\nNullPtr $\\leftarrow-1$\nNowPtr $\\leftarrow$ RootPtr\nWHILE NowPtr <> NullPtr\nIF LinkList[NowPtr].Data < Item THEN\nNowPtr $\\leftarrow$ LinkList[NowPtr].RightPtr\nELSE\nIF LinkList[NowPtr].Data > Item THEN\nNowPtr $\\leftarrow$ LinkList[NowPtr].LeftPtr\nELSE\nRETURN NowPtr\nENDIF\nENDIF\nENDWHILE\nRETURN NullPtr\nENDFUNCTION",
+          "answer_conditions": [
+            "FUNCTION SearchList(Item : INTEGER) RETURNS INTEGER",
+            "NullPtr $\\leftarrow-1$",
+            "NowPtr $\\leftarrow$ RootPtr",
+            "WHILE NowPtr <> NullPtr",
+            "IF LinkList[NowPtr].Data < Item THEN",
+            "NowPtr $\\leftarrow$ LinkList[NowPtr].RightPtr",
+            "ELSE",
+            "IF LinkList[NowPtr].Data > Item THEN",
+            "NowPtr $\\leftarrow$ LinkList[NowPtr].LeftPtr",
+            "ELSE",
+            "RETURN NowPtr",
+            "ENDIF",
+            "ENDIF",
+            "ENDWHILE",
+            "RETURN NullPtr",
+            "ENDFUNCTION"
+          ]
+        }
+      ]
+    }
+  ]
+}

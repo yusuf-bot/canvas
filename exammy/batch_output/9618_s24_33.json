@@ -1,0 +1,25 @@
+{
+  "subject_code": "9608",
+  "paper_code": "31",
+  "exam_session": "Winter",
+  "exam_year": "2024",
+  "context": "no insert provided",
+  "questions": [
+    {
+      "question_number": "1",
+      "subquestions": [
+        {
+          "subquestion_label": "a",
+          "question_text": "Real numbers are stored in a computer system using floating-point representation with:\n\n- 10 bits for the mantissa\n- 6 bits for the exponent\n- two's complement form for both the mantissa and the exponent.\n\n(a) Calculate the denary value of the given normalised floating-point number.\n\nShow your working.\n\nMantissa\nExponent\n\n| 0 | 1 | 0 | 0 | 1 | 1 | 1 | 1 | 0 | 0 |\n| :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |\n\nWorking $\\qquad$\n$\\qquad$\n$\\qquad$\n$\\qquad$\n$\\qquad$\n\nAnswer $\\qquad$",
+          "question_type": "calculation",
+          "marks": 3,
+          "answer": "One mark per mark point (Max 3)\nMP1 conversion of exponent 001001 to 9\nMP2 application of exponent to mantissa to go from 0.100111100 to 100111100 // $256+32+16+8+4$ seen // 64/128 $+8 / 128+4 / 128+2 / 128+1 / 128=79 / 128 / / 1 / 2+1 / 16+1 / 32+1 / 64+1 / 128=79 / 128$\nMP3 correct answer $=316$",
+          "answer_conditions": [
+            "conversion of exponent 001001 to 9",
+            "application of exponent to mantissa to go from 0.100111100 to 100111100 // $256+32+16+8+4$ seen // 64/128 $+8 / 128+4 / 128+2 / 128+1 / 128=79 / 128 / / 1 / 2+1 / 16+1 / 32+1 / 64+1 / 128=79 / 128$",
+            "correct answer $=316$"
+          ]
+        },
+        {
+          "subquestion_label": "b",
+          "question_text": "(b) Calculate the normalised floating-point representation of -102.75 in this system.\n\nShow your working.\n\nMantissa\nExponent\n\n|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |

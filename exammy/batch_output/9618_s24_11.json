@@ -1,0 +1,543 @@
+{
+  "subject_code": "9608",
+  "paper_code": "11",
+  "exam_session": "Summer",
+  "exam_year": "2024",
+  "context": "no insert provided",
+  "questions": [
+    {
+      "question_number": "1",
+      "subquestions": [
+        {
+          "subquestion_label": "a",
+          "question_text": "Tick $(\\checkmark)$ one box to identify the correct logic statement for this truth table.\n\n| $A$ | $B$ | $C$ | $X$ |\n| :--: | :--: | :--: | :--: |\n| 0 | 0 | 0 | 1 |\n| 0 | 0 | 1 | 0 |\n| 0 | 1 | 0 | 0 |\n| 0 | 1 | 1 | 0 |\n| 1 | 0 | 0 | 0 |\n| 1 | 0 | 1 | 0 |\n| 1 | 1 | 0 | 1 |\n| 1 | 1 | 1 | 0 |\n\n$\\square$ NOT (A AND B AND C)\n(A XOR B) NOR C\n(A OR B OR C) NOR C\n$\\square$ NOT A AND NOT B AND NOT C",
+          "question_type": "mcq",
+          "marks": 1,
+          "answer": "(A XOR B) NOR C",
+          "answer_conditions": [
+            "1 mark for: (A XOR B) NOR C"
+          ]
+        },
+        {
+          "subquestion_label": "b",
+          "question_text": "Draw a logic circuit for the logic expression:\n\n$$\\mathbf{X}=\\text{ NOT (NOT A AND (NOT B XOR C)) }$$",
+          "question_type": "diagram_drawing",
+          "marks": 2,
+          "answer": "[Diagram: logic circuit for X=NOT (NOT A AND (NOT B XOR C))]",
+          "answer_conditions": [
+            "1 mark for NOT B XOR C",
+            "1 mark for NOT A and final AND plus NOT"
+          ]
+        }
+      ]
+    },
+    {
+      "question_number": "2",
+      "subquestions": [
+        {
+          "subquestion_label": "a",
+          "question_text": "Identify two characteristics of the doorbell that suggest it is an embedded system.\n\n1 \u3000\u3000\u3000\n2 \u3000\u3000",
+          "question_type": "short_answer",
+          "marks": 2,
+          "answer": [
+            "The doorbell only performs the specific tasks of motion detection/video recording/doorbell ringing",
+            "The motion sensor and digital camera are built into the doorbell",
+            "The CPU/memory/storage/software are all dedicated to this task only",
+            "Only a dedicated microprocessor is required due to the limited processing requirements"
+          ],
+          "answer_conditions": [
+            "1 mark each to max 2:",
+            "- The doorbell only performs the specific tasks of motion detection/video recording/doorbell ringing",
+            "- The motion sensor and digital camera are built into the doorbell",
+            "- The CPU/memory/storage/software are all dedicated to this task only",
+            "- Only a dedicated microprocessor is required due to the limited processing requirements"
+          ]
+        },
+        {
+          "subquestion_label": "b",
+          "question_text": "State whether the video doorbell is a monitoring system or a control system. Justify your choice.\n\nMonitoring or control system \u3000\u3000\nJustification \u3000\u3000\u3000\u3000\u3000",
+          "question_type": "short_answer",
+          "marks": 2,
+          "answer": [
+            "Monitoring:",
+            "- The turning on of the digital camera does not affect the input to the sensor/button",
+            "- The transmission of the data/video does not affect the input to the sensor/button",
+            "- The ringing of the doorbell does not affect the input to the button",
+            "Control:",
+            "- Video doorbell does not only store the values from the motion sensor",
+            "- The data is processed, generating a signal to start the digital camera recording",
+            "- Button pressed/motion detected causes a signal to be sent over a network to the smartphone"
+          ],
+          "answer_conditions": [
+            "No mark for identification of monitoring or control",
+            "1 mark each to max 2 for justification:"
+          ]
+        },
+        {
+          "subquestion_label": "c(i)",
+          "question_text": "Identify two items of data that the video doorbell will store in primary memory.\n\n1 \u3000\u3000\n2 \u3000\u3000",
+          "question_type": "short_answer",
+          "marks": 2,
+          "answer": [
+            "Current reading/data from motion sensor",
+            "Current/recent video",
+            "Instructions being executed",
+            "Start-up/BIOS/boot-up instructions"
+          ],
+          "answer_conditions": [
+            "1 mark each to max 2 :",
+            "- Current reading/data from motion sensor",
+            "- Current/recent video",
+            "- Instructions being executed",
+            "- Start-up/BIOS/boot-up instructions"
+          ]
+        },
+        {
+          "subquestion_label": "c(ii)",
+          "question_text": "Complete the table by writing the answer or answers to each statement about the principal operation of solid state (flash) memory.\n\n| Statement | Answer |\n| :-- | :-- |\n| the two types of logic gate that can be used to create solid state devices | 1 \u3000 |\n| the number of transistors contained in each cell | 2 \u3000 |\n| the type of gate that can retain electrons without power |  |\n| the type of gate that allows or stops current from passing through |  |",
+          "question_type": "table_completion",
+          "marks": 4,
+          "answer": [
+            {
+              "Statement": "the two types of logic gate that can be used to create solid state devices",
+              "Answer": "NAND\nNOR"
+            },
+            {
+              "Statement": "the number of transistors contained in each cell",
+              "Answer": "2"
+            },
+            {
+              "Statement": "the type of gate that can retain electrons without power",
+              "Answer": "floating"
+            },
+            {
+              "Statement": "the type of gate that allows or stops current from passing through",
+              "Answer": "control"
+            }
+          ],
+          "answer_conditions": [
+            "1 mark for each row:"
+          ]
+        },
+        {
+          "subquestion_label": "c(iii)",
+          "question_text": "Describe how the video doorbell will use the buffer.",
+          "question_type": "long_answer",
+          "marks": 2,
+          "answer": [
+            "Captured video is transmitted to buffer",
+            "... video is transmitted from buffer to smartphone",
+            "Store recent data in a buffer for the user to rewind",
+            "... instead of storing everything in secondary storage",
+            "Store readings from motion sensor",
+            "... until the microprocessor can process them",
+            "Store video from digital camera",
+            "... before moving it to secondary storage"
+          ],
+          "answer_conditions": [
+            "1 mark each to max 2:",
+            "- Captured video is transmitted to buffer",
+            "- ... video is transmitted from buffer to smartphone",
+            "- Store recent data in a buffer for the user to rewind",
+            "- ... instead of storing everything in secondary storage",
+            "- Store readings from motion sensor",
+            "- ... until the microprocessor can process them",
+            "- Store video from digital camera",
+            "- ... before moving it to secondary storage"
+          ]
+        },
+        {
+          "subquestion_label": "d",
+          "question_text": "Describe how this change in sampling rate will affect the performance of the video doorbell.\n\u3000\u3000\u3000\u3000\u3000",
+          "question_type": "long_answer",
+          "marks": 3,
+          "answer": [
+            "Data transmission to user's smartphone will take longer",
+            "... because there is more data to transmit",
+            "The secondary storage device will fill faster",
+            "... fewer videos will be able to be stored long-term // videos are overwritten more often"
+          ],
+          "answer_conditions": [
+            "1 mark each to max 3:",
+            "- Data transmission to user's smartphone will take longer",
+            "- ... because there is more data to transmit",
+            "- The secondary storage device will fill faster",
+            "- ... fewer videos will be able to be stored long-term // videos are overwritten more often"
+          ]
+        },
+        {
+          "subquestion_label": "e(i)",
+          "question_text": "State what is meant by bit streaming.\n\u3000\u3000",
+          "question_type": "short_answer",
+          "marks": 1,
+          "answer": "Continuous ordered flow of bits over a communication path",
+          "answer_conditions": [
+            "1 mark for: Continuous ordered flow of bits over a communication path"
+          ]
+        },
+        {
+          "subquestion_label": "e(ii)",
+          "question_text": "Give two differences between real-time and on-demand bit streaming.\n\n1\n\u3000\u3000\u3000\n2\n\u3000\u3000\u3000",
+          "question_type": "short_answer",
+          "marks": 2,
+          "answer": [
+            "Real-time is direct from source whereas on-demand is prerecorded/downloaded to view later",
+            "Real-time cannot be re-watched, on-demand can be paused, re-watched etc.",
+            "Real-time plays continually, on-demand downloads sections/blocks and cannot play until next section is downloaded"
+          ],
+          "answer_conditions": [
+            "1 mark each to max 2:",
+            "- Real-time is direct from source whereas on-demand is prerecorded/downloaded to view later",
+            "- Real-time cannot be re-watched, on-demand can be paused, re-watched etc.",
+            "- Real-time plays continually, on-demand downloads sections/blocks and cannot play until next section is downloaded"
+          ]
+        }
+      ]
+    },
+    {
+      "question_number": "3",
+      "subquestions": [
+        {
+          "subquestion_label": "a",
+          "question_text": "Explain one reason why it is easier to debug the program code using an interpreter instead of a compiler.\n\u3000\u3000\u3000\u3000",
+          "question_type": "long_answer",
+          "marks": 2,
+          "answer": [
+            "The interpreter will stop when an error is found",
+            "... so the error can be corrected in real-time, and the result of changes seen immediately",
+            "Only one error is displayed at a time",
+            "... so fewer errors to correct simultaneously and no dependent errors"
+          ],
+          "answer_conditions": [
+            "1 mark each to max 2:",
+            "- The interpreter will stop when an error is found",
+            "- ... so the error can be corrected in real-time, and the result of changes seen immediately",
+            "- Only one error is displayed at a time",
+            "- ... so fewer errors to correct simultaneously and no dependent errors"
+          ]
+        },
+        {
+          "subquestion_label": "b",
+          "question_text": "Explain the reasons why the need to create an executable file makes the complier the appropriate choice when the program is complete.\n\u3000\u3000\u3000\u3000\u3000\u3000\u3000",
+          "question_type": "long_answer",
+          "marks": 3,
+          "answer": [
+            "Program can be distributed without source code",
+            "... so it cannot be edited/stolen/plagiarised",
+            "Users do not require the translator to run the program",
+            "... so time is not spent retranslating by user"
+          ],
+          "answer_conditions": [
+            "1 mark each to max 3:",
+            "- Program can be distributed without source code",
+            "- ... so it cannot be edited/stolen/plagiarised",
+            "- Users do not require the translator to run the program",
+            "- ... so time is not spent retranslating by user"
+          ]
+        }
+      ]
+    },
+    {
+      "question_number": "4",
+      "subquestions": [
+        {
+          "subquestion_label": "a",
+          "question_text": "The current contents of memory are shown:\n\n| Address | Data |\n| :--: | :--: |\n| 19 | 24 |\n| 20 | 2 |\n| 21 | 1 |\n| 22 | 3 |\n| 23 | 5 |\n| 24 | 4 |\n| 25 | 22 |\n\nThe current contents of the ACC and IX are shown:\n\n| ACC | 12 |\n| :--: | :--: |\n| IX | 1 |\n\nComplete the table by writing the content of the ACC after each program has run.\n\n| Program number | Code | ACC content |\n| :--: | :--: | :--: |\n| 1 | LDD 20 <br> ADD #2 |  |\n| 2 | LDX 22 |  |\n| 3 | LDI 25 <br> INC ACC <br> SUB 22 |  |\n| 4 | LDD 19 <br> LDM #5 <br> LDM #25 |  |",
+          "question_type": "short_answer",
+          "marks": 4,
+          "answer": [
+            {
+              "Program number": "1",
+              "Code": "LDD 20\nADD #2",
+              "ACC content": "4"
+            },
+            {
+              "Program number": "2",
+              "Code": "LDX 22",
+              "ACC content": "5"
+            },
+            {
+              "Program number": "3",
+              "Code": "LDI 25\nINC ACC\nSUB 22",
+              "ACC content": "1"
+            },
+            {
+              "Program number": "4",
+              "Code": "LDD 19\nLDM #5\nLDM #25",
+              "ACC content": "25"
+            }
+          ],
+          "answer_conditions": [
+            "1 mark for each correct answer:"
+          ]
+        },
+        {
+          "subquestion_label": "b",
+          "question_text": "The current contents of memory are shown:\n\n| Address | Data |\n| :--: | :--: |\n| 30 | 01110101 |\n| 31 | 11111111 |\n| 32 | 00000000 |\n| 33 | 11001100 |\n| 34 | 10101010 |\n\nThe current content of the ACC is shown:\n\n| 1 | 0 | 0 | 1 | 1 | 0 | 1 | 0 |\n| :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |\n\nComplete the table by writing the content of the ACC after each program has run.\nThe binary number 10011010 is reloaded into the ACC before each program is run.\n\n| Program number | Code | ACC content |\n| :--: | :--: | :--: |\n| 1 | AND 31 |  |\n| 2 | XOR B01001111 |  |\n| 3 | OR #30 |  |",
+          "question_type": "short_answer",
+          "marks": 3,
+          "answer": [
+            {
+              "Program number": "1",
+              "Code": "AND 31",
+              "ACC content": "10011010"
+            },
+            {
+              "Program number": "2",
+              "Code": "XOR B01001111",
+              "ACC content": "11010101"
+            },
+            {
+              "Program number": "3",
+              "Code": "OR #30",
+              "ACC content": "10011110"
+            }
+          ],
+          "answer_conditions": [
+            "1 mark for each correct answer:"
+          ]
+        }
+      ]
+    },
+    {
+      "question_number": "5",
+      "subquestions": [
+        {
+          "subquestion_label": "a",
+          "question_text": "Describe the roles of the different devices in this model.\n\u3000\u3000\u3000\u3000\u3000\u3000\u3000\u3000",
+          "question_type": "long_answer",
+          "marks": 4,
+          "answer": [
+            "Identification of server in the bank scenario",
+            "Description e.g. Receives requests, processes the requests",
+            "Identification of client in bank scenario",
+            "Description e.g. Sends request to the server, waits and outputs the response"
+          ],
+          "answer_conditions": [
+            "1 mark each:",
+            "- Identification of server in the bank scenario",
+            "- Description e.g. Receives requests, processes the requests",
+            "- Identification of client in bank scenario",
+            "- Description e.g. Sends request to the server, waits and outputs the response"
+          ]
+        },
+        {
+          "subquestion_label": "b",
+          "question_text": "Complete the description of parity check when Computer A is transmitting data to Computer B. Computer A and Computer B agree on whether to use parity. Computer A divides the data into groups of The number of 1 s in each group is counted. If the agreed parity is and the group has an even number of 1 s , a parity bit of 1 is appended, otherwise a parity bit of 0 is appended.\n\nIn a parity check the bytes are grouped together, for example in a grid. The number of 1 s in each column (bit position) is counted. A bit is assigned to each column to make the column match the parity. These parity bits are transmitted with the data as a parity",
+          "question_type": "long_answer",
+          "marks": 5,
+          "answer": "Computer A and Computer B agree on whether to use odd or even parity. Computer A divides the data into groups of 7-bits. The number of 1 s in each group is counted. If the agreed parity is odd and the group has an even number of 1 s a parity bit of 1 is appended, otherwise a parity bit of 0 is appended.\n\nIn a parity block check the bytes are grouped together, for example in a grid. The number of 1 s in each column (bit position) is counted. A bit is assigned to each column to make the column match the parity. These parity bits are transmitted with the data as a parity byte.",
+          "answer_conditions": [
+            "1 mark for each correctly completed term:",
+            "- odd or even",
+            "- 7-bits",
+            "- odd",
+            "- block",
+            "- byte"
+          ]
+        },
+        {
+          "subquestion_label": "c(i)",
+          "question_text": "Explain how a firewall can help protect the customers' data.\n\u3000\u3000\u3000\u3000\u3000\u3000\u3000\u3000\u3000",
+          "question_type": "long_answer",
+          "marks": 3,
+          "answer": [
+            "Compares all incoming and outgoing transmissions",
+            "... against set criteria/whitelist/blacklist",
+            "Blocks all transmissions that do not meet rules",
+            "Blocks data entering from specific ports",
+            "Blocks unauthorised/unknown internal software transmitting data"
+          ],
+          "answer_conditions": [
+            "1 mark each to max 3 :",
+            "- Compares all incoming and outgoing transmissions",
+            "- ... against set criteria/whitelist/blacklist",
+            "- Blocks all transmissions that do not meet rules",
+            "- Blocks data entering from specific ports",
+            "- Blocks unauthorised/unknown internal software transmitting data"
+          ]
+        },
+        {
+          "subquestion_label": "c(ii)",
+          "question_text": "Describe how AI is used in facial recognition.\n\u3000\u3000\u3000\u3000\u3000\u3000\u3000\u3000\u3000\u3000",
+          "question_type": "long_answer",
+          "marks": 4,
+          "answer": [
+            "Captures an image of the face",
+            "Uses image recognition",
+            "Trained to identify the features of a face in an image",
+            "... using a large number of images",
+            "Analyse images for facial features",
+            "Uses the probability of a match"
+          ],
+          "answer_conditions": [
+            "1 mark each to max 4 :",
+            "e.g.",
+            "- Captures an image of the face",
+            "- Uses image recognition",
+            "- Trained to identify the features of a face in an image",
+            "- ... using a large number of images",
+            "- Analyse images for facial features",
+            "- Uses the probability of a match"
+          ]
+        }
+      ]
+    },
+    {
+      "question_number": "6",
+      "subquestions": [
+        {
+          "subquestion_label": "a",
+          "question_text": "Create a 3-table design for this database normalised to Third Normal Form (3NF).\n\nGive your table design in the format:\nTableName (PrimaryKey, Field1, Field2, ...)\n\u3000\u3000\u3000\u3000\u3000\u3000\u3000\u3000\u3000\u3000\u3000",
+          "question_type": "code_trace",
+          "marks": 6,
+          "answer": "USER(Username, Email, DateOfBirth, Rating)\nQUIZ (QuizID, Date, Filename)\nUSER_QUIZ(Username, QuizID, Score)",
+          "answer_conditions": [
+            "1 mark each:",
+            "- User table with the username as the Primary Key",
+            "- ... containing at least email address, date of birth / age and rating",
+            "- Quiz table with Quiz ID or date or file name as the Primary Key.",
+            "- ... containing at least the other field(s) not used as the PK",
+            "- A joining table with an appropriate name including at least fields for user identification, quiz identification and score",
+            "- ... with an appropriate Primary Key",
+            "- ... and Foreign Keys matching the Primary Keys of the other two tables"
+          ]
+        },
+        {
+          "subquestion_label": "b",
+          "question_text": "Describe what is meant by the following DBMS features:\nData dictionary\n\u3000\u3000\u3000\nLogical schema \u3000\u3000\u3000",
+          "question_type": "short_answer",
+          "marks": 4,
+          "answer": [
+            "Data dictionary:",
+            "Data about the data in the database // metadata",
+            "Identifies the characteristics of the data that will be stored",
+            "Appropriate example e.g. field names, table name, validation rules, data types, primary / foreign keys, relationships etc.",
+            "Logical schema:",
+            "Conceptual design",
+            "Platform/database independent overview of the database",
+            "Is used to design the physical structure",
+            "Appropriate example e.g. Design of entities / E-R diagram / views"
+          ],
+          "answer_conditions": [
+            "1 mark each to max 2 for data dictionary and max 2 for logical schema:"
+          ]
+        },
+        {
+          "subquestion_label": "c(i)",
+          "question_text": "Write a Structured Query Language (SQL) script to change the table definition for EVENT to link the foreign key to PLAYER.\n\u3000\u3000\u3000\u3000",
+          "question_type": "code_trace",
+          "marks": 2,
+          "answer": "ALTER TABLE EVENT\nADD FOREIGN KEY(PlayerID)REFERENCES PLAYER(PlayerID);",
+          "answer_conditions": [
+            "1 mark for each correct clause:",
+            "- Alter table EVENT",
+            "- Adding foreign key as PlayerID referencing correct table"
+          ]
+        },
+        {
+          "subquestion_label": "c(ii)",
+          "question_text": "Write an SQL script to return the number of events that each player has completed.\n\u3000\u3000\u3000\u3000\u3000\u3000\u3000",
+          "question_type": "code_trace",
+          "marks": 3,
+          "answer": "SELECT PlayerID, COUNT (EventID)\nFROM EVENT\nGROUP BY PlayerID;",
+          "answer_conditions": [
+            "1 mark each:",
+            "- Selecting PlayerID from EVENT",
+            "- Counting EventID",
+            "- Grouping by the PlayerID"
+          ]
+        }
+      ]
+    },
+    {
+      "question_number": "7",
+      "subquestions": [
+        {
+          "subquestion_label": "",
+          "question_text": "Complete the binary addition. Show your working.\n\n$$\n\\begin{aligned}\n& 10011110 \\\\ \n& 01100001 \\\\ \n& +00011001\n\\end{aligned}\n$$",
+          "question_type": "calculation",
+          "marks": 3,
+          "answer": "$10011110\n01100001\n+00011001\n(1) 00011000\n1111111\n(carries)",
+          "answer_conditions": [
+            "1 mark each:",
+            "- Working - carried values clearly indicted",
+            "- Correct answer 00011000",
+            "- Overflow clearly indicated as overflow"
+          ]
+        }
+      ]
+    },
+    {
+      "question_number": "8",
+      "subquestions": [
+        {
+          "subquestion_label": "a",
+          "question_text": "Tick $(\\checkmark)$ one or more boxes in each row to identify the topology, or topologies, each statement describes.\n\n| Statement | Bus | Star | Mesh |\n| :-- | :-- | :-- | :-- |\n| all devices connect to one central device |  |  |  |\n| all devices connect to a central cable |  |  |  |\n| multiple paths for the packets to travel along |  |  |  |\n| robust against damage because if any line fails, the rest of the network retains full functionality |  |  |  |\n| most likely to lose data through collisions |  |  |  |",
+          "question_type": "mcq",
+          "marks": 5,
+          "answer": [
+            {
+              "Statement": "all devices connect to one central device",
+              "Bus": "",
+              "Star": "$\\checkmark$",
+              "Mesh": ""
+            },
+            {
+              "Statement": "all devices connect to a central cable",
+              "Bus": "$\\checkmark$",
+              "Star": "",
+              "Mesh": ""
+            },
+            {
+              "Statement": "multiple paths for the packets to travel along",
+              "Bus": "",
+              "Star": "",
+              "Mesh": "$\\checkmark$"
+            },
+            {
+              "Statement": "robust against damage because if any line fails, the rest of the network retains full functionality",
+              "Bus": "",
+              "Star": "$\\checkmark$",
+              "Mesh": "$\\checkmark$"
+            },
+            {
+              "Statement": "most likely to lose data through collisions",
+              "Bus": "$\\checkmark$",
+              "Star": "",
+              "Mesh": ""
+            }
+          ],
+          "answer_conditions": [
+            "1 mark for each correct row:"
+          ]
+        },
+        {
+          "subquestion_label": "b(i)",
+          "question_text": "State why the router has a public IP address.\n\u3000\u3000",
+          "question_type": "short_answer",
+          "marks": 1,
+          "answer": "to be visible to and accessible by other devices on the internet",
+          "answer_conditions": [
+            "1 mark for: to be visible to and accessible by other devices on the internet"
+          ]
+        },
+        {
+          "subquestion_label": "b(ii)",
+          "question_text": "Identify two other differences between an IPv4 and IPv6 address.\n1 \u3000\u3000\u3000\u3000\n2 \u3000\u3000\u3000\u3000",
+          "question_type": "short_answer",
+          "marks": 2,
+          "answer": [
+            "IPv4 has 4 groups of digits whilst IPv6 has 8 groups",
+            "IPv4 is usually represented in denary whilst IPv6 is usually represented in hexadecimal",
+            "IPv4 groups are between 0 and 255 whilst IPv6 is between 0 and FFFF",
+            "IPv4 is 32 bits whilst IPv6 is 128 bits"
+          ],
+          "answer_conditions": [
+            "1 mark each:"
+          ]
+        }
+      ]
+    }
+  ]
+}

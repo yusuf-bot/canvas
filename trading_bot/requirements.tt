@@ -1,0 +1,12 @@
+numpy
+pandas
+pandas-ta
+scikit-learn
+scipy
+lightgbm
+optuna
+SQLAlchemy
+python-dotenv
+python-binance
+alpaca-py
+websocket-client

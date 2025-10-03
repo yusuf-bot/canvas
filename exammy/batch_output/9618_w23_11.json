@@ -1,0 +1,406 @@
+{
+  "subject_code": "9618",
+  "paper_code": "11",
+  "exam_session": "Winter",
+  "exam_year": "2023",
+  "context": "no insert provided",
+  "questions": [
+    {
+      "question_number": "1",
+      "subquestions": [
+        {
+          "subquestion_label": "a",
+          "question_text": "Draw one line from each vector graphic term to its most appropriate description.\n\n# Term\n\n## Description\n\ndrawing list\na component created using a formula\ndrawing object\ndefines one characteristic of a component\nproperty\ndata required to create all components in the graphic",
+          "question_type": "matching",
+          "marks": 2,
+          "answer": "Term Description\ndrawing list\ndrawing object\nproperty\na component created using a formula\ndefines one characteristic of a component\ndata required to create all components in the graphic",
+          "answer_conditions": [
+            "2 marks for all 3 lines correct",
+            "1 mark for 1 line correct"
+          ]
+        },
+        {
+          "subquestion_label": "b",
+          "question_text": "State what is meant by the bit depth of a bitmap image and explain how changing the bit depth affects the image.\n\nDefinition\n\n\nExplanation",
+          "question_type": "short_answer",
+          "marks": 3,
+          "answer": "- The number of bits used to represent each colour\n- Increase in bit depth means the image has a greater range of colours // Decrease in bit depth means the image has a smaller range of colours\n- Increase in bit depth makes the image closer to the original / more realistic // Decrease in bit depth makes the image less like the original / less realistic",
+          "answer_conditions": [
+            "1 mark for the definition",
+            "1 mark for each bullet point for the explanation"
+          ]
+        },
+        {
+          "subquestion_label": "c",
+          "question_text": "Explain why a bitmap image is often compressed before it is attached to an email.",
+          "question_type": "short_answer",
+          "marks": 2,
+          "answer": "- Reduced bandwidth usage when transmitting the message\n- Reduced transmission time from email client to email server\n- Reduced storage space on the email\n- Email accounts often have a maximum size for an attachment",
+          "answer_conditions": [
+            "1 mark for each bullet point (max 2)"
+          ]
+        }
+      ]
+    },
+    {
+      "question_number": "2",
+      "subquestions": [
+        {
+          "subquestion_label": "a",
+          "question_text": "The LAN connects to the internet using a router.\n\nDescribe the function of a router in a network.",
+          "question_type": "short_answer",
+          "marks": 3,
+          "answer": "- Receives packets from internet / external network\n- Implements a firewall\n- Analyses the destination IP address of each packet\n- Forwards the packet towards its destination // send packets onto local network or external network\n- ...using the routing table\n- Maintains / updates the routing\n- Allocates private IP addresses\n- Finds the most efficient route to the destination\n- Changes the packet format for transmission over the next network\n- Network Address Translation (NAT):NAT is a technique used by routers to allow multiple devices in a private local area network (LAN) to share a single public IP address.",
+          "answer_conditions": [
+            "1 mark for each bullet point (max 3)"
+          ]
+        },
+        {
+          "subquestion_label": "b",
+          "question_text": "Complete the following table by writing the purpose of each of these other hardware devices used to support the LAN.\n\n| Hardware device | Purpose |\n| :--: | :--: |\n| switch | $\\qquad$ |\n|  | $\\qquad$ |\n| Wireless Access Point (WAP) | $\\qquad$ |\n|  | $\\qquad$ |\n| bridge | $\\qquad$ |",
+          "question_type": "table_completion",
+          "marks": 3,
+          "answer": "Switch: To allow two or more devices to communicate with one another\nWireless Access Point (WAP): To allow connection of devices (to the central device) using radio signals / Wi-Fi\nBridge: To connect two LANs / segments with the same protocol",
+          "answer_conditions": [
+            "1 mark for each bullet point (max 1)"
+          ]
+        },
+        {
+          "subquestion_label": "c",
+          "question_text": "The students can save their school files on a public cloud.\n\nIdentify two drawbacks of the students storing their files on the public cloud.\n1 $\\qquad$\n2 $\\qquad$",
+          "question_type": "short_answer",
+          "marks": 2,
+          "answer": "- The students cannot access their files without a reliable internet connection\n- The amount of space for no payment may be limited so students will have to purchase more space if needed\n- The students do not have control over the backup (or security) of their work // the students are dependent on a third party for the (security and) backing up of their work",
+          "answer_conditions": [
+            "1 mark for each bullet point (max 2)"
+          ]
+        },
+        {
+          "subquestion_label": "d",
+          "question_text": "A new classroom is being set up with 20 computers and a switch.\n\nExplain one advantage of implementing a star topology instead of a bus topology in the new classroom.",
+          "question_type": "short_answer",
+          "marks": 2,
+          "answer": "- Star topology is more resilient to faults\n- ...because there is no single cable and leads to less disruption to teaching\n- Higher performance as fewer collisions\n- ...because each device in the classroom is only connected to the switch\n- Easier to add new nodes\n- ...because each device in the classroom connects directly to the switch\n- Easier to fault find compared to bus topology",
+          "answer_conditions": [
+            "1 mark for each advantage and 1 mark for valid corresponding expansion"
+          ]
+        }
+      ]
+    },
+    {
+      "question_number": "3",
+      "subquestions": [
+        {
+          "subquestion_label": "a",
+          "question_text": "Complete the entity-relationship (E-R) diagram for the relational database.\n\n| SHOP_ORDER | CUSTOMER |\n| :-- | :-- |\n\nORDER_ITEM\nSUPPLIER\n\nITEM",
+          "question_type": "diagram_completion",
+          "marks": 3,
+          "answer": "[Diagram: E-R diagram with entities SHOP_ORDER, CUSTOMER, ORDER_ITEM, SUPPLIER, ITEM and their relationships]",
+          "answer_conditions": [
+            "1 mark for each correct relationship or relationships\n- 1:M between CUSTOMER and SHOP_ORDER\n- 1:M between SUPPLIER and ITEM\n- 1:M between SHOP_ORDER and ORDER_ITEM and M:1 between ORDER_ITEM and ITEM"
+          ]
+        },
+        {
+          "subquestion_label": "b",
+          "question_text": "Identify three advantages of a relational database compared to a file-based approach.",
+          "question_type": "short_answer",
+          "marks": 3,
+          "answer": "- Reduced data redundancy\n- Improved data integrity / consistency / referential integrity\n- Allows for views / improved privacy\n- Allows for program-data independence\n- Complex queries can be executed",
+          "answer_conditions": [
+            "1 mark for each bullet point (max 3)"
+          ]
+        },
+        {
+          "subquestion_label": "c",
+          "subquestion_parts": [
+            {
+              "subquestion_label": "i",
+              "question_text": "Write a Structured Query Language (SQL) script to define the database called SHOP.",
+              "question_type": "code_trace",
+              "marks": 1,
+              "answer": "CREATE DATABASE SHOP;",
+              "answer_conditions": [
+                "1 mark for <br> CREATE DATABASE SHOP;"
+              ]
+            },
+            {
+              "subquestion_label": "ii",
+              "question_text": "Write the SQL script to return the total quantity of items that the customer with the ID of HJ231 has ordered.",
+              "question_type": "code_trace",
+              "marks": 4,
+              "answer": "Either:\nSELECT SUM(Quantity)\nFROM ORDER_ITEM, SHOP_ORDER\nWHERE ORDER_ITEM.OrderNo = SHOP_ORDER.OrderNo\nAND SHOP_ORDER.CustomerID = 'HJ231';\nOR\nSELECT SUM(Quantity)\nFROM ORDER_ITEM (INNER) JOIN SHOP_ORDER\nON ORDER_ITEM.OrderNo = SHOP_ORDER.OrderNo\nWHERE SHOP_ORDER.CustomerID = 'HJ231';",
+              "answer_conditions": [
+                "1 mark for each line (max 4)"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "question_number": "4",
+      "subquestions": [
+        {
+          "subquestion_label": "a",
+          "question_text": "Complete the truth table for the logic expression:\n\n$$X=\\text { NOT (A NAND B) XOR (NOT B AND (B NOR C)) }$$\n\n| $\\mathbf{A}$ | $\\mathbf{B}$ | $\\mathbf{C}$ | Working space | $\\mathbf{X}$ |\n| :--: | :--: | :--: | :--: | :--: |\n| 0 | 0 | 0 |  |  |\n| 0 | 0 | 1 |  |  |\n| 0 | 1 | 0 |  |  |\n| 0 | 1 | 1 |  |  |\n| 1 | 0 | 0 |  |  |\n| 1 | 0 | 1 |  |  |\n| 1 | 1 | 0 |  |  |\n| 1 | 1 | 1 |  |  |",
+          "question_type": "table_completion",
+          "marks": 2,
+          "answer": "| A | B | C | X |\n| :--: | :--: | :--: | :--: |\n| 0 | 0 | 0 | 1 |\n| 0 | 0 | 1 | 0 |\n| 0 | 1 | 0 | 0 |\n| 0 | 1 | 1 | 0 |\n| 1 | 0 | 0 | 1 |\n| 1 | 0 | 1 | 0 |\n| 1 | 1 | 0 | 1 |\n| 1 | 1 | 1 | 1 |",
+          "answer_conditions": [
+            "1 mark for each set of 4 rows (shaded)"
+          ]
+        },
+        {
+          "subquestion_label": "b",
+          "question_text": "Draw a logic circuit for the logic expression:\n\n$$X=(\\text { A AND NOT (B OR C)) AND (B NOR C) }$$",
+          "question_type": "diagram_completion",
+          "marks": 2,
+          "answer": "[Diagram: Logic circuit with AND gates, NOT gate, OR gate, and NOR gate]",
+          "answer_conditions": [
+            "1 mark for both AND gates",
+            "1 mark for NOT gate and OR gate and NOR gate"
+          ]
+        }
+      ]
+    },
+    {
+      "question_number": "5",
+      "subquestions": [
+        {
+          "subquestion_label": "a",
+          "question_text": "Identify two other special purpose registers and state their role in the CPU.",
+          "question_type": "short_answer",
+          "marks": 4,
+          "answer": "- Program Counter (PC)\n- stores the address where the next instruction is to be read from\n- Memory Address Register (MAR)\n- stores the address of the memory location (or an I/O component) currently being read from or written to\n- Current Instruction Register (CIR)\n- holds the instruction currently being decoded and/or executed\n- Status Register\n- Contains bits which can be referenced individually and set or cleared depending on the operation e.g. overflow, underflow",
+          "answer_conditions": [
+            "1 mark for identification of the register and 1 mark for role (max 2 for each register)"
+          ]
+        },
+        {
+          "subquestion_label": "b",
+          "question_text": "Describe what is meant by the Immediate Access Store (IAS) in a computer system.",
+          "question_type": "short_answer",
+          "marks": 2,
+          "answer": "- Immediate Access Store holds all the data / instructions / programs currently in use\n- Immediate Access Store is volatile memory\n- Immediate Access Store has fast access times",
+          "answer_conditions": [
+            "1 mark for each bullet point (max 2)"
+          ]
+        },
+        {
+          "subquestion_label": "c",
+          "subquestion_parts": [
+            {
+              "subquestion_label": "i",
+              "question_text": "Describe how increasing the clock speed to 4 GHz can increase the performance of the computer.",
+              "question_type": "short_answer",
+              "marks": 1,
+              "answer": "- The CPU can now perform nearly twice as many F-E cycles per second\n- Instead of 2.1 billion F-E cycles per second, the CPU can now perform 4 billion FE cycles per second",
+              "answer_conditions": [
+                "1 mark for each bullet point (max 1)"
+              ]
+            },
+            {
+              "subquestion_label": "ii",
+              "question_text": "A second computer has a CPU with two 2.1 GHz cores.\n\nExplain why the second computer does not always run twice as fast as the computer with one 2.1 GHz CPU.",
+              "question_type": "short_answer",
+              "marks": 5,
+              "answer": "- Multiple cores introduce additional overheads\n- ...because of the need for communication between cores\n- Software may not be designed for multiple cores\n- ...so one of the cores will be left idle\n- Memory access speed may not match speed of cores\n- ...so causing delay\n- The two computers may have more differences than just the cores\n- ...one may have more RAM which allows faster multitasking\n- ...one may have a GPU\n- ...etc.",
+              "answer_conditions": [
+                "1 mark for each bullet point (max 5)"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "question_number": "6",
+      "subquestions": [
+        {
+          "subquestion_label": "a",
+          "question_text": "Describe the advantages of using the interpreter compared to the compiler to translate the program.",
+          "question_type": "short_answer",
+          "marks": 4,
+          "answer": "- easier to debug the program\n- ... because it translates line-by-line and stops when an error is found whereas the compiler translates all the program at the same time\n- ... only reporting one error at a time\n- ... which allows the error to be corrected in real time whereas the program would need to be corrected and recompiled\n- ... and the program can restart at same point when error occurred with a compiler the program needs to be re-run\n- The effect of any changes made by the programmer can be seen immediately with a compiler the effects can only be seen after re-running\n- A partially completed program can be translated / tested on its own a compiler cannot translate a partial program",
+          "answer_conditions": [
+            "1 mark for each bullet point (max 4)"
+          ]
+        },
+        {
+          "subquestion_label": "b",
+          "question_text": "State one reason why some high-level languages are partially compiled and partially interpreted.",
+          "question_type": "short_answer",
+          "marks": 1,
+          "answer": "- Partially compiled programs can be used on different platforms as they are interpreted when run\n- Code is optimised for the CPU as machine code is generated at run time\n- Source code does not need recompiling so more efficient to run",
+          "answer_conditions": [
+            "1 mark for each bullet point (max 1)"
+          ]
+        },
+        {
+          "subquestion_label": "c",
+          "subquestion_parts": [
+            {
+              "subquestion_label": "i",
+              "question_text": "Identify two features that support the visual presentation of the code in a typical Integrated Development Environment (IDE).",
+              "question_type": "short_answer",
+              "marks": 2,
+              "answer": "- Prettyprint\n- Expand/collapse code blocks\n- Auto indentation / formatting",
+              "answer_conditions": [
+                "1 mark for each bullet point (max 2)"
+              ]
+            },
+            {
+              "subquestion_label": "ii",
+              "question_text": "Identify two features that support the debugging of the code in a typical IDE.",
+              "question_type": "short_answer",
+              "marks": 2,
+              "answer": "- Single stepping\n- Breakpoints\n- Report window\n- Variable expressions",
+              "answer_conditions": [
+                "1 mark for each bullet point (max 2)"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "question_number": "7",
+      "subquestions": [
+        {
+          "subquestion_label": "a",
+          "question_text": "Describe the principal operations of a 3D printer.",
+          "question_type": "short_answer",
+          "marks": 3,
+          "answer": "- Additive manufacturing\n- Uses a digital 3D model or a Computer Aided Design (CAD) (file)\n- Builds up the model one layer at a time\n- ...starting from the bottom\n- ...using $x, y$ and $z$ co-ordinates\n- The material is fused / cured together layer by layer\n- Fused Deposition Modelling (FDM)\n- Material is heated and pushed through nozzle / extruder\n- Stereolithography (SLA)\n- Photosensitive liquid resin is exposed to a UV-laser beam\n- Digital Light Processing (DLP)\n- Uses liquid plastic resin melted with arc lamps\n- Selective Laser Sintering (SLS)\n- Uses a laser to form objects from powdered material",
+          "answer_conditions": [
+            "1 mark for each bullet point (max 3)"
+          ]
+        },
+        {
+          "subquestion_label": "b",
+          "question_text": "Describe the purpose of a temperature sensor within the 3D printer.",
+          "question_type": "short_answer",
+          "marks": 2,
+          "answer": "- To prevent overheating // ensure material is hot enough\n- ...by identifying the temperature of the object (being printed)\n- ...by identifying the temperature of the material being used",
+          "answer_conditions": [
+            "1 mark for each bullet point (max 2)"
+          ]
+        },
+        {
+          "subquestion_label": "c",
+          "question_text": "A 3D printer contains 1 GB of Dynamic RAM (DRAM) to store print data.\n\nState two advantages of the printer having Dynamic RAM instead of Static RAM (SRAM).",
+          "question_type": "short_answer",
+          "marks": 2,
+          "answer": "- Dynamic RAM has lower cost per unit\n- A fast access speed is not needed\n- Higher bit density // more data can be stored per chip",
+          "answer_conditions": [
+            "1 mark for each bullet point (max 2)"
+          ]
+        }
+      ]
+    },
+    {
+      "question_number": "8",
+      "subquestions": [
+        {
+          "subquestion_label": "a",
+          "question_text": "Identify the purpose of the first pass of a two-pass assembler.",
+          "question_type": "short_answer",
+          "marks": 1,
+          "answer": "- To create a symbol table",
+          "answer_conditions": [
+            "1 mark for: - To create a symbol table"
+          ]
+        },
+        {
+          "subquestion_label": "b",
+          "subquestion_parts": [
+            {
+              "subquestion_label": "i",
+              "question_text": "Give one example of an instruction that belongs to each of the following instruction groups.\n\nOnly use the instructions given in the table. Each instruction must have a suitable operand.\n\nData movement\nArithmetic operation\nConditional instruction",
+              "question_type": "short_answer",
+              "marks": 3,
+              "answer": "- Data movement: e.g. LDR #50 // STO 201\n- Arithmetic operation: e.g. ADD 100 // INC IX\n- Conditional instruction: e.g. JPE 96",
+              "answer_conditions": [
+                "1 mark for each bullet point"
+              ]
+            },
+            {
+              "subquestion_label": "ii",
+              "question_text": "The instruction LDR #2 uses immediate addressing.\n\nGive one similarity and one difference between direct addressing and indexed addressing.",
+              "question_type": "short_answer",
+              "marks": 2,
+              "answer": "- Similarity:\n- both load the contents of an address into the Accumulator\n- Difference:\n- direct accesses the address given by the operand whereas indexed adds the contents of IX to the operand and accesses the data at that calculated address",
+              "answer_conditions": [
+                "1 mark for each bullet point (max 2)"
+              ]
+            },
+            {
+              "subquestion_label": "iii",
+              "question_text": "Identify one other mode of addressing.",
+              "question_type": "short_answer",
+              "marks": 1,
+              "answer": "- Indirect (addressing)\n- Relative (addressing)",
+              "answer_conditions": [
+                "1 mark for"
+              ]
+            }
+          ]
+        },
+        {
+          "subquestion_label": "c",
+          "subquestion_parts": [
+            {
+              "subquestion_label": "i",
+              "question_text": "The current contents of the ACC are:\n\n| 0 | 1 | 0 | 0 | 1 | 1 | 1 | 1 |\n| :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |\n\nShow the contents of the ACC after the execution of the following instruction.\nAND B10100101",
+              "question_type": "short_answer",
+              "marks": 1,
+              "answer": "00000101",
+              "answer_conditions": []
+            },
+            {
+              "subquestion_label": "ii",
+              "question_text": "The current contents of the ACC are:\n\n| 0 | 0 | 0 | 1 | 0 | 1 | 1 | 1 |\n| :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |\n\nShow the contents of the ACC after the execution of the following instruction.\nLSR #3",
+              "question_type": "short_answer",
+              "marks": 1,
+              "answer": "00000010",
+              "answer_conditions": []
+            },
+            {
+              "subquestion_label": "iii",
+              "question_text": "The current contents of the ACC are:\n\n| 1 | 1 | 1 | 1 | 0 | 1 | 1 | 1 |\n| :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |\n\nShow the contents of the ACC after the execution of the following instruction.\nXOR B00100101",
+              "question_type": "short_answer",
+              "marks": 1,
+              "answer": "11010010",
+              "answer_conditions": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "question_number": "9",
+      "subquestions": [
+        {
+          "subquestion_label": "a",
+          "question_text": "Explain the importance of feedback in a control system.",
+          "question_type": "short_answer",
+          "marks": 2,
+          "answer": "- Feedback ensures that a system operates within set criteria / constraints\n- ...by enabling system output to affect (subsequent) system input\n- ...thus allowing conditions to be automatically adjusted",
+          "answer_conditions": [
+            "1 mark for each bullet point (max 2)"
+          ]
+        },
+        {
+          "subquestion_label": "b",
+          "question_text": "Give one example of an embedded system and explain why it is an example of an embedded system.",
+          "question_type": "short_answer",
+          "marks": 3,
+          "answer": "- Dedicated to one task applied to example\n- Does not require much processing power applied to example\n- Built into a larger system applied to example\n- Contains firmware that cannot be easily updated applied to example\n- The system does not have its own operating system\n- An embedded system must contain a processor, memory and an I/O capability // Dedicated hardware",
+          "answer_conditions": [
+            "One mark for each reason to max 3 to match the example given"
+          ]
+        }
+      ]
+    }
+  ]
+}

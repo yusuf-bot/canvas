@@ -1,0 +1,8 @@
+# Ignore Firebase config
+app/google-services.json
+# Ignore Android Studio build outputs
+/build/
+/app/build/
+.idea/
+.gradle/
+./fcm-service-account.json

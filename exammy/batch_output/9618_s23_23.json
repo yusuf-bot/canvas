@@ -1,0 +1,311 @@
+ {
+  "subject_code": "9618",
+  "paper_code": "23",
+  "exam_session": "May/June",
+  "exam_year": "2023",
+  "context": "COMPUTER SCIENCE\nPaper 2 Fundamental Problem-solving and Programming Skills\nAn error will be generated if a function call is not properly formed or if the parameters are of an incorrect type or an incorrect value.\n# String and Character Functions\n- A string of length 1 may be either of type CHAR or STRING\n- A CHAR may be assigned to, or concatenated with, a STRING\n- A STRING of length greater than 1 cannot be assigned to a CHAR\n```\nLEFT(ThisString : STRING, x : INTEGER) RETURNS STRING\nreturns leftmost x characters from ThisString\nExample: LEFT (\"ABCDEFGH\", 3) returns \"ABC\"\nRIGHT(ThisString : STRING, x : INTEGER) RETURNS STRING\nreturns rightmost x characters from ThisString\nExample: RIGHT (\"ABCDEFGH\", 3) returns \"FGH\"\nMID(ThisString : STRING, x : INTEGER, y : INTEGER) RETURNS STRING\nreturns a string of length y starting at position x from ThisString\nExample: MID (\"ABCDEFGH\", 2, 3) returns string \"BCD\"\nLENGTH (ThisString : STRING) RETURNS INTEGER\nreturns the integer value representing the length of ThisString\nExample: LENGTH (\"Happy Days\") returns 10\nTO_UPPER(x : <datatype>) RETURNS <datatype>\n<datatype> may be CHAR or STRING\nreturns an object of type <datatype> formed by converting all characters of x to upper case.\nExamples:\n- TO_UPPER(\"Error 803\") returns \"ERROR 803\"\n- TO_UPPER('a') returns 'A'\nTO_LOWER(x : <datatype>) RETURNS <datatype>\n<datatype> may be CHAR or STRING\nreturns an object of type <datatype> formed by converting all characters of x to lower case.\nExamples:\n- TO_LOWER(\"JIM 803\") returns \"jim 803\"\n- TO_LOWER('W') returns 'w'\nNUM_TO_STR(x : <datatype1>) RETURNS <datatype2>\nreturns a string representation of a numeric value.\n<datatype1> may be REAL or INTEGER, <datatype2> may be CHAR or STRING\nExample: NUM_TO_STR(87.5) returns \"87.5\"\nSTR_TO_NUM (x : <datatype1>) RETURNS <datatype2>\nreturns a numeric representation of a string.\n<datatype1> may be CHAR or STRING, <datatype2> may be REAL or INTEGER\nExample: STR_TO_NUM(\"23.45\") returns 23.45\nIS_NUM(ThisString : <datatype>) RETURNS BOOLEAN\nreturns TRUE if ThisString represents a valid numeric value.\n<datatype> may be CHAR or STRING\nExample: IS_NUM(\"-12.36\") returns TRUE\n```\nASC (ThisChar : CHAR) RETURNS INTEGER\nreturns an integer value (the ASCII value) of character ThisChar\nExample: ASC('A') returns 65, ASC('B') returns 66, etc.\nCHR (x : INTEGER) RETURNS CHAR\nreturns the character whose integer value (the ASCII value) is $x$\nExample: CHR (65) returns 'A', CHR (66) returns 'B', etc.\n# Numeric Functions\nINT (x : REAL) RETURNS INTEGER\nreturns the integer part of $x$\nExample: INT (27.5415) returns 27\nRAND (x : INTEGER) RETURNS REAL\nreturns a real number in the range 0 to $x$ (not inclusive of $x$ ).\nExample: RAND (87) may return 35.43\n## Date Functions\nDate format is assumed to be DD/MM/YYYY unless otherwise stated.\n```\nDAY (ThisDate : DATE) RETURNS INTEGER\nreturns the current day number from ThisDate\nExample: DAY(04/10/2003) returns 4\nMONTH (ThisDate : DATE) RETURNS INTEGER\nreturns the current month number from ThisDate\nExample: MONTH(04/10/2003) returns 10\nYEAR (ThisDate : DATE) RETURNS INTEGER\nreturns the current year number from ThisDate\nExample: YEAR(04/10/2003) returns 2003\nDAYINDEX(ThisDate : DATE) RETURNS INTEGER\nreturns the day index number from ThisDate where Sunday = 1, Monday = 2 etc.\nExample: DAYINDEX(09/05/2023) returns 3\nSETDATE (Day, Month, Year : INTEGER) RETURNS DATE\nreturns a value of type DATE with the value of <Day>/<Month>/<Year>\nExample: SETDATE(26, 10, 2003) returns a date corresponding to 26/10/2003\nTODAY() RETURNS DATE\nreturns a value of type DATE corresponding to the current date.\n```\n## Text File Functions\nEOF(FileName : STRING) RETURNS BOOLEAN\nreturns TRUE if there are no more lines to be read from file FileName\nThe function will generate an error if the file is not already open in READ mode.\n# Operators\nAn error will be generated if an operator is used with a value or values of an incorrect type.\n| $\\&$ | concatenates (joins) two strings. <br> Example: \"Summer\" \\& \" \" \\& \"Pudding\" evaluates to \"Summer Pudding\" <br> The operator may also be used to concatenate a CHAR with a STRING |\n| :--: |\n| AND | performs a logical AND on two Boolean values. <br> Example: TRUE AND FALSE evaluates to FALSE |\n| OR | performs a logical OR on two Boolean values. <br> Example: TRUE OR FALSE evaluates to TRUE |\n| NOT | performs a logical NOT on a Boolean value. <br> Example: NOT TRUE evaluates to FALSE |\n| MOD | finds the remainder when one number is divided by another. <br> Example: 10 MOD 3 evaluates to 1 |\n| DIV | finds the quotient when one number is divided by another. <br> Example 10 DIV 3 evaluates to 3 |\n## Comparison Operators\n| $=$ | used to compare two items of the same type. evaluates to TRUE if the condition is true, otherwise evaluates to FALSE |\n| :--: |\n| $>$ | Notes: |\n| $<$ | - may be used to compare types REAL and INTEGER <br> - may be used to compare types CHAR and STRING <br> - case sensitive when used to compare types CHAR or STRING <br> - cannot be used to compare two records |\n| $<=$ |\n| $<>$ | Examples:\n| :--: |\n| - \"Program\" = \"program\" evaluates to FALSE <br> - Count $=4$ evaluates to TRUE when variable Count contains the value 4 |\n[^0]\n[^0]:    Permission to reproduce items where third-party owned material protected by copyright is included has been sought and cleared where possible. Every reasonable effort has been made by the publisher (UCLES) to trace copyright holders, but if any items requiring clearance have unwittingly been included, the publisher will be pleased to make amends at the earliest possible opportunity.\nTo avoid the issue of disclosure of answer-related information to candidates, all copyright acknowledgements are reproduced online in the Cambridge Assessment International Education Copyright Acknowledgements Booklet. This is produced for each series of examinations and is freely available to download at www.cambridgeinternational.org after the live examination series.\nCambridge Assessment International Education is part of Cambridge Assessment. Cambridge Assessment is the brand name of the University of Cambridge Local Examinations Syndicate (UCLES), which is a department of the University of Cambridge.",
+  "questions": [
+    {
+      "question_number": "1",
+      "subquestions": [
+        {
+          "subquestion_label": "a",
+          "question_text": "The pseudocode contains references to an array.\n\nComplete the table by writing the answer for each row.\n\n# Answer\n\n| The dimension of the array |  |\n| :-- | :-- |\n| The name of the variable used as an array index |  |\n| The number of elements in the array |  |\n",
+          "question_type": "table_completion",
+          "marks": 3,
+          "answer": "\n\n| The dimension of the array | 2 |\n| :-- | :-- |\n| The name of the variable used as an array index | PCount |\n| The number of elements in the array | 100 |\n",
+          "answer_conditions": [
+            "MP1 The (second dimension/index of the) array",
+            "MP2 Value for the dimension of the array",
+            "MP3 The name of the variable used as an array index"
+          ]
+        },
+        {
+          "subquestion_label": "b",
+          "question_text": "The pseudocode contains two errors. One error is that variable PCount has not been declared.\n\nIdentify the other error and state the line number where it occurs.\nError $\\qquad$\n$\\qquad$\n$\\qquad$\nLine number $\\qquad$",
+          "question_type": "short_answer",
+          "marks": 2,
+          "answer": "One mark per point:\n- The (second dimension/index of the) array is declared from 1 to 50 but the loop runs from 0 to 49\n- Line number: 10 / 100 / 101 / 102",
+          "answer_conditions": [
+            "MP1 The array is declared from 1 to 50 but the loop runs from 0 to 49",
+            "MP2 Line number: 10 / 100 / 101 / 102"
+          ]
+        },
+        {
+          "subquestion_label": "c",
+          "question_text": "The pseudocode does not include a declaration for PCount.\n\nState the data type that should be used in the declaration.",
+          "question_type": "short_answer",
+          "marks": 1,
+          "answer": "Integer",
+          "answer_conditions": [
+            "MP1 The data type that should be used in the declaration"
+          ]
+        },
+        {
+          "subquestion_label": "d",
+          "question_text": "The pseudocode statements given in the following table are used in other parts of the algorithm.\n\nComplete the table by placing one or more ticks ($\\checkmark$) in each row.\nThe first row has already been completed.\n\n| Pseudocode statement | Input | Process | Output |\n| :-- | :--: | :--: | :--: |\n| INPUT MyChoice | $\\checkmark$ |  |  |\n| OUTPUT FirstName \\& LastName |  |  |  |\n| WRITEFILE YourFile, TextLine |  |  |  |\n| READFILE MyFile, TextLine |  |  |  |\n| Result $\\leftarrow$ SQRT (NextNum) |  |  |  |\n",
+          "question_type": "table_completion",
+          "marks": 4,
+          "answer": "| Pseudocode statement | Input | Process | Output |\n| :-- | :--: | :--: | :--: |\n| INPUT MyChoice | $\\checkmark$ |  |  |\n| OUTPUT FirstName \\& LastName |  |  | $\\checkmark$ |\n| WRITEFILE OutputFile, TextLine |  | $\\checkmark$ |  |\n| READFILE MyFile, TextLine | $\\checkmark$ |  |  |\n| Result $\\leftarrow$ SQRT (NextNum) |  | $\\checkmark$ |  |\n",
+          "answer_conditions": [
+            "MP1 One mark for each of rows 2 - 5",
+            "MP2 Pseudocode statement",
+            "MP3 Input",
+            "MP4 Process",
+            "MP5 Output"
+          ]
+        }
+      ]
+    },
+    {
+      "question_number": "2",
+      "subquestions": [
+        {
+          "subquestion_label": "a",
+          "question_text": "MyDOB has been assigned a valid value corresponding to Kevin's date of birth.\n\nComplete the pseudocode statement to test whether Kevin was born on a Thursday.",
+          "question_type": "code_trace",
+          "marks": 2,
+          "answer": "IF DAYINDEX (MyDOB) $=5$ THEN",
+          "answer_conditions": [
+            "MP1 One mark for each underlined part",
+            "MP2 IF DAYINDEX (MyDOB) $=5$ THEN"
+          ]
+        },
+        {
+          "subquestion_label": "b(i)",
+          "question_text": "Two of the parameter values can be checked without reference to the third parameter.\n\nDescribe these two checks.",
+          "question_type": "short_answer",
+          "marks": 2,
+          "answer": "MP1 Value for month is between 1 and 12 (inclusive)\nMP2 Value of year is <= 2002",
+          "answer_conditions": [
+            "MP1 Value for month is between 1 and 12 (inclusive)",
+            "MP2 Value of year is <= 2002"
+          ]
+        },
+        {
+          "subquestion_label": "b(ii)",
+          "question_text": "Several values of the parameter representing the day can only be checked completely by referring to the value of one other parameter.\n\nDescribe this check.",
+          "question_type": "short_answer",
+          "marks": 2,
+          "answer": "MP1 Reference to month and day\nMP2 Clear description for a check that the day number matches with a relevant month\n(Either day matches with month // month matches with day)",
+          "answer_conditions": [
+            "MP1 Reference to month and day",
+            "MP2 Clear description for a check that the day number matches with a relevant month"
+          ]
+        }
+      ]
+    },
+    {
+      "question_number": "3",
+      "subquestions": [
+        {
+          "subquestion_label": "a(i)",
+          "question_text": "An error will be generated if an attempt is made to POP a value when the stack is empty.\n\nState the maximum number of consecutive POP operations that could be performed on the stack shown above before an error is generated.",
+          "question_type": "short_answer",
+          "marks": 1,
+          "answer": "6",
+          "answer_conditions": [
+            "MP1 The maximum number of consecutive POP operations"
+          ]
+        },
+        {
+          "subquestion_label": "a(ii)",
+          "question_text": "[Diagram: ASCII representation of a stack with TopOfStack and BottomOfStack pointers]\n\n\nThe following operations are performed:\n\n1. POP and store value in variable Data1\n2. POP and store value in variable Data2\n3. PUSH value AAA\n4. PUSH value BBB\n5. POP and discard value\n6. POP and store value in variable Data2\n\nComplete the diagram to show the state of the stack and the variables after the given operations have been performed.\n\nStack\nMemory location\nValue\n506\n505\n504\n503\n502\n501\n500\n\nPointer\nVariable Value\nData1\nData2\n[4]",
+          "question_type": "table_completion",
+          "marks": 4,
+          "answer": "Stack\nMemory location\nValue\n506\n505\tBBB\n504\tAAA\n503\tXXX\t$+- \\text { TopOfStack }$\n502\tZZZ\n501\tNNN\n500\tPPP\n\nPointer\nVariable Value\nData1\tWWW\nData2\tAAA\n",
+          "answer_conditions": [
+            "MP1 Values 'BBB' and 'AAA'",
+            "MP2 Values 'XXX' to 'PPP' (unchanged)",
+            "MP3 Both pointers and labelled",
+            "MP4 Values of both variables"
+          ]
+        },
+        {
+          "subquestion_label": "b(i)",
+          "question_text": "State an advantage of writing the data from the stack to a text file before the program ends.",
+          "question_type": "short_answer",
+          "marks": 1,
+          "answer": "So that the data may be recovered / restored (the next time the program is run) // the data is permanently saved / data is not lost when the program terminates",
+          "answer_conditions": [
+            "MP1 The advantage of writing the data from the stack to a text file before the program ends"
+          ]
+        },
+        {
+          "subquestion_label": "b(ii)",
+          "question_text": "Express an algorithm for SaveStack() as five steps that could be used to produce pseudocode.",
+          "question_type": "short_answer",
+          "marks": 5,
+          "answer": "Max 5 marks\nMP1 Open the text file in WRITE mode\nMP2 Check there is a value on the stack\nMP3 POP value ...\nMP4 Write value to the text file\nMP5 Repeat from Step 2 // loop referencing the stack items\nAlternative solution: Not using POP primitive\nMP1 Open the text file in WRITE mode\nMP2 Check there is a value on the stack\nMP3 Read value from ToS location\nMP4 Write the value to the text file - Must some attempt at 'the value' NOT 'all the values'\nMP5 Decrement ToS\nMP6 Repeat from step 2 // loop referencing the stack items",
+          "answer_conditions": [
+            "MP1 Open the text file in WRITE mode",
+            "MP2 Check there is a value on the stack",
+            "MP3 POP value ...",
+            "MP4 Write value to the text file",
+            "MP5 Repeat from Step 2 // loop referencing the stack items"
+          ]
+        }
+      ]
+    },
+    {
+      "question_number": "4",
+      "subquestions": [
+        {
+          "subquestion_label": "",
+          "question_text": "A function MakeString () will:\n\n1. take two parameters:\n\n- a count as an integer\n- a character\n\n2. generate a string of length equal to the count, made up of the character\n3. return the string generated, or return \"ERROR\" if the count is less than 1.\n\nFor example, the function call:\nMakeString (3, 'Z') will return the string \"ZZZ\"\nWrite pseudocode for function MakeString ().",
+          "question_type": "code_trace",
+          "marks": 6,
+          "answer": "FUNCTION MakeString (Count : INTEGER, AChar : CHAR) RETURNS STRING\nDECLARE MyString : STRING\nDECLARE Index : INTEGER\nIF Count < 1 THEN\nMyString $\\leftarrow$ \"ERROR\"\nELSE\nMyString $\\leftarrow$ \"\"\nFOR Index $\\leftarrow 1$ TO Count\nMyString $\\leftarrow$ MyString \\& AChar\nNEXT Index\nENDIF\nRETURN MyString\nENDFUNCTION",
+          "answer_conditions": [
+            "MP1 Function heading and end including parameters and return type",
+            "MP2 Declaration of locals Index and MyString",
+            "MP3 Test for Count < 1 and if true, assign \"ERROR\" to MyString / Immediate RETURN",
+            "MP4 Loop for Count iterations",
+            "MP5 Use of concatenate - must have been initialised in a loop",
+            "MP6 Return STRING (correctly in both cases)"
+          ]
+        }
+      ]
+    },
+    {
+      "question_number": "5",
+      "subquestions": [
+        {
+          "subquestion_label": "a",
+          "question_text": "Additional information will be needed before this method can be used.\n\nIdentify this additional information and explain why it is needed.",
+          "question_type": "short_answer",
+          "marks": 3,
+          "answer": "Additional Information:\nMP1 The (program/source) code/specification\nMP2 test plan // inputs/test data and expected outputs\nExplanation:\nMP3 The structure / design / algorithm of the program of the program\nneeds to be known\nMP4 .... so that all paths through the program can be tested",
+          "answer_conditions": [
+            "MP1 The (program/source) code/specification",
+            "MP2 test plan // inputs/test data and expected outputs",
+            "MP3 The structure / design / algorithm of the program of the program\nneeds to be known",
+            "MP4 .... so that all paths through the program can be tested"
+          ]
+        },
+        {
+          "subquestion_label": "b",
+          "question_text": "State the type of maintenance that has been applied to the program.",
+          "question_type": "short_answer",
+          "marks": 1,
+          "answer": "Perfective",
+          "answer_conditions": [
+            "MP1 The type of maintenance that has been applied to the program"
+          ]
+        }
+      ]
+    },
+    {
+      "question_number": "6",
+      "subquestions": [
+        {
+          "subquestion_label": "a",
+          "question_text": "Write pseudocode for procedure Select().",
+          "question_type": "code_trace",
+          "marks": 7,
+          "answer": "PROCEDURE Select(Start, End : INTEGER)\nDECLARE ThisNum, Total: INTEGER\nDECLARE ThisString : STRING\nDECLARE Char1, Char2 : CHAR\nFOR ThisNum $\\leftarrow$ Start+1 TO End-1\nThisString $\\leftarrow$ NUM_TO_STR(ThisNum)\nChar1 $\\leftarrow$ RIGHT(ThisString, 1)\nChar2 $\\leftarrow$ LEFT(RIGHT(ThisString, 2), 1)\nTotal $\\leftarrow$ STR_TO_NUM(Char1) + STR_TO_NUM(Char2)\nIF Total $=6$ THEN\nOUTPUT ThisString\nENDIF\nNEXT ThisNum\nENDPROCEDURE",
+          "answer_conditions": [
+            "MP1 Procedure heading and ending",
+            "MP2 (Count-controlled) Loop",
+            "MP3 .... with correct range from Start+1 to End-1",
+            "MP4 Convert ThisNum (loop counter) to a string",
+            "MP5 Extract the last two/first/second 'character digit(s)' required in a loop",
+            "MP6 Extract the second individual 'character digit' required in a loop",
+            "MP7 Calculate the sum of the last two digits",
+            "MP8 If sum $=6$ then OUTPUT the number (either string or integer) in a loop"
+          ]
+        },
+        {
+          "subquestion_label": "b",
+          "question_text": "The new function CheckNum () will:\n\n- allow the required sum to be specified (not just 6)\n- check one number\n- return an appropriate value.\n\nDescribe the function interface and two advantages of this modular approach.",
+          "question_type": "short_answer",
+          "marks": 4,
+          "answer": "MP1 The function will take two integer parameters - the number and the (required) total\nMP2 $\\quad\\ldots$ and return a Boolean\nOR:\nCheckNum(Number,Total : INTEGER) RETURNS BOOLEAN\nMP1 MP2\nTwo marks for the advantages:\nMP3 CheckNum() can be called repeatedly as and when required\nMP4 CheckNum() is designed and tested once (then used repeatedly)\nMP5 Any subsequent change to CheckNum() needs to be made once only // is easier to maintain/modify",
+          "answer_conditions": [
+            "MP1 The function will take two integer parameters - the number and the (required) total",
+            "MP2 $\\quad\\ldots$ and return a Boolean",
+            "MP3 CheckNum() can be called repeatedly as and when required",
+            "MP4 CheckNum() is designed and tested once (then used repeatedly)",
+            "MP5 Any subsequent change to CheckNum() needs to be made once only // is easier to maintain/modify"
+          ]
+        }
+      ]
+    },
+    {
+      "question_number": "7",
+      "subquestions": [
+        {
+          "subquestion_label": "a(i)",
+          "question_text": "State the purpose of applying abstraction to this problem.",
+          "question_type": "short_answer",
+          "marks": 1,
+          "answer": "- To filter out information (that is not necessary to solve the problem) //\n<br> to include only essential information",
+          "answer_conditions": [
+            "MP1 The purpose of applying abstraction to this problem"
+          ]
+        },
+        {
+          "subquestion_label": "a(ii)",
+          "question_text": "Identify one item of information that is required and one item that is not required in the new module. Justify your choices.",
+          "question_type": "short_answer",
+          "marks": 2,
+          "answer": "Required:\nStudent : Student name / email (address)\nLoan: Return/Issue date\nBook: Book title\nNot Required:\nStudent: Home address / DoB / tutor / subject choices\nBook: Library location / category / author / book title",
+          "answer_conditions": [
+            "MP1 One item of information that is required",
+            "MP2 Justification for the required item",
+            "MP3 One item of information that is not required",
+            "MP4 Justification for the not required item"
+          ]
+        },
+        {
+          "subquestion_label": "a(iii)",
+          "question_text": "Identify two operations that would be required to process data when an overdue book is returned.",
+          "question_type": "short_answer",
+          "marks": 2,
+          "answer": "Examples could include:\n- Clear the loan // indicate that the book has been returned // update loan history\n- Take the student off 'block' // allow the student to borrow further books\n- Send acknowledgement to the student when book is returned",
+          "answer_conditions": [
+            "MP1 One operation that would be required to process data when an overdue book is returned",
+            "MP2 Another operation that would be required to process data when an overdue book is returned"
+          ]
+        }
+      ]
+    },
+    {
+      "question_number": "8",
+      "subquestions": [
+        {
+          "subquestion_label": "a",
+          "question_text": "Write pseudocode for module ChangeSupp ().",
+          "question_type": "code_trace",
+          "marks": 8,
+          "answer": "FUNCTION ChangeSupp (Code1, Code2 : STRING) RETURNS INTEGER\nDECLARE Count : INTEGER\nDECLARE ThisLine, ThisCode : STRING\nOPENFILE \"Stock.txt\" FOR READ\nOPENFILE \"NewStock.txt\" FOR WRITE\nCount $\\leftarrow 0$\nWHILE NOT EOF(\"Stock.txt\")\nREADFILE(\"Stock.txt \", ThisLine) // brackets optional\nThisCode $\\leftarrow$ MID(ThisLine, 5, 3)\nIF ThisCode = Code1 THEN\nThisLine $\\leftarrow$ LEFT (ThisLine, 4) \\& Code2 \\& RIGHT (ThisLine, LENGTH(ThisLine) - 7)\nCount $\\leftarrow$ Count +1\nENDIF\nWRITEFILE(\"NewStock.txt\", ThisLine) // brackets optional\nENDWHILE\nCLOSEFILE \"NewStock.txt\"\nCLOSEFILE \"Stock.txt\"\nRETURN Count\nENDFUNCTION",
+          "answer_conditions": [
+            "MP1 Open both files, in correct modes, and subsequently close",
+            "MP2 Conditional loop until EOF(\"Stock.txt\")",
+            "MP3 Read a line from Stock.txt AND extract ThisCode in a loop",
+            "MP4 Test ThisCode = Code1 AND if true, increment Count (must have been Initialised) in a loop",
+            "MP5 Update ThisLine using substring functions and '\\&' in a loop",
+            "MP6 completely correct update of ThisLine in a loop",
+            "MP7 Write ThisLine to NewStock.txt in a loop",
+            "MP8 Return count after loop"
+          ]
+        },
+        {
+          "subquestion_label": "b",
+          "question_text": "Write pseudocode for module Report_1().",
+          "question_type": "code_trace",
+          "marks": 6,
+          "answer": "PROCEDURE Report_1 (Supp : STRING)\nDECLARE Count : INTEGER\nDECLARE ThisItemNum, ThisDesc, ThisLine, ThisCode : STRING\nCount $\\leftarrow 0$\nOPENFILE \"Stock.txt\" FOR READ\nOUTPUT \"Report for Supplier:\" \\& Supp\nOUTPUT \"\" //Blank line as per example\nOUTPUT \"Item Description\"\nOUTPUT \"\" //Blank line as per example\nWHILE NOT EOF(\"Stock.txt\")\nREADFILE(\"Stock.txt\", ThisLine)\nThisCode $\\leftarrow$ Mid(ThisLine, 5, 3)\nIF ThisCode = Supp THEN\nThisItemNum $\\leftarrow$ LEFT (ThisLine, 4)\nThisDesc $\\leftarrow$ RIGHT(ThisLine, LENGTH(ThisLine) - 7)\nOUTPUT ThisItem \\& \" \" \\& ThisDesc\nCount $\\leftarrow$ Count +1\nENDIF\nENDWHILE\nCLOSEFILE \"Stock.txt\"\nOUTPUT \"\" //Blank line as per example\nOUTPUT \"Number of items listed: \", Count\nENDPROCEDURE",
+          "answer_conditions": [
+            "MP1 Output report header (blank lines optional) - Must contain the parameter code",
+            "MP2 Conditional loop until EOF(\"Stock.txt\")",
+            "MP3 Read a line from Stock.txt AND extract SupplierCode in a loop",
+            "MP4 Test if SupplierCode = Supp then increment count (must have been Initialised)",
+            "MP5 Extract AND output item and description in a loop",
+            "MP6 Output the final line with count"
+          ]
+        }
+      ]
+    }
+  ]
+}

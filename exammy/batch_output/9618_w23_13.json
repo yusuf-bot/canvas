@@ -1,0 +1,56 @@
+{
+  "subject_code": "9709",
+  "paper_code": "9709/32/M/J/21",
+  "exam_session": "Summer",
+  "exam_year": "2021",
+  "context": "no insert provided",
+  "questions": [
+    {
+      "question_number": "1",
+      "subquestions": [
+        {
+          "subquestion_label": "a(i)",
+          "question_text": "The PDF could not be processed.",
+          "question_type": "short_answer",
+          "marks": 1,
+          "answer": "The PDF could not be processed.",
+          "answer_conditions": ["The PDF could not be processed."]
+        },
+        {
+          "subquestion_label": "a(ii)",
+          "question_text": "The PDF could not be processed.",
+          "question_type": "short_answer",
+          "marks": 1,
+          "answer": "The PDF could not be processed.",
+          "answer_conditions": ["The PDF could not be processed."]
+        }
+      ]
+    },
+    {
+      "question_number": "2",
+      "subquestions": [
+        {
+          "subquestion_label": "",
+          "question_text": "The PDF could not be processed.",
+          "question_type": "long_answer",
+          "marks": 3,
+          "answer": "The PDF could not be processed.",
+          "answer_conditions": ["The PDF could not be processed."]
+        }
+      ]
+    },
+    {
+      "question_number": "3",
+      "subquestions": [
+        {
+          "subquestion_label": "",
+          "question_text": "The PDF could not be processed.",
+          "question_type": "calculation",
+          "marks": 4,
+          "answer": "The PDF could not be processed.",
+          "answer_conditions": ["The PDF could not be processed."]
+        }
+      ]
+    }
+  ]
+}

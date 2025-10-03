@@ -1,0 +1,441 @@
+{
+  "subject_code": "9608",
+  "paper_code": "11",
+  "exam_session": "Summer",
+  "exam_year": "2024",
+  "context": "no context required",
+  "questions": [
+    {
+      "question_number": "1",
+      "subquestions": [
+        {
+          "subquestion_label": "a",
+          "question_text": "Error processing PDF: API error occurred",
+          "question_type": "short_answer",
+          "marks": 4,
+          "answer": "1 mark for each correct answer:\n- binary\n- 3072\n- denary/decimal\n- 2000\nA kibibyte has a binary prefix. Three kibibytes is the same as $3 0 7 2$ bytes.\nA megabyte has a decimal/denary prefix. Two terabytes is the same as 2000 gigabytes.",
+          "answer_conditions": [
+            "1 mark for each correct answer:",
+            "- binary",
+            "- 3072",
+            "- denary/decimal",
+            "- 2000",
+            "A kibibyte has a binary prefix. Three kibibytes is the same as $3 0 7 2$ bytes.",
+            "A megabyte has a decimal/denary prefix. Two terabytes is the same as 2000 gigabytes."
+          ]
+        },
+        {
+          "subquestion_label": "b",
+          "question_text": "Error processing PDF: API error occurred",
+          "question_type": "short_answer",
+          "marks": 1,
+          "answer": "1 mark for correct answer:\nF1",
+          "answer_conditions": [
+            "1 mark for correct answer:",
+            "F1"
+          ]
+        },
+        {
+          "subquestion_label": "c",
+          "question_text": "Error processing PDF: API error occurred",
+          "question_type": "short_answer",
+          "marks": 1,
+          "answer": "1 mark for a correct answer:\nThe answer is too long to be represented in the same number of bits as the binary numbers being added",
+          "answer_conditions": [
+            "1 mark for a correct answer:",
+            "The answer is too long to be represented in the same number of bits as the binary numbers being added"
+          ]
+        },
+        {
+          "subquestion_label": "d(i)",
+          "question_text": "Error processing PDF: API error occurred",
+          "question_type": "table_completion",
+          "marks": 1,
+          "answer": "1 mark for all 3 answers correct:\n\n| Character set | Number of bits |\n| --- | --- |\n| ASCII | 7 |\n| extended ASCII | 8 |\n| Unicode | 16/32 |",
+          "answer_conditions": [
+            "1 mark for all 3 answers correct:"
+          ]
+        },
+        {
+          "subquestion_label": "d(ii)",
+          "question_text": "Error processing PDF: API error occurred",
+          "question_type": "short_answer",
+          "marks": 2,
+          "answer": "1 mark each:\n- Each character has a unique binary code\n- The binary code for each character is stored in sequence",
+          "answer_conditions": [
+            "1 mark each:",
+            "- Each character has a unique binary code",
+            "- The binary code for each character is stored in sequence"
+          ]
+        }
+      ]
+    },
+    {
+      "question_number": "2",
+      "subquestions": [
+        {
+          "subquestion_label": "a",
+          "question_text": "Error processing PDF: API error occurred",
+          "question_type": "calculation",
+          "marks": 2,
+          "answer": "1 mark for working:\n- $4000 * 3000 * 4$\n1 mark for correct answer:\n- 48MB",
+          "answer_conditions": [
+            "1 mark for working:",
+            "- $4000 * 3000 * 4$",
+            "1 mark for correct answer:",
+            "- 48MB"
+          ]
+        },
+        {
+          "subquestion_label": "b(i)",
+          "question_text": "Error processing PDF: API error occurred",
+          "question_type": "short_answer",
+          "marks": 3,
+          "answer": "1 mark each to max 3:\n- The file takes less storage space on the web server than if lossless compression was used\n- The file is faster to upload/download to/from the server than if lossless compression was used\n- The file uses less bandwidth to transmit than if lossless compression was used\n- The file consumes less data allowance than if lossless compression was used",
+          "answer_conditions": [
+            "1 mark each to max 3:",
+            "- The file takes less storage space on the web server than if lossless compression was used",
+            "- The file is faster to upload/download to/from the server than if lossless compression was used",
+            "- The file uses less bandwidth to transmit than if lossless compression was used",
+            "- The file consumes less data allowance than if lossless compression was used"
+          ]
+        },
+        {
+          "subquestion_label": "b(ii)",
+          "question_text": "Error processing PDF: API error occurred",
+          "question_type": "short_answer",
+          "marks": 2,
+          "answer": "1 mark each:\n- Identifies consecutive repeating pixels of the same colour\n- Stores the colour /pattern and the number of times it repeats",
+          "answer_conditions": [
+            "1 mark each:",
+            "- Identifies consecutive repeating pixels of the same colour",
+            "- Stores the colour /pattern and the number of times it repeats"
+          ]
+        },
+        {
+          "subquestion_label": "c",
+          "question_text": "Error processing PDF: API error occurred",
+          "question_type": "short_answer",
+          "marks": 2,
+          "answer": "1 mark each to max 2:\n- Colour/bit depth\n- Image resolution",
+          "answer_conditions": [
+            "1 mark each to max 2:",
+            "- Colour/bit depth",
+            "- Image resolution"
+          ]
+        }
+      ]
+    },
+    {
+      "question_number": "3",
+      "subquestions": [
+        {
+          "subquestion_label": "a",
+          "question_text": "Error processing PDF: API error occurred",
+          "question_type": "calculation",
+          "marks": 4,
+          "answer": "1 mark for each correct answer:\n\n| Program Number | Code | ACC Content |\n| --- | --- | --- |\n| 1 | LDM #50 INC ACC SUB #1 | 50 |\n| 2 | LDI 51 ADD 52 | 97 |\n| 3 | LDR #2 LDX 50 DEC ACC | 48 |\n| 4 | LDD 52 SUB 54 INC ACC | 44 |",
+          "answer_conditions": [
+            "1 mark for each correct answer:"
+          ]
+        },
+        {
+          "subquestion_label": "b",
+          "question_text": "Error processing PDF: API error occurred",
+          "question_type": "calculation",
+          "marks": 3,
+          "answer": "1 mark for each correct answer:\n\n| Instruction Number | Instruction | ACC Content |\n| --- | --- | --- |\n| 1 | LSL #2 | 11111100 |\n| 2 | XOR 100 | 11110010 |\n| 3 | AND 103 | 00110111 |",
+          "answer_conditions": [
+            "1 mark for each correct answer:"
+          ]
+        }
+      ]
+    },
+    {
+      "question_number": "4",
+      "subquestions": [
+        {
+          "subquestion_label": "a",
+          "question_text": "Error processing PDF: API error occurred",
+          "question_type": "short_answer",
+          "marks": 1,
+          "answer": "1 mark for:\nmany to 1 // there are many performances of each show",
+          "answer_conditions": [
+            "1 mark for:",
+            "many to 1 // there are many performances of each show"
+          ]
+        },
+        {
+          "subquestion_label": "b",
+          "question_text": "Error processing PDF: API error occurred",
+          "question_type": "code_trace",
+          "marks": 4,
+          "answer": "1 mark each for:\n- Creating table PERFORMANCE with opening and closing brackets\n- Setting all four attributes with appropriate data types\n- Setting PerformanceID as primary key\n- Setting ShowID as foreign key referencing SHOW table\nExample:\nCREATE TABLE PERFORMANCE(\nPerformanceID varchar NOT NULL,\nShowID varchar,\nShowDate Date,\nStartTime Time,\nPRIMARY KEY (PerformanceID),\nFOREIGN KEY (ShowID) REFERENCES SHOW (ShowID)\n);",
+          "answer_conditions": [
+            "1 mark each for:",
+            "- Creating table PERFORMANCE with opening and closing brackets",
+            "- Setting all four attributes with appropriate data types",
+            "- Setting PerformanceID as primary key",
+            "- Setting ShowID as foreign key referencing SHOW table",
+            "Example:",
+            "CREATE TABLE PERFORMANCE(\nPerformanceID varchar NOT NULL,\nShowID varchar,\nShowDate Date,\nStartTime Time,\nPRIMARY KEY (PerformanceID),\nFOREIGN KEY (ShowID) REFERENCES SHOW (ShowID)\n);"
+          ]
+        },
+        {
+          "subquestion_label": "c",
+          "question_text": "Error processing PDF: API error occurred",
+          "question_type": "code_trace",
+          "marks": 4,
+          "answer": "1 mark each for:\n- Selecting COUNT of an attribute in PERFORMANCE table with suitable name\n- FROM clause\n- Joining tables\n- Grouping by the title and selecting the title\nExample 1:\nSELECT SHOW.Title, Count (PERFORMANCE.PerformanceID)\nAS NumberOfShowings\nFROM PERFORMANCE, SHOW\nWHERE PERFORMANCE.ShowID = SHOW.ShowID\nGROUP BY SHOW.Title;\nExample 2:\nSELECT SHOW.Title, Count (PERFORMANCE.PerformanceID)\nAS NumberOfShowings\nFROM PERFORMANCE INNER JOIN SHOW\nON PERFORMANCE.ShowID = SHOW.ShowID\nGROUP BY SHOW.Title;",
+          "answer_conditions": [
+            "1 mark each for:",
+            "- Selecting COUNT of an attribute in PERFORMANCE table with suitable name",
+            "- FROM clause",
+            "- Joining tables",
+            "- Grouping by the title and selecting the title",
+            "Example 1:",
+            "SELECT SHOW.Title, Count (PERFORMANCE.PerformanceID)\nAS NumberOfShowings\nFROM PERFORMANCE, SHOW\nWHERE PERFORMANCE.ShowID = SHOW.ShowID\nGROUP BY SHOW.Title;",
+            "Example 2:",
+            "SELECT SHOW.Title, Count (PERFORMANCE.PerformanceID)\nAS NumberOfShowings\nFROM PERFORMANCE INNER JOIN SHOW\nON PERFORMANCE.ShowID = SHOW.ShowID\nGROUP BY SHOW.Title;"
+          ]
+        },
+        {
+          "subquestion_label": "d",
+          "question_text": "Error processing PDF: API error occurred",
+          "question_type": "short_answer",
+          "marks": 5,
+          "answer": "1 mark each to max 5:\ne.g.\n- CUSTOMER table identified with suitable Primary Key and appropriate name\n- $\\quad \\ldots$ and other suitable fields including name and email\n- BOOKING TABLE identified with suitable Primary Key and appropriate name\n- $\\quad$ that stores the Primary Key of the CUSTOMER table as a Foreign Key to join with CUSTOMER table\n- and stores the Primary Key of the PERFORMANCE table as a Foreign Key to join with PERFORMANCE table\n- A linking table between Table 2 and SEAT with suitable Primary Key and appropriate name\n- $\\quad$ that includes the Primary Key of Table 2 as a Foreign Key to join with Table 2\n- $\\quad$ that stores the SeatID.",
+          "answer_conditions": [
+            "1 mark each to max 5:",
+            "e.g.",
+            "- CUSTOMER table identified with suitable Primary Key and appropriate name",
+            "- $\\quad \\ldots$ and other suitable fields including name and email",
+            "- BOOKING TABLE identified with suitable Primary Key and appropriate name",
+            "- $\\quad$ that stores the Primary Key of the CUSTOMER table as a Foreign Key to join with CUSTOMER table",
+            "- and stores the Primary Key of the PERFORMANCE table as a Foreign Key to join with PERFORMANCE table",
+            "- A linking table between Table 2 and SEAT with suitable Primary Key and appropriate name",
+            "- $\\quad$ that includes the Primary Key of Table 2 as a Foreign Key to join with Table 2",
+            "- $\\quad$ that stores the SeatID."
+          ]
+        }
+      ]
+    },
+    {
+      "question_number": "5",
+      "subquestions": [
+        {
+          "subquestion_label": "a(i)",
+          "question_text": "Error processing PDF: API error occurred",
+          "question_type": "short_answer",
+          "marks": 1,
+          "answer": "1 mark for:\nDedicated/bespoke services/storage on a remote server only available to company",
+          "answer_conditions": [
+            "1 mark for:",
+            "Dedicated/bespoke services/storage on a remote server only available to company"
+          ]
+        },
+        {
+          "subquestion_label": "a(ii)",
+          "question_text": "Error processing PDF: API error occurred",
+          "question_type": "short_answer",
+          "marks": 3,
+          "answer": "1 mark each to max 3:\ne.g.\n- Not reliant on a third party\n- $\\quad$ gives greater control over security/privacy\n- $\\quad$ gives greater control over backup\n- Storage can be tailored/scalable to company requirements// an example\ne.g. the amount of storage accessible/ facilitating the sharing of files",
+          "answer_conditions": [
+            "1 mark each to max 3:",
+            "e.g.",
+            "- Not reliant on a third party",
+            "- $\\quad$ gives greater control over security/privacy",
+            "- $\\quad$ gives greater control over backup",
+            "- Storage can be tailored/scalable to company requirements// an example",
+            "e.g. the amount of storage accessible/ facilitating the sharing of files"
+          ]
+        },
+        {
+          "subquestion_label": "b",
+          "question_text": "Error processing PDF: API error occurred",
+          "question_type": "short_answer",
+          "marks": 2,
+          "answer": "1 mark each:\n- Sending computer transmits packets directly to switch/router/central device\n- Switch/router/central device checks destination address of packet and forwards directly to that device",
+          "answer_conditions": [
+            "1 mark each:",
+            "- Sending computer transmits packets directly to switch/router/central device",
+            "- Switch/router/central device checks destination address of packet and forwards directly to that device"
+          ]
+        },
+        {
+          "subquestion_label": "c(i)",
+          "question_text": "Error processing PDF: API error occurred",
+          "question_type": "short_answer",
+          "marks": 2,
+          "answer": "1 mark each to max 2:\n- Jamming signal is transmitted by the sending device\n- Transmission is aborted\n- The sending device waits a random time before trying to send data again ...\n- $\\quad$ if further collisions occur the wait time is increased",
+          "answer_conditions": [
+            "1 mark each to max 2:",
+            "- Jamming signal is transmitted by the sending device",
+            "- Transmission is aborted",
+            "- The sending device waits a random time before trying to send data again ...",
+            "- $\\quad$ if further collisions occur the wait time is increased"
+          ]
+        },
+        {
+          "subquestion_label": "c(ii)",
+          "question_text": "Error processing PDF: API error occurred",
+          "question_type": "short_answer",
+          "marks": 2,
+          "answer": "1 mark each to max 2:\n- Random time increased each time so can be infinite waiting\n- May be constant jamming signal so nothing ever sends\n- Certain nodes cannot be prioritised\n- High power consumption\n- Only suitable for short distance network // limited distance\n- Not scalable // more nodes means exponentially longer waiting times",
+          "answer_conditions": [
+            "1 mark each to max 2:",
+            "- Random time increased each time so can be infinite waiting",
+            "- May be constant jamming signal so nothing ever sends",
+            "- Certain nodes cannot be prioritised",
+            "- High power consumption",
+            "- Only suitable for short distance network // limited distance",
+            "- Not scalable // more nodes means exponentially longer waiting times"
+          ]
+        },
+        {
+          "subquestion_label": "d",
+          "question_text": "Error processing PDF: API error occurred",
+          "question_type": "short_answer",
+          "marks": 1,
+          "answer": "1 mark for:\nStatic means the IP for that device does not change and Private means it can only be accessed/seen/used within the LAN",
+          "answer_conditions": [
+            "1 mark for:",
+            "Static means the IP for that device does not change and Private means it can only be accessed/seen/used within the LAN"
+          ]
+        }
+      ]
+    },
+    {
+      "question_number": "6",
+      "subquestions": [
+        {
+          "subquestion_label": "",
+          "question_text": "Error processing PDF: API error occurred",
+          "question_type": "table_completion",
+          "marks": 3,
+          "answer": "1 mark for each correct line:\n\n| Truth table |\n| --- |\n| A | B | C | X |\n| 0 | 0 | 0 | 0 |\n| 0 | 0 | 1 | 1 |\n| 0 | 1 | 0 | 0 |\n| 0 | 1 | 1 | 0 |\n| 1 | 0 | 0 | 1 |\n| 1 | 0 | 1 | 1 |\n| 1 | 1 | 0 | 0 |\n| 1 | 1 | 1 | 0 |\n\n| A | B | C | X |\n| 0 | 0 | 0 | 0 |\n| 0 | 0 | 1 | 1 |\n| 0 | 1 | 0 | 0 |\n| 0 | 1 | 1 | 0 |\n| 1 | 0 | 0 | 0 |\n| 1 | 0 | 1 | 0 |\n| 1 | 1 | 0 | 0 |\n| 1 | 1 | 1 | 1 |\n\n| A | B | C | X |\n| 0 | 0 | 0 | 1 |\n| 0 | 0 | 1 | 1 |\n| 0 | 1 | 0 | 1 |\n| 0 | 1 | 1 | 1 |\n| 1 | 0 | 0 | 1 |\n| 1 | 0 | 1 | 1 |\n| 1 | 1 | 0 | 0 |\n| 1 | 1 | 1 | 1 |",
+          "answer_conditions": [
+            "1 mark for each correct line:"
+          ]
+        }
+      ]
+    },
+    {
+      "question_number": "7",
+      "subquestions": [
+        {
+          "subquestion_label": "a",
+          "question_text": "Error processing PDF: API error occurred",
+          "question_type": "short_answer",
+          "marks": 2,
+          "answer": "1 mark for sensor and matching purpose to max 2:\n\n| Sensor | Purpose of sensor in navigation system |\n| --- | --- |\n| Pressure | To detect if a table or other obstacle has been hit // to detect when food is put on/taken off the tray so it can move on |\n| Infra-red | To detect if there is an obstacle in the way // to indicate that it has reached the desired table |\n| Sound | To detect if someone is speaking so that it can use Al to decipher the speech and whether the robot is required to stop |",
+          "answer_conditions": [
+            "1 mark for sensor and matching purpose to max 2:"
+          ]
+        },
+        {
+          "subquestion_label": "b",
+          "question_text": "Error processing PDF: API error occurred",
+          "question_type": "short_answer",
+          "marks": 3,
+          "answer": "1 mark each to max 3 :\ne.g.\n- Voice/speech recognition is used\n- ... to identify if someone speaking\n- The sound is recorded and analysed\n- The audio recordings are compared to a database of words/sound waves\n- ... to identify the word that has the highest probability of being said\n- Natural language recognition is used\n- Words are combined and compared to known sentences\n- ... programmed action(s) for matching sentence(s) are performed",
+          "answer_conditions": [
+            "1 mark each to max 3 :",
+            "e.g.",
+            "- Voice/speech recognition is used",
+            "- ... to identify if someone speaking",
+            "- The sound is recorded and analysed",
+            "- The audio recordings are compared to a database of words/sound waves",
+            "- ... to identify the word that has the highest probability of being said",
+            "- Natural language recognition is used",
+            "- Words are combined and compared to known sentences",
+            "- ... programmed action(s) for matching sentence(s) are performed"
+          ]
+        },
+        {
+          "subquestion_label": "c",
+          "question_text": "Error processing PDF: API error occurred",
+          "question_type": "short_answer",
+          "marks": 2,
+          "answer": "1 mark each to max 2 :\n- Feedback ensures that a system operates within set criteria / constraints\n- ... by enabling system output to affect subsequent system input\n- ... thus allowing conditions to be automatically adjusted",
+          "answer_conditions": [
+            "1 mark each to max 2 :",
+            "- Feedback ensures that a system operates within set criteria / constraints",
+            "- ... by enabling system output to affect subsequent system input",
+            "- ... thus allowing conditions to be automatically adjusted"
+          ]
+        },
+        {
+          "subquestion_label": "d",
+          "question_text": "Error processing PDF: API error occurred",
+          "question_type": "short_answer",
+          "marks": 4,
+          "answer": "1 mark each to max 4:\n- Resistive: The space between the conductive layers is removed/the layers touch and a circuit is completed\n- Capacitive: The electrical charge changes where the user pressed\n- The point of contact is identified\n- ... from the change in electrical field\n- The software/microprocessor calculates the coordinates",
+          "answer_conditions": [
+            "1 mark each to max 4:",
+            "- Resistive: The space between the conductive layers is removed/the layers touch and a circuit is completed",
+            "- Capacitive: The electrical charge changes where the user pressed",
+            "- The point of contact is identified",
+            "- ... from the change in electrical field",
+            "- The software/microprocessor calculates the coordinates"
+          ]
+        },
+        {
+          "subquestion_label": "e(i)",
+          "question_text": "Error processing PDF: API error occurred",
+          "question_type": "short_answer",
+          "marks": 1,
+          "answer": "1 mark for:\nPre-written code/functions/routines that can be imported/called in another program",
+          "answer_conditions": [
+            "1 mark for:",
+            "Pre-written code/functions/routines that can be imported/called in another program"
+          ]
+        },
+        {
+          "subquestion_label": "e(ii)",
+          "question_text": "Error processing PDF: API error occurred",
+          "question_type": "short_answer",
+          "marks": 4,
+          "answer": "1 mark each to max 4:\n- Maintenance not needed to be done by the programmer\n- ... because the DLL is separate from program\n- The calling program does not need recompilation by the programmer when a DLL file changes\n- ... because the DLL file can be updated independently of the calling program\n- ... updates will apply to all programs that use the DLL file",
+          "answer_conditions": [
+            "1 mark each to max 4:",
+            "- Maintenance not needed to be done by the programmer",
+            "- ... because the DLL is separate from program",
+            "- The calling program does not need recompilation by the programmer when a DLL file changes",
+            "- ... because the DLL file can be updated independently of the calling program",
+            "- ... updates will apply to all programs that use the DLL file"
+          ]
+        },
+        {
+          "subquestion_label": "f(i)",
+          "question_text": "Error processing PDF: API error occurred",
+          "question_type": "short_answer",
+          "marks": 4,
+          "answer": "1 mark for each correct method and\n1 mark for corresponding description to max 4:\n\n| Method | Description |\n| --- | --- |\n| Parity byte | An additional bit is added to make the number of 1 s in the byte odd or even to match the parity. If a byte with an odd number of 1 bits is received when even parity is used, there is an error. |\n| Parity block | Parity is calculated horizontally and vertically. A parity byte is created from the bits produced by the vertical parity check. This is sent with the data. The parity is re-checked when received and the position of an incorrect bit can be determined. |\n| Checksum | A calculation is made from the data and the result transmitted with the data. The receiver repeats the calculation and compares the result with the value received. If the two are different, there is an error. |",
+          "answer_conditions": [
+            "1 mark for each correct method and",
+            "1 mark for corresponding description to max 4:",
+            "\n| Method | Description |",
+            "| --- | --- |",
+            "| Parity byte | An additional bit is added to make the number of 1 s in the byte odd or even to match the parity. If a byte with an odd number of 1 bits is received when even parity is used, there is an error. |",
+            "| Parity block | Parity is calculated horizontally and vertically. A parity byte is created from the bits produced by the vertical parity check. This is sent with the data. The parity is re-checked when received and the position of an incorrect bit can be determined. |",
+            "| Checksum | A calculation is made from the data and the result transmitted with the data. The receiver repeats the calculation and compares the result with the value received. If the two are different, there is an error. |"
+          ]
+        },
+        {
+          "subquestion_label": "f(ii)",
+          "question_text": "Error processing PDF: API error occurred",
+          "question_type": "short_answer",
+          "marks": 2,
+          "answer": "1 mark each to max 2:\n- Encodes/scrambles data\n- ... so if it is intercepted it cannot be understood\n- Algorithm/key is required to decode the data",
+          "answer_conditions": [
+            "1 mark each to max 2:",
+            "- Encodes/scrambles data",
+            "- ... so if it is intercepted it cannot be understood",
+            "- Algorithm/key is required to decode the data"
+          ]
+        }
+      ]
+    }
+  ]
+}

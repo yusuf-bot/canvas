@@ -1,0 +1,300 @@
+{
+  "subject_code": "9618",
+  "paper_code": "23",
+  "exam_session": "Winter",
+  "exam_year": "2024",
+  "context": "--- Page 1 ---\n# Cambridge Assessment International Education\n## Cambridge International AS & A Level\n**COMPUTER SCIENCE**\nPaper 2 Fundamental Problem-solving and Programming Skills\nINSERT\n9618/23\nOctober/November 2024\n2 hours\n## INFORMATION\n- This insert contains all the resources referred to in the questions.\n- You may annotate this insert and use the blank spaces for planning. **Do not write your answers** on the insert.\nThis document has 4 pages.\nDC (JP) 349041\n© UCLES 2024\n[Turn over]\n--- Page 2 ---\nAn error will be generated if a function call is not properly formed or if the parameters are of an incorrect type or an incorrect value.\n# String and character functions\n- A string of length 1 may be considered to be either of type CHAR or STRING\n- A CHAR may be assigned to, or concatenated with, a STRING\n- A STRING of length greater than 1 cannot be assigned to a CHAR\n```\nLEFT(ThisString : STRING, x : INTEGER) RETURNS STRING\nreturns leftmost x characters from ThisString\nExample: LEFT (\"ABCDEFGH\", 3) returns \"ABC\"\n```\n```\nRIGHT(ThisString : STRING, x : INTEGER) RETURNS STRING\nreturns rightmost x characters from ThisString\nExample: RIGHT (\"ABCDEFGH\", 3) returns \"FGH\"\n```\n```\nMID(ThisString : STRING, x : INTEGER, y : INTEGER) RETURNS STRING\nreturns a string of length y starting at position x from ThisString\nExample: MID (\"ABCDEFGH\", 2, 3) returns \"BCD\"\n```\nLENGTH (ThisString : STRING) RETURNS INTEGER\nreturns the integer value representing the length of ThisString\nExample: LENGTH (\"Happy Days\") returns 10\n```\nTO_UPPER(x : <datatype>) RETURNS <datatype>\n<datatype> may be CHAR or STRING\n```\nreturns an object of type <datatype> formed by converting all characters of $x$ to upper case.\n## Examples:\n- TO_UPPER(\"Error 803\") returns \"ERROR 803\"\n- TO_UPPER('a') returns 'A'\nTO_LOWER (x : <datatype>) RETURNS <datatype>\n<datatype> may be CHAR or STRING\nreturns an object of type <datatype> formed by converting all characters of $x$ to lower case.\n## Examples:\n- TO_LOWER(\"JIM 803\") returns \"jim 803\"\n- TO_LOWER('W') returns 'w'\n```\nNUM_TO_STR(x : <datatype1>) RETURNS <datatype2>\n```\nreturns a string representation of a numeric value.\n<datatype1> may be REAL or INTEGER, <datatype2> may be CHAR or STRING\nExample: NUM_TO_STR(87.5) returns \"87.5\"\nIf $x$ is a negative value, the returned value will be a string beginning with the ' - ' character.\n```\nSTR_TO_NUM(x : <datatype1>) RETURNS <datatype2>\n```\nreturns a numeric representation of a string.\n<datatype1> may be CHAR or STRING, <datatype2> may be REAL or INTEGER\nExample: STR_TO_NUM(\"23.45\") returns 23.45\nIf the string begins with the minus character ' - ', the returned value will be negative.\n--- Page 3 ---\nIS_NUM (ThisString : <datatype>) RETURNS BOOLEAN\nreturns TRUE if ThisString represents a valid numeric value.\n<datatype> may be CHAR or STRING\nExample: IS_NUM (\"-12.36\") returns TRUE\nASC (ThisChar : CHAR) RETURNS INTEGER\nreturns an integer value (the ASCII value) of ThisChar\nExample: ASC('A') returns 65, ASC('B') returns 66\nCHR (x : INTEGER) RETURNS CHAR\nreturns the character whose integer value (the ASCII value) is $x$\nExample: CHR (65) returns 'A', CHR (66) returns 'B'\n# Numeric functions\nINT (x : REAL) RETURNS INTEGER\nreturns the integer part of $x$\nExample: INT (27.5415) returns 27\nRAND (x : INTEGER) RETURNS REAL\nreturns a real number in the range 0 to $x$ (not inclusive of $x$ ).\nExample: RAND (87) could return 35.430729\n## Date functions\nDate format is assumed to be DD/MM/YYYY unless otherwise stated.\nDAY (ThisDate : DATE) RETURNS INTEGER\nreturns the day number from ThisDate\nExample: DAY (04/10/2003) returns 4\nMONTH (ThisDate : DATE) RETURNS INTEGER\nreturns the month number from ThisDate\nExample: MONTH (04/10/2003) returns 10\nYEAR (ThisDate : DATE) RETURNS INTEGER\nreturns the year number from ThisDate\nExample: YEAR (04/10/2003) returns 2003\nDAYINDEX (ThisDate : DATE) RETURNS INTEGER\nreturns the day index number from ThisDate where Sunday $=1$, Monday $=2$ etc.\nExample: DAYINDEX (07/11/2023) returns 3\nSETDATE (Day, Month, Year : INTEGER) RETURNS DATE\nreturns a value of type DATE with the value of <Day>/<Month>/<Year>\nExample: SETDATE (26, 10, 2003) returns a date corresponding to 26/10/2003\nTODAY () RETURNS DATE\nreturns a value of type DATE corresponding to the current date.\n--- Page 4 ---\n# Text file functions\nEOF(FileName : STRING) RETURNS BOOLEAN\nreturns TRUE if there are no more lines to be read from file FileName\nwill generate an error if the file is not already open in READ mode.\n## Operators\nAn error will be generated if an operator is used with a value or values of an incorrect type.\n| $\\&$ | concatenates (joins) two strings. <br> Example: \"Summer\" \\& \" \" \\& \"Pudding\" evaluates to \"Summer Pudding\" may also be used to concatenate a CHAR with a STRING |\n| :--: |\n| AND | performs a logical AND on two Boolean values. <br> Example: TRUE AND FALSE evaluates to FALSE |\n| OR | performs a logical OR on two Boolean values. <br> Example: TRUE OR FALSE evaluates to TRUE |\n| NOT | performs a logical NOT on a Boolean value. <br> Example: NOT TRUE evaluates to FALSE |\n| MOD | finds the remainder when one number is divided by another. <br> Example: 10 MOD 3 evaluates to 1 |\n| DIV | finds the quotient when one number is divided by another. <br> Example 10 DIV 3 evaluates to 3 |\n## Comparison operators\n| $=$ | used to compare two items of the same type. evaluates to TRUE if the condition is true, otherwise evaluates to FALSE |\n| $>$ | Notes: <br> - may be used to compare types REAL and INTEGER <br> - may be used to compare types CHAR and STRING <br> - case sensitive when used to compare types CHAR and/or STRING <br> - cannot be used to compare two records |\n| $<=$ | Examples: <br> - \"Program\" = \"program\" evaluates to FALSE <br> - Count $=4$ evaluates to TRUE when Count contains the value 4 |\n[^0]\n[^0]:    Permission to reproduce items where third-party owned material protected by copyright is included has been sought and cleared where possible. Every reasonable effort has been made by the publisher (UCLES) to trace copyright holders, but if any items requiring clearance have unwittingly been included, the publisher will be pleased to make amends at the earliest possible opportunity.\nTo avoid the issue of disclosure of answer-related information to candidates, all copyright acknowledgements are reproduced online in the Cambridge Assessment International Education Copyright Acknowledgements Booklet. This is produced for each series of examinations and is freely available to download at www.cambridgeinternational.org after the live examination series.\nCambridge Assessment International Education is part of Cambridge Assessment. Cambridge Assessment is the brand name of the University of Cambridge Local Examinations Syndicate (UCLES), which is a department of the University of Cambridge.\n",
+  "questions": [
+    {
+      "question_number": "1",
+      "subquestions": [
+        {
+          "subquestion_label": "a",
+          "question_text": "The following table contains pseudocode examples. Each example may contain statements that relate to one or more of the following:\n\n- selection\n- iteration (repetition)\n- subroutine (procedure or function).\n\nComplete the table by placing one or more ticks $(\\checkmark)$ in each row.\n\n| Pseudocode example | Selection | Iteration | Subroutine |\n| :-- | :-- | :-- | :-- |\n| FOR Index $\\leftarrow 1$ TO 3 <br> IF Safe[Index] = TRUE THEN <br> Flap[Index] $\\leftarrow 0$ <br> ENDIF <br> NEXT Index |  |  |  |\n| CASE OF Compound (3) |  |  |  |\n| REPEAT UNTIL AllDone () = TRUE |  |  |  |\n| WHILE Result[3] <> FALSE |  |  |  |",
+          "question_type": "table_completion",
+          "marks": 4,
+          "answer": "| Pseudocode example | Selection | Iteration | Subroutine |\n| :-- | :-- | :-- | :-- |\n| FOR Index $\\leftarrow 1$ TO 3 <br> IF Safe[Index] = TRUE THEN <br> Flap[Index] $\\leftarrow 0$ <br> ENDIF <br> NEXT Index | $\\checkmark$ | $\\checkmark$ |  |\n| CASE OF Compound (3) | $\\checkmark$ |  | $\\checkmark$ |\n| REPEAT UNTIL AllDone () = TRUE |  | $\\checkmark$ | $\\checkmark$ |\n| WHILE Result [3] <> FALSE |  | $\\checkmark$ |  |",
+          "answer_conditions": [
+            "One mark per row",
+            "One mark for each correct tick in the table"
+          ]
+        },
+        {
+          "subquestion_label": "b",
+          "question_text": "Complete the table by giving the appropriate data type in each case.\n\n| Variable | Example data value | Data type |\n| :-- | :-- | :-- |\n| Available | TRUE |  |\n| Received | \"18/04/2021\" |  |\n| Index | 100 |  |",
+          "question_type": "short_answer",
+          "marks": 3,
+          "answer": "| Variable | Example data value | Data type |\n| :-- | :-- | :-- |\n| Available | TRUE | BOOLEAN |\n| Received | \"18/04/2021\" | STRING |\n| Index | 100 | INTEGER |",
+          "answer_conditions": [
+            "One mark per row",
+            "One mark for each correct data type"
+          ]
+        },
+        {
+          "subquestion_label": "c",
+          "question_text": "Evaluate each expression in the table by using the data values shown in part (b). Write 'ERROR' if the expression contains an error.\n\n| Expression | Evaluates to |\n| :-- | :-- |\n| Available AND NOT (Index > 100) |  |\n| Index MOD 30 |  |\n| NUM_TO_STR(Index + \"33\") |  |",
+          "question_type": "short_answer",
+          "marks": 3,
+          "answer": "| Expression | Evaluates to |\n| :-- | :-- |\n| Available AND NOT (Index > 100) | TRUE |\n| Index MOD 30 | 10 |\n| NUM_TO_STR(Index + \"33\") | ERROR |",
+          "answer_conditions": [
+            "One mark per row",
+            "One mark for each correct evaluation or 'ERROR'"
+          ]
+        }
+      ]
+    },
+    {
+      "question_number": "2",
+      "subquestions": [
+        {
+          "subquestion_label": "a",
+          "question_text": "An algorithm will:\n\n1. prompt and input a sequence of 100 integer values, one at a time\n2. sum the positive integers\n3. output the result of the sum.\n\nAssume the value zero is neither positive nor negative.\nYou must declare all variables used in the algorithm.\n\n$\t$\n$\t$\n$\t$\n$\t$\n$\t$\n$\t$\n$\t$\n$\t$\n$\t$\n$\t$\n$\t$\n$\t$\n$\t$\n$\t$\n$\t$\n$\t$",
+          "question_type": "long_answer",
+          "marks": 5,
+          "answer": "DECLARE Count, Total, NextNumber : INTEGER\nTotal $\\leftarrow 0$\nFOR Count $\\leftarrow 1$ TO 100\nOUTPUT \"Input an integer value\"\nINPUT NextNumber\nIF NextNumber > 0 THEN\nTotal $\\leftarrow$ Total + NextNumber\nENDIF\nNEXT Count\nOUTPUT Total",
+          "answer_conditions": [
+            "MP1 Declarations of all variables used",
+            "MP2 Loop for 100 iterations",
+            "MP3 Prompt and input a value in a loop and",
+            "MP4 Test for value $>0 / />=1$ in a loop",
+            "MP5 Sum the Total in a loop",
+            "MP6 Output of Total after the loop"
+          ]
+        },
+        {
+          "subquestion_label": "b",
+          "question_text": "The algorithm requires the use of basic constructs. One of these is sequence. Identify one other basic construct required by the algorithm and describe how it is used.\n\nConstruct\nUse\n$\t$\n$\t$",
+          "question_type": "short_answer",
+          "marks": 2,
+          "answer": "Construct: Iteration / Repetition\nUse: To loop through all 100 inputs // To loop 100 times",
+          "answer_conditions": [
+            "MP1 Construct: Iteration / Repetition",
+            "MP2 Use: To loop through all 100 inputs // To loop 100 times"
+          ]
+        }
+      ]
+    },
+    {
+      "question_number": "3",
+      "subquestions": [
+        {
+          "subquestion_label": "a(i)",
+          "question_text": "State why the value 0 has been selected as the null pointer.",
+          "question_type": "short_answer",
+          "marks": 1,
+          "answer": "0 is not a valid array / List index value // No $0^{\\text{th}}$ element in the array",
+          "answer_conditions": [
+            "One mark for a correct explanation"
+          ]
+        },
+        {
+          "subquestion_label": "a(ii)",
+          "question_text": "Give the range of valid values that could be assigned to variable HeadPointer.",
+          "question_type": "short_answer",
+          "marks": 1,
+          "answer": "0 to 200",
+          "answer_conditions": [
+            "One mark for the correct range"
+          ]
+        },
+        {
+          "subquestion_label": "b",
+          "question_text": "The array List will be initialised so that each node points to the following node. The last node will contain a null pointer.\n\nComplete the program flowchart to represent the algorithm for this operation.\n\n![img-1.jpeg](img-1.jpeg)",
+          "question_type": "diagram_completion",
+          "marks": 4,
+          "answer": "[Diagram: flowchart for initializing a linked list]\n\n```\n+-------+       +-------+\n| Start |------>| Index=1|\n+-------+       +-------+\n       |        /      \\\n      /          |     \n     /           |     \n+-------+  +-------+\n|  Index  |<--|Index<=200|\n|   =200?|--->|   loop   |\n+-------+  +-------+\n     |          |\n     |       +-------+\n     |------>|Index++   |\n            +-------+\n```\n\nExplanation: The flowchart initializes a linked list where each node points to the next node, and the last node points to null (0).",
+          "answer_conditions": [
+            "MP1 Use of variable as array index and initialisation to 1 / to first element of array",
+            "MP2 Loop for 199 / 200 iterations",
+            "MP3 Assign Index+1 to each pointer field in a loop",
+            "MP4 Assign 0 to $200^{\\text{th}}$ pointer field"
+          ]
+        },
+        {
+          "subquestion_label": "c",
+          "question_text": "An algorithm outputs the Data field from all nodes in the array List. The order the Data is output should be the same order it is stored in the linked list.\n\nDescribe the algorithm in four steps.\n\nDo not use pseudocode statements in your answer.\n\nStep 1\n$\t$\n$\t$\nStep 2\n$\t$\n$\t$\n$\t$\nStep 3\n$\t$\n$\t$\nStep 4\n$\t$\n$\t$",
+          "question_type": "long_answer",
+          "marks": 4,
+          "answer": "Step 1: Assign HeadPointer to ThisPointer / Current Pointer // Identify first node using headpointer\nStep 2: Loop the following until ThisPointer value is 0 (zero) / null pointer reached\nStep 3: ... Output data (field) from array element at index ThisPointer // Output data (field) of the current node / array element\nStep 4: ... Assign pointer field from current array element / index / to ThisPointer / Current Pointer // Assign pointer field from current node to ThisPointer / Current Pointer",
+          "answer_conditions": [
+            "MP1 Assign HeadPointer to ThisPointer / Current Pointer // Identify first node using headpointer",
+            "MP2 Loop the following until ThisPointer value is 0 (zero) / null pointer reached",
+            "MP3 ... Output data (field) from array element at index ThisPointer // Output data (field) of the current node / array element",
+            "MP4 ... Assign pointer field from current array element / index / to ThisPointer / Current Pointer // Assign pointer field from current node to ThisPointer / Current Pointer"
+          ]
+        }
+      ]
+    },
+    {
+      "question_number": "4",
+      "subquestions": [
+        {
+          "subquestion_label": "a",
+          "question_text": "The pseudocode algorithm to determine whether a paper should be checked is as shown. The mark for the paper is stored in variable Mark. Global variables Mark, Index, Upper and Lower are declared as integers.\n\nComplete the pseudocode.\n\nFOR Index $\\leftarrow 1$ TO\nLower $\\leftarrow$ GB[Index] - 2\nUpper $\\leftarrow$\nIF Mark AND Mark THEN\nOUTPUT \"Check this paper\"\nENDIF\nNEXT Index",
+          "question_type": "code_trace",
+          "marks": 4,
+          "answer": "FOR Index $\\leftarrow 1$ TO 5\nLower $\\leftarrow$ GB[Index] - 2\nUpper $\\leftarrow$ GB[Index] + 2 // Lower + 4\nIF Mark >= Lower AND Mark <= Upper THEN\n//IF Mark <= Upper AND Mark >= Lower THEN\nOUTPUT \"Check this paper\"\nENDIF\nNEXT Index",
+          "answer_conditions": [
+            "One mark per highlighted part",
+            "MP1 Correct loop range",
+            "MP2 Correct calculation of Lower",
+            "MP3 Correct calculation of Upper",
+            "MP4 Correct condition to check if Mark is within the range"
+          ]
+        },
+        {
+          "subquestion_label": "b(i)",
+          "question_text": "Describe how an algorithm would use the Check array to determine whether this paper should be checked.\n\n$\t$\n$\t$\n$\t$\n$\t$\n$\t$\n$\t$",
+          "question_type": "short_answer",
+          "marks": 2,
+          "answer": "MP1 Use Mark as the index to the Check array // to specify an array element\nMP2 If value of indexed element is TRUE, then the paper will need to be checked",
+          "answer_conditions": [
+            "MP1 Use Mark as the index to the Check array // to specify an array element",
+            "MP2 If value of indexed element is TRUE, then the paper will need to be checked"
+          ]
+        },
+        {
+          "subquestion_label": "b(ii)",
+          "question_text": "A procedure GBInitialise() will initialise the Check array using values from the GB array. Note it can be assumed that the maximum grade boundary value for A is 70 and the minimum value for E is 15.\n\nWrite pseudocode for the procedure.\n\n$\t$\n$\t$\n$\t$\n$\t$\n$\t$\n$\t$\n$\t$\n$\t$\n$\t$\n$\t$\n$\t$\n$\t$\n$\t$\n$\t$\n$\t$\n$\t$\n$\t$\n$\t$\n$\t$\n$\t$\n$\t$\n$\t$\n$\t$\n$\t$\n$\t$\n$\t$\n$\t$\n$\t$\n$\t$\n$\t$\n$\t$\n$\t$\n$\t$",
+          "question_type": "code_trace",
+          "marks": 6,
+          "answer": "Example:solution\nPROCEDURE GBInitialise()\nDECLARE GBIndex, GBMark, ThisIndex : INTEGER\nFOR ThisIndex $\\leftarrow 0$ TO 75\nCheck[ThisIndex] $\\leftarrow$ FALSE // initialise all values\nNEXT ThisIndex\nFOR GBIndex $\\leftarrow 1$ TO 5\nGBMark $\\leftarrow$ GB[GBIndex]\nFOR ThisIndex $\\leftarrow$ GBMark - 2 TO GBMark + 2\nCheck[ThisIndex] $\\leftarrow$ TRUE //Set GBMark $\\pm 2$ to TRUE\nNEXT ThisIndex\nNEXT GBIndex\nENDPROCEDURE",
+          "answer_conditions": [
+            "MP1 Procedure heading and ending",
+            "MP2 Initialise Check array to FALSE",
+            "MP3 Loop through GB array",
+            "MP4 Extract the GB mark",
+            "MP5 Loop for 5 elements across GBMark $\\pm 2$ // Check if within GBMark $\\pm 2$",
+            "MP6 Assign each element of Check array to TRUE"
+          ]
+        }
+      ]
+    },
+    {
+      "question_number": "5",
+      "subquestions": [
+        {
+          "subquestion_label": "a",
+          "question_text": "Complete the table by writing the name of the life cycle stage for each activity.\n\n| Activity | Name of life cycle stage |\n| :-- | :-- |\n| A compiler is used. |  |\n| A program that has been released for general use is modified |  |\n| The dry run method is used. |  |\n| The program structure is specified. |  |",
+          "question_type": "short_answer",
+          "marks": 4,
+          "answer": "| Activity | Name of life cycle stage |\n| :-- | :-- |\n| A compiler is used. | Coding |\n| A program that has been released for general use is modified | Maintenance |\n| The dry run method is used. | Testing |\n| The program structure is specified. | Design |",
+          "answer_conditions": [
+            "One mark per row",
+            "One mark for each correct life cycle stage"
+          ]
+        },
+        {
+          "subquestion_label": "b",
+          "question_text": "A software developer has written modules Test_A() and Test_B(). These have been written but contain errors. These modules are called from several places in the main program and testing of the main program (integration testing) has to stop.\n\nIdentify a method that can be used to continue testing the main program before the errors in these modules have been corrected and describe how this would work.\n\nMethod\nDescription\n\n$\t$\n$\t$\n$\t$",
+          "question_type": "short_answer",
+          "marks": 3,
+          "answer": "Method: Stub testing\nDescription: The modules Test A() and Test B()are replaced by dummy modules\n... which return a known result // An output statement is displayed when called (to check it works) // gives expected output",
+          "answer_conditions": [
+            "MP1 Stub testing",
+            "MP2 The modules Test A() and Test B()are replaced by dummy modules",
+            "MP3 ... which return a known result // An output statement is displayed when called (to check it works) // gives expected output"
+          ]
+        }
+      ]
+    },
+    {
+      "question_number": "6",
+      "subquestions": [
+        {
+          "subquestion_label": "a",
+          "question_text": "A module AdjustClock () will take an integer parameter representing a year. The module will return an integer value representing the number of the day in March on which the clocks move forward.\n\nFor example, the following line of pseudocode would assign DayNumber the value 20:\nDayNumber $\\leftarrow$ AdjustClock (2022)\n\nWrite pseudocode for the function AdjustClock (). Date functions from the insert should be used in your solution.\n\n$\t$\n$\t$\n$\t$\n$\t$\n$\t$\n$\t$\n$\t$\n$\t$\n$\t$\n$\t$\n$\t$\n$\t$\n$\t$\n$\t$\n$\t$\n$\t$",
+          "question_type": "code_trace",
+          "marks": 7,
+          "answer": "Example solution:\nFUNCTION AdjustClock(ThisYear : INTEGER) RETURNS INTEGER\nDECLARE ThisDayNumber, SundayCount : INTEGER\nDECLARE ThisDate : DATE\nThisDayNumber $\\leftarrow 0$\nSundayCount $\\leftarrow 0$\nREPEAT\nThisDayNumber $\\leftarrow$ ThisDayNumber +1\nThisDate $\\leftarrow$ SETDATE (ThisDayNumber, 3, ThisYear)\nIF DAYINDEX (ThisDate) $=1$ THEN\nSundayCount $\\leftarrow$ SundayCount +1\nENDIF\nUNTIL SundayCount $=3$\nRETURN ThisDayNumber\nENDFUNCTION",
+          "answer_conditions": [
+            "MP1 Function heading, parameter, ending and return type",
+            "MP2 Declare local integer variable that is used to create a date",
+            "MP3 Loop until $3^{\\text{rd}}$ Sunday found",
+            "MP4 Attempt to use both SETDATE () and DAYINDEX () in a loop",
+            "MP5 Correctly generate value of type DATE using SETDATE () in a loop",
+            "MP6 Test if value represents a Sunday using DAYINDEX () in a loop",
+            "MP7 Increment Sunday count in a loop and initialised correctly before loop",
+            "MP8 Return day number of third Sunday"
+          ]
+        }
+      ]
+    },
+    {
+      "question_number": "7",
+      "subquestions": [
+        {
+          "subquestion_label": "a",
+          "question_text": "Identify the stage of the program development life cycle that this discussion is part of and give a document that will be produced during this stage.\n\nStage\nDocument\n\n$\t$\n$\t$",
+          "question_type": "short_answer",
+          "marks": 2,
+          "answer": "Stage: Analysis\nDocument: A requirement specification",
+          "answer_conditions": [
+            "MP1 Analysis",
+            "MP2 Named document, examples include: A requirement specification // Definition of System Objectives // List of problems with existing system // Survey results // Feasibility study // Interview notes"
+          ]
+        },
+        {
+          "subquestion_label": "b",
+          "question_text": "The shop will give each customer a loyalty card that displays a unique customer ID as a bar code. A customer will be able to present their card each time they make a purchase. The system will scan the bar code, calculate points, and add them to the customer's total. When the customer next makes a purchase and presents their card, they will have the option to exchange points for a discount.\n\nThe designer decides that this activity will be handled by a new module. Decomposition will be used to break the problem of designing the new module down into sub-problems (sub-modules).\n\nIdentify four sub-modules that could be used in the design of the new module and describe their use.\n\nSub-module 1\nUse\n$\t$\n\nSub-module 2\nUse\n$\t$\n\nSub-module 3\nUse\n$\t$\n\nSub-module 4\nUse\n$\t$\n$\t$",
+          "question_type": "short_answer",
+          "marks": 4,
+          "answer": "Sub-module 1: ScanCard() / GetID()\nUse: Read the barcode from the loyalty card / Get the customer ID from the barcode\n\nSub-module 2: GetPoints()\nUse: Get the number of points the customer has\n\nSub-module 3: ExchangePoints() / UpdateCard()\nUse: Reduce the number of loyalty points\n\nSub-module 4: GetDiscount() / CalculateDiscount()\nUse: Calculate the discount",
+          "answer_conditions": [
+            "Identify four sub-modules and describe their use",
+            "One mark for each sub-module and its use"
+          ]
+        }
+      ]
+    },
+    {
+      "question_number": "8",
+      "subquestions": [
+        {
+          "subquestion_label": "a",
+          "question_text": "Example solution\nPROCEDURE Count(ThisPlayer : INTEGER, ThisRole : STRING)\nDECLARE Index, Num, Total : INTEGER\nNum $\\leftarrow 0$\nTotal $\\leftarrow 0$\nFOR Index $\\leftarrow 1$ TO 45\nIF Character[Index].Player = ThisPlayer AND\nCharacter[Index].Role = ThisRole THEN\nNum $\\leftarrow$ Num +1\nTotal $\\leftarrow$ Total + Character[Index].SkillLevel\nNEXT Index\nIF Num > 0 THEN\nOUTPUT \"Player \", ThisPlayer,  \" has \", Num, \" characters with the role of \", ThisRole, \" and the total skill level is \", Total\nELSE\nOUTPUT \"No characters with that role are assigned to this player\"\nENDIF\nENDPROCEDURE",
+          "question_type": "code_trace",
+          "marks": 7,
+          "answer": "Example solution\nPROCEDURE Count(ThisPlayer : INTEGER, ThisRole : STRING)\nDECLARE Index, Num, Total : INTEGER\nNum $\\leftarrow 0$\nTotal $\\leftarrow 0$\nFOR Index $\\leftarrow 1$ TO 45\nIF Character[Index].Player = ThisPlayer AND\nCharacter[Index].Role = ThisRole THEN\nNum $\\leftarrow$ Num +1\nTotal $\\leftarrow$ Total + Character[Index].SkillLevel\nNEXT Index\nIF Num > 0 THEN\nOUTPUT \"Player \", ThisPlayer,  \" has \", Num, \" characters with the role of \", ThisRole, \" and the total skill level is \", Total\nELSE\nOUTPUT \"No characters with that role are assigned to this player\"\nENDIF\nENDPROCEDURE",
+          "answer_conditions": [
+            "MP1 Initialisation of local integers for Num and Total",
+            "MP2 Loop through 45 elements",
+            "MP3 Attempt to check Player and Role fields in a loop",
+            "MP4 Correctly compare Player field with parameter in a loop",
+            "MP5 Correctly compare Role field with parameter in a loop",
+            "MP6 ... if player and role found, increment Num and sum Skill Total in a loop",
+            "MP7 Test for any matches after the loop",
+            "MP8 Both possible OUTPUT statements correctly formed following an attempt at MP6 but outputting one only"
+          ]
+        },
+        {
+          "subquestion_label": "b",
+          "question_text": "Example solution:\nPROCEDURE Restore()\nDECLARE Index : INTEGER\nDECLARE Line : STRING\nOPENFILE \"SaveFile.txt\" FOR READ\nFOR Index $\\leftarrow 1$ TO 45\nREADFILE \"SaveFile.txt\", Line\nCharacter[Index].Player $\\leftarrow$ STR_TO_NUM(Extract (Line, 1))\nCharacter[Index].Role $\\leftarrow$ Extract (Line, 2)\nCharacter[Index].Name $\\leftarrow$ Extract (Line, 3)\nCharacter[Index].Skill $\\leftarrow$ STR_TO_NUM(Extract (Line, 4))\nNEXT Index\nCLOSEFILE \"SaveFile.txt\"\nENDPROCEDURE",
+          "question_type": "code_trace",
+          "marks": 7,
+          "answer": "Example solution:\nPROCEDURE Restore()\nDECLARE Index : INTEGER\nDECLARE Line : STRING\nOPENFILE \"SaveFile.txt\" FOR READ\nFOR Index $\\leftarrow 1$ TO 45\nREADFILE \"SaveFile.txt\", Line\nCharacter[Index].Player $\\leftarrow$ STR_TO_NUM(Extract (Line, 1))\nCharacter[Index].Role $\\leftarrow$ Extract (Line, 2)\nCharacter[Index].Name $\\leftarrow$ Extract (Line, 3)\nCharacter[Index].Skill $\\leftarrow$ STR_TO_NUM(Extract (Line, 4))\nNEXT Index\nCLOSEFILE \"SaveFile.txt\"\nENDPROCEDURE",
+          "answer_conditions": [
+            "MP1 Open the file in read mode and subsequently close",
+            "MP2 Loop through 45 elements",
+            "MP3 Read a line from the file in a loop",
+            "MP4 Attempt to use Extract () in a loop",
+            "MP5 Correct use of Extract () for all fields in a loop",
+            "MP6 Use of STR_TO_NUM() on Player and Skill in a loop",
+            "MP7 Completely correct extraction and assignment of all fields in a loop"
+          ]
+        },
+        {
+          "subquestion_label": "c",
+          "question_text": "The game can last for several days and users often find that they have to close and rerun the game program many times in order to complete it.\n\nDescribe the benefit of using the file SaveFile.txt as described in part (b).\n\n$\t$\n$\t$\n$\t$\n$\t$\n$\t$\n$\t$",
+          "question_type": "short_answer",
+          "marks": 2,
+          "answer": "The Character array / character data can be saved before the program is closed\nAllowing the game to continue using the same data / from the point it was saved",
+          "answer_conditions": [
+            "MP1 The Character array / character data can be saved before the program is closed",
+            "MP2 Allowing the game to continue using the same data / from the point it was saved"
+          ]
+        }
+      ]
+    }
+  ]
+}

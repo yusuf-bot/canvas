@@ -1,0 +1,338 @@
+{
+  "subject_code": "9618",
+  "paper_code": "41",
+  "exam_session": "Summer",
+  "exam_year": "2024",
+  "context": "no insert provided",
+  "questions": [
+    {
+      "question_number": "1",
+      "subquestions": [
+        {
+          "subquestion_label": "a",
+          "question_text": "The function ReadData():\n\n- has a local array of strings that can store 45 items\n- reads each line of data and stores it in the array\n- returns the array.\n\nWrite program code for the function ReadData().",
+          "question_type": "code_trace",
+          "marks": 6,
+          "answer": "```python\ndef ReadData():\n    Colours = []\n    try:\n        File = open('Data.txt')\n        Colours = File.read().split('\\n')\n        File.close()\n        return Colours\n    except:\n        print('No file found')\n```",
+          "answer_conditions": [
+            "Function declaration (and close where appropriate)",
+            "Declaration/use of an array (with space/initialised with 45 spaces/strings)",
+            "Opening the file Data.txt for read and closing in an appropriate place",
+            "Looping through all file contents/Looping 45 times and reading each line ...",
+            "... storing all items from file into array",
+            "Returning the populated array",
+            "Exception handling with suitable try, catch and output"
+          ]
+        },
+        {
+          "subquestion_label": "b(i)",
+          "question_text": "The function FormatArray () takes an array of strings as a parameter. It concatenates the contents of the array into one string with a space between each array element. The function returns the concatenated string.\n\nWrite program code for FormatArray().",
+          "question_type": "code_trace",
+          "marks": 2,
+          "answer": "```python\ndef FormatArray(DataArray):\n    OutputText = ''\n    for x in range(0, 45):\n        OutputText = OutputText + DataArray[x] + ' '\n    return OutputText\n```",
+          "answer_conditions": [
+            "Function header (and end where appropriate) taking (min) one parameter",
+            "Looping through each parameter array element, concatenating with space and returning"
+          ]
+        },
+        {
+          "subquestion_label": "b(ii)",
+          "question_text": "The main program:\n\n- calls ReadData() and stores the returned array\n- calls FormatArray() with the returned array and outputs the returned string.\n\nWrite program code for the main program.",
+          "question_type": "code_trace",
+          "marks": 3,
+          "answer": "```python\nColours = ReadData() #string array\nprint(FormatArray(Colours))\n```",
+          "answer_conditions": [
+            "Calling ReadData() and storing returned array ...",
+            "... calling FormatArray() with returned array",
+            "Outputting return value from FormatArray()"
+          ]
+        },
+        {
+          "subquestion_label": "b(iii)",
+          "question_text": "Test your program.\n\nTake a screenshot of the output.\n\nSave your program.\n\nCopy and paste the screenshot into part 1(b)(iii) in the evidence document.",
+          "question_type": "code_trace",
+          "marks": 1,
+          "answer": "```\npage green scarlet silver bronze slate yellow orange jade lavender magenta magnolia turquoise black grey russet mango maroon mint purp\nle red pink white cream navy olive brown violet cyan amber aqua azure copper fawn fuschia gold indigo ivory mauve mulberry peach perle\nokle plum rose sage\n```",
+          "answer_conditions": [
+            "1 mark for output showing all colours in one string"
+          ]
+        },
+        {
+          "subquestion_label": "c",
+          "question_text": "The function CompareStrings():\n\n- takes two strings as parameters\n- compares each string, one character at a time, to identify which string comes first alphabetically. If the first two characters are the same, the second character of each string is compared. This continues until the two characters are different.\n\nThe function:\n\n- returns 1 if the first parameter comes before the second alphabetically\n- returns 2 if the second parameter comes before the first alphabetically.\n\nWrite program code for CompareStrings().\n\nAssume that all strings are in lower case.\n\nAssume that a difference between two strings will always be identified before the end of one string is reached.\n\nDo not use an in-built string comparison function. The strings must be compared one character at a time.\n\nSave your program.\n\nCopy and paste the program code into part 1(c) in the evidence document.",
+          "question_type": "code_trace",
+          "marks": 4,
+          "answer": "```python\ndef CompareStrings(First, Second):\n    Count = 0\n    while True:\n        if First[Count] < Second[Count]:\n            return 1\n        elif First[Count] > Second[Count]:\n            return 2\n        else:\n            Count = Count + 1\n```",
+          "answer_conditions": [
+            "Function header (and close where appropriate) taking (min) two parameters and returns a value in all cases",
+            "Looping through each character in each string parameter ...",
+            "... return 1 when first parameter < second",
+            "... return 2 when first parameter > second"
+          ]
+        },
+        {
+          "subquestion_label": "d(i)",
+          "question_text": "The function Bubble() takes an array of strings as a parameter and sorts the data into ascending alphabetical order, using a bubble sort. The bubble sort uses CompareStrings() to compare each string.\n\nThe function returns the sorted list.\n\nWrite program code for Bubble().",
+          "question_type": "code_trace",
+          "marks": 3,
+          "answer": "```python\ndef Bubble(DataArray):\n    ArrayLength = len(DataArray)\n    for x in range(ArrayLength - 1):\n        for y in range(0, ArrayLength - x - 1):\n            Result = CompareStrings(DataArray[y], DataArray[y + 1])\n            if Result == 2:\n                DataArray[y], DataArray[y + 1] = DataArray[y + 1], DataArray[y]\n    return DataArray\n```",
+          "answer_conditions": [
+            "Bubble sort function header taking array parameter and returns sorted array in all cases",
+            "Comparing strings using CompareStrings() and correctly swapping values when needed",
+            "Correct bubble sort that sorts the data correctly"
+          ]
+        },
+        {
+          "subquestion_label": "d(ii)",
+          "question_text": "Write program code to amend the main program to:\n\n- call Bubble () with the unsorted array as a parameter\n- call FormatArray () with the sorted array and output the returned string.",
+          "question_type": "code_trace",
+          "marks": 2,
+          "answer": "```python\nBubbleSorted = Bubble(Colours)\nprint(FormatArray(BubbleSorted))\n```",
+          "answer_conditions": [
+            "Calling Bubble () with array as parameter and using/storing return value",
+            "Calling FormatArray () with return value from Bubble () and outputting return value"
+          ]
+        },
+        {
+          "subquestion_label": "d(iii)",
+          "question_text": "Test your program.\n\nTake a screenshot of the output.\n\nSave your program.\n\nCopy and paste the screenshot into part 1(d)(iii) in the evidence document.",
+          "question_type": "code_trace",
+          "marks": 1,
+          "answer": "```\namber aqua azure beige black bronze brown copper cream cyan fawn fuschia gold green grey indigo ivory fade lavender magenta magnolia ma\nogo maroon mauve mint mulberry navy olive orange peach periwinkle pink plum purple red rose russet sage scarlet silver slate turquoise\nviolet white yellow\n```",
+          "answer_conditions": [
+            "1 mark for sorted data"
+          ]
+        }
+      ]
+    },
+    {
+      "question_number": "2",
+      "subquestions": [
+        {
+          "subquestion_label": "a(i)",
+          "question_text": "Write program code to declare the class Horse and its constructor.\n\nDo not declare the other methods.\n\nUse your programming language's appropriate constructor.\n\nAll attributes must be private. If you are writing in Python, include attribute declarations using comments.\n\nSave your program as Question2_N24.\n\nCopy and paste the program code into part 2(a)(i) in the evidence document.",
+          "question_type": "code_trace",
+          "marks": 4,
+          "answer": "```python\nclass Horse:\n    def __init__(self, PName, PMaxFenceHeight, PPercentageSuccess):\n        self.__Name = PName #String\n        self.__MaxFenceHeight = PMaxFenceHeight #Integer\n        self.__PercentageSuccess = PPercentageSuccess #Integer\n```",
+          "answer_conditions": [
+            "Class Horse declaration (and end where appropriate)",
+            "All 3 attributes declared as private with appropriate data types (declaration or comment)",
+            "Constructor header (and end) taking 3 parameters (constructor must be within class)",
+            "... constructor assigns parameters to attributes"
+          ]
+        },
+        {
+          "subquestion_label": "a(ii)",
+          "question_text": "The get methods GetName () and GetMaxFenceHeight() each return the relevant attribute.\n\nWrite program code for the get methods.\n\nSave your program.\n\nCopy and paste the program code into part 2(a)(ii) in the evidence document.",
+          "question_type": "code_trace",
+          "marks": 3,
+          "answer": "```python\ndef GetName(self):\n    return self.__Name\n\ndef GetMaxFenceHeight(self):\n    return self.__MaxFenceHeight\n```",
+          "answer_conditions": [
+            "1 get method header with no parameter ...",
+            "... returning correct attribute (without change)",
+            "2nd get method correct"
+          ]
+        },
+        {
+          "subquestion_label": "b(i)",
+          "question_text": "The array Horses stores objects of type Horse.\n\nThe program has two horses:\n\n- The horse named 'Beauty' can jump a maximum height of 150 cm and has a success percentage rate of $72 \\%$.\n- The horse named 'Jet' can jump a maximum height of 160 cm and has a success percentage rate of $65 \\%$.\n\nWrite program code to:\n\n- declare the array, Horses, local to the main program with space for two Horse objects\n- store the two horses described in the array\n- output the name of both Horse objects from the array.\n\nSave your program.\n\nCopy and paste the program code into part 2(b)(i) in the evidence document.",
+          "question_type": "code_trace",
+          "marks": 5,
+          "answer": "```python\nHorses = []\nHorses.append(Horse('Beauty', 150, 72))\nHorses.append(Horse('Jet', 160, 65))\nprint(Horses[0].GetName())\nprint(Horses[1].GetName())\n```",
+          "answer_conditions": [
+            "Instantiating one object of type Horse with correct data ...",
+            "... and storing in first element of a 1D array Horses",
+            "Instantiating second object of type Horse with correct data and storing in second index of the array",
+            "Outputting name of both horse objects from array ...",
+            "... using GetName ()"
+          ]
+        },
+        {
+          "subquestion_label": "b(ii)",
+          "question_text": "Test your program.\n\nTake a screenshot of the output.\n\nSave your program.\n\nCopy and paste the screenshot into part 2(b)(ii) in the evidence document.",
+          "question_type": "code_trace",
+          "marks": 1,
+          "answer": "```\nBeauty\nJet\n```",
+          "answer_conditions": [
+            "1 mark for both names output:"
+          ]
+        },
+        {
+          "subquestion_label": "c(i)",
+          "question_text": "Write program code to declare the class Fence, its constructor and get methods.\n\nUse your programming language's appropriate constructor.\n\nAll attributes must be private.\n\nIf you are writing in Python, include attribute declarations using comments.\n\n# Save your program.\n\nCopy and paste the program code into part 2(c)(i) in the evidence document.",
+          "question_type": "code_trace",
+          "marks": 4,
+          "answer": "```python\nclass Fence:\n    def __init__(self, PHeight, PRisk):\n        self.__Height = PHeight #integer\n        self.__Risk = PRisk #integer\n    \n    def GetHeight(self):\n        return self.__Height\n    \n    def GetRisk(self):\n        return self.__Risk\n```",
+          "answer_conditions": [
+            "Class Fence header (and end where appropriate) with no inheritance",
+            "Height and Risk private with integer data type",
+            "Constructor taking 2 parameters and storing in attributes (constructor must be within class)",
+            "2 get methods (no parameter) returning correct attributes (within class)"
+          ]
+        },
+        {
+          "subquestion_label": "c(ii)",
+          "question_text": "The array Course stores four Fence objects. The user inputs the height and risk for each fence, and these are validated before each fence is created.\n\nAmend the main program to:\n\n- declare the local array Course\n- take as input the data for four fences from the user\n- loop the input until both the height and risk are valid for each fence\n- create an instance of Fence for each of the four valid fences and store each instance in the array.\n\nSave your program.\n\nCopy and paste the program code into part 2(c)(ii) in the evidence document.",
+          "question_type": "code_trace",
+          "marks": 5,
+          "answer": "```python\nCourse = []\nfor x in range(0, 4):\n    Valid = False\n    while Valid == False:\n        Height = int(input('Enter the height in cm'))\n        if (Height >= 70 and Height <= 180):\n            Valid = True\n    Valid = False\n    while Valid == False:\n        Risk = int(input('Enter the risk between 1 (easy) and 5 (hard)'))\n        if (Risk >= 1 and Risk <= 5):\n            Valid = True\n    Course.append(Fence(Height, Risk))\n```",
+          "answer_conditions": [
+            "Declaration/use of array Course of type Fence (with at least 4 elements)",
+            "Taking Height and Risk as input four times and store/use",
+            "Instantiating a Fence object for each set of valid input values and storing in array",
+            "Taking each height as input until it is between 70 and 180 (inclusive)",
+            "Taking each risk as input until it is between 1 and 5 (inclusive)"
+          ]
+        },
+        {
+          "subquestion_label": "d",
+          "question_text": "Write program code for Success ().\n\nSave your program.\n\nCopy and paste the program code into part 2(d) in the evidence document.",
+          "question_type": "code_trace",
+          "marks": 5,
+          "answer": "```python\ndef Success(self, Height, Risk):\n    if Height > self.__MaxFenceHeight:\n        return self.__PercentageSuccess * 0.2\n    else:\n        if Risk == 1:\n            return self.__PercentageSuccess\n        elif Risk == 2:\n            return self.__PercentageSuccess * 0.9\n        elif Risk == 3:\n            return self.__PercentageSuccess * 0.8\n        elif Risk == 4:\n            return self.__PercentageSuccess * 0.7\n        else:\n            return self.__PercentageSuccess * 0.6\n```",
+          "answer_conditions": [
+            "Method header taking 2 parameters (and end where appropriate, returning real)",
+            "Checking if fence height parameter is more than max attribute for that horse, if true multiplying percentage success by 0.2",
+            "(Otherwise) selection checking risk value parameter between 1 and 5, multiplying modifier by percentage success",
+            "Returning correct value as a real number in all instances",
+            "Correct use of attributes and parameters throughout"
+          ]
+        },
+        {
+          "subquestion_label": "e(i)",
+          "question_text": "Write program code to amend the main program to:\n\n- calculate and output the chance of the first horse jumping each of the four fences without knocking each fence down\n- calculate and output the chance of the second horse jumping each of the four fences without knocking each fence down.\n\nAll outputs must have appropriate messages including the name of the horse and the fence number.\n\nAn example output for one horse jumping two fences is:\n\"The horse Fox at fence 1 has a 68\\% chance of success\nThe horse Fox at fence 2 has a $72 \\%$ chance of success\"\n\nSave your program.\n\nCopy and paste the program code into part 2(e)(i) in the evidence document.",
+          "question_type": "code_trace",
+          "marks": 3,
+          "answer": "```python\nfor y in range(0, 2):\n    for x in range(0, 4):\n        Chance = Horses[y].Success(Course[x].GetHeight(), Course[x].GetRisk())\n        print(Horses[y].GetName(), 'Fence', x + 1, 'chance of success is', Chance, '\\%')\n```",
+          "answer_conditions": [
+            "Calling Success () for each horse with the height and risk of all 4 fences ...",
+            "... using get methods for height and risk of each fence",
+            "... outputting the horse name, fence number and calculated success at fence in appropriate message"
+          ]
+        },
+        {
+          "subquestion_label": "e(ii)",
+          "question_text": "Write program code to amend the main program to:\n\n- calculate and output the average chance of success for each horse jumping over all four fences without knocking each fence down (the average is the total of values divided by the quantity of values). An example output for one horse jumping all of the fences is:\n\"The horse Fox has an average 70\\% chance of jumping over all four fences\"\n- output the name of the horse that has the highest average chance of success.\n\nYou can assume that each average will be different.\n\nAll outputs must have appropriate messages.\n\nSave your program.\n\nCopy and paste the program code into part 2(e)(ii) in the evidence document.",
+          "question_type": "code_trace",
+          "marks": 2,
+          "answer": "```python\nAverageSuccess = []\nfor y in range(0, 2):\n    Total = 0\n    for x in range(0, 4):\n        Chance = Horses[y].Success(Course[x].GetHeight(), Course[x].GetRisk())\n        print(Horses[y].GetName(), 'Fence', x + 1, 'chance of success is', Chance, '\\%')\n        Total = Total + Chance\n    Average = Total / 4\n    AverageSuccess.append(Average)\n    print(Horses[y].GetName(), 'average success rate is', Average, '\\%')\nHighest = AverageSuccess[0]\nWinner = -1\nfor x in range(1, 2):\n    if Highest < AverageSuccess[x]:\n        Winner = x\n        Highest = AverageSuccess[x]\nprint(Horses[Winner].GetName(), ' has the highest average chance of success ')\n```",
+          "answer_conditions": [
+            "Calculating average of all 4 fences for each horse and outputting in suitable message",
+            "Identifying the highest percentage of success and outputting the horse's name in an appropriate message"
+          ]
+        },
+        {
+          "subquestion_label": "e(iii)",
+          "question_text": "Test your program with the following input data for four fences:\n\n|  Height | Risk  |\n| --- | --- |\n|  152 | 5  |\n|  121 | 1  |\n|  130 | 3  |\n|  145 | 4  |\n\nTake a screenshot of the output.\n\nSave your program.\n\nCopy and paste the screenshot into part 2(e)(iii) in the evidence document.",
+          "question_type": "code_trace",
+          "marks": 2,
+          "answer": "```\nEnter the height in cm 152\nEnter the risk between 1 (easy) and 5 (hard) 5\nEnter the height in cm 121\nEnter the risk between 1 (easy) and 5 (hard) 1\nEnter the height in cm 130\nEnter the risk between 1 (easy) and 5 (hard) 3\nEnter the height in cm 145\nEnter the risk between 1 (easy) and 5 (hard) 4\nBeauty Jump 1 chance of success is 14.4\\%\nBeauty Jump 2 chance of success is $72 \\%$\nBeauty Jump 3 chance of success is $57.6 \\%$\nBeauty Jump 4 chance of success is $50.4 \\%$\nBeauty average success rate is $48.6 \\%$\nJet Jump 1 chance of success is $39.0 \\%$\nJet Jump 2 chance of success is $65 \\%$\nJet Jump 3 chance of success is $52.0 \\%$\nJet Jump 4 chance of success is $45.5 \\%$\nJet average success rate is $50.375 \\%$\nJet has the best chance of winning\n```",
+          "answer_conditions": [
+            "Outputting showing correct input values for all fences, and correct chance for each horse on each jump",
+            "Outputs of average chance of each horse and horse name with highest average"
+          ]
+        }
+      ]
+    },
+    {
+      "question_number": "3",
+      "subquestions": [
+        {
+          "subquestion_label": "a",
+          "question_text": "Write program code for the main program to declare and initialise LinkedList, FirstNode and FirstEmpty.\n\nSave your program as Question3_N24.\n\nCopy and paste the program code into part 3(a) in the evidence document.",
+          "question_type": "code_trace",
+          "marks": 2,
+          "answer": "```python\nLinkedList = [] #global\nFirstNode = -1\nFirstEmpty = 0\nfor x in range(0, 19):\n    LinkedList.append([-1, x + 1])\nLinkedList[19][0] = -1\nLinkedList[19][1] = -1\n```",
+          "answer_conditions": [
+            "LinkedList declared as 2D array with (min) $20 \\times 2$ elements (Integer) with all data initialised to -1 , all nodes linked correctly",
+            "(Global) FirstNode (Int) initialised as -1 and (global) FirstEmpty (Int) initialised as 0"
+          ]
+        },
+        {
+          "subquestion_label": "b",
+          "question_text": "The procedure InsertData() takes five positive integers as input from the user and inserts these into the linked list.\n\nEach data item is inserted at the front of the linked list.\n\nThe table shows the steps to follow depending on the state of the linked list:\n\n| Linked list state | Steps |\n| :--: | :-- |\n| not full | insert the data in the index pointed to by FirstEmpty <br> change the pointer to the index pointed to by FirstNode <br> change the values of FirstNode and FirstEmpty |\n| full | end the procedure |\n\nAny node that is at the end of the linked list has a pointer of -1 .\n\nWrite program code for InsertData().\n\nSave your program.\n\nCopy and paste the program code into part 3(b) in the evidence document.",
+          "question_type": "code_trace",
+          "marks": 6,
+          "answer": "```python\ndef InsertData():\n    global LinkedList\n    global FirstNode\n    global FirstEmpty\n    for _ in range(5):\n        if FirstEmpty != -1:\n            nextEmpty = LinkedList[FirstEmpty][1]\n            LinkedList[FirstEmpty][0] = int(input('Value: '))\n            LinkedList[FirstEmpty][1] = FirstNode\n            FirstNode = FirstEmpty\n            FirstEmpty = nextEmpty\n```",
+          "answer_conditions": [
+            "Procedure header (and end) taking (min) 5 data items as input from the user",
+            "Checking if linked list is full (FirstEmpty = -1) ...",
+            "...ending procedure/loop/not doing anything further",
+            "(otherwise) LinkedList[FirstEmpty, 0] = data input",
+            "LinkedList[FirstEmpty, 1] = FirstNode",
+            "FirstNode = FirstEmpty",
+            "FirstEmpty = LinkedList[FirstEmpty, 1] before any update to FirstEmpty 's pointer"
+          ]
+        },
+        {
+          "subquestion_label": "c(i)",
+          "question_text": "The procedure OutputLinkedList() outputs the data in the linked list in order by following the pointers from FirstNode.\n\nWrite program code for OutputLinkedList().\n\nSave your program.\n\nCopy and paste the program code into part 3(c)(i) in the evidence document.",
+          "question_type": "code_trace",
+          "marks": 2,
+          "answer": "```python\ndef OutputLinkedList():\n    global LinkedList\n    global FirstNode\n    global FirstEmpty\n    CurrentPointer = FirstNode\n    Flag = True\n    while Flag:\n        print(LinkedList[CurrentPointer][0])\n        CurrentPointer = LinkedList[CurrentPointer][1]\n        if CurrentPointer == -1:\n            Flag = False\n```",
+          "answer_conditions": [
+            "Procedure header (and end) starting with node at index FirstNode and outputting data LinkedList[FirstNode,0]",
+            "Following pointers until end reached and outputting data for each node"
+          ]
+        },
+        {
+          "subquestion_label": "c(ii)",
+          "question_text": "Amend the main program to call InsertData() and then OutputLinkedList().\n\nSave your program.\n\nCopy and paste the program code into part 3(c)(ii) in the evidence document.",
+          "question_type": "code_trace",
+          "marks": 1,
+          "answer": "```python\nInsertData()\nOutputLinkedList()\n```",
+          "answer_conditions": [
+            "1 mark for calling InsertData() then OutputLinkedList()"
+          ]
+        },
+        {
+          "subquestion_label": "c(iii)",
+          "question_text": "Test your program with the test data:\n$5 \\quad 1 \\quad 2 \\quad 3 \\quad 8$\n\nTake a screenshot of the output.\n\nSave your program.\n\nCopy and paste the screenshot into part 3(c)(iii) in the evidence document.",
+          "question_type": "code_trace",
+          "marks": 1,
+          "answer": "```\n8 3 2 1 5\n```",
+          "answer_conditions": [
+            "1 mark for inputs of 51238 and output of 83215"
+          ]
+        },
+        {
+          "subquestion_label": "d(i)",
+          "question_text": "The procedure RemoveData() removes a node from the linked list.\n\nThe procedure takes the data item to be removed from the linked list as a parameter.\n\nThe procedure checks each node in the linked list, starting with the node FirstNode, until it finds the node to be removed. This node is added to the empty list, and pointers are changed as appropriate. The procedure only removes the first occurrence of the parameter.\n\nAssume that the data item being removed is in the linked list.\n\nWrite program code for RemoveData().\n\nSave your program.\n\nCopy and paste the program code into part 3(d)(i) in the evidence document.",
+          "question_type": "code_trace",
+          "marks": 5,
+          "answer": "```python\ndef RemoveData(ItemToRemove):\n    global LinkedList\n    global FirstNode\n    global FirstEmpty\n    if LinkedList[FirstNode][0] == ItemToRemove:\n        NewFirst = LinkedList[FirstNode][1]\n        LinkedList[FirstNode][1] = FirstEmpty\n        FirstEmpty = FirstNode\n        FirstNode = NewFirst\n    else:\n        if FirstNode != -1:\n            CurrentPointer = FirstNode\n            PreviousNode = -1\n            while (ItemToRemove != LinkedList[CurrentPointer][0] and CurrentPointer != -1):\n                PreviousNode = CurrentPointer\n                CurrentPointer = LinkedList[CurrentPointer][1]\n            if ItemToRemove == LinkedList[CurrentPointer][0]:\n                LinkedList[PreviousNode][1] = LinkedList[CurrentPointer][1]\n                LinkedList[CurrentPointer][0] = -1\n                LinkedList[CurrentPointer][1] = FirstEmpty\n                FirstEmpty = CurrentPointer\n```",
+          "answer_conditions": [
+            "Procedure header (and end) with parameter",
+            "Checking data in FirstNode against parameter ...",
+            "(if found) updating FirstNode to LinkedList[FirstNode, 1]",
+            "(Otherwise) following pointers in loop/recursive call ...",
+            "...comparing to data to remove each time",
+            "... storing previous pointer through each loop...",
+            "... when found, updating previous pointer to found node's pointer",
+            "Adding deleted node to end of/start of empty list (and updating FirstEmpty if needed)"
+          ]
+        },
+        {
+          "subquestion_label": "d(ii)",
+          "question_text": "Amend the main program to:\n\n- call RemoveData() with the parameter 5\n- output the word \"After\"\n- call OutputLinkedList().\n\nSave your program.\n\nCopy and paste the program code into part 3(d)(ii) in the evidence document.",
+          "question_type": "code_trace",
+          "marks": 1,
+          "answer": "```python\nLinkedList = []\nFirstNode = -1\nFirstEmpty = 0\nfor x in range(0, 19):\n    LinkedList.append([-1, x + 1])\nInsertData()\nOutputLinkedList()\nRemoveData(5)\nprint('After')\nOutputLinkedList()\n```",
+          "answer_conditions": [
+            "1 mark for calling RemoveData (5), outputting \"After\", calling OutputLinkedList ()"
+          ]
+        },
+        {
+          "subquestion_label": "d(iii)",
+          "question_text": "Test your program with both sets of given test data:\n\nTest data set 1: 56895\n\nTest data set 2: 107856\n\nTake a screenshot of each output.\n\nSave your program.\n\nCopy and paste the screenshot(s) into part 3(d)(iii) in the evidence document.",
+          "question_type": "code_trace",
+          "marks": 1,
+          "answer": "```\nTest data 1:\nInput 56895\n'After'\nOutput: 9865\n\nTest data 2:\nInput 107856\n'After'\nOutput: 68710\n```",
+          "answer_conditions": [
+            "1 mark for input and output."
+          ]
+        }
+      ]
+    }
+  ]
+}

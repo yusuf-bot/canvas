@@ -1,0 +1,253 @@
+{
+  "subject_code": "9618",
+  "paper_code": "4",
+  "exam_session": "Summer",
+  "exam_year": "2023",
+  "context": "no insert provided",
+  "questions": [
+    {
+      "question_number": "1",
+      "subquestions": [
+        {
+          "subquestion_label": "a(i)",
+          "question_text": "Write program code for the function IterativeVowels().",
+          "question_type": "code_trace",
+          "marks": 5,
+          "answer": "```java\npublic static Integer IterativeVowels(String Value) {\n    Integer Total = 0;\n    Integer LengthString = Value.length();\n    char FirstCharacter;\n    for(Integer X = 0; X < LengthString; X++) {\n        FirstCharacter = Value.charAt(0);\n        if(FirstCharacter == 'a' || FirstCharacter == 'e' || FirstCharacter =='i' || FirstCharacter == 'o' || FirstCharacter == 'u') {\n            Total++;\n        }\n        Value = Value.substring(1, Value.length());\n    }\n    return Total;\n}\n```",
+          "answer_conditions": [
+            "Function header (and end where appropriate) taking one string parameter",
+            "Calculating length of parameter string",
+            "Looping correct number of times",
+            "Checking the first character against all vowels",
+            "Accessing the remainder of the string",
+            "Remainder of function correct with nothing extra i.e. totalling, must match structure of given algorithm"
+          ]
+        },
+        {
+          "subquestion_label": "a(ii)",
+          "question_text": "Write program code to call the function IterativeVowels() with the parameter \"house\" from the main program.\n\nOutput the return value.",
+          "question_type": "code_trace",
+          "marks": 2,
+          "answer": "```java\nSystem.out.println(IterativeVowels(\"house\"));\n```",
+          "answer_conditions": [
+            "Calling the function with \"house\"",
+            "Outputting the return value"
+          ]
+        },
+        {
+          "subquestion_label": "a(iii)",
+          "question_text": "Test your program.\n\nTake a screenshot of the output.",
+          "question_type": "calculation",
+          "marks": 1,
+          "answer": "Screenshot showing output 2",
+          "answer_conditions": [
+            "Screenshot outputting 2"
+          ]
+        },
+        {
+          "subquestion_label": "b(i)",
+          "question_text": "Rewrite the function IterativeVowels() as a recursive function with the identifier RecursiveVowels().",
+          "question_type": "code_trace",
+          "marks": 6,
+          "answer": "```java\npublic static Integer RecursiveVowels(String Value) {\n    char FirstCharacter;\n    if(Value.length() == 0) {\n        return 0;\n    } else {\n        FirstCharacter = Value.charAt(0);\n        if(FirstCharacter == 'a' || FirstCharacter == 'e' || FirstCharacter == 'i' || FirstCharacter == 'o' || FirstCharacter == 'u') {\n            return 1 + RecursiveVowels(Value.substring(1, Value.length()));\n        } else {\n            return RecursiveVowels(Value.substring(1, Value.length()));\n        }\n    }\n}\n```",
+          "answer_conditions": [
+            "Recursive call",
+            "Function header (and end where appropriate) taking string parameter (returning integer where given)",
+            "Base case checking (length is 0) and returning 0",
+            "Extracting first character and checking if a vowel ...",
+            "... if it is a vowel, returning 1 + recursive call with 1 less character",
+            "... if not a vowel, return recursive call with 1 less character"
+          ]
+        },
+        {
+          "subquestion_label": "b(ii)",
+          "question_text": "Write program code to call the function RecursiveVowels() with the parameter \"imagine\" from the main program.\n\nOutput the return value.",
+          "question_type": "code_trace",
+          "marks": 1,
+          "answer": "```java\nSystem.out.println(RecursiveVowels(\"imagine\"));\n```",
+          "answer_conditions": [
+            "Calling recursive function with \"imagine\" and outputting return value"
+          ]
+        },
+        {
+          "subquestion_label": "b(iii)",
+          "question_text": "Test your program.\n\nTake a screenshot of the output.",
+          "question_type": "calculation",
+          "marks": 1,
+          "answer": "Screenshot showing output 4",
+          "answer_conditions": [
+            "Screenshot showing 4"
+          ]
+        }
+      ]
+    },
+    {
+      "question_number": "2",
+      "subquestions": [
+        {
+          "subquestion_label": "a(i)",
+          "question_text": "Write program code to declare:\n\n- Queue - a global array with space to store 50 IDs of type string\n- HeadPointer - a global variable to point to the first element in the queue, initialised to -1\n- TailPointer - a global variable to point to the next available space in the queue, initialised to 0 .",
+          "question_type": "code_trace",
+          "marks": 2,
+          "answer": "```java\npublic static String[] Queue = new String[50];\npublic static Integer HeadPointer = -1;\npublic static Integer TailPointer = 0;\n```",
+          "answer_conditions": [
+            "(Global) array with identifier Queue with (minimum) 50 elements (of type string)",
+            "TailPointer (integer) initialised to 0, HeadPointer (integer) initialised to -1"
+          ]
+        },
+        {
+          "subquestion_label": "a(ii)",
+          "question_text": "Write program code for Enqueue ().",
+          "question_type": "code_trace",
+          "marks": 4,
+          "answer": "```java\npublic static void Enqueue(String Value) {\n    if(TailPointer == 50) {\n        System.out.println(\"Queue full\");\n    } else {\n        Queue[TailPointer] = Value;\n        TailPointer++;\n        if(HeadPointer == -1) {\n            HeadPointer = 0;\n        }\n    }\n}\n```",
+          "answer_conditions": [
+            "Procedure Enqueue () header (and close where appropriate) with one (string) parameter",
+            "Checking if queue is full and outputting suitable message",
+            "... otherwise inserting parameter to next space",
+            "... increment TailPointer and set HeadPointer to 0 if first item (HeadPointer = -1)"
+          ]
+        },
+        {
+          "subquestion_label": "a(iii)",
+          "question_text": "Write program code for Dequeue ().",
+          "question_type": "code_trace",
+          "marks": 4,
+          "answer": "```java\npublic static String Dequeue() {\n    if(HeadPointer == -1 || HeadPointer == TailPointer) {\n        System.out.println(\"Queue empty\");\n        return \"Empty\";\n    } else {\n        HeadPointer ++;\n        return Queue [HeadPointer - 1];\n    }\n}\n```",
+          "answer_conditions": [
+            "Function header Dequeue() (and end where appropriate) with no parameter",
+            "Checking if empty ...",
+            "... outputting suitable message and returning \"Empty\"",
+            "(otherwise) incrementing head pointer",
+            "returning next value (at head pointer before incrementing)"
+          ]
+        }
+      ]
+    },
+    {
+      "question_number": "3",
+      "subquestions": [
+        {
+          "subquestion_label": "a(i)",
+          "question_text": "Write program code to declare the class Character and its constructor.",
+          "question_type": "code_trace",
+          "marks": 4,
+          "answer": "```java\nclass Character {\n    private Integer XPosition;\n    private Integer YPosition;\n    private String Name;\n    public Character(Integer XPositionP, Integer YPositionP, String NameP) {\n        XPosition = XPositionP;\n        YPosition = YPositionP;\n        Name = NameP;\n    }\n}\n```",
+          "answer_conditions": [
+            "Class header (and end where appropriate)",
+            "Three attributes with correct names and data types",
+            "Constructor header (and end where appropriate) with 3 parameters",
+            "Within constructor, assigns attributes to parameters"
+          ]
+        },
+        {
+          "subquestion_label": "a(ii)",
+          "question_text": "Write program code for the get methods.",
+          "question_type": "code_trace",
+          "marks": 3,
+          "answer": "```java\npublic Integer GetXPosition() {\n    return XPosition;\n}\npublic Integer GetYPosition() {\n    return YPosition;\n}\n```",
+          "answer_conditions": [
+            "1 get header with no parameter ...",
+            "... returning correct value",
+            "2nd get method"
+          ]
+        },
+        {
+          "subquestion_label": "a(iii)",
+          "question_text": "Write program code for the set methods.",
+          "question_type": "code_trace",
+          "marks": 4,
+          "answer": "```java\npublic void SetXPosition(Integer Value) {\n    XPosition = XPosition + Value;\n    if(XPosition > 10000) {\n        XPosition = 10000;\n    } else if(XPosition < 0) {\n        XPosition = 0;\n    }\n}\npublic void SetYPosition(Integer Value) {\n    YPosition = YPosition + Value;\n    if(YPosition > 10000) {\n        YPosition = 10000;\n    } else if(YPosition < 0) {\n        YPosition = 0;\n    }\n}\n```",
+          "answer_conditions": [
+            "1 set method header (and end where appropriate) with parameter ...",
+            "... adding parameter to X/Y Position attribute and storing in the X/Y attribute",
+            "If (resulting value is) more than 10000 limiting to 10000 and if less than 0 limiting to 0",
+            "Second correct set method"
+          ]
+        },
+        {
+          "subquestion_label": "a(iv)",
+          "question_text": "Write program code for Move ( ).",
+          "question_type": "code_trace",
+          "marks": 4,
+          "answer": "```java\npublic void Move(String Direction) {\n    if(Direction.equals(\"up\")) {\n        SetYPosition(10);\n    } else if(Direction.equals(\"down\")) {\n        SetYPosition(-10);\n    } else if(Direction.equals(\"right\")) {\n        SetXPosition(10);\n    } else {\n        SetXPosition(-10);\n    }\n}\n```",
+          "answer_conditions": [
+            "Method header with (string) parameter",
+            "Checking parameter for direction ...",
+            "... using SetYPosition() and SetXPosition() correctly ...",
+            "... with correct parameters"
+          ]
+        },
+        {
+          "subquestion_label": "b",
+          "question_text": "Write program code to declare a new instance of Character with the identifier Jack.",
+          "question_type": "code_trace",
+          "marks": 2,
+          "answer": "```java\nCharacter Jack = new Character(50, 50, \"Jack\");\n```",
+          "answer_conditions": [
+            "New instance of Character created with identifier Jack ...",
+            "... correct constructor called and values passed"
+          ]
+        },
+        {
+          "subquestion_label": "c(i)",
+          "question_text": "Write program code to declare the class BikeCharacter and its constructor.",
+          "question_type": "code_trace",
+          "marks": 3,
+          "answer": "```java\nclass BikeCharacter extends Character {\n    public BikeCharacter(Integer XPositionP, Integer YPositionP, String NameP) {\n        super(XPositionP, YPositionP, NameP);\n    }\n}\n```",
+          "answer_conditions": [
+            "Class header inheriting from Character",
+            "Constructor taking all 3 parameters ...",
+            "... calling parent/super constructor with the 3 parameters"
+          ]
+        },
+        {
+          "subquestion_label": "c(ii)",
+          "question_text": "Write program code for Move ( ).",
+          "question_type": "code_trace",
+          "marks": 2,
+          "answer": "```java\npublic void Move(String Direction) {\n    if(Direction.equals(\"up\")) {\n        super.SetYPosition(20);\n    } else if(Direction.equals(\"down\")) {\n        super.SetYPosition(-20);\n    } else if(Direction.equals(\"right\")) {\n        super.SetXPosition(20);\n    } else {\n        super.SetXPosition(-20);\n    }\n}\n```",
+          "answer_conditions": [
+            "Method header taking parameter and overriding parent/super Move ()",
+            "Correct changes to method to update values by 20"
+          ]
+        },
+        {
+          "subquestion_label": "d",
+          "question_text": "Write program code to declare a new instance of BikeCharacter with the identifier Karla.",
+          "question_type": "code_trace",
+          "marks": 1,
+          "answer": "```java\nBikeCharacter Karla = new BikeCharacter(100, 50, \"Karla\");\n```",
+          "answer_conditions": [
+            "Declaring new BikeCharacter with correct values"
+          ]
+        },
+        {
+          "subquestion_label": "e(i)",
+          "question_text": "Write program code to:\n\n- take as input which of the two characters the user would like to move\n- take as input the direction the user would like the character to move\n- call the appropriate method to move the character\n- output the character's new X and Y position in an appropriate format, for example:\n\"Karla's new position is X=100 Y=200 \"\nAll inputs require appropriate prompts and must be validated.",
+          "question_type": "code_trace",
+          "marks": 5,
+          "answer": "```java\nSystem.out.println(\"Would you like to move Jack or Karla?\");\nCharacterToMove = (scanner.nextLine()).toLowerCase();\nwhile(CharacterToMove.equals(\"jack\") == false && CharacterToMove.equals(\"karla\") == false) {\n    System.out.println(\"Invalid, try again\");\n    CharacterToMove = (scanner.nextLine()).toLowerCase();\n}\nSystem.out.println(\"Which direction? Up, down, left or right?\");\nDirection = (scanner.nextLine()).toLowerCase();\nwhile(Direction.equals(\"up\") == false && Direction.equals(\"down\") == false && Direction.equals(\"left\") == false && Direction.equals(\"right\")== false) {\n    System.out.println(\"Invalid, try again\");\n    Direction = (scanner.nextLine()).toLowerCase();\n}\nif(CharacterToMove.equals(\"jack\")) {\n    Jack.Move(Direction);\n    System.out.println(\"Jack's new position is X = \" + Jack.GetXPosition() + \" Y = \" + Jack.GetYPosition());\n} else {\n    Karla.Move(Direction);\n    System.out.println(\"Karla's new position is \" + Karla.GetXPosition() + \" \" + Karla.GetYPosition());\n}\n```",
+          "answer_conditions": [
+            "Reading in both values (character and direction) with appropriate prompts",
+            "Character name is validated as e.g. Jack/Karla, and direction is validated as e.g. up/down/left/right",
+            "Calling Move () for the character input, with direction input as a parameter",
+            "Outputting character's new X and Y position in a suitable format ...",
+            "... using get methods"
+          ]
+        },
+        {
+          "subquestion_label": "e(ii)",
+          "question_text": "Test your program twice with the following inputs.\n\nTest 1: jack right\nTest 2: karla down\nTake a screenshot of the output.",
+          "question_type": "calculation",
+          "marks": 2,
+          "answer": "Screenshot showing:\nTest 1: Jack's new position is X=60 Y=50\nTest 2: Karla's new position is X=100 Y=30",
+          "answer_conditions": [
+            "Test 1: Jack's new position is X=60 Y=50",
+            "Test 2: Karla's new position is X=100 Y=30"
+          ]
+        }
+      ]
+    }
+  ]
+}

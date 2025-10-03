@@ -1,0 +1,330 @@
+{
+  "subject_code": "9618",
+  "paper_code": "42",
+  "exam_session": "November",
+  "exam_year": "2023",
+  "context": "no insert provided",
+  "questions": [
+    {
+      "question_number": "1",
+      "subquestions": [
+        {
+          "subquestion_label": "a(i)",
+          "question_text": "Write program code to declare two 1D global arrays: StackVowel and StackConsonant. Each array needs to store up to 100 letters. The index of the first element in each array is 0 . If you are writing in Python, include declarations using comments. Save your program as Question1_N23. Copy and paste the program code into part 1(a)(i) in the evidence document.",
+          "question_type": "code_trace",
+          "marks": 2,
+          "answer": "```java\npublic static String[] StackVowel = new String[100];\npublic static String[] StackConsonant = new String[100];\n```\n\n```vb.net\nDim StackVowel (0 To 99) As Char\nDim StackConsonant (0 To 99) As Char\n```\n\n```python\nStackVowel = [] #string 100\nStackConsonant = [] #string 100\n```",
+          "answer_conditions": [
+            "Two arrays with correct identifiers of type string/character",
+            "Each has 100 elements"
+          ]
+        },
+        {
+          "subquestion_label": "a(ii)",
+          "question_text": "The global variable VowelTop is a pointer that stores the index of the next free space in StackVowel. The global variable ConsonantTop is a pointer that stores the index of the next free space in StackConsonant. VowelTop and ConsonantTop are both initialised to 0. Write program code to declare and initialise the two variables. If you are writing in Python, include declarations using comments. Save your program. Copy and paste the program code into part 1(a)(ii) in the evidence document.",
+          "question_type": "code_trace",
+          "marks": 1,
+          "answer": "```java\npublic static Integer VowelTop = 0;\npublic static Integer ConsonantTop = 0;\n```\n\n```vb.net\nDim VowelTop As Integer = 0\nDim ConsonantTop As Integer = 0\n```\n\n```python\nglobal VowelTop #integer\nglobal ConsonantTop #integer\n#main\nVowelTop = 0\nConsonantTop = 0\n```",
+          "answer_conditions": [
+            "Declaring both variables as type integer global and initialised to 0"
+          ]
+        },
+        {
+          "subquestion_label": "b(i)",
+          "question_text": "The procedure PushData() takes one letter as a parameter. If the parameter is a vowel, it is pushed onto StackVowel and the relevant pointer updated. If the stack is full, a suitable message is output. If the parameter is a consonant, it is pushed onto StackConsonant and the relevant pointer updated. If the stack is full, a suitable message is output. You do not need to validate that the parameter is a letter. Write program code for PushData(). Save your program. Copy and paste the program code into part 1(b)(i) in the evidence document.",
+          "question_type": "code_trace",
+          "marks": 6,
+          "answer": "```java\npublic static void PushData(String Letter) {\nif(Letter.equals(\"a\") || Letter.equals(\"e\") || Letter.equals(\"i\") || Letter.equals(\"o\")\n|| Letter.equals(\"u\")) {\nif(VowelTop == 100){\nSystem.out.println(\"Vowel stack full\");\n}else{\nStackVowel[VowelTop] = Letter;\nVowelTop++;\n}\n}else{\nif(ConsonantTop == 100) {\nSystem.out.println(\"Consonant stack full\");\n}else{\nStackConsonant[ConsonantTop] = Letter;\nConsonantTop++;\n}\n}\n}\n```\n\n```vb.net\nSub PushData (Letter As Char)\nIf Letter = \"a\" Or Letter = \"e\" Or Letter = \"i\" Or Letter = \"o\" Or Letter = \"u\" Then\nIf VowelTop = 100 Then\nConsole.WriteLine(\"Vowel stack full\")\nElse\nStackVowel(VowelTop) = Letter\nVowelTop += 1\nEnd If\nElse\nIf ConsonantTop = 100 Then\nConsole.WriteLine(\"Consonant stack full\")\nElse\nStackConsonant(ConsonantTop) = Letter\nConsonantTop += 1\nEnd If\nEnd If\nEnd Sub\n```\n\n```python\ndef PushData (Letter):\nglobal VowelTop\nglobal ConsonantTop\nif Letter == \"a\" or Letter == \"e\" or Letter == \"i\" or Letter == \"o\" or Letter == \"u\":\nif VowelTop == 100:\nprint(\"Vowel stack full\")\nelse:\nStackVowel.append (Letter)\nVowelTop = VowelTop + 1\nelse:\nif ConsonantTop == 100:\nprint(\"Consonant stack full\")\nelse:\nStackConsonant.append (Letter)\nConsonantTop = ConsonantTop + 1\n```",
+          "answer_conditions": [
+            "Procedure PushData () heading (and end where appropriate) taking one parameter",
+            "Checking if parameter is a (lowercase) vowel ...",
+            "... checking if StackVowel is full and outputting suitable message",
+            "... otherwise inserting parameter in next position",
+            "... incrementing VowelTop",
+            "Repeated for Consonant"
+          ]
+        },
+        {
+          "subquestion_label": "b(ii)",
+          "question_text": "The file StackData.txt stores 100 lower-case letters. The procedure ReadData() reads each letter from the file and uses PushData() to push each letter onto its appropriate stack. Use appropriate exception handling if the file does not exist. Write program code for ReadData(). Save your program. Copy and paste the program code into part 1(b)(ii) in the evidence document.",
+          "question_type": "code_trace",
+          "marks": 6,
+          "answer": "```java\nprivate static void ReadData(){\ntry{\nScanner Scanner1 = new Scanner(new File(\"StackData.txt\"));\nwhile(Scanner1.hasNextLine()) {\nPushData(Scanner1.next());\n}\nScanner1.close();\n}catch(FileNotFoundException ex) {\nSystem.out.println(\"No file found\");\n}\n}\n```\n\n```vb.net\nSub ReadData()\nTry\nDim DataReader As New System.IO.StreamReader(\"StackData.txt\")\nDo Until DataReader.EndOfStream\nPushData(DataReader.ReadLine())\nLoop\nDataReader.Close()\nCatch ex As Exception\nConsole.WriteLine(\"File not found\")\nEnd Try\nEnd Sub\n```\n\n```python\ndef ReadData():\ntry:\nDataFile = open(\"StackData.txt\")\nfor Line in DataFile:\nPushData(Line.strip())\nDataFile.close()\nexcept:\nprint(\"File not found\")\n```",
+          "answer_conditions": [
+            "Procedure header ReadData() with no parameter",
+            "Opening StackData.txt to read and closing file",
+            "Looping until EOF // Looping 100 times",
+            "Read each item from the file",
+            "Calling PushData() with each value as parameter",
+            "Appropriate exception handling with suitable output"
+          ]
+        },
+        {
+          "subquestion_label": "c",
+          "question_text": "The function PopVowel() removes and returns the data at the top of StackVowel and updates the relevant pointer(s). The function PopConsonant () removes and returns the data from the top of StackConsonant and updates the relevant pointer(s). If either stack is empty, the string \"No data\" must be returned. Write program code to declare PopVowel () and PopConsonant(). Save your program. Copy and paste the program code into part 1(c) in the evidence document.",
+          "question_type": "code_trace",
+          "marks": 5,
+          "answer": "```java\npublic static String PopVowel() {\nString DataToReturn = \"\";\nif(VowelTop - 1 >= 0) {\nVowelTop --;\nDataToReturn = StackVowel[VowelTop];\nreturn DataToReturn;\n}else{\nreturn \"No data\";\n}\n}\n\npublic static String PopConsonant() {\nString DataToReturn = \"\";\nif(ConsonantTop - 1 >= 0) {\nConsonantTop--;\nDataToReturn = StackConsonant[ConsonantTop];\nreturn DataToReturn;\n}else{\nreturn \"No data\";\n}\n}\n```\n\n```vb.net\nFunction PopVowel()\nIf VowelTop - 1 >= 0 Then\nVowelTop -= 1\nDim DataToReturn As Char = StackVowel(VowelTop)\nReturn DataToReturn\nElse\nReturn \"No data\"\nEnd If\nEnd Function\n\nFunction PopConsonant()\nIf ConsonantTop - 1 >= 0 Then\nConsonantTop -= 1\nDim DataToReturn As Char = StackConsonant(ConsonantTop)\nReturn DataToReturn\nElse\nReturn \"No data\"\nEnd If\nEnd Function\n```\n\n```python\ndef PopVowel():\nglobal VowelTop\nglobal ConsonantTop\nif VowelTop - 1 >= 0:\nVowelTop = VowelTop - 1\nDataToReturn = StackVowel[VowelTop]\ndel StackVowel[-1]\nreturn DataToReturn\nelse:\nreturn \"No data\"\n\n\ndef PopConsonant():\nglobal VowelTop\nglobal ConsonantTop\nif ConsonantTop - 1 >= 0:\nConsonantTop = ConsonantTop - 1\nDataToReturn = StackConsonant[ConsonantTop]\ndel StackConsonant[-1]\nreturn DataToReturn\nelse:\nreturn \"No data\"\n```",
+          "answer_conditions": [
+            "One function header with no parameter",
+            "Checking if stack is empty and returning \"No data\"",
+            "...otherwise, decrementing correct pointer",
+            "Returning value at top of stack",
+            "2nd function fully correct"
+          ]
+        },
+        {
+          "subquestion_label": "d(i)",
+          "question_text": "The program first needs to call ReadData () and then: 1. prompt the user to input their choice of vowel or consonant 2. take, as input, the user's choice 3. depending on the user's choice, call PopVowel () or PopConsonant () and store the return value. The three steps are repeated until 5 letters have been successfully returned and stored. If either stack is empty at any stage, an appropriate message must be output. Once 5 letters have been successfully returned and stored, they are output on one line, for example: abyti Write program code for the main program. Save your program. Copy and paste the program code into part 1(d)(i) in the evidence document.",
+          "question_type": "code_trace",
+          "marks": 6,
+          "answer": "```java\npublic static void main(String args[]){\nVowelTop = 0;\nConsonantTop = 0;\nReadData();\nString Letters = \"\";\nBoolean Flag = false;\nString Choice = \"\";\nString DataAccessed = \"\";\nfor(Integer X = 0; X < 5; X++) {\nFlag = false;\nwhile(Flag == false) {\nSystem.out.println(\"Vowel or Consonant\");\nScanner scanner = new Scanner(System.in);\nChoice = (scanner.nextLine()).toLowerCase();\nif(Choice.equals(\"vowel\")) {\nDataAccessed = PopVowel();\nif(DataAccessed.equals(\"No data\") == false) {\nLetters = Letters + DataAccessed;\nFlag = true;\n}else{\nSystem.out.println(\"No vowels left\");\n}\n}else if(Choice.equals(\"consonant\")) {\nDataAccessed = PopConsonant();\nif(DataAccessed.equals(\"No data\") == false)\nLetters = Letters + DataAccessed;\nFlag = true;\n}\nelse{\nSystem.out.println(\"No consonants left\");\n}\n}\n}\n}\nSystem.out.println(Letters);\n}\n```\n\n```vb.net\nSub Main(args As String())\nVowelTop = 0\nConsonantTop = 0\nReadData()\nDim Letters As String = \"\"\nDim Flag As Boolean = False\nDim Choice As String\nDim DataAccessed As String\nFor x = 0 To 4\nFlag = False\nWhile Flag = False\nConsole.WriteLine(\"Vowel or Consonant?\")\nChoice = Console.ReadLine().ToLower()\nIf Choice = \"vowel\" Then\nDataAccessed = PopVowel()\nIf DataAccessed <> \"No data\" Then\nLetters = Letters & DataAccessed\nFlag = True\nElse\nConsole.WriteLine(\"No vowels left\")\nEnd If\nElseIf Choice = \"consonant\" Then\nDataAccessed = PopConsonant()\nIf DataAccessed <> \"No data\" Then\nLetters = Letters & DataAccessed\nFlag = True\nElse\nConsole.WriteLine(\"No consonants left\")\nEnd If\nEnd If\nEnd While\nNext\nConsole.WriteLine(Letters)\nEnd Sub\n```\n\n```python\n#main\nVowelTop = 0\nConsonantTop = 0\nReadData()\nLetters = \"\"\nFlag = False\nfor x in range(0, 5):\nFlag = False\nwhile Flag == False:\nChoice = input(\"Vowel or Consonant\").lower()\nif Choice == \"vowel\":\nDataAccessed = PopVowel()\nif DataAccessed != \"No data\":\nLetters = Letters + DataAccessed\nFlag = True\nelse:\nprint(\"No vowels left\")\nelif Choice == \"consonant\":\nDataAccessed = PopConsonant()\nif DataAccessed != \"No data\":\nLetters = Letters + DataAccessed\nFlag = True\nelse:\nprint(\"No consonants left\")\nprint(Letters)\n```",
+          "answer_conditions": [
+            "Calling ReadData()",
+            "Looping until 5 letters successfully accessed",
+            "Prompt and read in input of choice ...",
+            "... if vowel is input calling PopVowel () and if consonant calling PopConsonant () ...",
+            "... storing return values",
+            "Outputting appropriate message if no vowels and if no consonants (stacks full) within loop",
+            "Outputting the five returned letters on one line"
+          ]
+        },
+        {
+          "subquestion_label": "d(ii)",
+          "question_text": "Test your program with the following inputs: vowel consonant consonant vowel vowel Take a screenshot of the output. Save your program. Copy and paste the screenshot into part 1(d)(ii) in the evidence document.",
+          "question_type": "calculation",
+          "marks": 1,
+          "answer": "One mark showing input in order vowel, cons, cons, vowel, vowel. Output is then utxoe e.g. Vowel or Consonantvowel Vowel or Consonantconsonant Vowel or Consonantconsonant Vowel or Consonantvowel Vowel or Consonantvowel utxoe",
+          "answer_conditions": [
+            "One mark showing input in order vowel, cons, cons, vowel, vowel. Output is then utxoe"
+          ]
+        }
+      ]
+    },
+    {
+      "question_number": "2",
+      "subquestions": [
+        {
+          "subquestion_label": "a(i)",
+          "question_text": "Write program code for IterativeCalculate(). Save your program as Question2_N23. Copy and paste the program code into part 2(a)(i) in the evidence document.",
+          "question_type": "code_trace",
+          "marks": 5,
+          "answer": "```java\npublic static Integer IterativeCalculate(Integer Number) {\nInteger ToFind = Number;\nInteger Total = 0;\nwhile(Number != 0) {\nif(ToFind % Number == 0) {\nTotal += Number;\n}\nNumber--;\n}\nreturn Total;\n}\n```\n\n```vb.net\nFunction IterativeCalculate(Number As Integer)\nDim total As Integer = 0\nDim ToFind As Integer = Number\nWhile Number <> 0\nIf ToFind Mod Number = 0 Then\ntotal = total + Number\nEnd If\nNumber = Number - 1\nEnd While\nReturn total\nEnd Function\n```\n\n```python\ndef IterativeCalculate(Number):\nTotal = 0\nToFind = Number\nwhile Number != 0:\nif ToFind % Number == 0:\nTotal = Total + Number\nNumber = Number - 1\nreturn Total\n```",
+          "answer_conditions": [
+            "Function header with parameter",
+            "Correct loop",
+            "Modulus calculation",
+            "Return of correct value at correct place",
+            "Remainder of function correct"
+          ]
+        },
+        {
+          "subquestion_label": "a(ii)",
+          "question_text": "Write program code to call IterativeCalculate() with 10 as the parameter and output the return value. Save your program. Copy and paste the program code into part 2(a)(ii) in the evidence document.",
+          "question_type": "code_trace",
+          "marks": 2,
+          "answer": "```java\nSystem.out.println(IterativeCalculate(10));\n```\n\n```vb.net\nSub Main(args As String())\nConsole.WriteLine(IterativeCalculate(10))\nEnd Sub\n```\n\n```python\nprint(IterativeCalculate(10))\n```",
+          "answer_conditions": [
+            "Calling IterativeCalculate(10)",
+            "Outputting return value"
+          ]
+        },
+        {
+          "subquestion_label": "a(iii)",
+          "question_text": "Test your program. Take a screenshot of the output. Save your program. Copy and paste the screenshot into part 2(a)(iii) in the evidence document.",
+          "question_type": "calculation",
+          "marks": 1,
+          "answer": "One mark for screenshot showing 18",
+          "answer_conditions": [
+            "One mark for screenshot showing 18"
+          ]
+        },
+        {
+          "subquestion_label": "b(i)",
+          "question_text": "Write program code for RecursiveValue(). Save your program. Copy and paste the program code into part 2(b)(i) in the evidence document.",
+          "question_type": "code_trace",
+          "marks": 7,
+          "answer": "```java\npublic static Integer RecursiveValue(Integer Number, Integer ToFind) {\nif(Number == 0) {\nreturn 0 ;\n}else {\nif(ToFind % Number == 0) {\nreturn Number + RecursiveValue(Number - 1, ToFind);\n}else {\nreturn RecursiveValue(Number - 1, ToFind);\n}\n}\n}\n```\n\n```vb.net\nFunction RecursiveValue(Number As Integer, ToFind As Integer)\nIf Number = 0 Then\nReturn 0\nElse\nIf ToFind Mod Number = 0 Then\nReturn Number + RecursiveValue(Number - 1, ToFind)\nElse\nReturn RecursiveValue(Number - 1, ToFind)\nEnd If\nEnd If\nEnd Function\n```\n\n```python\ndef RecursiveValue(Number, ToFind):\nif Number == 0 :\nreturn 0\nelse:\nif ToFind % Number == 0 :\nreturn Number + RecursiveValue(Number - 1, ToFind)\nelse:\nreturn RecursiveValue(Number - 1, ToFind)\n```",
+          "answer_conditions": [
+            "One mark for each gap (5)",
+            "One mark for recursive calls both accurate and in correct places",
+            "One mark for remainder of function with nothing superfluous"
+          ]
+        },
+        {
+          "subquestion_label": "b(ii)",
+          "question_text": "Write program code to call RecursiveValue() with 50 as the first parameter and 50 as the second parameter and output the return value. Save your program. Copy and paste the program code into part 2(b)(ii) in the evidence document.",
+          "question_type": "code_trace",
+          "marks": 1,
+          "answer": "```java\nSystem.out.println(RecursiveValue(50,50));\n```\n\n```vb.net\nConsole.WriteLine(RecursiveValue(50,50))\n```\n\n```python\nprint(RecursiveValue(50,50))\n```",
+          "answer_conditions": [
+            "One mark for calling RecursiveValue (50,50) and outputting return value"
+          ]
+        },
+        {
+          "subquestion_label": "b(iii)",
+          "question_text": "Test your program. Take a screenshot of the output. Save your program. Copy and paste the screenshot into part 2(b)(iii) in the evidence document.",
+          "question_type": "calculation",
+          "marks": 1,
+          "answer": "One mark for screenshot showing 93",
+          "answer_conditions": [
+            "One mark for screenshot showing 93"
+          ]
+        }
+      ]
+    },
+    {
+      "question_number": "3",
+      "subquestions": [
+        {
+          "subquestion_label": "a(i)",
+          "question_text": "Write program code to declare the class Character and its constructor. Do not declare the other methods. Use your programming language's appropriate constructor. If you are writing in Python, include attribute declarations using comments. Save your program as Question3_N23. Copy and paste the program code into part 3(a)(i) in the evidence document.",
+          "question_type": "code_trace",
+          "marks": 5,
+          "answer": "```java\nclass Character{\nprivate String CharacterName;\nprivate Date DateOfBirth;\nprivate Double Intelligence;\nprivate Integer Speed;\npublic Character(String CName, Date DBirth, Double Intell, Integer SpeedP) {\nCharacterName = CName;\nDateOfBirth = DBirth;\nIntelligence = Intell;\nSpeed = SpeedP;\n}\n}\n```\n\n```vb.net\nClass Character\nPrivate CharacterName As String\nPrivate DateOfBirth As Date\nPrivate Intelligence As Single\nPrivate Speed As Integer\nSub New(CName, DBirth, Intell, SpeedP)\nCharacterName = CName\nDateOfBirth = DBirth\nIntelligence = Intell\nSpeed = SpeedP\nEnd Sub\nEnd Class\n```\n\n```python\nclass Character:\n#self. CharacterName string\n#self. DateOfBirth date\n#self. Intelligence real\n#self. Speed integer\n\ndef __init__(self, CName, DBirth, Intell, SpeedP):\nself. CharacterName = CName\nself. DateOfBirth = DBirth\nself. Intelligence = Intell\nself. Speed = SpeedP\n```",
+          "answer_conditions": [
+            "Class declaration",
+            "Four attributes with correct data types",
+            "Constructor header",
+            "... taking 4 parameters",
+            "Setting attributes to parameter values"
+          ]
+        },
+        {
+          "subquestion_label": "a(ii)",
+          "question_text": "The get methods GetIntelligence () and GetName () return the attribute values. Write program code for the methods GetIntelligence () and GetName (). Save your program. Copy and paste the program code into part 3(a)(ii) in the evidence document.",
+          "question_type": "code_trace",
+          "marks": 3,
+          "answer": "```java\npublic Double GetIntelligence() {\nreturn Intelligence;\n}\n\npublic String GetName() {\nreturn CharacterName;\n}\n```\n\n```vb.net\nFunction GetIntelligence()\nReturn Intelligence\nEnd Function\n\nFunction GetName()\nReturn CharacterName\nEnd Function\n```\n\n```python\ndef GetIntelligence(self):\nreturn self.__Intelligence\n\n\ndef GetName(self):\nreturn self.__CharacterName\n```",
+          "answer_conditions": [
+            "1 get header with no parameter ...",
+            "... returning attribute",
+            "Second correct get method"
+          ]
+        },
+        {
+          "subquestion_label": "a(iii)",
+          "question_text": "The method SetIntelligence () assigns the value of its parameter to the attribute. Write program code for SetIntelligence (). Save your program. Copy and paste the program code into part 3(a)(iii) in the evidence document.",
+          "question_type": "code_trace",
+          "marks": 2,
+          "answer": "```java\npublic void SetIntelligence(Double NewValue) {\nIntelligence = NewValue;\n}\n```\n\n```vb.net\nSub SetIntelligence(NewValue)\nIntelligence = NewValue\nEnd Sub+\n```\n\n```python\ndef SetIntelligence(self, NewValue):\nself.__Intelligence = NewValue\n```",
+          "answer_conditions": [
+            "Set header with 1 parameter ...",
+            "... assigns parameter to attribute"
+          ]
+        },
+        {
+          "subquestion_label": "a(iv)",
+          "question_text": "The method Learn () increases the current value of Intelligence by 10%. Write program code for Learn (). Save your program. Copy and paste the program code into part 3(a)(iv) in the evidence document.",
+          "question_type": "code_trace",
+          "marks": 1,
+          "answer": "```java\npublic void Learn(){\nIntelligence = Intelligence * 1.1;\n}\n```\n\n```vb.net\nOverridable Sub Learn()\nIntelligence = Intelligence * 1.1\nEnd Sub\n```\n\n```python\ndef Learn(self):\nself.__Intelligence = self.__Intelligence * 1.1\n```",
+          "answer_conditions": [
+            "One mark for method multiplying attribute intelligence by 1.1 (or equivalent) and storing in attribute."
+          ]
+        },
+        {
+          "subquestion_label": "a(v)",
+          "question_text": "The method ReturnAge () calculates and returns the age of the character in years as an integer. Write program code for the method ReturnAge (). Save your program. Copy and paste the program code into part 3(a)(v) in the evidence document.",
+          "question_type": "code_trace",
+          "marks": 2,
+          "answer": "```java\npublic Integer ReturnAge() {\nreturn 2023 - DateOfBirth.getYear();\n}\n```\n\n```vb.net\nFunction ReturnAge()\nReturn DateDiff(DateInterval.Year, DateOfBirth, #01/01/2023#)\nEnd Function\n```\n\n```python\ndef ReturnAge(self):\nreturn 2023 - self.__DateOfBirth.year\n```",
+          "answer_conditions": [
+            "Method (function) header (and end where appropriate) no parameter, returning a calculated age",
+            "Extracting attribute year of birth from date and subtracting from 2023"
+          ]
+        },
+        {
+          "subquestion_label": "b(i)",
+          "question_text": "Write program code to create a new instance of Character with the identifier FirstCharacter. The name of the character is Royal, date of birth is 1 January 2019, intelligence is 70 and speed is 30 . Save your program. Copy and paste the program code into part 3(b)(i) in the evidence document.",
+          "question_type": "code_trace",
+          "marks": 2,
+          "answer": "```java\nCharacter FirstCharacter = new Character(\"Royal\", new Date(2019,01,01), 70.0, 30);\n```\n\n```vb.net\nSub Main(args As String())\nDim FirstCharacter As Character\nFirstCharacter = New Character(\"Royal\", #1/1/2019#, 70, 30)\nEnd Sub\n```\n\n```python\nFirstCharacter = Character(\"Royal\", datetime.datetime(2019, 1, 1), 70, 30)\n```",
+          "answer_conditions": [
+            "Creating new instance of Character with identifier FirstCharacter ...",
+            "... sending correct values as parameters"
+          ]
+        },
+        {
+          "subquestion_label": "b(ii)",
+          "question_text": "Write program code to call the method Learn () for the character created in part 3(b)(i). Output the name, age and intelligence of the character in an appropriate message. Save your program. Copy and paste the program code into part 3(b)(ii) in the evidence document.",
+          "question_type": "code_trace",
+          "marks": 3,
+          "answer": "```java\nFirstCharacter.Learn();\nSystem.out.println(FirstCharacter.GetName() + \" is \" + FirstCharacter.ReturnAge() + \" years old and has intelligence \" + FirstCharacter.GetIntelligence());\n```\n\n```vb.net\nFirstCharacter.Learn()\nConsole.WriteLine(FirstCharacter.GetName() & \" is \" & FirstCharacter.ReturnAge() &\n\" years old and has intelligence \" & FirstCharacter.GetIntelligence())\n```\n\n```python\nFirstCharacter.Learn()\nprint(FirstCharacter.GetName(), \"is\", FirstCharacter.ReturnAge(), \"years old and has intelligence\",  FirstCharacter.GetIntelligence())\n```",
+          "answer_conditions": [
+            "Calling Learn () for FirstCharacter",
+            "Calling ReturnAge () and outputting return value",
+            "Outputting name and intelligence using gets with suitable message"
+          ]
+        },
+        {
+          "subquestion_label": "b(iii)",
+          "question_text": "Test your program. Take a screenshot of the output. Save your program. Copy and paste the screenshot into part 3(b)(iii) in the evidence document.",
+          "question_type": "calculation",
+          "marks": 1,
+          "answer": "One mark for screenshot with Royal, 4 years, 77 intelligence e.g. Royal is 4 years old and has intelligence 77.0",
+          "answer_conditions": [
+            "One mark for screenshot with Royal, 4 years, 77 intelligence"
+          ]
+        },
+        {
+          "subquestion_label": "c(i)",
+          "question_text": "Write program code to declare the class MagicCharacter and its constructor. Do not declare the other method. Use your programming language's appropriate constructor. Save your program. Copy and paste the program code into part 3(c)(i) in the evidence document.",
+          "question_type": "code_trace",
+          "marks": 5,
+          "answer": "```java\nclass MagicCharacter extends Character{\nprivate String Element;\npublic MagicCharacter(String ElementP, String CName, Date DBirth, Double Intell, Integer SpeedP) {\nsuper(CName, DBirth, Intell, SpeedP);\nElement = ElementP;\n}\n}\n```\n\n```vb.net\nClass MagicCharacter\nInherits Character\nPrivate Element As String\nSub New(ElementP, CName, DBirth, Intell, SpeedP)\nMyBase.New(CName, DBirth, Intell, SpeedP)\nElement = ElementP\nEnd Sub\nEnd Class\n```\n\n```python\nclass MagicCharacter(Character):\n#self. Element String\n\ndef __init__(self, ElementP, CName, DBirth, Intell, SpeedP):\nsuper().__init__(CName, DBirth, Intell, SpeedP)\nself.__Element = ElementP\n```",
+          "answer_conditions": [
+            "Class header inheriting from Character",
+            "Declaring Element as string",
+            "Constructor header taking 5 parameters ...",
+            "... calling parent constructor with the 4 parameters",
+            "... assigning parameter to Element"
+          ]
+        },
+        {
+          "subquestion_label": "c(ii)",
+          "question_text": "The method Learn( ) overrides the parent class method and increases the intelligence depending on the character's element. Write program code for Learn( ). Save your program. Copy and paste the program code into part 3(c)(ii) in the evidence document.",
+          "question_type": "code_trace",
+          "marks": 3,
+          "answer": "```java\npublic void Learn(){\nif(Element.equals(\"fire\") || Element.equals(\"water\")) {\nsuper.SetIntelligence(super.GetIntelligence() * 1.2);\n}else if(Element.equals(\"earth\")) {\nsuper.SetIntelligence(super.GetIntelligence() * 1.3);\n}else{\nsuper.SetIntelligence(super.GetIntelligence() * 1.1);\n}\n}\n```\n\n```vb.net\nOverrides Sub Learn()\nIf Element = \"fire\" Or Element = \"water\" Then\nSetIntelligence(GetIntelligence() * 1.2)\nElseIf Element = \"earth\" Then\nSetIntelligence(GetIntelligence() * 1.3)\nElse\nSetIntelligence(GetIntelligence() * 1.1)\nEnd If\nEnd Sub\n```\n\n```python\ndef Learn(self):\nif(self. Element == \"fire\" or self. Element == \"water\"):\nsuper().SetIntelligence(super().GetIntelligence() * 1.2)\nelif self. Element == \"earth\":\nsuper().SetIntelligence(super().GetIntelligence() * 1.3)\nelse:\nsuper().SetIntelligence(super().GetIntelligence() * 1.1)\n```",
+          "answer_conditions": [
+            "Method header overriding parent method but no parameters",
+            "Checking element value ...",
+            "... correct calculations with attribute intelligence and storing"
+          ]
+        },
+        {
+          "subquestion_label": "d(i)",
+          "question_text": "Write program code to create a new instance of MagicCharacter with the identifier FirstMagic. The name of the character is Light, date of birth is 3 March 2018, intelligence is 75, speed is 22 and element is fire. Save your program. Copy and paste the program code into part 3(d)(i) in the evidence document.",
+          "question_type": "code_trace",
+          "marks": 2,
+          "answer": "```java\nMagicCharacter FirstMagic = new MagicCharacter(\"fire\", \"Light\", new Date(2018,03,03), 75.0, 22);\n```\n\n```vb.net\nDim FirstMagic As MagicCharacter\nFirstMagic = New MagicCharacter(\"fire\", \"Light\", #3/3/2018#, 75, 22)\n```\n\n```python\nFirstMagic = MagicCharacter(\"fire\", \"Light\", datetime.datetime(2018, 3, 3), 75, 22)\n```",
+          "answer_conditions": [
+            "Declaring MagicCharacter with identifier FirstMagic ...",
+            "... with correct parameters"
+          ]
+        },
+        {
+          "subquestion_label": "d(ii)",
+          "question_text": "Write program code to call the method Learn () for the character created in part 3(d)(i). Output the name, age and intelligence of the character in an appropriate message. Save your program. Copy and paste the program code into part 3(d)(ii) in the evidence document.",
+          "question_type": "code_trace",
+          "marks": 1,
+          "answer": "```java\nFirstMagic.Learn();\nSystem.out.println(FirstMagic.GetName() + \" is \" + FirstMagic.ReturnAge() + \" years old and has intelligence \" + FirstMagic.GetIntelligence());\n```\n\n```vb.net\nFirstMagic.Learn()\nConsole.WriteLine(FirstMagic.GetName() & \" is \" & FirstMagic.ReturnAge() & \" years old and has intelligence \" & FirstMagic.GetIntelligence())\n```\n\n```python\nFirstMagic.Learn()\nprint(FirstMagic.GetName(), \"is\", FirstMagic.ReturnAge(), \"years old and has intelligence\", FirstMagic.GetIntelligence())\n```",
+          "answer_conditions": [
+            "One mark for calling Learn () for FirstMagic and outputting all required data in appropriate message using gets."
+          ]
+        },
+        {
+          "subquestion_label": "d(iii)",
+          "question_text": "Test your program. Take a screenshot of the output. Save your program. Copy and paste the screenshot into part 3(d)(iii) in the evidence document.",
+          "question_type": "calculation",
+          "marks": 1,
+          "answer": "One mark for screenshot e.g. Light is 5 years old and has intelligence 90.0",
+          "answer_conditions": [
+            "One mark for screenshot e.g. Light is 5 years old and has intelligence 90.0"
+          ]
+        }
+      ]
+    }
+  ]
+}

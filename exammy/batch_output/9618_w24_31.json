@@ -1,0 +1,422 @@
+{
+  "subject_code": "COMPSCI",
+  "paper_code": "COMPSCI 3",
+  "exam_session": "Winter",
+  "exam_year": "2024",
+  "context": "no context required",
+  "questions": [
+    {
+      "question_number": "1",
+      "subquestions": [
+        {
+          "subquestion_label": "a",
+          "question_text": "Numbers are stored in a computer using binary floating-point representation with:\n\n- 10 bits for the mantissa\n- 6 bits for the exponent\n- two's complement form for both the mantissa and the exponent.\n\n(a) Calculate the normalised binary floating-point representation of +201.125 in this system.\n\nShow your working.",
+          "question_type": "calculation",
+          "marks": 3,
+          "answer": "One mark per mark point (Max 1)\n- correct answer\n- statement regarding number losing precision/rounding error\nOne mark per mark point for working (Max 2)\n- number converted to binary $201.125=11001001.001$\n// $128+64+8+1+0.125 / 1 / 8$ seen\n- use of the exponent e.g. moving the binary point 8 places $/ \\times 2^{8}$.\nMantissa\nExponent",
+          "answer_conditions": [
+            "correct answer",
+            "statement regarding number losing precision/rounding error",
+            "number converted to binary $201.125=11001001.001$",
+            "use of the exponent e.g. moving the binary point 8 places $/ \\times 2^{8}$.",
+            "Mantissa",
+            "Exponent"
+          ]
+        },
+        {
+          "subquestion_label": "b",
+          "question_text": "(b) Calculate the denary value of the given normalised binary floating-point number.\n\nShow your working.",
+          "question_type": "calculation",
+          "marks": 3,
+          "answer": "One mark per mark point (Max 2)\n- application of exponent to go from 1.010110011 to 101011.0011 // \\times 2^{5} / / movement of binary point 5 places seen\n- $-32+8+2+1+.125+.0625 / /-32+8+2+1+1 / 8+1 / 16$ seen\n$/ /-1+1 / 4+1 / 16+1 / 32+1 / 256+1 / 512 / /-1+{ }^{179} / 512 / /-{ }^{333} / 512$\nOne mark for correct answer (Max 1)\n- $-20.8125 / /$\n$-20^{13} / 16$",
+          "answer_conditions": [
+            "application of exponent to go from 1.010110011 to 101011.0011 // \\times 2^{5} / / movement of binary point 5 places seen",
+            "-32+8+2+1+.125+.0625 / /-32+8+2+1+1 / 8+1 / 16$ seen",
+            "$/ /-1+1 / 4+1 / 16+1 / 32+1 / 256+1 / 512 / /-1+{ }^{179} / 512 / /-{ }^{333} / 512$",
+            "correct answer",
+            "-20.8125 / /",
+            "-20^{13} / 16$"
+          ]
+        }
+      ]
+    },
+    {
+      "question_number": "2",
+      "subquestions": [
+        {
+          "subquestion_label": "",
+          "question_text": "Reduced Instruction Set Computers (RISC) is a type of processor.\nIdentify four features of a RISC processor.",
+          "question_type": "short_answer",
+          "marks": 4,
+          "answer": "One mark per mark point (Max 4)\nMP1 low number of instruction formats //low number of instruction sets\nMP2 uses single-clock cycle instructions\nMP3 uses fixed length instructions\nMP4 uses many general-purpose registers\nMP5 works well with pipelining\nMP6 hard-wired control unit\nMP7 makes extensive use of RAM\nMP8 uses a low number of addressing modes\nMP9 the design emphasis is on the software.",
+          "answer_conditions": [
+            "low number of instruction formats //low number of instruction sets",
+            "uses single-clock cycle instructions",
+            "uses fixed length instructions",
+            "uses many general-purpose registers",
+            "works well with pipelining",
+            "hard-wired control unit",
+            "makes extensive use of RAM",
+            "uses a low number of addressing modes",
+            "the design emphasis is on the software."
+          ]
+        }
+      ]
+    },
+    {
+      "question_number": "3",
+      "subquestions": [
+        {
+          "subquestion_label": "a",
+          "question_text": "(a) Describe circuit switching as a method of data transmission.",
+          "question_type": "long_answer",
+          "marks": 3,
+          "answer": "One mark per mark point (Max 3)\nMP1 A dedicated circuit / channel is required\nMP2 The circuit is established before the transmission begins\nMP3 The circuit lasts for the whole of the transmission // The circuit is closed at the end of the transmission\nMP4 Data travels in a continuous stream along the same route\nMP5 Transmission is usually bidirectional.",
+          "answer_conditions": [
+            "A dedicated circuit / channel is required",
+            "The circuit is established before the transmission begins",
+            "The circuit lasts for the whole of the transmission // The circuit is closed at the end of the transmission",
+            "Data travels in a continuous stream along the same route",
+            "Transmission is usually bidirectional."
+          ]
+        },
+        {
+          "subquestion_label": "b",
+          "question_text": "(b) State one benefit and one drawback of circuit switching as a method of data transmission.",
+          "question_type": "short_answer",
+          "marks": 2,
+          "answer": "One mark for a benefit (Max 1)\nMP1 No need for data to be reassembled // data / frames arrive in the same order in which they were sent\nMP2 Suitable for real time transmission // fast data transfer rate\nMP3 The whole of the bandwidth is available\nOne mark for a drawback (Max 1)\nMP4 No other transmission can use the same circuit when it is in use // Bandwidth can be wasted as it cannot be used by other messages\nMP5 Not secure // Can be intercepted as all data travelling along the same route\nMP6 If there is a problem with the route the transmission ends // No other route is available without first doing the setup\nMP7 The circuit is always there whether or not it's being used\nMP8 Can take time to set up before transmission starts.",
+          "answer_conditions": [
+            "No need for data to be reassembled // data / frames arrive in the same order in which they were sent",
+            "Suitable for real time transmission // fast data transfer rate",
+            "The whole of the bandwidth is available",
+            "No other transmission can use the same circuit when it is in use // Bandwidth can be wasted as it cannot be used by other messages",
+            "Not secure // Can be intercepted as all data travelling along the same route",
+            "If there is a problem with the route the transmission ends // No other route is available without first doing the setup",
+            "The circuit is always there whether or not it's being used",
+            "Can take time to set up before transmission starts."
+          ]
+        }
+      ]
+    },
+    {
+      "question_number": "4",
+      "subquestions": [
+        {
+          "subquestion_label": "",
+          "question_text": "The TCP/IP protocol may be viewed as a stack that contains four layers: Application, Transport, Internet, Link.\n\nDescribe how the layers of the TCP/IP protocol stack interact with each other.",
+          "question_type": "long_answer",
+          "marks": 4,
+          "answer": "One mark per mark point (Max 4)\nMP1 Each layer can only accept input from the next higher layer or the next lower layer\nMP2 There is an interface between the adjacent layers which is the only interaction between layers\nMP3 Data is added to the headers as the frames/packets pass through the layers\nMP4 The interactions are carried out by installed software\nMP5 User interaction takes place at the highest/Application layer of the stack through protocols associated with that layer of the stack\nMP6 Direct access to hardware takes place at the lowest/Link layer of the stack.",
+          "answer_conditions": [
+            "Each layer can only accept input from the next higher layer or the next lower layer",
+            "There is an interface between the adjacent layers which is the only interaction between layers",
+            "Data is added to the headers as the frames/packets pass through the layers",
+            "The interactions are carried out by installed software",
+            "User interaction takes place at the highest/Application layer of the stack through protocols associated with that layer of the stack",
+            "Direct access to hardware takes place at the lowest/Link layer of the stack."
+          ]
+        }
+      ]
+    },
+    {
+      "question_number": "5",
+      "subquestions": [
+        {
+          "subquestion_label": "a",
+          "question_text": "(a) Explain what is meant by a hashing algorithm in the context of file access.",
+          "question_type": "long_answer",
+          "marks": 3,
+          "answer": "One mark per mark point (Max 3)\nMP1 A hashing algorithm is used in direct access methods on random and sequential files\nMP2 It is a mathematical formula\nMP3 ... used to perform a calculation applied to the key field of the record being searched / stored\nMP4 The result of the calculation gives the address where the record should be found / stored.",
+          "answer_conditions": [
+            "A hashing algorithm is used in direct access methods on random and sequential files",
+            "It is a mathematical formula",
+            "... used to perform a calculation applied to the key field of the record being searched / stored",
+            "The result of the calculation gives the address where the record should be found / stored."
+          ]
+        },
+        {
+          "subquestion_label": "b",
+          "question_text": "(b) The use of a hashing algorithm can result in the same storage location being identified for more than one record.\n\nOutline two methods of overcoming this issue.",
+          "question_type": "short_answer",
+          "marks": 2,
+          "answer": "One mark per mark point (Max 2)\nMP1 The record is stored in the next free memory space after the one identified by the hashing algorithm // Use linear progression\nMP2 An overflow area is set up and the record is stored in the next free memory space in the overflow area.",
+          "answer_conditions": [
+            "The record is stored in the next free memory space after the one identified by the hashing algorithm // Use linear progression",
+            "An overflow area is set up and the record is stored in the next free memory space in the overflow area."
+          ]
+        }
+      ]
+    },
+    {
+      "question_number": "6",
+      "subquestions": [
+        {
+          "subquestion_label": "a",
+          "question_text": "(a) Describe the user-defined data type set.",
+          "question_type": "long_answer",
+          "marks": 3,
+          "answer": "One mark per mark point (Max 3)\nMP1 A set user-defined data type is a composite data type\nMP2 ... which includes a list of unordered elements\nMP3 Set theory operations, such as intersection and union, can be applied to these elements\nMP4 A set data type includes the type of data/data type it uses as part of its definition\nMP5 All the elements are of the same data type.",
+          "answer_conditions": [
+            "A set user-defined data type is a composite data type",
+            "... which includes a list of unordered elements",
+            "Set theory operations, such as intersection and union, can be applied to these elements",
+            "A set data type includes the type of data/data type it uses as part of its definition",
+            "All the elements are of the same data type."
+          ]
+        },
+        {
+          "subquestion_label": "b",
+          "question_text": "(b) Write pseudocode statements to declare the set data type, SymbolSet, to hold the following set of mathematical operators, using the variable Operators.\n\n$$  \n\\begin{aligned}  \n& \\text { + } \\quad * \\quad / \\wedge \\\\  \n& \\qquad  \n\\end{aligned}  \n$$",
+          "question_type": "code_trace",
+          "marks": 4,
+          "answer": "One mark for each mark point (Max 4)\nMP1 TYPE SymbolSet/Operators =\nMP2 SET OF CHAR\nMP3 DEFINE Operators/SymbolSet\nMP4 ('+', '-', '*', '/', '^')\nMP5 : SymbolSet/Operators\nExample answers\nTYPE SymbolSet = SET OF CHAR\nDEFINE Operators ('+', '-', '*', '/', '^') : SymbolSet\nTYPE Operators = SET OF CHAR\nDEFINE SymbolSet ('+', '-', '*', '/', '^') : Operators",
+          "answer_conditions": [
+            "TYPE SymbolSet/Operators =",
+            "SET OF CHAR",
+            "DEFINE Operators/SymbolSet",
+            "'+', '-', '*', '/', '^'",
+            ": SymbolSet/Operators",
+            "Example answers\nTYPE SymbolSet = SET OF CHAR\nDEFINE Operators ('+', '-', '*', '/', '^') : SymbolSet\nTYPE Operators = SET OF CHAR\nDEFINE SymbolSet ('+', '-', '*', '/', '^') : Operators"
+          ]
+        }
+      ]
+    },
+    {
+      "question_number": "7",
+      "subquestions": [
+        {
+          "subquestion_label": "a",
+          "question_text": "The truth table for a logic circuit is shown.\n\n| INPUT |  |  |  | OUTPUT |\n| :--: | :--: | :--: | :--: | :--: |\n| A | B | C | D | T |\n| 0 | 0 | 0 | 0 | 0 |\n| 0 | 0 | 0 | 1 | 1 |\n| 0 | 0 | 1 | 0 | 0 |\n| 0 | 0 | 1 | 1 | 1 |\n| 0 | 1 | 0 | 0 | 0 |\n| 0 | 1 | 0 | 1 | 0 |\n| 0 | 1 | 1 | 0 | 0 |\n| 0 | 1 | 1 | 1 | 0 |\n| 1 | 0 | 0 | 0 | 0 |\n| 1 | 0 | 0 | 1 | 1 |\n| 1 | 0 | 1 | 0 | 0 |\n| 1 | 0 | 1 | 1 | 1 |\n| 1 | 1 | 0 | 0 | 0 |\n| 1 | 1 | 0 | 1 | 1 |\n| 1 | 1 | 1 | 0 | 0 |\n| 1 | 1 | 1 | 1 | 1 |\n\n(a) Write the Boolean logic expression that corresponds to the given truth table as the sum-of-products.",
+          "question_type": "short_answer",
+          "marks": 3,
+          "answer": "One mark for every two correct products (Max 3)\n$(\\mathrm{T}=)$ Ä. $\\overline{\\mathrm{B}} . \\overline{\\mathrm{C}} . \\mathrm{D}+\\overline{\\mathrm{A}} . \\overline{\\mathrm{B}} . \\mathrm{C} . \\mathrm{D}+\\mathrm{A} . \\overline{\\mathrm{B}} . \\overline{\\mathrm{C}} . \\mathrm{D}+\\mathrm{A} . \\overline{\\mathrm{B}} . \\mathrm{C} . \\mathrm{D}+\\mathrm{A} . \\mathrm{B} . \\mathrm{C} . \\mathrm{D}$",
+          "answer_conditions": [
+            "Ä. $\\overline{\\mathrm{B}} . \\overline{\\mathrm{C}} . \\mathrm{D}$",
+            "\\overline{\\mathrm{A}} . \\overline{\\mathrm{B}} . \\mathrm{C} . \\mathrm{D}$",
+            "\\mathrm{A} . \\overline{\\mathrm{B}} . \\overline{\\mathrm{C}} . \\mathrm{D}$",
+            "\\mathrm{A} . \\overline{\\mathrm{B}} . \\mathrm{C} . \\mathrm{D}$",
+            "\\mathrm{A} . \\mathrm{B} . \\mathrm{C} . \\mathrm{D}"
+          ]
+        },
+        {
+          "subquestion_label": "b",
+          "question_text": "(b) Complete the Karnaugh map (K-map) for the given truth table.",
+          "question_type": "table_completion",
+          "marks": 2,
+          "answer": "Two marks if no errors present\nOne mark if one error present\n| AB |   |\n| CD | 00  |\n| 00 | 0  |\n| 01 | 1  |\n| 11 | 1  |\n| 10 | 0  |",
+          "answer_conditions": [
+            "Two marks if no errors present",
+            "One mark if one error present",
+            "| AB |   |\n| CD | 00  |\n| 00 | 0  |\n| 01 | 1  |\n| 11 | 1  |\n| 10 | 0  |"
+          ]
+        },
+        {
+          "subquestion_label": "c",
+          "question_text": "(c) Draw loop(s) around appropriate group(s) in the K-map to produce an optimal sum-of-products.",
+          "question_type": "diagram",
+          "marks": 2,
+          "answer": "One mark for each correct loop (Max 2)\n| AB |   |\n| CD | 00  |\n| 00 | 0  |\n| 01 | 1  |\n| 11 | 1  |\n| 10 | 0  |",
+          "answer_conditions": [
+            "One mark for each correct loop (Max 2)",
+            "| AB |   |\n| CD | 00  |\n| 00 | 0  |\n| 01 | 1  |\n| 11 | 1  |\n| 10 | 0  |"
+          ]
+        },
+        {
+          "subquestion_label": "d(i)",
+          "question_text": "(d) (i) Write the Boolean logic expression from your answer to part (c) as the simplified sum-of-products.",
+          "question_type": "short_answer",
+          "marks": 2,
+          "answer": "One mark for each mark point (Max 2)\n- Any correct Boolean term\n- Boolean terms and operator correct and no other terms present\n$(\\mathrm{T}=)$ A. $\\mathrm{D}+\\overline{\\mathrm{B}} . \\mathrm{D} / / \\overline{\\mathrm{B}} . \\mathrm{D} .+$ A. D",
+          "answer_conditions": [
+            "Any correct Boolean term",
+            "- Boolean terms and operator correct and no other terms present",
+            "$(\\mathrm{T}=)$ A. $\\mathrm{D}+\\overline{\\mathrm{B}} . \\mathrm{D} / / \\overline{\\mathrm{B}} . \\mathrm{D} .+$ A. D"
+          ]
+        },
+        {
+          "subquestion_label": "d(ii)",
+          "question_text": "(ii) Use Boolean algebra to write your answer to part (d)(i) in its simplest form.",
+          "question_type": "short_answer",
+          "marks": 1,
+          "answer": "One mark for simplest form (Max 1)\n$(\\mathrm{T}=)$ D. (A. $\\overline{\\mathrm{B}}$)",
+          "answer_conditions": [
+            "$(\\mathrm{T}=)$ D. (A. $\\overline{\\mathrm{B}}$)"
+          ]
+        }
+      ]
+    },
+    {
+      "question_number": "8",
+      "subquestions": [
+        {
+          "subquestion_label": "a",
+          "question_text": "(a) Describe the process of segmentation for memory management.",
+          "question_type": "long_answer",
+          "marks": 4,
+          "answer": "One mark per mark point (Max 4)\nMP1 In segmented memory, the logical / virtual address space is broken into varying sized blocks called segments / sections.\nMP2 Each segment has a name and size.\nMP3 During execution segments from logical / virtual memory are loaded into physical memory.\nMP4 The address is specified by the user\nMP5 ... it contains the segment name and offset value.\nMP6 Segments are numbered\nMP7 ... and this number is used as an index in the segment map table.\nMP8 The offset value determines the size of the segment.\nMP9 A segment map table maps logical / virtual addresses to physical addresses / contains the segment number and offset.",
+          "answer_conditions": [
+            "In segmented memory, the logical / virtual address space is broken into varying sized blocks called segments / sections.",
+            "Each segment has a name and size.",
+            "During execution segments from logical / virtual memory are loaded into physical memory.",
+            "The address is specified by the user",
+            "... it contains the segment name and offset value.",
+            "Segments are numbered",
+            "... and this number is used as an index in the segment map table.",
+            "The offset value determines the size of the segment.",
+            "A segment map table maps logical / virtual addresses to physical addresses / contains the segment number and offset."
+          ]
+        },
+        {
+          "subquestion_label": "b",
+          "question_text": "(b) Explain what is meant by disk thrashing.",
+          "question_type": "long_answer",
+          "marks": 3,
+          "answer": "One mark per mark point (Max 3)\nMP1 Disk thrashing is a problem that may occur when virtual memory is being used.\nMP2 As the main memory fills up, more and more pages need to be swapped in and out of virtual memory.\nMP3 This swapping leads to a very high rate of hard disk access / excessive disk head movements.\nMP4 Moving a hard disk read/write head takes a relatively long time / long latency time.\nMP5 Eventually, more time is spent swapping pages than processing data thrash point, which can cause the program to freeze or not run.",
+          "answer_conditions": [
+            "Disk thrashing is a problem that may occur when virtual memory is being used.",
+            "As the main memory fills up, more and more pages need to be swapped in and out of virtual memory.",
+            "This swapping leads to a very high rate of hard disk access / excessive disk head movements.",
+            "Moving a hard disk read/write head takes a relatively long time / long latency time.",
+            "Eventually, more time is spent swapping pages than processing data thrash point, which can cause the program to freeze or not run."
+          ]
+        }
+      ]
+    },
+    {
+      "question_number": "9",
+      "subquestions": [
+        {
+          "subquestion_label": "a",
+          "question_text": "A veterinary surgery wants to create a class for individual pets. Some of the attributes required in the class are listed in the table.\n\n| Attribute | Data type | Description |\n| :-- | :-- | :-- |\n| PetID | STRING | unique ID assigned at registration |\n| PetType | STRING | type of pet assigned at registration |\n| OwnerTelephone | STRING | telephone number of owner assigned at <br> registration |\n| DateRegistered | DATE | date of registration |\n\n(a) State one reason why the attributes would be declared as PRIVATE.",
+          "question_type": "short_answer",
+          "marks": 1,
+          "answer": "To ensure that the attributes are only accessible using the class's own methods/within the class.",
+          "answer_conditions": [
+            "To ensure that the attributes are only accessible using the class's own methods/within the class."
+          ]
+        },
+        {
+          "subquestion_label": "b",
+          "question_text": "(b) Complete the class diagram for Pet, to include:\n\n- an attribute and data type for the name of the pet\n- an attribute and data type for the name of the owner\n- a method to create a Pet object and set attributes at the time of registration\n- a method to assign a pet ID\n- a method to assign the date of registration\n- a method to return the pet name\n- a method to return the owner's telephone number.\n\n|  | Pet |\n| :-- | :-- |\n| PetID | $:$ STRING |\n| PetType | $:$ STRING |\n| OwnerTelephone | $:$ STRING |\n| DateRegistered | $:$ DATE |\n| $\\ldots \\ldots \\ldots \\ldots \\ldots \\ldots \\ldots \\ldots \\ldots \\ldots \\ldots \\ldots \\ldots$ |  |\n| $\\ldots \\ldots \\ldots \\ldots \\ldots \\ldots \\ldots \\ldots \\ldots \\ldots \\ldots \\ldots \\ldots \\ldots$ |  |\n| $\\ldots \\ldots \\ldots \\ldots \\ldots \\ldots \\ldots \\ldots \\ldots \\ldots \\ldots \\ldots \\ldots \\ldots \\ldots$ |  |\n| $\\ldots \\ldots \\ldots \\ldots \\ldots \\ldots \\ldots \\ldots \\ldots \\ldots \\ldots \\ldots \\ldots \\ldots \\ldots \\ldots$ |  |\n| $\\ldots \\ldots \\ldots \\ldots \\ldots \\ldots \\ldots \\ldots \\ldots \\ldots \\ldots \\ldots \\ldots \\ldots \\ldots \\ldots \\ldots$ |  |\n| $\\ldots \\ldots \\ldots \\ldots \\ldots \\ldots \\ldots \\ldots \\ldots \\ldots \\ldots \\ldots \\ldots \\ldots \\ldots \\ldots \\ldots \\ldots$ |  |\n| $\\ldots \\ldots \\ldots \\ldots \\ldots \\ldots \\ldots \\ldots \\ldots \\ldots \\ldots \\ldots \\ldots \\ldots \\ldots \\ldots \\ldots \\ldots \\ldots$ |  |\n| $\\ldots \\ldots \\ldots \\ldots \\ldots \\ldots \\ldots \\ldots \\ldots \\ldots \\ldots \\ldots \\ldots \\ldots \\ldots \\ldots \\ldots \\ldots \\ldots \\ldots$ |  |\n| $\\ldots \\ldots \\ldots \\ldots \\ldots \\ldots \\ldots \\ldots \\ldots \\ldots \\ldots \\ldots \\ldots \\ldots \\ldots \\ldots \\ldots \\ldots \\ldots \\ldots \\ldots$ |  |",
+          "question_type": "diagram",
+          "marks": 5,
+          "answer": "One mark per mark point (Max 5)\nMP1 Two correct attributes with sensible names and correct data types.\nMP2 Constructor present.\nMP3 Two correct setters with exact names and appropriate parameters and data types.\nMP4 Two correct getters with appropriate names.\nMP5 Name assigned to pet name getter matches the attribute.\n|  | Pet |\n|  | PetID | : STRING  |\n|  | PetType | : STRING  |\n|  | OwnerTelephone | : STRING  |\n|  | DateRegistered | : DATE  |\n|  | PetName | : STRING  |\n|  | OwnerName | : STRING  |\n|  |   |\n|  | Constructor()\n|  | SetPetID (APetID : STRING)\n|  | SetDateRegistered (RegDate : DATE)\n|  | GetPetName()\n|  | GetOwnerTelephone() |  |",
+          "answer_conditions": [
+            "Two correct attributes with sensible names and correct data types.",
+            "Constructor present.",
+            "Two correct setters with exact names and appropriate parameters and data types.",
+            "Two correct getters with appropriate names.",
+            "Name assigned to pet name getter matches the attribute.",
+            "|  | Pet |\n|  | PetID | : STRING  |\n|  | PetType | : STRING  |\n|  | OwnerTelephone | : STRING  |\n|  | DateRegistered | : DATE  |\n|  | PetName | : STRING  |\n|  | OwnerName | : STRING  |\n|  |   |\n|  | Constructor()\n|  | SetPetID (APetID : STRING)\n|  | SetDateRegistered (RegDate : DATE)\n|  | GetPetName()\n|  | GetOwnerTelephone() |  |"
+          ]
+        }
+      ]
+    },
+    {
+      "question_number": "10",
+      "subquestions": [
+        {
+          "subquestion_label": "a",
+          "question_text": "Several syntax diagrams are shown.\n\n![img-4.jpeg](img-4.jpeg)\n![img-5.jpeg](img-5.jpeg)\n![img-6.jpeg](img-6.jpeg)\n![img-7.jpeg](img-7.jpeg)\n\n(a) Complete the Backus-Naur Form (BNF) for the given syntax diagrams.",
+          "question_type": "short_answer",
+          "marks": 4,
+          "answer": "One mark per mark point (Max 4)\n- `<operator>::= + | - | * | /`\n- `<label>::= <letter><digit> |<letter><digit><digit>`\n- `<equation>::= <label>>`\n- `<label><operator><label>`",
+          "answer_conditions": [
+            "- `<operator>::= + | - | * | /`",
+            "- `<label>::= <letter><digit> |<letter><digit><digit>`",
+            "- `<equation>::= <label>>`",
+            "- `<label><operator><label>`"
+          ]
+        },
+        {
+          "subquestion_label": "b(i)",
+          "question_text": "(b) A new syntax rule, password, is required. It must begin with a letter or a symbol, followed by a digit and end with one or two symbols.\n\n(i) Draw a syntax diagram for password.",
+          "question_type": "diagram",
+          "marks": 3,
+          "answer": "One mark per mark point (Max 3)\nMP1 begin with either a letter or a symbol\nMP2 end with either one or two symbols\nMP3 digit and all other connections and label correct.\npassword\nletter  digit \nsymbol",
+          "answer_conditions": [
+            "begin with either a letter or a symbol",
+            "end with either one or two symbols",
+            "digit and all other connections and label correct.",
+            "password\nletter  digit \nsymbol"
+          ]
+        },
+        {
+          "subquestion_label": "b(ii)",
+          "question_text": "(ii) Write the BNF for password.",
+          "question_type": "short_answer",
+          "marks": 2,
+          "answer": "One mark per mark point (Max 2)\n- \n- \nAlternative Answer\nOne mark per mark point (Max 2)\n- All three lines correct\n- Any two lines correct\n|   |\n|   |\n",
+          "answer_conditions": [
+            "-",
+            "-",
+            "Alternative Answer",
+            "One mark per mark point (Max 2)",
+            "- All three lines correct",
+            "- Any two lines correct",
+            "|   |",
+            "|   |"
+          ]
+        }
+      ]
+    },
+    {
+      "question_number": "11",
+      "subquestions": [
+        {
+          "subquestion_label": "a",
+          "question_text": "The following diagram shows an ordered binary tree.\n\n![img-8.jpeg](img-8.jpeg)\n\n(a) A linked list of nodes is used to store the data. Each node consists of a left pointer, the data and a right pointer.\n-1 is used to represent a null pointer.\n\nComplete this linked list to represent the given binary tree.\n\n![img-9.jpeg](img-9.jpeg)",
+          "question_type": "diagram",
+          "marks": 4,
+          "answer": "One mark per mark point (Max 4)\nMP1 Four additional nodes with correct data values\nMP2 Correct null pointers in all added nodes (6) with no extra null pointers where the arrow points to the next node\nMP3 Correct arrows to represent pointers joining parent nodes to child nodes\nMP4 All nodes in correct order and no extra data added to pointers.\n![img-0.jpeg](img-0.jpeg)",
+          "answer_conditions": [
+            "Four additional nodes with correct data values",
+            "Correct null pointers in all added nodes (6) with no extra null pointers where the arrow points to the next node",
+            "Correct arrows to represent pointers joining parent nodes to child nodes",
+            "All nodes in correct order and no extra data added to pointers.",
+            "![img-0.jpeg](img-0.jpeg)"
+          ]
+        },
+        {
+          "subquestion_label": "b",
+          "question_text": "(b) A user-defined record structure is used to store the nodes of the linked list in part (a).\n\nComplete the diagram, using your answer for part (a).\n\n| RootPtr | Index | LeftPtr | Data | RightPtr |\n| :--: | :--: | :--: | :--: | :--: |\n| 0 | 0 |  | Red |  |\n| FreePtr | 1 |  | Green |  |\n|  | 2 |  | Yellow |  |\n|  | 3 |  | Blue |  |\n|  | 4 |  | Orange |  |\n|  | 5 |  | Indigo |  |\n|  | 6 |  | Violet |  |\n|  | 7 |  |  |  |",
+          "question_type": "table_completion",
+          "marks": 4,
+          "answer": "One mark per mark point (Max 4)\nMP1 Correct Red and Green rows\nMP2 Correct Yellow and Blue rows\nMP3 Correct Orange, Indigo and Violet rows\nMP4 Correct FreePtr with blank row 7\nRootPt\nr  Index  \n0  0  \n FreePt\nr  1  \n  2  \n  3  \n  4  \n  5  \n  6  \n7  7  ",
+          "answer_conditions": [
+            "Correct Red and Green rows",
+            "Correct Yellow and Blue rows",
+            "Correct Orange, Indigo and Violet rows",
+            "Correct FreePtr with blank row 7",
+            "RootPt\nr  Index  \n0  0  \n FreePt\nr  1  \n  2  \n  3  \n  4  \n  5  \n  6  \n7  7  "
+          ]
+        },
+        {
+          "subquestion_label": "c",
+          "question_text": "(c) The linked list in part (a) is implemented using a 1D array of records. Each record contains a left pointer, data and a right pointer.\n\nThe following pseudocode represents a function that searches for an element in the array of records BinTree. It returns the index of the record if the element is found, or it returns a null pointer if the element is not found.\n\nComplete the pseudocode for the function.\n\nFUNCTION SearchTree(Item : STRING)\n\n    NowPtr\n    WHILE NowPtr <> -1\n    IF THEN\n        NowPtr ← BinTree[NowPtr].LeftPtr\n    ELSE\n        IF BinTree[NowPtr].Data < Item THEN\n        ELSE\n            RETURN NowPtr\n        ENDIF\n    ENDIF\nENDWHILE\nRETURN NowPtr\nENDFUNCTION",
+          "question_type": "code_trace",
+          "marks": 4,
+          "answer": "One mark for any correct row (Max 4)\nFUNCTION SearchTree(Item : STRING) RETURNS INTEGER\nNowPtr ← RootPtr\nWHILE NowPtr <> -1\nIF BinTree[NowPtr].Data > Item THEN\nNowPtr ← BinTree[NowPtr].LeftPtr\nELSE\nIF BinTree[NowPtr].Data < Item THEN\nNowPtr ← BinTree[NowPtr].RightPtr\nELSE\nRETURN NowPtr\nENDIF\nENDIF\nENDWHILE\nRETURN NowPtr\nENDFUNCTION",
+          "answer_conditions": [
+            "FUNCTION SearchTree(Item : STRING) RETURNS INTEGER",
+            "NowPtr ← RootPtr",
+            "WHILE NowPtr <> -1",
+            "IF BinTree[NowPtr].Data > Item THEN",
+            "NowPtr ← BinTree[NowPtr].LeftPtr",
+            "ELSE",
+            "IF BinTree[NowPtr].Data < Item THEN",
+            "NowPtr ← BinTree[NowPtr].RightPtr",
+            "ELSE",
+            "RETURN NowPtr",
+            "ENDIF",
+            "ENDIF",
+            "ENDWHILE",
+            "RETURN NowPtr",
+            "ENDFUNCTION"
+          ]
+        }
+      ]
+    }
+  ]
+}

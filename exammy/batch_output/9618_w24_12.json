@@ -1,0 +1,323 @@
+{
+  "subject_code": "9618",
+  "paper_code": "12",
+  "exam_session": "Winter",
+  "exam_year": "2024",
+  "context": "no insert provided",
+  "questions": [
+    {
+      "question_number": "1",
+      "subquestions": [
+        {
+          "subquestion_label": "a",
+          "question_text": "Complete the truth table for the logic expression:\n\n$$X=(\\text { A XOR B) NAND (A AND (B XOR C)) }$$\n\n| $\\mathbf{A}$ | $\\mathbf{B}$ | $\\mathbf{C}$ | Working space | $\\mathbf{X}$ |\n| :--: | :--: | :--: | :--: | :--: |\n| 0 | 0 | 0 |  |  |\n| 0 | 0 | 1 |  |  |\n| 0 | 1 | 0 |  |  |\n| 0 | 1 | 1 |  |  |\n| 1 | 0 | 0 |  |  |\n| 1 | 0 | 1 |  |  |\n| 1 | 1 | 0 |  |  |\n| 1 | 1 | 1 |  |  |",
+          "question_type": "table_completion",
+          "marks": 2,
+          "answer": "| A | B | C | X |\n| :--: | :--: | :--: | :--: |\n| 0 | 0 | 0 | 1 |\n| 0 | 0 | 1 | 1 |\n| 0 | 1 | 0 | 1 |\n| 0 | 1 | 1 | 1 |\n| 1 | 0 | 0 | 1 |\n| 1 | 0 | 1 | 0 |\n| 1 | 1 | 0 | 1 |\n| 1 | 1 | 1 | 1 |",
+          "answer_conditions": [
+            "1 mark for each shaded part."
+          ]
+        },
+        {
+          "subquestion_label": "b",
+          "question_text": "Draw the logic circuit for the logic expression:\n\n$$\\mathbf{W}=\\mathbf{P} \\text { NAND }((\\mathbf{Q} \\text { OR NOT } \\mathbf{R}) \\text { XOR }(\\mathbf{P} \\text { XOR } \\mathbf{Q}))$$",
+          "question_type": "diagram",
+          "marks": 2,
+          "answer": "[Diagram: NAND gate with inputs P and (Q OR NOT R) XOR (P XOR Q)]\n\n```\n  P ----+---\\____\n       |       \\\n  Q ---| OR NOT R |\n       |       /\n       |______/\n          |\n          |\n[P XOR Q]-----\n          |\n          |\n  ______NAND______\n  |             |\n  W              \n```",
+          "answer_conditions": [
+            "1 mark for (P XOR Q) and (Q OR NOT R)",
+            "1 mark for second XOR gate and final NAND gate with appropriate inputs"
+          ]
+        }
+      ]
+    },
+    {
+      "question_number": "2",
+      "subquestions": [
+        {
+          "subquestion_label": "a",
+          "question_text": "Describe the drawbacks of embedded systems.",
+          "question_type": "long_answer",
+          "marks": 3,
+          "answer": "Drawbacks of embedded systems:\n- It is difficult to change/update the firmware by the user\n- Errors cannot be fixed easily // Troubleshooting/fault-finding/repairing is a specialist task/expensive\n- Functionality cannot be changed/extended easily // Cannot be easily adapted for another task\n- Faulty/outdated devices are often thrown away rather than repaired... leading to e-waste",
+          "answer_conditions": [
+            "1 mark for each bullet point (max 3)"
+          ]
+        },
+        {
+          "subquestion_label": "b",
+          "question_text": "Identify one benefit of using DRAM instead of Static RAM (SRAM) in an embedded system.",
+          "question_type": "short_answer",
+          "marks": 1,
+          "answer": "DRAM is less expensive to manufacture/purchase than SRAM in the embedded system",
+          "answer_conditions": [
+            "1 mark from:",
+            "- DRAM is less expensive to manufacture/purchase than SRAM in the embedded system",
+            "- DRAM has a higher bit density per chip // more data can be stored per chip"
+          ]
+        },
+        {
+          "subquestion_label": "c",
+          "question_text": "Give two differences between Erasable Programmable ROM (EPROM) and Electrically Erasable Programmable ROM (EEPROM).",
+          "question_type": "short_answer",
+          "marks": 2,
+          "answer": "Differences between EPROM and EEPROM:\n- EPROM uses ultraviolet light to erase data whilst EEPROM uses an electrical signal to do this\n- EPROM has to be removed from the circuit board when changing the data whilst EEPROM remains in the circuit when the data is changed\n- EPROM erases all the data, EEPROM can erase parts of the data",
+          "answer_conditions": [
+            "1 mark for each bullet point (max 2)"
+          ]
+        }
+      ]
+    },
+    {
+      "question_number": "3",
+      "subquestions": [
+        {
+          "subquestion_label": "a",
+          "question_text": "Complete the table by describing the purpose of each of the given registers.\n\n| Register | Purpose |\n| :--: | :--: |\n| Program Counter <br> (PC) |  |\n| Memory Address <br> Register (MAR) |  |\n| Memory Data <br> Register (MDR) |  |\n| Index Register (IX) |  |",
+          "question_type": "table_completion",
+          "marks": 4,
+          "answer": "| Register | Purpose |\n| :--: | :--: |\n| Program Counter <br> (PC) | Stores the address of the next instruction to be fetched/executed |\n| Memory Address <br> Register (MAR) | Stores the address of the memory location where data will be read from/written to |\n| Memory Data <br> Register (MDR) | Stores the data read from the address in the MAR // stores the data to be written to the address in the MAR |\n| Index Register (IX) | Stores a number that will be added to the operand, to form the address of the data |",
+          "answer_conditions": [
+            "1 mark for each correct purpose"
+          ]
+        },
+        {
+          "subquestion_label": "b",
+          "question_text": "Explain the benefits of connecting the monitor to the computer using the HDMI port instead of the VGA port.",
+          "question_type": "long_answer",
+          "marks": 4,
+          "answer": "Benefits of using HDMI port instead of VGA port:\n- HDMI has faster transfer rates than VGA\n- HDMI supports the high resolution of the monitor\n- HDMI supports video and audio transfer between computer and monitor speakers\n- HDMI is digital interface therefore no data is lost in transfer to analogue and back\n- HDMI is less prone to error/crosstalk/external interference",
+          "answer_conditions": [
+            "1 mark for each bullet point (max 4)"
+          ]
+        },
+        {
+          "subquestion_label": "c",
+          "question_text": "Describe the process management tasks performed by an OS.",
+          "question_type": "long_answer",
+          "marks": 4,
+          "answer": "Process management tasks performed by an OS:\n- It manages the scheduling of processes // Decides which process is to be run next\n- Allows multi-tasking/multi-processing\n- Ensures fair access\n- Handles interrupts\n- Manages/allocates which resources the processes require\n- Facilitates the sharing and exchange of data between processes\n- Prevents interference between processes // conflict resolution",
+          "answer_conditions": [
+            "1 mark for each bullet point (max 4)"
+          ]
+        }
+      ]
+    },
+    {
+      "question_number": "4",
+      "subquestions": [
+        {
+          "subquestion_label": "a",
+          "question_text": "Describe how the programmers can use the debugging features of a typical IDE during the development of the program.",
+          "question_type": "long_answer",
+          "marks": 4,
+          "answer": "Debugging features of a typical IDE:\n- Single stepping\n- Run the program one line at a time\n- Set breakpoints\n- Variable/report watch window\n- View how the data changes as the program is running",
+          "answer_conditions": [
+            "1 mark for each bullet point (max 4)"
+          ]
+        },
+        {
+          "subquestion_label": "b",
+          "question_text": "Describe the benefits to the programmers of creating a program library.",
+          "question_type": "long_answer",
+          "marks": 3,
+          "answer": "Benefits of creating a program library:\n- Subroutines can be shared/reused\n- A program library provides continuity between programs/programmers\n- Individual programmers can contribute their specialisms to the library // Individual programmers can use the specialisms of others",
+          "answer_conditions": [
+            "1 mark for each bullet point (max 3)"
+          ]
+        },
+        {
+          "subquestion_label": "c",
+          "question_text": "Identify one security method that can be used to protect the program code from unauthorised access during email transfer.\n\nExplain how your chosen method protects the program code.",
+          "question_type": "short_answer",
+          "marks": 3,
+          "answer": "Security method: Encryption\n\nExplanation:\n- File contents are converted to cipher text\n- If intercepted the data cannot be understood without the decryption key",
+          "answer_conditions": [
+            "1 mark for the security method. 2 marks for explanation"
+          ]
+        }
+      ]
+    },
+    {
+      "question_number": "5",
+      "subquestions": [
+        {
+          "subquestion_label": "a",
+          "question_text": "Explain the reasons why the computer programmer needs to act ethically towards colleagues and the public.",
+          "question_type": "long_answer",
+          "marks": 4,
+          "answer": "Reasons why the computer programmer needs to act ethically:\n\nColleagues:\n- Treat colleagues fairly and avoid acts of discrimination\n- Be prepared to accept/offer critique\n- Credit the contributions of colleagues\n- Help/train colleagues\n\nThe public:\n- Maintain the health, safety and welfare of the public\n- Be honest/realistic in making claims about the software\n- Maintain the security of the public's data",
+          "answer_conditions": [
+            "1 mark for each bullet point max 2 for public max 2 for colleagues"
+          ]
+        },
+        {
+          "subquestion_label": "b(i)",
+          "question_text": "Identify one suitable type of software licence for the program and describe the reasons for your choice.",
+          "question_type": "short_answer",
+          "marks": 3,
+          "answer": "Type of software licence: Open Source Initiative // Free Software Foundation\n\nReasons for choice:\n- Allows program source code to be examined\n- Allows the programmer to earn money for the software and updates",
+          "answer_conditions": [
+            "1 mark for Type of software licence",
+            "1 mark for each bullet point (max 2)"
+          ]
+        },
+        {
+          "subquestion_label": "b(ii)",
+          "question_text": "Explain the reasons why the programmer should copyright their program.",
+          "question_type": "short_answer",
+          "marks": 2,
+          "answer": "Reasons why the programmer should copyright their program:\n- To identify themselves as the owner/author // To gain formal recognition of ownership\n- To allow for legal consequences if anyone steals/copies it\n- To restrict competition",
+          "answer_conditions": [
+            "1 mark for each bullet point (max 2)"
+          ]
+        }
+      ]
+    },
+    {
+      "question_number": "6",
+      "subquestions": [
+        {
+          "subquestion_label": "a",
+          "question_text": "Explain the benefits of using a relational database instead of a file-based approach.",
+          "question_type": "long_answer",
+          "marks": 3,
+          "answer": "Benefits of using a relational database:\n- There is reduced data redundancy // less repeated data\n- Data consistency is maintained // Data integrity is improved\n- Program-data independence is ensured\n- Complex queries are easier to run\n- Different views can be provided\n- Multiple concurrent access is possible",
+          "answer_conditions": [
+            "1 mark each to max 3"
+          ]
+        },
+        {
+          "subquestion_label": "b(i)",
+          "question_text": "Identify each relationship between the database tables and explain how each relationship can be implemented in the normalised database.",
+          "question_type": "long_answer",
+          "marks": 6,
+          "answer": "Relationships between the database tables:\n- CUSTOMER to JOB is 1 to many\n- EMPLOYEE to LOGIN_DATA is 1 to 1\n- JOB to JOB_EMPLOYEE is 1 to many\n- EMPLOYEE to JOB_EMPLOYEE is 1 to many",
+          "answer_conditions": [
+            "1 mark each to max 6"
+          ]
+        },
+        {
+          "subquestion_label": "b(ii)",
+          "question_text": "Write a Structured Query Language (SQL) script to return the total amount of all the invoices sent in the year 2023 that have been paid.",
+          "question_type": "code_trace",
+          "marks": 3,
+          "answer": "SELECT SUM(Amount)\nFROM INVOICE\nWHERE Paid = \"Y\"\nAND DateSent >= #01/01/2023# AND DateSent <= #31/12/2023#",
+          "answer_conditions": [
+            "1 mark each",
+            "- Select SUM of Amount",
+            "- From the correct table and one correct condition",
+            "- Remaining correct condition"
+          ]
+        }
+      ]
+    },
+    {
+      "question_number": "7",
+      "subquestions": [
+        {
+          "subquestion_label": "a(i)",
+          "question_text": "Define the following bitmap terms.\n\nColour depth\n\nFile header",
+          "question_type": "short_answer",
+          "marks": 2,
+          "answer": "Colour depth: the number of bits used to represent a colour // the number of colours that can be represented in an image\n\nFile header: stores data about the image file / metadata",
+          "answer_conditions": [
+            "1 mark for each correct definition"
+          ]
+        },
+        {
+          "subquestion_label": "a(ii)",
+          "question_text": "Explain why changing the image resolution will affect the image quality and file size.",
+          "question_type": "long_answer",
+          "marks": 2,
+          "answer": "Image quality:\n- Decreasing resolution means details within the image are lost because there are fewer pixels // Increasing resolution means the image is more detailed because there are more pixels\n\nFile size:\n- Decreasing the resolution will decrease the file size because there are fewer pixels therefore less data // Increasing the resolution will increase the file size because there are more pixels therefore more data",
+          "answer_conditions": [
+            "1 mark for each correct explanation"
+          ]
+        },
+        {
+          "subquestion_label": "a(iii)",
+          "question_text": "Identify one lossless method of compressing an image.",
+          "question_type": "short_answer",
+          "marks": 1,
+          "answer": "Run-Length Encoding",
+          "answer_conditions": [
+            "1 mark for correct method"
+          ]
+        },
+        {
+          "subquestion_label": "b",
+          "question_text": "Define the vector graphic terms property and drawing list.",
+          "question_type": "short_answer",
+          "marks": 2,
+          "answer": "Property: an attribute of a drawing object // data about a shape // defines one aspect of the appearance of a drawing object\n\nDrawing list: all the drawing objects/shapes in an image // stores the commands/descriptions / mathematical equations required to draw each object",
+          "answer_conditions": [
+            "1 mark for each correct definition"
+          ]
+        }
+      ]
+    },
+    {
+      "question_number": "8",
+      "subquestions": [
+        {
+          "subquestion_label": "a",
+          "question_text": "Complete the table by writing the content of the ACC and the IX after each set of instructions has run.\n\n|  | Instructions | ACC content | IX content |\n| :--: | :--: | :--: | :--: |\n| 1 | LDM #19 <br> DEC ACC |  |  |\n| 2 | LDD 23 <br> ADD 19 |  |  |\n| 3 | LDI 25 <br> INC ACC |  |  |\n| 4 | LDR #21 <br> LDX 2 |  |  |",
+          "question_type": "table_completion",
+          "marks": 5,
+          "answer": "|  | Instructions | ACC content | IX content |\n| :--: | :--: | :--: | :--: |\n| 1 | LDM #19 <br> DEC ACC | 18 | 20 |\n| 2 | LDD 23 <br> ADD 19 | 40 | 20 |\n| 3 | LDI 25 <br> INC ACC | 5 | 20 |\n| 4 | LDR #21 <br> LDX 2 | 15 | 21 |",
+          "answer_conditions": [
+            "1 mark for each correct content of the ACC (4)",
+            "1 mark for correct IX column"
+          ]
+        },
+        {
+          "subquestion_label": "b(i)",
+          "question_text": "Complete the table by writing the content of the ACC after each set of instructions has run.\n\n|  | Instructions | ACC content |\n| :--: | :-- | :-- |\n| 1 | LSL #2 |  |\n| 2 | ADD #5 <br> AND #30 |  |\n| 3 | OR B11110010 <br> INC ACC |  |",
+          "question_type": "table_completion",
+          "marks": 3,
+          "answer": "|  | Instructions | ACC content |\n| :--: | :-- | :-- |\n| 1 | LSL #2 | 01101000 |\n| 2 | ADD #5 <br> AND #30 | 00011110 |\n| 3 | OR B11110010 <br> INC ACC | 11111011 |",
+          "answer_conditions": [
+            "1 mark each correct content of ACC"
+          ]
+        },
+        {
+          "subquestion_label": "b(ii)",
+          "question_text": "Explain how bit manipulation can be used to test whether the binary number stored in the ACC represents an odd denary number.\n\nWrite the bit manipulation instruction that will be used.",
+          "question_type": "long_answer",
+          "marks": 3,
+          "answer": "Explanation:\n- An odd binary number will have a 1 in the Least Significant Bit (LSB)\n- A bit manipulation operation is required to access/mask only the LSB and clear all the others\n- Compare the result of the masking with denary 1\n- The result of the comparison will be true if the number is odd\n\nInstruction:\n- AND B00000001 // AND #1 // AND &01",
+          "answer_conditions": [
+            "1 mark each to max 2 for explanation",
+            "1 mark for correct instruction"
+          ]
+        }
+      ]
+    },
+    {
+      "question_number": "9",
+      "subquestions": [
+        {
+          "subquestion_label": "a",
+          "question_text": "Complete the table by identifying two different sensors that could be used by the system and describe how each sensor is used by the system.\n\n| Sensor | Use in bridge warning system |\n| :-- | :-- |\n|  |  |\n|  |  |",
+          "question_type": "table_completion",
+          "marks": 2,
+          "answer": "| Sensor | Use in bridge warning system |\n| :-- | :-- |\n| Infra-red sensor | Measure/check the height of the vehicle |\n| Pressure sensor | Measure/check the weight of the vehicle |",
+          "answer_conditions": [
+            "1 mark for sensor and its use in this system"
+          ]
+        },
+        {
+          "subquestion_label": "b",
+          "question_text": "Explain whether the bridge warning system is an example of a monitoring system or of a control system.",
+          "question_type": "short_answer",
+          "marks": 2,
+          "answer": "The bridge warning system is an example of a monitoring system:\n- Because there is no use of feedback // the warning sign is only an indicator\n- The output of the turning on of the sign does not affect the input of data from the sensors\n- The system does not have any actuators",
+          "answer_conditions": [
+            "1 mark for each bullet point (max 2) for a correct justification"
+          ]
+        }
+      ]
+    }
+  ]
+}

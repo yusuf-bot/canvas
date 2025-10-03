@@ -1,0 +1,303 @@
+{
+  "subject_code": "9618",
+  "paper_code": "21",
+  "exam_session": "Winter",
+  "exam_year": "2023",
+  "context": "An error will be generated if a function call is not properly formed or if the parameters are of an incorrect type or an incorrect value.\n\n# String and character functions\n- A string of length 1 may be considered to be either of type CHAR or STRING\n- A CHAR may be assigned to, or concatenated with, a STRING\n- A STRING of length greater than 1 cannot be assigned to a CHAR\nLEFT (ThisString : STRING, x : INTEGER) RETURNS STRING\nreturns leftmost $x$ characters from ThisString\nExample: LEFT (\"ABCDEFGH\", 3) returns \"ABC\"\nRIGHT (ThisString : STRING, x : INTEGER) RETURNS STRING\nreturns rightmost $x$ characters from ThisString\nExample: RIGHT (\"ABCDEFGH\", 3) returns \"FGH\"\nMID (ThisString : STRING, x : INTEGER, y : INTEGER) RETURNS STRING\nreturns a string of length $y$ starting at position $x$ from ThisString\nExample: MID (\"ABCDEFGH\", 2, 3) returns \"BCD\"\nLENGTH (ThisString : STRING) RETURNS INTEGER\nreturns the integer value representing the length of ThisString\nExample: LENGTH (\"Happy Days\") returns 10\nTO_UPPER (x : <datatype>) RETURNS <datatype>\n<datatype> may be CHAR or STRING\nreturns an object of type <datatype> formed by converting all characters of $x$ to upper case.\nExamples:\n- TO_UPPER(\"Error 803\") returns \"ERROR 803\"\n- TO_UPPER('a') returns 'A'\nTO_LOWER (x : <datatype>) RETURNS <datatype>\n<datatype> may be CHAR or STRING\nreturns an object of type <datatype> formed by converting all characters of $x$ to lower case.\nExamples:\n- TO_LOWER(\"JIM 803\") returns \"jim 803\"\n- TO_LOWER('W') returns 'w'\nNUM_TO_STR (x : <datatype1>) RETURNS <datatype2>\nreturns a string representation of a numeric value.\n<datatype1> may be REAL or INTEGER, <datatype2> may be CHAR or STRING\nExample: NUM_TO_STR (87.5) returns \"87.5\"\nIf $x$ is a negative value, the returned value will be a string beginning with the '-' character.\nSTR_TO_NUM (x : <datatype1>) RETURNS <datatype2>\nreturns a numeric representation of a string.\n<datatype1> may be CHAR or STRING, <datatype2> may be REAL or INTEGER\nExample: STR_TO_NUM (\"23.45\") returns 23.45\nIS_NUM (ThisString : <datatype>) RETURNS BOOLEAN\nreturns TRUE if ThisString represents a valid numeric value.\n<datatype> may be CHAR or STRING\nExample: IS_NUM (\"-12.36\") returns TRUE\nASC (ThisChar : CHAR) RETURNS INTEGER\nreturns an integer value (the ASCII value) of ThisChar\nExample: ASC('A') returns 65, ASC('B') returns 66, etc.\nCHR (x : INTEGER) RETURNS CHAR\nreturns the character whose integer value (the ASCII value) is $x$\nExample: CHR (65) returns 'A', CHR (66) returns 'B', etc.\n# Numeric functions\nINT (x : REAL) RETURNS INTEGER\nreturns the integer part of $x$\nExample: INT (27.5415) returns 27\nRAND (x : INTEGER) RETURNS REAL\nreturns a real number in the range 0 to $x$ (not inclusive of $x$ ).\nExample: RAND (87) could return 35.430729\n## Date functions\nDate format is assumed to be DD/MM/YYYY unless otherwise stated\n```\nDAY(ThisDate : DATE) RETURNS INTEGER\n```\nreturns the current day number from ThisDate\nExample: DAY $(04 / 10 / 2003)$ returns 4\n```\nMONTH (ThisDate : DATE) RETURNS INTEGER\n```\nreturns the current month number from ThisDate\nExample: MONTH $(04 / 10 / 2003)$ returns 10\nYEAR (ThisDate : DATE) RETURNS INTEGER\nreturns the current year number from ThisDate\nExample: YEAR $(04 / 10 / 2003)$ returns 2003\n```\nDAYINDEX(ThisDate : DATE) RETURNS INTEGER\n```\nreturns the day index number from ThisDate where Sunday $=1$, Monday $=2$ etc.\nExample: DAYINDEX $(07 / 11 / 2023)$ returns 3\nSETDATE (Day, Month, Year : INTEGER) RETURNS DATE\nreturns a value of type DATE with the value of <Day>/<Month>/<Year>\nExample: SETDATE (26, 10, 2003) returns a date corresponding to 26/10/2003\n```\nTODAY() RETURNS DATE\n```\nreturns a value of type DATE corresponding to the current date.\n# Text file functions\nEOF (FileName : STRING) RETURNS BOOLEAN\nreturns TRUE if there are no more lines to be read from file FileName\nThe function will generate an error if the file is not already open in READ mode.\n## Operators\nAn error will be generated if an operator is used with a value(s) of an incorrect type.\n| $\\&$ | concatenates (joins) two strings. <br> Example: \"Summer\" \\& \" \" \\& \"Pudding\" evaluates to \"Summer Pudding\" may also be used to concatenate a CHAR with a STRING |\n| :--: | :--: |\n| AND | performs a logical AND on two Boolean values. <br> Example: TRUE AND FALSE evaluates to FALSE |\n| OR | performs a logical OR on two Boolean values. <br> Example: TRUE OR FALSE evaluates to TRUE |\n| NOT | performs a logical NOT on a Boolean value. <br> Example: NOT TRUE evaluates to FALSE |\n| MOD | finds the remainder when one number is divided by another. <br> Example: 10 MOD 3 evaluates to 1 |\n| DIV | finds the quotient when one number is divided by another. <br> Example 10 DIV 3 evaluates to 3 |\n## Comparison operators\n| $=$ | used to compare two items of the same type. evaluates to TRUE if the condition is true, otherwise evaluates to FALSE <br> Notes: <br> - may be used to compare types REAL and INTEGER <br> - may be used to compare types CHAR and STRING <br> - case sensitive when used to compare types CHAR and / or STRING <br> - cannot be used to compare two records |\n| :--: | :--: |\n| $<= | Examples: |\n| $<> | - \"Program\" = \"program\" evaluates to FALSE <br> - Count $=4$ evaluates to TRUE when Count contains the value 4 |",
+  "questions": [
+    {
+      "question_number": "1",
+      "subquestions": [
+        {
+          "subquestion_label": "a",
+          "question_text": "Complete the table by writing the answer for each row:\n\n|  | Answer |\n| :-- | :-- |\n| The value assigned to Level when ThisValue is 40 |  |\n| The value assigned to Check when ThisValue is 36 |  |\n| The value assigned to Level when ThisValue is 18 |  |\n| The number of elements in array Data that may be incremented |  |\n\n",
+          "question_type": "table_completion",
+          "marks": 4,
+          "answer": "|  | Answer |\n| :-- | :-- |\n| The value assigned to Level when ThisValue is 40 | Medium |\n| The value assigned to Check when ThisValue is 36 | 12 |\n| The value assigned to Level when ThisValue is 18 | Low |\n| The number of elements in array Data that may be incremented | 11 |\n",
+          "answer_conditions": []
+        },
+        {
+          "subquestion_label": "b",
+          "question_text": "The pseudocode contains four assignments to variable Level. One of these assignments will never be performed.\n\nIdentify this assignment and explain why this is the case.\n",
+          "question_type": "long_answer",
+          "marks": 3,
+          "answer": "Level ← \"Very Low\" // the level is assigned value \"very low\" because CASE clauses are checked in sequence // because of the order of the clauses a value < 30 satisfies the first clause // Clause '< 20' will never be tested",
+          "answer_conditions": [
+            "One mark for identifying assignment: MP1 Level ← \"Very Low\" // the level is assigned value \"very low\"",
+            "Explanation points: MP2 because CASE clauses are checked in sequence // because of the order of the clauses MP3 a value < 30 satisfies the first clause // Clause '< 20' will never be tested"
+          ]
+        },
+        {
+          "subquestion_label": "c",
+          "question_text": "The following line is added immediately before the ENDCASE statement:\n\n$$ \n\\text { OTHERWISE : Level } \\leftarrow \\text { \"Undefined\" }\n$$\n\nState why this assignment is never performed.\n",
+          "question_type": "short_answer",
+          "marks": 1,
+          "answer": "all of the possible values are addressed via all / four / three / the other clauses // there are no other possible values to map to OTHERWISE",
+          "answer_conditions": [
+            "MP1 all of the possible values are addressed via all / four / three / the other clauses // there are no other possible values to map to OTHERWISE"
+          ]
+        },
+        {
+          "subquestion_label": "d",
+          "question_text": "Give the appropriate data types for the variables ThisValue, Check and Level.\n\nThisValue\nCheck\nLevel\n",
+          "question_type": "short_answer",
+          "marks": 3,
+          "answer": "ThisValue: INTEGER\nCheck: REAL\nLevel: STRING",
+          "answer_conditions": [
+            "One mark per point:\n- ThisValue: INTEGER\n- Check: REAL\n- Level: STRING"
+          ]
+        }
+      ]
+    },
+    {
+      "question_number": "2",
+      "subquestions": [
+        {
+          "subquestion_label": "a",
+          "question_text": "Outline, using stepwise refinement, the five steps for this algorithm which could be used to produce pseudocode.\n\nDo not use pseudocode statements in your answer.\n\nStep 1\n\nStep 2\n\nStep 3\n\nStep 4\n\nStep 5\n",
+          "question_type": "long_answer",
+          "marks": 5,
+          "answer": "MP1 Set total to zero\nMP2 Input a number\nMP3 Check if number greater than 29 and less than 71\nMP4 ... if check is true - add number to total\nMP5 Repeat from step 2 99 times // for a total of 100 iterations\nMP6 Output the total",
+          "answer_conditions": [
+            "MP1 Set total to zero",
+            "MP2 Input a number",
+            "MP3 Check if number greater than 29 and less than 71",
+            "MP4 ... if check is true - add number to total",
+            "MP5 Repeat from step 2 99 times // for a total of 100 iterations",
+            "MP6 Output the total"
+          ]
+        },
+        {
+          "subquestion_label": "b",
+          "question_text": "Sequence is one programming construct. Identify two other programming constructs that will be required when the algorithm is converted into pseudocode.\n\nConstruct 1\n\nConstruct 2\n",
+          "question_type": "short_answer",
+          "marks": 2,
+          "answer": "Construct 1: An iterative construct // a (count-controlled) loop\nConstruct 2: A selection construct // an IF statement",
+          "answer_conditions": [
+            "MP1 An iterative construct // a (count-controlled) loop",
+            "MP2 A selection construct // an IF statement"
+          ]
+        }
+      ]
+    },
+    {
+      "question_number": "3",
+      "subquestions": [
+        {
+          "subquestion_label": "a",
+          "question_text": "The stack is implemented using two variables and a 1D array of 8 elements as shown.\n\nThe variables are used to reference individual elements of the array, in such a way that:\n\n- the array is filled from the lowest indexed element towards the highest\n- all the elements of the array are available for the stack.\n\nComplete the diagram to represent the state of the stack as shown above.\n\nArray\nData element\n8\n7\n6\n5\nVariable\n4\nTopOfStack\n3\nBottomOfStack\n2\n1\n$\u25A1$\n",
+          "question_type": "diagram_completion",
+          "marks": 3,
+          "answer": "[Diagram: an array with elements 8, 7, 6, 5, 4, 3, 2, 1. TopOfStack points to element 8, BottomOfStack points to element 1]",
+          "answer_conditions": [
+            "Array element 3 element 8 7 6 5 4 3 2 1 MP1 all values in the order and location shown MP2 TopOfStack value is index of element containing D1 MP3 BottomOfStack value is index of element containing D2"
+          ]
+        },
+        {
+          "subquestion_label": "b",
+          "question_text": "A function Push () will add a value onto the stack by manipulating the array and variables in part (a).\n\nBefore adding a value onto the stack, the algorithm will check that space is available. If the value is added to the stack, the function will return TRUE, otherwise it will return FALSE. The algorithm is expressed in five steps. Complete the steps.\n\n1. If then return FALSE\n2. Otherwise TopOfStack\n3. Use TopOfStack as an to the array.\n4. Set the element at this to the being added.\n5. Return\n",
+          "question_type": "long_answer",
+          "marks": 5,
+          "answer": "MP1 If TopOfStack = 8 // (stack) full then return FALSE\nMP2 Otherwise, increment TopOfStack\nMP3 Use TopOfStack as an index to the Array\nMP4 Set the element at this index / location / position to the value / data / item being added\nMP5 Return TRUE",
+          "answer_conditions": [
+            "MP1 If TopOfStack = 8 // (stack) full then return FALSE",
+            "MP2 Otherwise, increment TopOfStack",
+            "MP3 Use TopOfStack as an index to the Array",
+            "MP4 Set the element at this index / location / position to the value / data / item being added",
+            "MP5 Return TRUE"
+          ]
+        }
+      ]
+    },
+    {
+      "question_number": "4",
+      "subquestions": [
+        {
+          "subquestion_label": "a",
+          "question_text": "Write pseudocode for the function TooMany ( ).\n",
+          "question_type": "code_trace",
+          "marks": 6,
+          "answer": "FUNCTION TooMany (Search : STRING, Max : INTEGER) RETURNS BOOLEAN\nDECLARE Count, Index : INTEGER\nCount ← 0\nFOR Index ← 1 TO 150\nIF Data[Index] = Search THEN\nCount ← Count + 1\nENDIF\nNEXT Index\nIF Count > Max THEN\nRETURN TRUE\nELSE\nRETURN FALSE\nENDIF\nENDFUNCTION\n",
+          "answer_conditions": [
+            "MP1 Function heading, ending and return type",
+            "MP2 Declare Count and Index as integers",
+            "MP3 Initialise Count",
+            "MP4 Loop (any type) for 150 iterations",
+            "MP5 Compare Data element with parameter - if equal, increment Count in a loop",
+            "MP6 Compare Count with Max and return Boolean in both cases outside the loop"
+          ]
+        },
+        {
+          "subquestion_label": "b",
+          "question_text": "Write pseudocode to check these conditions. Assume that the row index is contained in variable Row and the search string in variable Search.\n",
+          "question_type": "code_trace",
+          "marks": 3,
+          "answer": "IF Row MOD 2 = 0 AND (Data[Row, 1] = Search OR Data[Row, 2] = Search) THEN\nALTERNATIVE using nested IFs:\nIF Row MOD 2 = 0 THEN\nIF Data[Row, 1] = Search OR Data[Row, 2] = Search THEN\nALTERNATIVE SOLUTION: A FOR loop using 'STEP 2'\nFOR Row ← 2 TO 150 / NEXT Row STEP 2\nData[Row, 1] = Search OR Data[Row, 2] = Search) THEN",
+          "answer_conditions": [
+            "MP1 Test for row being even number",
+            "MP2 Test for either column value equal to Search",
+            "MP3 Selection structure is either: - Single IF statement using AND, or - Two nested IFs using AND, or - Single IF and the use of a two-iteration loop Either of these structures correctly formed scores the mark ALTERNATIVE SOLUTION: A FOR loop using 'STEP 2' FOR Row ← 2 TO 150 / NEXT Row STEP 2 Data[Row, 1] = Search OR Data[Row, 2] = Search) THEN"
+          ]
+        }
+      ]
+    },
+    {
+      "question_number": "5",
+      "subquestions": [
+        {
+          "subquestion_label": "a",
+          "question_text": "The pseudocode contains three errors due to the incorrect use of operators.\n\nIdentify each error and state the correction required.\n\n1\n\n2\n\n3\n",
+          "question_type": "short_answer",
+          "marks": 3,
+          "answer": "1 Num > Min should be Num < Min\n2 Count & 1 should be Count + 1\n3 NextInput ← \"END\" should be NextInput = \"END\"",
+          "answer_conditions": [
+            "MP1 Num > Min should be Num < Min",
+            "MP2 Count & 1 should be Count + 1",
+            "MP3 NextInput ← \"END\" should be NextInput = \"END\""
+          ]
+        },
+        {
+          "subquestion_label": "b(i)",
+          "question_text": "Explain the problem with the algorithm.\n",
+          "question_type": "long_answer",
+          "marks": 2,
+          "answer": "If all the numeric input values are greater than 999 // If there are no numeric values in the sequence then the minimum will be given as 999 (and not one of the input values)",
+          "answer_conditions": [
+            "MP1 If all the numeric input values are greater than 999 // If there are no numeric values in the sequence",
+            "MP2 then the minimum will be given as 999 (and not one of the input values)"
+          ]
+        },
+        {
+          "subquestion_label": "b(ii)",
+          "question_text": "Give a sequence of four test data values that could be input to demonstrate the problem.\n\nValue 1\n\nValue 2\n\nValue 3\n\nValue 4\n",
+          "question_type": "short_answer",
+          "marks": 2,
+          "answer": "Value 1: 1325\nValue 2: DOG\nValue 3: 7868\nValue 4: 7615\n// SNAKE, 3478, SPIDER\nFinal value: END",
+          "answer_conditions": [
+            "MP1 Mixture non-numeric and numeric with 3 or 4 values - with all numerics greater than 999",
+            "MP2 Examples: 1325, DOG, 7868, 7615 // SNAKE, 3478, SPIDER Final value: END"
+          ]
+        }
+      ]
+    },
+    {
+      "question_number": "6",
+      "subquestions": [
+        {
+          "subquestion_label": "a",
+          "question_text": "Write pseudocode for MyOutput ().\n",
+          "question_type": "code_trace",
+          "marks": 7,
+          "answer": "PROCEDURE MyOutput (NewString : STRING, EOL : BOOLEAN)\nIF LENGTH (MyString) + LENGTH (NewString) > 255 THEN OUTPUT MyString // Resulting string would be too long\nMyString ← NewString\nELSE\nMyString ← MyString & NewString // Concat with\nMyString\nIF EOL = TRUE THEN\nOUTPUT MyString\nMyString ← \"\"\nENDIF\nENDIF\nENDPROCEDURE\n",
+          "answer_conditions": [
+            "MP1 Procedure heading, including parameters, and ending",
+            "MP2 Produce concatenated string",
+            "MP3 ... Check whether resulting string would be too long",
+            "MP4 If so, then output old MyString",
+            "MP5 ... and assign NewString to MyString",
+            "MP6 Else concatenate NewString to MyString",
+            "MP7 (test for length < 255) Test EOL - If TRUE then Output",
+            "MP8 ... and reset MyString to empty string"
+          ]
+        },
+        {
+          "subquestion_label": "b",
+          "question_text": "Explain why it does not work as expected.\n",
+          "question_type": "short_answer",
+          "marks": 2,
+          "answer": "A new (instance of) variable MyString is created each time the procedure is called / executed so the previous contents are lost",
+          "answer_conditions": [
+            "MP1 A new (instance of) variable MyString is created each time the procedure is called / executed",
+            "MP2 So the previous contents are lost"
+          ]
+        }
+      ]
+    },
+    {
+      "question_number": "7",
+      "subquestions": [
+        {
+          "subquestion_label": "",
+          "question_text": "Complete the state-transition diagram to represent the information given in the table.\n\n![img-2.jpeg](img-2.jpeg)\n",
+          "question_type": "diagram_completion",
+          "marks": 5,
+          "answer": "[Diagram: State-transition diagram with states S1, S2, S3, S4, S5 and transitions A1, A2, A3, A4, A9]",
+          "answer_conditions": []
+        }
+      ]
+    },
+    {
+      "question_number": "8",
+      "subquestions": [
+        {
+          "subquestion_label": "a",
+          "question_text": "Write pseudocode for module SendFile().\n\nAssume:\n\n- module Transmit() has already been written and is used to transmit a message\n- the value of MyID may be used as SourceID\n- the file specified contains no blank lines\n- the file specified does not contain the line \"****\"\n",
+          "question_type": "code_trace",
+          "marks": 7,
+          "answer": "PROCEDURE SendFile(FileName, DestID : STRING, Port : INTEGER)\nDECLARE FileData : STRING\nCONSTANT STX = CHR(02)\nCONSTANT ETX = CHR(03)\nOPENFILE FileName FOR READ\nWHILE NOT EOF(FileName)\nREADFILE FileName, FileData\nFileData ← STX & DestID & MyID & FileData & ETX\nCALL Transmit(FileData, Port)\nENDWHILE\nCLOSEFILE FileName\nCALL Transmit(STX & DestID & \"****\" & ETX, ( Port))\nENDPROCEDURE\n",
+          "answer_conditions": [
+            "MP1 OPEN file in READ mode - using parameter - and subsequently CLOSE",
+            "MP2 Conditional loop to EOF()",
+            "MP3 Use of READFILE to get a line from the file",
+            "MP4 'Attempt' to form a message (minimum is DestID, MyID, FileData)",
+            "MP5 Message formed is completely correct",
+            "MP6 Call Transmit () with correct MP4 string in a loop",
+            "MP7 Transmit the \"****\" message (all parts present) after the loop"
+          ]
+        },
+        {
+          "subquestion_label": "b",
+          "question_text": "Explain why module SendFile () transmits the message with data string \"****\" after the last line of the file.\n",
+          "question_type": "long_answer",
+          "marks": 2,
+          "answer": "Indicates that all the lines of the file have been sent // it is the end of the transmission / file transfer so that the receiving program can stop waiting for further data The file can be closed / saved",
+          "answer_conditions": [
+            "MP1 Indicates that all the lines of the file have been sent // it is the end of the transmission / file transfer",
+            "MP2 So that the receiving program can stop waiting for further data",
+            "MP3 The file can be closed / saved"
+          ]
+        },
+        {
+          "subquestion_label": "c(i)",
+          "question_text": "Explain why this is a problem.\n",
+          "question_type": "short_answer",
+          "marks": 2,
+          "answer": "A message cannot contain a zero-length data field ... so a blank line cannot be sent // there is no way to send a blank line",
+          "answer_conditions": [
+            "MP1 A message cannot contain a zero-length data field",
+            "MP2 ... so a blank line cannot be sent // there is no way to send a blank line"
+          ]
+        },
+        {
+          "subquestion_label": "c(ii)",
+          "question_text": "Explain how the message format could be changed to allow a blank line to be sent.\n",
+          "question_type": "long_answer",
+          "marks": 2,
+          "answer": "Append a (special) character to the start of the message text interpret the new field data as a blank line ALTERNATIVE Change the message protocol and use an additional field to act as an indicator Interpret the new field data",
+          "answer_conditions": [
+            "MP1 Append a (special) character to the start of the message text",
+            "MP2 interpret the new field data as a blank line",
+            "ALTERNATIVE",
+            "MP1 Change the message protocol and use an additional field to act as an indicator",
+            "MP2 Interpret the new field data"
+          ]
+        },
+        {
+          "subquestion_label": "d",
+          "question_text": "Write pseudocode for module GetField().\n",
+          "question_type": "code_trace",
+          "marks": 6,
+          "answer": "FUNCTION GetField(Msg : STRING, FieldNo : INTEGER) RETURNS STRING\nDECLARE RetString : STRING\nCASE OF FieldNo\n1 : RetString ← MID (Msg, 2, 3)\n2 : RetString ← MID (Msg, 5, 3)\n3 : RetString ← MID (Msg, 8, LENGTH (Msg) - 8)\nOTHERWISE : RetString ← \"\"\nENDCASE\nRETURN RetString\nENDFUNCTION\n",
+          "answer_conditions": [
+            "MP1 Use of CASE . . . ENDCASE or IF . . . THEN . . . ENDIF",
+            "MP2 Field 1 and Field 2 extracted correctly",
+            "MP3 Calculate a length of field 3",
+            "MP4 Field 3 extracted correctly",
+            "MP5 Return empty string in case of invalid parameter (via OTHERWISE or initialisation)",
+            "MP6 Final RETURN, after a reasonable attempt"
+          ]
+        }
+      ]
+    }
+  ]
+}

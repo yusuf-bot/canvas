@@ -1,0 +1,286 @@
+{
+  "subject_code": "9618",
+  "paper_code": "21",
+  "exam_session": "May/June",
+  "exam_year": "2023",
+  "context": "# Cambridge Assessment\nInternational Education\n## Cambridge International AS & A Level\n**COMPUTER SCIENCE**\nPaper 2 Fundamental Problem-solving and Programming Skills\nINSERT\n9618/21\nMay/June 2023\n2 hours\n## INFORMATION\n- This insert contains all the resources referred to in the questions.\n- You may annotate this insert and use the blank spaces for planning. **Do not write your answers** on the insert.\nThis document has 4 pages.\nDC (EF) 312085/3\n© UCLES 2023\n[Turn over\n--- Page 2 ---\nAn error will be generated if a function call is not properly formed or if the parameters are of an incorrect type or an incorrect value.\n# String and Character Functions\n- A string of length 1 may be either of type CHAR or STRING\n- A CHAR may be assigned to, or concatenated with, a STRING\n- A STRING of length greater than 1 cannot be assigned to a CHAR\n```\nLEFT(ThisString : STRING, x : INTEGER) RETURNS STRING\nreturns leftmost x characters from ThisString\nExample: LEFT (\"ABCDEFGH\", 3) returns \"ABC\"\nRIGHT(ThisString : STRING, x : INTEGER) RETURNS STRING\nreturns rightmost x characters from ThisString\nExample: RIGHT (\"ABCDEFGH\", 3) returns \"FGH\"\nMID(ThisString : STRING, x : INTEGER, y : INTEGER) RETURNS STRING\nreturns a string of length y starting at position x from ThisString\nExample: MID (\"ABCDEFGH\", 2, 3) returns string \"BCD\"\nLENGTH (ThisString : STRING) RETURNS INTEGER\nreturns the integer value representing the length of ThisString\nExample: LENGTH (\"Happy Days\") returns 10\nTO_UPPER(x : <datatype>) RETURNS <datatype>\n<datatype> may be CHAR or STRING\nreturns an object of type <datatype> formed by converting all characters of x to upper case.\nExamples:\n- TO_UPPER(\"Error 803\") returns \"ERROR 803\"\n- TO_UPPER('a') returns 'A'\nTO_LOWER(x : <datatype>) RETURNS <datatype>\n<datatype> may be CHAR or STRING\nreturns an object of type <datatype> formed by converting all characters of x to lower case.\nExamples:\n- TO_LOWER(\"JIM 803\") returns \"jim 803\"\n- TO_LOWER('W') returns 'w'\nNUM_TO_STR(x : <datatype1>) RETURNS <datatype2>\nreturns a string representation of a numeric value.\n<datatype1> may be REAL or INTEGER, <datatype2> may be CHAR or STRING\nExample: NUM_TO_STR(87.5) returns \"87.5\"\nSTR_TO_NUM (x : <datatype1>) RETURNS <datatype2>\nreturns a numeric representation of a string.\n<datatype1> may be CHAR or STRING, <datatype2> may be REAL or INTEGER\nExample: STR_TO_NUM(\"23.45\") returns 23.45\nIS_NUM(ThisString : <datatype>) RETURNS BOOLEAN\nreturns TRUE if ThisString represents a valid numeric value.\n<datatype> may be CHAR or STRING\nExample: IS_NUM(\"-12.36\") returns TRUE\n```\n--- Page 3 ---\nASC (ThisChar : CHAR) RETURNS INTEGER\nreturns an integer value (the ASCII value) of character ThisChar\nExample: ASC('A') returns 65, ASC('B') returns 66, etc.\nCHR (x : INTEGER) RETURNS CHAR\nreturns the character whose integer value (the ASCII value) is $x$\nExample: CHR (65) returns 'A', CHR (66) returns 'B', etc.\n# Numeric Functions\nINT (x : REAL) RETURNS INTEGER\nreturns the integer part of $x$\nExample: INT (27.5415) returns 27\nRAND (x : INTEGER) RETURNS REAL\nreturns a real number in the range 0 to $x$ (not inclusive of $x$ ).\nExample: RAND (87) may return 35.43\n## Date Functions\nDate format is assumed to be DD/MM/YYYY unless otherwise stated.\n```\nDAY (ThisDate : DATE) RETURNS INTEGER\nreturns the current day number from ThisDate\nExample: DAY(04/10/2003) returns 4\nMONTH (ThisDate : DATE) RETURNS INTEGER\nreturns the current month number from ThisDate\nExample: MONTH(04/10/2003) returns 10\nYEAR (ThisDate : DATE) RETURNS INTEGER\nreturns the current year number from ThisDate\nExample: YEAR(04/10/2003) returns 2003\nDAYINDEX(ThisDate : DATE) RETURNS INTEGER\nreturns the day index number from ThisDate where Sunday = 1, Monday = 2 etc.\nExample: DAYINDEX(09/05/2023) returns 3\nSETDATE (Day, Month, Year : INTEGER) RETURNS DATE\nreturns a value of type DATE with the value of <Day>/<Month>/<Year>\nExample: SETDATE(26, 10, 2003) returns a date corresponding to 26/10/2003\nTODAY() RETURNS DATE\nreturns a value of type DATE corresponding to the current date.\n```\n## Text File Functions\nEOF(FileName : STRING) RETURNS BOOLEAN\nreturns TRUE if there are no more lines to be read from file FileName\nThe function will generate an error if the file is not already open in READ mode.\n--- Page 4 ---\n# Operators\nAn error will be generated if an operator is used with a value or values of an incorrect type.\n| $\\&$ | concatenates (joins) two strings. <br> Example: \"Summer\" \\& \" \" \\& \"Pudding\" evaluates to \"Summer Pudding\" <br> The operator may also be used to concatenate a CHAR with a STRING |\n| :--: |\n| AND | performs a logical AND on two Boolean values. <br> Example: TRUE AND FALSE evaluates to FALSE |\n| OR | performs a logical OR on two Boolean values. <br> Example: TRUE OR FALSE evaluates to TRUE |\n| NOT | performs a logical NOT on a Boolean value. <br> Example: NOT TRUE evaluates to FALSE |\n| MOD | finds the remainder when one number is divided by another. <br> Example: 10 MOD 3 evaluates to 1 |\n| DIV | finds the quotient when one number is divided by another. <br> Example 10 DIV 3 evaluates to 3 |\n## Comparison Operators\n| $=$ | used to compare two items of the same type. evaluates to TRUE if the condition is true, otherwise evaluates to FALSE |\n| :--: |\n| $>$ | Notes: |\n| $<$ | - may be used to compare types REAL and INTEGER <br> - may be used to compare types CHAR and STRING <br> - case sensitive when used to compare types CHAR or STRING <br> - cannot be used to compare two records |\n| $<=$ |\n| $<>$ | Examples: |\n|  | - \"Program\" = \"program\" evaluates to FALSE <br> - Count $=4$ evaluates to TRUE when variable Count contains the value 4 |\n[^0]\n[^0]:    Permission to reproduce items where third-party owned material protected by copyright is included has been sought and cleared where possible. Every reasonable effort has been made by the publisher (UCLES) to trace copyright holders, but if any items requiring clearance have unwittingly been included, the publisher will be pleased to make amends at the earliest possible opportunity.\nTo avoid the issue of disclosure of answer-related information to candidates, all copyright acknowledgements are reproduced online in the Cambridge Assessment International Education Copyright Acknowledgements Booklet. This is produced for each series of examinations and is freely available to download at www.cambridgeinternational.org after the live examination series.\nCambridge Assessment International Education is part of Cambridge Assessment. Cambridge Assessment is the brand name of the University of Cambridge Local Examinations Syndicate (UCLES), which is a department of the University of Cambridge.",
+  "questions": [
+    {
+      "question_number": "1",
+      "subquestions": [
+        {
+          "subquestion_label": "(a)",
+          "question_text": "A programmer has written a program which includes the function Calculate (). When the program is run, the function returns an unexpected value.\n\nDescribe how a typical Integrated Development Environment (IDE) could be used to help debug the program to find the errors in the function Calculate ().",
+          "question_type": "long_answer",
+          "marks": 4,
+          "answer": "Could set a breakpoint to stop the program at a particular point / instruction then the value of variables could be checked using a report/watch window while single stepping can be used to execute one statement/line at a time.",
+          "answer_conditions": [
+            "One mark for each underlined term",
+            "One mark for an explanation of each term"
+          ]
+        },
+        {
+          "subquestion_label": "(b)",
+          "question_text": "The algorithm for function Calculate () contains the three pseudocode statements shown.\n\nDescribe the error in each statement or write 'no error' if the statement contains no error. Assume any variables used are of the correct type for the given function.\n\nStatement 1: Index ← STR_TO_NUM((\"27\") + 2)\nError\n\nStatement 2: Index ← STR_TO_NUM(MID(\"CPE1704TKS\", 4, 2))\nError\n\nStatement 3: IF MONTH(ThisDate) > '6' THEN\nError",
+          "question_type": "short_answer",
+          "marks": 3,
+          "answer": "One mark for correct description of:\nError 1: Brackets mismatch // 2/value should be added after brackets/function // Addition between a string and a number is not valid // STR_TO_NUM / the function needs to be passed a string / not an integer\nError 2: No Error\nError 3: MONTH () returns an integer and this is being compared with a character/string // Integer cannot be compared to a string // 6 should not be in quotes",
+          "answer_conditions": [
+            "One mark for correct description of each error"
+          ]
+        },
+        {
+          "subquestion_label": "(c)(i)",
+          "question_text": "The program contains variables with values as follows:\n\n| Variable | Value |\n| --- | --- |\n| Active | TRUE |\n| Points | 75 |\n| Exempt | FALSE |\n\nComplete the table by evaluating each expression.\n\n|   | Expression | Evaluation  |\n| --- | --- | --- |\n| 1 | (Points > 99) OR Active |   |\n| 2 | (Points MOD 2=0 ) OR Exempt |   |\n| 3 | (Points <= 75) AND (Active OR Exempt) |   |\n| 4 | (Active OR NOT Active) AND NOT Exempt |   |",
+          "question_type": "table_completion",
+          "marks": 2,
+          "answer": "|   | Expression | Evaluation  |\n| --- | --- | --- |\n| 1 | (Points > 99) OR Active | TRUE |\n| 2 | (Points MOD 2=0 ) OR Exempt | FALSE |\n| 3 | (Points <= 75) AND (Active OR Exempt) | TRUE |\n| 4 | (Active OR NOT Active) AND NOT Exempt | TRUE |",
+          "answer_conditions": [
+            "One mark for any two rows correct",
+            "Two marks for all rows correct"
+          ]
+        },
+        {
+          "subquestion_label": "(c)(ii)",
+          "question_text": "Write expression 4 from the table in part (c)(i) in its simplest form.",
+          "question_type": "short_answer",
+          "marks": 1,
+          "answer": "NOT Exempt",
+          "answer_conditions": [
+            "Expression in its simplest form"
+          ]
+        }
+      ]
+    },
+    {
+      "question_number": "2",
+      "subquestions": [
+        {
+          "subquestion_label": "(a)",
+          "question_text": "The algorithm is described as follows:\n\n1. prompt and input a character and store in MyChar\n2. prompt and input an integer and store in MyCount\n3. generate a string consisting of MyChar repeated MyCount times\n4. output the string.\n\nDraw a program flowchart to represent the algorithm.",
+          "question_type": "long_answer",
+          "marks": 4,
+          "answer": "START\nINPUT \"Input Character\", MyChar\nINPUT \"Input Count\", MyCount\nSet MyString to **\n1\n17\nYES\n5\n5\n5\nOne mark per point:\n1 Both prompts\n2 Both inputs using correct identifiers as given in question, MyChar and MyCount\n3 Initialise MyString to empty string and subsequent output after loop\n4 Loop MyCount iterations including decrement MyCount\n5 Use of Concatenate or equivalent pseudocode statement inside loop\nMax 4 Marks",
+          "answer_conditions": [
+            "One mark for each correct element of the flowchart"
+          ]
+        },
+        {
+          "subquestion_label": "(b)",
+          "question_text": "A different part of the program uses the variable StartDate.\n\nWrite pseudocode statements to declare StartDate and assign to it the date corresponding to 15/11/2005.",
+          "question_type": "code_trace",
+          "marks": 2,
+          "answer": "DECLARE StartDate : DATE\nStartDate ← SETDATE(15, 11, 2005)",
+          "answer_conditions": [
+            "One mark for the declaration",
+            "One mark for the assignment"
+          ]
+        }
+      ]
+    },
+    {
+      "question_number": "3",
+      "subquestions": [
+        {
+          "subquestion_label": "(a)(i)",
+          "question_text": "Identify a suitable structure for storing the information for one customer. Explain the advantage of using this structure.",
+          "question_type": "short_answer",
+          "marks": 4,
+          "answer": "Structure: Record\nAdvantage:\n- A set of data / all data related to one customer\n- of different types\n- is held under a single identifier/entity",
+          "answer_conditions": [
+            "One mark for structure",
+            "One mark for each point"
+          ]
+        },
+        {
+          "subquestion_label": "(a)(ii)",
+          "question_text": "Describe a data structure that could be used to store the information for all customers.",
+          "question_type": "short_answer",
+          "marks": 2,
+          "answer": "A (1D) array of records // An array of the given type could be used",
+          "answer_conditions": [
+            "One mark per underlined word"
+          ]
+        },
+        {
+          "subquestion_label": "(b)",
+          "question_text": "Customers receive points depending on the amount they spend. The number of points depends on the band that the amount falls into:\n\n| Band | Amount | Points |\n| :--: | :-- | :-- |\n| 1 | Less than $10 | 5 per whole dollar ($) |\n| 2 | Between $10 and $100 inclusive | 7 per whole dollar ($) |\n| 3 | Over $100 | 10 per whole dollar ($) |\n\nFor example, if the amount is $99.77, this amount is in band 2 and therefore the number of points is 7 × 99, which is 693 points.\n\nThe algorithm to calculate the points from a given amount is expressed as follows:\n\n- work out the appropriate band\n- calculate and output the number of points.\n\nApply the process of stepwise refinement to increase the detail of the algorithm. Structure your algorithm into a sequence of five steps that could be used to produce pseudocode.\n\nWrite the five steps.",
+          "question_type": "long_answer",
+          "marks": 5,
+          "answer": "1 Reference to the use of constants or variables for the two threshold values of 10 and 100 // Input amount spent (by customer and store in a numeric variable)\n2 Work out one band that amount maps to\n3 Work out all bands that amount maps to\n4 Calculate rounded value of amount / whole number part of amount\n5 Calculate the points by multiplying the (rounded) amount by the appropriate value for appropriate band /all bands\n6 Output the number of points\nNote: Max 5 from available points",
+          "answer_conditions": [
+            "One mark for reference to each point"
+          ]
+        }
+      ]
+    },
+    {
+      "question_number": "4",
+      "subquestions": [
+        {
+          "subquestion_label": "",
+          "question_text": "Function Replace () will:\n1. take three parameters:\n   - a string (the original string)\n   - a char (the original character)\n   - a char (the new character)\n2. form a new string from the original string where all instances of the original character are replaced by the new character\n3. return the new string.\n\nWrite pseudocode for function Replace ().",
+          "question_type": "code_trace",
+          "marks": 6,
+          "answer": "Function Replace(OldString : STRING, Char1, Char2 : CHAR) RETURNS : STRING\nDECLARE NewString : STRING\nDECLARE ThisChar : CHAR\nDECLARE Index : INTEGER\nNewString ← \"\"\nFOR Index ← 1 TO LENGTH (OldString)\nThisChar ← MID (OldString, Index, 1)\nIF ThisChar = Char1 THEN\nThisChar ← Char2\nENDIF\nNewString ← NewString & ThisChar\nNEXT Index\nRETURN NewString\nENDFUNCTION",
+          "answer_conditions": [
+            "One mark for each correct element of the pseudocode"
+          ]
+        }
+      ]
+    },
+    {
+      "question_number": "5",
+      "subquestions": [
+        {
+          "subquestion_label": "(a)(i)",
+          "question_text": "Give two reasons why this may not be the most appropriate model to use in this case.",
+          "question_type": "short_answer",
+          "marks": 2,
+          "answer": "Reasons include:\n1 No working software until late in the life cycle so slower to market than competitors // Does not allow the creation of early versions/prototypes (which can be updated later)\n2 More difficult/slower to cope with changes to the requirements // website slower to be updated to reflect new requirements\n3 Needs high involvement/feedback of the stake holders /customer / client",
+          "answer_conditions": [
+            "One mark per point",
+            "Max 2 marks"
+          ]
+        },
+        {
+          "subquestion_label": "(a)(ii)",
+          "question_text": "Identify a more appropriate program development life cycle model for this scenario.",
+          "question_type": "short_answer",
+          "marks": 1,
+          "answer": "Iterative / Rapid Application Development / RAD",
+          "answer_conditions": [
+            "Correct identification of the model"
+          ]
+        },
+        {
+          "subquestion_label": "(b)",
+          "question_text": "The website has been running in test mode for several weeks.\n\nIdentify and describe a final stage of testing that should take place before the website is made available to all customers.",
+          "question_type": "long_answer",
+          "marks": 3,
+          "answer": "One mark for Stage\nStage: Beta testing\nMax 2 marks for Description\nDescription:\n1 Testing carried out by a small group of (potential) users\n2 Users will check that the website/software works as required / works in the real world //User will identify errors in the website/software\n3 Users will feedback (problems) / suggestions for improvement\n4 Problems / suggestions identified are addressed (before the program is sold)",
+          "answer_conditions": [
+            "One mark for the stage",
+            "Two marks for the description"
+          ]
+        }
+      ]
+    },
+    {
+      "question_number": "6",
+      "subquestions": [
+        {
+          "subquestion_label": "",
+          "question_text": "A video-conferencing program supports up to six users. Speech from each user is sampled and digitised (converted from analogue to digital). Digitised values are stored in array Sample.\n\nThe array Sample consists of 6 rows by 128 columns and is of type integer. Each row contains 128 digitised sound samples from one user.\n\nThe digitised sound samples from each user are to be processed to produce a single value which will be stored in a 1D array Result of type integer. This process will be implemented by procedure Mix().\n\nA procedure Mix() will:\n\n- calculate the average of each of the 6 sound samples in a column\n- ignore sound sample values of 10 or less\n- store the average value in the corresponding position in Result\n- repeat for each column in array Sample\n\nThe diagram uses example values to illustrate the process:\n\n[Diagram: A 2D array with 6 rows and 128 columns. Each cell contains a digitised sound sample value. The last row shows the Result array with the average values.]\n\n| Sample: | 1 | 2 | 3 | ... | 126 | 127 | 128 |\n| :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: |\n|  | 20 | 20 | 20 |  | 30 | 30 | 2 |\n|  | 20 | 20 | 30 |  | 50 | 30 | 3 |\n|  | 3 | 20 | 20 | 40 |  | 40 | 40 |\n|  | 4 | 20 | 20 | 50 |  | 40 | 50 |\n|  | 5 | 20 | 3 | 5 |  | 6 | 60 |\n|  | 6 | 20 | 4 | 2 |  | 4 | 70 |\n| Result: |  | 20 | 20 | 35 |  | 40 | 46 |\n\nWrite pseudocode for procedure Mix(). Assume Sample and Result are global.",
+          "question_type": "code_trace",
+          "marks": 6,
+          "answer": "PROCEDURE Mix()\nDECLARE Count, Total ThisNum : INTEGER\nDECLARE ThisUser, ThisSample : INTEGER\nFOR ThisSample ← 1 TO 128\nCount ← 0\nTotal ← 0\nFOR ThisUser ← 1 TO 6\nIF Sample[ThisUser, ThisSample] > 10 THEN\nCount ← Count + 1\nTotal ← Total + Sample[ThisUser, ThisSample]\nENDIF\nNEXT ThisUser\nResult[ThisSample] ← INT (Total / Count)\nNEXT ThisSample\nENDPROCEDURE",
+          "answer_conditions": [
+            "One mark for each correct element of the pseudocode"
+          ]
+        }
+      ]
+    },
+    {
+      "question_number": "7",
+      "subquestions": [
+        {
+          "subquestion_label": "(a)",
+          "question_text": "Identify three program modules that could be used in the design and describe their use.",
+          "question_type": "short_answer",
+          "marks": 3,
+          "answer": "Examples include:\nModule: GetOverdueLoan()\nUse: Identifies an overdue book\nModule: IdentifyStudent()\nUse: Identifies a student (with an overdue book)\nModule: GetStudentEmail()\nUse: Gets the email address of a student with an overdue book\nModule: CreateEmail()\nUse: Generates an email to a student with an overdue book\nModule: SendEmail()\nUse: Sends an email to a student with an overdue book",
+          "answer_conditions": [
+            "One mark for name and use",
+            "Max 3 marks"
+          ]
+        },
+        {
+          "subquestion_label": "(b)(i)",
+          "question_text": "Explain the relationship between the four modules shown.",
+          "question_type": "short_answer",
+          "marks": 2,
+          "answer": "One mark per point:\n- Module-A calls the other three modules\n- The process is repeated",
+          "answer_conditions": [
+            "One mark for each correct explanation"
+          ]
+        },
+        {
+          "subquestion_label": "(b)(ii)",
+          "question_text": "Two new modules are added: Module-X() and Module-Y().\n\n- Module-X() has no parameters.\n- Module-Y() will take a string and a real number as parameters and return a Boolean value.\n- Module-D() will call either Module-X() or Module-Y().\n\nDraw only the part of the structure chart that represents the relationship between Module-X(), Module-Y() and Module-D().",
+          "question_type": "diagram",
+          "marks": 3,
+          "answer": "[Diagram: A structure chart showing the relationship between Module-X(), Module-Y(), and Module-D().]",
+          "answer_conditions": [
+            "One mark per bullet point:\n- All rectangles correctly labelled and interconnected\n- All and only parameters as shown\n- Selection diamond"
+          ]
+        }
+      ]
+    },
+    {
+      "question_number": "8",
+      "subquestions": [
+        {
+          "subquestion_label": "(a)",
+          "question_text": "Write pseudocode for module IsNewSupp ().\n\nModule SuppExists () has already been written and should be used as part of your solution. Module SuppExists() will generate a run-time error if the given parameter is not 5 characters in length.",
+          "question_type": "code_trace",
+          "marks": 7,
+          "answer": "FUNCTION IsNewSupp(ThisString : STRING) RETURNS BOOLEAN\nDECLARE Index : INTEGER\nDECLARE ThisChar : CHAR\nIF LENGTH(ThisString) <> 5 THEN\nRETURN FALSE // invalid SupplierCode length\nENDIF\nIF SuppExists(ThisString) THEN\nRETURN FALSE // SupplierCode already exists\nENDIF\nFOR Index ← 1 TO 5\nThisChar ← TO_LOWER(MID(ThisString, Index, 1))\nIF ThisChar < 'a' OR ThisChar > 'z'THEN\nRETURN FALSE\nENDIF\nNEXT Index\nRETURN TRUE\nENDFUNCTION",
+          "answer_conditions": [
+            "One mark for each correct element of the pseudocode"
+          ]
+        },
+        {
+          "subquestion_label": "(b)",
+          "question_text": "Write efficient pseudocode for module CheckNewItem ().",
+          "question_type": "code_trace",
+          "marks": 7,
+          "answer": "FUNCTION CheckNewItem(NewLine : STRING) RETURNS BOOLEAN\nDECLARE NotFound : BOOLEAN\nDECLARE NewItemNum, ThisItemNum, ThisLine : STRING\nNotFound ← TRUE\nOPENFILE \"Stock.txt\" FOR READ\nNewItemNum ← LEFT (NewLine, 4)\nThisItemNum ← \"0000\" //rogue initial value\nWHILE NOT EOF(\"Stock.txt\") AND NotFound = TRUE AND ThisItemNum < NewItemNum\nREADFILE(\"Stock.txt\", ThisLine) //brackets optional\nThisItemNum ← LEFT (ThisLine, 4)\nIF ThisItemNum = NewItemNum THEN\nNotFound ← FALSE\nENDIF\nENDWHILE\nCLOSEFILE \"Stock.txt\"\nRETURN NotFound\nENDFUNCTION",
+          "answer_conditions": [
+            "One mark for each correct element of the pseudocode"
+          ]
+        },
+        {
+          "subquestion_label": "(c)(i)",
+          "question_text": "Identify this method of testing.",
+          "question_type": "short_answer",
+          "marks": 1,
+          "answer": "Integration testing",
+          "answer_conditions": [
+            "Correct identification of the method"
+          ]
+        },
+        {
+          "subquestion_label": "(c)(ii)",
+          "question_text": "One of the modules does not work properly when it is added to the program.\n\nDescribe a testing method that can be used to address this problem so that testing can continue and other modules can be added.",
+          "question_type": "long_answer",
+          "marks": 2,
+          "answer": "Two marks for the description:\n- A dummy/simple module is written to replace the module that does not work properly\n- The dummy/simple module will return an expected value // will output a message to show it has been called",
+          "answer_conditions": [
+            "One mark for each correct description"
+          ]
+        },
+        {
+          "subquestion_label": "(d)",
+          "question_text": "A new module AddItem () will be used to add information to the Stock.txt file.\n\nState the file mode that should be used for the algorithm within this module.",
+          "question_type": "short_answer",
+          "marks": 1,
+          "answer": "Append",
+          "answer_conditions": [
+            "Correct identification of the file mode"
+          ]
+        },
+        {
+          "subquestion_label": "(e)",
+          "question_text": "A new module FindItem () searches for a given item in the Stock.txt file, which is already organised in ascending order of ItemNum.\n\nDescribe how this organisation may improve the efficiency of the algorithm.",
+          "question_type": "long_answer",
+          "marks": 3,
+          "answer": "One mark for each part:\n- The algorithm / search / iteration can stop /only iterates if the current value read from the file // current line in file is greater than the value being searched for",
+          "answer_conditions": [
+            "One mark for each correct description"
+          ]
+        }
+      ]
+    }
+  ]
+}

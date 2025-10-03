@@ -1,0 +1,231 @@
+{
+  "subject_code": "9618",
+  "paper_code": "23",
+  "exam_session": "Summer",
+  "exam_year": "2024",
+  "context": "Refer to the insert for the list of pseudocode functions and operators.\n\nAn error will be generated if a function call is not properly formed or if the parameters are of an incorrect type or an incorrect value.\n\n# String and character functions\n- A string of length 1 may be considered to be either of type CHAR or STRING\n- A CHAR may be assigned to, or concatenated with, a STRING\n- A STRING of length greater than 1 cannot be assigned to a CHAR\n\n```\nLEFT(ThisString : STRING, x : INTEGER) RETURNS STRING\nreturns leftmost x characters from ThisString\nExample: LEFT(\"ABCDEFGH\", 3) returns \"ABC\"\nRIGHT(ThisString : STRING, x : INTEGER) RETURNS STRING\nreturns rightmost x characters from ThisString\nExample: RIGHT (\"ABCDEFGH\", 3) returns \"FGH\"\nMID(ThisString : STRING, x : INTEGER, y : INTEGER) RETURNS STRING\nreturns a string of length y starting at position x from ThisString\nExample: MID (\"ABCDEFGH\", 2, 3) returns string \"BCD\"\nLENGTH (ThisString : STRING) RETURNS INTEGER\nreturns the integer value representing the length of ThisString\nExample: LENGTH (\"Happy Days\") returns 10\nTO_UPPER(x : <datatype>) RETURNS <datatype>\n<datatype> may be CHAR or STRING\nreturns an object of type <datatype> formed by converting all characters of x to upper case.\nExamples:\n- TO_UPPER(\"Error 803\") returns \"ERROR 803\"\n- TO_UPPER('a') returns 'A'\nTO_LOWER(x : <datatype>) RETURNS <datatype>\n<datatype> may be CHAR or STRING\nreturns an object of type <datatype> formed by converting all characters of x to lower case.\nExamples:\n- TO_LOWER(\"JIM 803\") returns \"jim 803\"\n- TO_LOWER('W') returns 'w'\nNUM_TO_STR(x : <datatype1>) RETURNS <datatype2>\nreturns a string representation of a numeric value.\n<datatype1> may be REAL or INTEGER, <datatype2> may be CHAR or STRING\nExample: NUM_TO_STR(87.5) returns \"87.5\"\nIf x is a negative value, the returned value will be a string beginning with the ' - ' character.\n\nSTR_TO_NUM (x : <datatype1>) RETURNS <datatype2>\nreturns a numeric representation of a string.\n<datatype1> may be CHAR or STRING, <datatype2> may be REAL or INTEGER\nExample: STR_TO_NUM(\"23.45\") returns 23.45\nIf the string begins with the ' - ' character, the returned value will be negative.\n```\n\nIS_NUM (ThisString : <datatype>) RETURNS BOOLEAN\nreturns TRUE if ThisString represents a valid numeric value.\n<datatype> may be CHAR or STRING\nExample: IS_NUM (\"-12.36\") returns TRUE\nASC (ThisChar : CHAR) RETURNS INTEGER\nreturns an integer value (the ASCII value) of character ThisChar\nExample: ASC('A') returns 65, ASC('B') returns 66\nCHR (x : INTEGER) RETURNS CHAR\nreturns the character whose integer value (the ASCII value) is $x$\nExample: CHR (65) returns 'A', CHR (66) returns 'B'\n\n# Numeric functions\nINT (x : REAL) RETURNS INTEGER\nreturns the integer part of $x$\nExample: INT (27.5415) returns 27\nRAND (x : INTEGER) RETURNS REAL\nreturns a real number in the range 0 to $x$ (not inclusive of $x$ ).\nExample: RAND (87) could return 35.430729\n\n## Date functions\nDate format is assumed to be DD/MM/YYYY unless otherwise stated.\n\n```\nDAY (ThisDate : DATE) RETURNS INTEGER\nreturns the day number from ThisDate\nExample: DAY(04/10/2003) returns 4\nMONTH (ThisDate : DATE) RETURNS INTEGER\nreturns the month number from ThisDate\nExample: MONTH(04/10/2003) returns 10\nYEAR (ThisDate : DATE) RETURNS INTEGER\nreturns the year number from ThisDate\nExample: YEAR(04/10/2003) returns 2003\nDAYINDEX(ThisDate : DATE) RETURNS INTEGER\nreturns the day index number from ThisDate where Sunday = 1, Monday = 2 etc.\nExample: DAYINDEX(09/05/2023) returns 3\nSETDATE (Day, Month, Year : INTEGER) RETURNS DATE\nreturns a value of type DATE with the value of <Day>/<Month>/<Year>\nExample: SETDATE(26, 10, 2003) returns a date corresponding to 26/10/2003\nTODAY() RETURNS DATE\nreturns a value of type DATE corresponding to the current date.\n```\n\n# Text file functions\n## EOF (FileName : STRING) RETURNS BOOLEAN\nreturns TRUE if there are no more lines to be read from file FileName will generate an error if the file is not already open in READ mode.\n\n## Operators\nAn error will be generated if an operator is used with a value or values of an incorrect type.\n\n| $\\&$ | concatenates (joins) two strings. \nExample: \"Summer\" \\& \" \" \\& \"Pudding\" evaluates to \"Summer Pudding\" may also be used to concatenate a CHAR with a STRING |\n| :--: |\n| AND | performs a logical AND on two Boolean values. \nExample: TRUE AND FALSE evaluates to FALSE |\n| OR | performs a logical OR on two Boolean values. \nExample: TRUE OR FALSE evaluates to TRUE |\n| NOT | performs a logical NOT on a Boolean value. \nExample: NOT TRUE evaluates to FALSE |\n| MOD | finds the remainder when one number is divided by another. \nExample: 10 MOD 3 evaluates to 1 |\n| DIV | finds the quotient when one number is divided by another. \nExample 10 DIV 3 evaluates to 3 |\n\n## Comparison operators\n\n| $=$ | used to compare two items of the same type. evaluates to TRUE if the condition is true, otherwise evaluates to FALSE |\n| :--: |\n| $>$ | Notes: \n- may be used to compare types REAL and INTEGER \n- may be used to compare types CHAR and STRING \n- case sensitive when used to compare types CHAR and/or STRING \n- cannot be used to compare two records |\n| $<=$ | Examples: \n- \"Program\" = \"program\" evaluates to FALSE \n- Count $=4$ evaluates to TRUE when Count contains the value 4 |\n",
+  "questions": [
+    {
+      "question_number": "1",
+      "subquestions": [
+        {
+          "subquestion_label": "a(i)",
+          "question_text": "State **two** benefits of this modification to the existing program.",
+          "question_type": "short_answer",
+          "marks": 2,
+          "answer": "Two marks for the benefits:\n1. The code can be called when needed\n2. Any subsequent change to the algorithm / calculation needs to be made once only // Easier to manage / maintain (the program)\n3. Less code / no code duplication\n4. The algorithm / code / calculation can be designed / coded / tested once",
+          "answer_conditions": [
+            "Max 2 marks"
+          ]
+        },
+        {
+          "subquestion_label": "a(ii)",
+          "question_text": "Complete each pseudocode expression with a function or operator so that it evaluates to the value shown.\n\nAny functions and operators used must be defined in the insert.",
+          "question_type": "table_completion",
+          "marks": 3,
+          "answer": "| Pseudocode expression | Evaluates to |\n| --- | --- |\n| MID (\"Random\", 2, 3) | \"and\" |\n| $5+$ DAY $(10 / 11 / 2023)$ | 15 |\n| IS_NUM (\"45000\") | TRUE |\n| $(20$ MOD 3) +1 | 3 |",
+          "answer_conditions": [
+            "One mark per row"
+          ]
+        }
+      ]
+    },
+    {
+      "question_number": "2",
+      "subquestions": [
+        {
+          "subquestion_label": "a",
+          "question_text": "Outline five steps for this algorithm that could be used to produce pseudocode.\nAssume there are more elements in the array than lines in the file.\nDo not use pseudocode statements in your answer.",
+          "question_type": "short_answer",
+          "marks": 5,
+          "answer": "One mark per point:\n1. Open the file (in read mode and subsequently close)\n2. Initialise an index variable (to 1 // 0)\n3. Repeat (the next three steps) until the end of file is reached\n4. Read a line from the file (into a string variable)\n5. Store the line / variable in the array at the index\n6. Increment the index in a loop",
+          "answer_conditions": [
+            "max 5 marks"
+          ]
+        },
+        {
+          "subquestion_label": "b",
+          "question_text": "Identify one other programming construct that will be required when the algorithm from part (a) is converted into pseudocode and explain its use.",
+          "question_type": "short_answer",
+          "marks": 2,
+          "answer": "One mark per point:\nConstruct: a conditional loop\nUse: To keep repeating until the end of the file is reached\n\nALTERNATIVE:\nConstruct: a selection statement\nUse: To test / check the value returned by the EOF() function",
+          "answer_conditions": []
+        }
+      ]
+    },
+    {
+      "question_number": "3",
+      "subquestions": [
+        {
+          "subquestion_label": "a(i)",
+          "question_text": "A program uses a variable ThisIndex as the array index to access a record.\n\nWrite a pseudocode clause to check whether or not the weight of an individual component is within the acceptable range.",
+          "question_type": "code_trace",
+          "marks": 3,
+          "answer": "Example solution using AND\nIF Batch[ThisIndex].Weight >= Min AND\nBatch[ThisIndex].Weight <= Max THEN\n\nAlternative solution using OR\nIF Batch[ThisIndex].Weight < Min OR\nBatch[ThisIndex].Weight > Max THEN",
+          "answer_conditions": [
+            "Mark as follows:\n1. Reference to Batch[ThisIndex].Weight\n2. A valid check for one boundary\n3. A valid check for other boundary with correct logic operator"
+          ]
+        },
+        {
+          "subquestion_label": "a(ii)",
+          "question_text": "When batches of less than 1000 components are processed, it is necessary to indicate that certain elements in the array are unused.\n\nSuggest how an unused array element could be indicated.",
+          "question_type": "short_answer",
+          "marks": 1,
+          "answer": "One mark for either:\n- Set the Item_ID field to an empty string / NULL / invalid value\n- Set Weight to <= 0 / zero",
+          "answer_conditions": []
+        },
+        {
+          "subquestion_label": "b",
+          "question_text": "[Diagram: flowchart with labels 'START', 'Set Index to 0', 'Set Count to 0', 'Set Index to Index + 1', 'Is Index = 1001 ?', 'Yes', 'InRange (Index) = TRUE ?', 'Set Count to Count + 1', 'Is Count > 5', 'You must be in a 5001? (Is Count > 5 ?)', 'You must be in a 10001? (You must be in a 5001 ?)', 'END']\n\nComplete the program flowchart to represent the algorithm for module BatchCheck().",
+          "question_type": "short_answer",
+          "marks": 5,
+          "answer": "One mark per zone",
+          "answer_conditions": []
+        }
+      ]
+    },
+    {
+      "question_number": "4",
+      "subquestions": [
+        {
+          "subquestion_label": "a",
+          "question_text": "Write pseudocode for the procedure TwoParts ().",
+          "question_type": "code_trace",
+          "marks": 6,
+          "answer": "Example solution:\nPROCEDURE TwoParts()\nDECLARE NextNum, Average : REAL\nTotalA ← 0.0 // 0\nTotalB ← 0.0 // 0\nREPEAT\nINPUT NextNum\nTotalA ← TotalA + NextNum\nUNTIL NextNum =0\nREPEAT\nINPUT NextNum\nTotalB ← TotalB + NextNum\nUNTIL NextNum =0\nAverage ← (TotalA + TotalB) / 2\nOUTPUT \"The average is \", Average\nENDPROCEDURE",
+          "answer_conditions": [
+            "Mark as follows:\n1. Procedure heading and ending\n2. Declare all local variables\n3. Initialise TotalA and TotalB\n4. First conditional loop until zero entered, summing TotalA // Loop until both parts (sequences) have been entered\n5. Second conditional loop until zero entered, summing TotalB // Loop summing appropriate Totals\n6. Calculation of average and output with a message // Calculation of the average for the values making up the two totals and both output with a suitable message"
+          ]
+        },
+        {
+          "subquestion_label": "b(i)",
+          "question_text": "Identify a suitable data structure that could be used to store the different total values.",
+          "question_type": "short_answer",
+          "marks": 2,
+          "answer": "(1D) array of 20 reals\nMarks as follows:\n1 mark for array\n1 mark for 20 reals",
+          "answer_conditions": []
+        },
+        {
+          "subquestion_label": "b(ii)",
+          "question_text": "Describe three benefits of using the data structure given in part (b)(i).",
+          "question_type": "short_answer",
+          "marks": 3,
+          "answer": "One mark per point:\n1 (Multiple instances referenced via a single identifier so) fewer identifiers needed\n2 Easier to process / search / organise / access the data // Values may be accessed via a loop-controlled variable /an index //An array / data can be iterated through\n3 Makes the program/algorithm easier to write / design / understand / maintain / modify // Simplifies the program // Easier to debug / test",
+          "answer_conditions": []
+        }
+      ]
+    },
+    {
+      "question_number": "5",
+      "subquestions": [
+        {
+          "subquestion_label": "a",
+          "question_text": "Suggest a more appropriate construct that could be used and explain your choice.",
+          "question_type": "short_answer",
+          "marks": 2,
+          "answer": "One mark per point\n- Count-controlled loop\n- the number of iterations is known",
+          "answer_conditions": []
+        },
+        {
+          "subquestion_label": "b",
+          "question_text": "Explain why this is not efficient and suggest a more efficient solution.",
+          "question_type": "short_answer",
+          "marks": 4,
+          "answer": "Two mark for Statement of Problem:\n1 The functions will return the same value every time they are called\n2 ... because Label / the parameter value does not change within the loop\n\nTwo marks for Solution:\n3 Assign FormatA (Label) and FormatB (Label) to two (local) variables before the loop\n4 Use the (new) variables in place of the function calls / in the loop // Replace the references to FormatA() and FormatB() in the CASE clauses with the new variable names",
+          "answer_conditions": []
+        }
+      ]
+    },
+    {
+      "question_number": "6",
+      "subquestions": [
+        {
+          "subquestion_label": "a",
+          "question_text": "Write pseudocode for procedure Progress().",
+          "question_type": "code_trace",
+          "marks": 6,
+          "answer": "Example Solutions:\nPROCEDURE Progress(Percent : INTEGER, Root : STRING)\nDECLARE StepValue : INTEGER\nDECLARE Filename : STRING\nStepValue ← (Percent DIV 10) + 1 // INT(Percent / 10) +1\nFileName ← Root & \"-\" & NUM_TO_STR(StepValue) & \".bmp\"\nCALL Display(Filename)\nENDPROCEDURE\n\nAlternative:\nPROCEDURE Progress(Percent : INTEGER, Root : STRING)\nDECLARE StepValue : INTEGER\nDECLARE Filename : STRING\nDECLARE Found : BOOLEAN\nStepValue ← 1\nFound ← FALSE\nREPEAT\nIF Percent < StepValue * 10 THEN\nFound ← TRUE\nENDIF\nStepValue ← StepValue +1\nUNTIL Found\nFilename ← Root & \"-\" & NUM_TO_STR(StepValue - 1) & \".bmp\"\nCALL Display(Filename)\nENDPROCEDURE",
+          "answer_conditions": [
+            "Mark as follows for use of DIV/INT or loop solution:\n1 Procedure heading, parameters and ending\n2 Calculate StepValue as integer value // Attempt at calculating file number\n3 Add 1 to obtain file number // Completely correct file number calculation\n4 Use of NUM_TO_STR( ) to convert file number to string and use\n5 Concatenate Root, hyphen, file number and \".bmp\" suffix\n6 Call Display () with filename as parameter following a reasonable attempt"
+          ]
+        },
+        {
+          "subquestion_label": "b(i)",
+          "question_text": "Write pseudocode for the new module header.",
+          "question_type": "code_trace",
+          "marks": 1,
+          "answer": "Example Selection Solution:\nPROCEDURE Progress(Percent : INTEGER, Root : STRING)\nDECLARE Filename, StepValue : STRING\nCASE OF Percent\n<10\n<20\n<30\n<40\n<50\n<60\n<70\n<80\n<90\n<100\nOTHERWISE : StepValue\nENDCASE\nFilename ← Root & \"-\" & StepValue & \".bmp\" CALL Display(Filename)\nENDPROCEDURE",
+          "answer_conditions": [
+            "Mark as follows for loop solution:\n1 Procedure heading, parameters and ending\n2 Correct selection construct(s) structure\n3 Use of selection statement to obtain two file numbers\n4 Use of selection statement to obtain all the file numbers\n5 Concatenate Root, hyphen, file number and \".bmp\" suffix\n6 Call Display () once with filename as parameter following a reasonable attempt"
+          ]
+        },
+        {
+          "subquestion_label": "b(ii)",
+          "question_text": "State one benefit of increasing the number of steps.",
+          "question_type": "short_answer",
+          "marks": 1,
+          "answer": "One mark for a reasonable attempt to explain",
+          "answer_conditions": [
+            "2 marks for full explanation including context"
+          ]
+        }
+      ]
+    },
+    {
+      "question_number": "7",
+      "subquestions": [
+        {
+          "subquestion_label": "a(i)",
+          "question_text": "Identify the modules that would be implemented as functions.",
+          "question_type": "short_answer",
+          "marks": 1,
+          "answer": "Mod-B() and Mod-E()",
+          "answer_conditions": []
+        },
+        {
+          "subquestion_label": "a(ii)",
+          "question_text": "Explain the effect of the two different ways of passing the parameter Par3.",
+          "question_type": "short_answer",
+          "marks": 2,
+          "answer": "Points required:\n1 any change made to the parameter value / Par3 within Mod-G () is reflected in the (subsequent) value in the calling module / Mod-C () (after Mod-G () terminates)\n2 any change made to the parameter value / Par3 within Mod-F () is NOT reflected in the (subsequent) value in the calling module / Mod-C () (after Mod-F () terminates)",
+          "answer_conditions": [
+            "Mark as follows:\n1 mark for a reasonable attempt to explain\n2 marks for full explanation including context"
+          ]
+        },
+        {
+          "subquestion_label": "b",
+          "question_text": "[Diagram: structure chart showing the relationship between the seven modules and the parameters passed between them]",
+          "question_type": "diagram",
+          "marks": 6,
+          "answer": "One mark per bullet:\n1 All modules correctly labelled and interconnected\n2 Parameters between Mod-A and Mod-B and return value from Mod-B\n3 Parameters between Mod-A and Mod-C\n4 Diamond applied to Mod-B only\n5 Iteration arrow applied to Mod-C only\n6 All parameters at lower level and return value",
+          "answer_conditions": []
+        }
+      ]
+    },
+    {
+      "question_number": "8",
+      "subquestions": [
+        {
+          "subquestion_label": "a",
+          "question_text": "Write pseudocode for module `Header()`.",
+          "question_type": "code_trace",
+          "marks": 7,
+          "answer": "Example:\nFUNCTION Header(Line : STRING) RETURNS STRING\nIF LENGTH (Line) >= 13 THEN\nIF TO_UPPER(LEFT (Line, 9)) = \"FUNCTION \" THEN RETURN \"F\" & RIGHT (Line, LENGTH (Line) - 9) ENDIF\nIF TO_UPPER(LEFT (Line, 10)) = \"PROCEDURE \" THEN RETURN \"P\" & RIGHT (Line, LENGTH (Line) - 10) ENDIF\nENDIF\nRETURN \"\"\nENDFUNCTION",
+          "answer_conditions": [
+            "Mark as follows:\n1 Function heading, parameter, return type and ending\n2 Check that the line is at least 13 characters long before attempting to extract and return empty string\n3 Attempt at: Extract characters, 9 or 10 characters, corresponding to keyword plus space and compare with appropriate keyword plus space\n4 Completely correct MP3\n5 Use of type case conversion to allow for 'any case'\n6 Calculation of 'rest of line' and concatenation with 'P or 'F'\n7 Return string"
+          ]
+        },
+        {
+          "subquestion_label": "b",
+          "question_text": "Write pseudocode for module FindModules().",
+          "question_type": "code_trace",
+          "marks": 8,
+          "answer": "Example:\nPROCEDURE FindModules (FileName : STRING)\nDECLARE Line : STRING\nDECLARE Index, LineNum : INTEGER\nOPENFILE FileName FOR READ\nIndex ← 1\nLineNum ← 0\nWHILE NOT EOF (FileName)\nREADFILE FileName, Line\nLineNum ← LineNum +1\nLine ← Header (Line)\nIF Line <> \"\" THEN\nModInfo[Index, 1] ← NUM_TO_STR (LineNum)\nModInfo[Index, 2] ← LEFT (Line, 1)\nModInfo[Index, 3] ← RIGHT (Line, LENGTH (Line) - 1)\nIndex ← Index +1\nENDIF\nENDWHILE\nCLOSEFILE FileName\nENDPROCEDURE",
+          "answer_conditions": [
+            "Mark as follows:\n1 Open file in READ mode and subsequently close\n2 Loop to EOF (FileName)\n3 Read a line from the file and maintain LineNum in a loop\n4 Call Header () and use return value in a loop\n5 Test return value for \"\" in a loop\n6 Attempt at all three-array assignment for all columns in correct row\n7 Correct values assigned to all columns of array\n8 Maintain correct array row index"
+          ]
+        }
+      ]
+    }
+  ]
+}

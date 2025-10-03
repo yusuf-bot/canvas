@@ -1,0 +1,328 @@
+{
+  "subject_code": "9618",
+  "paper_code": "22",
+  "exam_session": "May/June",
+  "exam_year": "2023",
+  "context": "Refer to the insert for the list of pseudocode functions and operators.\n\nAn error will be generated if a function call is not properly formed or if the parameters are of an incorrect type or an incorrect value.\n\n# String and Character Functions\n- A string of length 1 may be either of type CHAR or STRING\n- A CHAR may be assigned to, or concatenated with, a STRING\n- A STRING of length greater than 1 cannot be assigned to a CHAR\n```\nLEFT(ThisString : STRING, x : INTEGER) RETURNS STRING\nreturns leftmost x characters from ThisString\nExample: LEFT (\"ABCDEFGH\", 3) returns \"ABC\"\nRIGHT(ThisString : STRING, x : INTEGER) RETURNS STRING\nreturns rightmost x characters from ThisString\nExample: RIGHT (\"ABCDEFGH\", 3) returns \"FGH\"\nMID(ThisString : STRING, x : INTEGER, y : INTEGER) RETURNS STRING\nreturns a string of length y starting at position x from ThisString\nExample: MID (\"ABCDEFGH\", 2, 3) returns string \"BCD\"\nLENGTH (ThisString : STRING) RETURNS INTEGER\nreturns the integer value representing the length of ThisString\nExample: LENGTH (\"Happy Days\") returns 10\nTO_UPPER(x : <datatype>) RETURNS <datatype>\n<datatype> may be CHAR or STRING\nreturns an object of type <datatype> formed by converting all characters of x to upper case.\nExamples:\n- TO_UPPER(\"Error 803\") returns \"ERROR 803\"\n- TO_UPPER('a') returns 'A'\nTO_LOWER(x : <datatype>) RETURNS <datatype>\n<datatype> may be CHAR or STRING\nreturns an object of type <datatype> formed by converting all characters of x to lower case.\nExamples:\n- TO_LOWER(\"JIM 803\") returns \"jim 803\"\n- TO_LOWER('W') returns 'w'\nNUM_TO_STR(x : <datatype1>) RETURNS <datatype2>\nreturns a string representation of a numeric value.\n<datatype1> may be REAL or INTEGER, <datatype2> may be CHAR or STRING\nExample: NUM_TO_STR(87.5) returns \"87.5\"\nSTR_TO_NUM (x : <datatype1>) RETURNS <datatype2>\nreturns a numeric representation of a string.\n<datatype1> may be CHAR or STRING, <datatype2> may be REAL or INTEGER\nExample: STR_TO_NUM(\"23.45\") returns 23.45\nIS_NUM(ThisString : <datatype>) RETURNS BOOLEAN\nreturns TRUE if ThisString represents a valid numeric value.\n<datatype> may be CHAR or STRING\nExample: IS_NUM(\"-12.36\") returns TRUE\n```\n\nASC (ThisChar : CHAR) RETURNS INTEGER\nreturns an integer value (the ASCII value) of character ThisChar\nExample: ASC('A') returns 65, ASC('B') returns 66, etc.\nCHR (x : INTEGER) RETURNS CHAR\nreturns the character whose integer value (the ASCII value) is $x$\nExample: CHR (65) returns 'A', CHR (66) returns 'B', etc.\n\n# Numeric Functions\nINT (x : REAL) RETURNS INTEGER\nreturns the integer part of $x$\nExample: INT (27.5415) returns 27\nRAND (x : INTEGER) RETURNS REAL\nreturns a real number in the range 0 to $x$ (not inclusive of $x$ ).\nExample: RAND (87) may return 35.43\n\n## Date Functions\nDate format is assumed to be DD/MM/YYYY unless otherwise stated.\n```\nDAY (ThisDate : DATE) RETURNS INTEGER\nreturns the current day number from ThisDate\nExample: DAY(04/10/2003) returns 4\nMONTH (ThisDate : DATE) RETURNS INTEGER\nreturns the current month number from ThisDate\nExample: MONTH(04/10/2003) returns 10\nYEAR (ThisDate : DATE) RETURNS INTEGER\nreturns the current year number from ThisDate\nExample: YEAR(04/10/2003) returns 2003\nDAYINDEX(ThisDate : DATE) RETURNS INTEGER\nreturns the day index number from ThisDate where Sunday = 1, Monday = 2 etc.\nExample: DAYINDEX(09/05/2023) returns 3\nSETDATE (Day, Month, Year : INTEGER) RETURNS DATE\nreturns a value of type DATE with the value of <Day>/<Month>/<Year>\nExample: SETDATE(26, 10, 2003) returns a date corresponding to 26/10/2003\nTODAY() RETURNS DATE\nreturns a value of type DATE corresponding to the current date.\n```\n\n## Text File Functions\nEOF(FileName : STRING) RETURNS BOOLEAN\nreturns TRUE if there are no more lines to be read from file FileName\nThe function will generate an error if the file is not already open in READ mode.\n\n# Operators\nAn error will be generated if an operator is used with a value or values of an incorrect type.\n\n| $\\&$ | concatenates (joins) two strings. <br> Example: \"Summer\" \\& \" \" \\& \"Pudding\" evaluates to \"Summer Pudding\" <br> The operator may also be used to concatenate a CHAR with a STRING |\n\n| :--: |\n| AND | performs a logical AND on two Boolean values. <br> Example: TRUE AND FALSE evaluates to FALSE |\n| OR | performs a logical OR on two Boolean values. <br> Example: TRUE OR FALSE evaluates to TRUE |\n| NOT | performs a logical NOT on a Boolean value. <br> Example: NOT TRUE evaluates to FALSE |\n| MOD | finds the remainder when one number is divided by another. <br> Example: 10 MOD 3 evaluates to 1 |\n| DIV | finds the quotient when one number is divided by another. <br> Example 10 DIV 3 evaluates to 3 |\n\n## Comparison Operators\n\n| $=$ | used to compare two items of the same type. evaluates to TRUE if the condition is true, otherwise evaluates to FALSE |\n\n| $>$ | Notes: |\n| $<$ | - may be used to compare types REAL and INTEGER <br> - may be used to compare types CHAR and STRING <br> - case sensitive when used to compare types CHAR or STRING <br> - cannot be used to compare two records |\n| $<=$ | Examples: |\n| $<>$ | - \"Program\" = \"program\" evaluates to FALSE <br> - Count $=4$ evaluates to TRUE when variable Count contains the value 4 |\n\n",
+  "questions": [
+    {
+      "question_number": "1",
+      "subquestions": [
+        {
+          "subquestion_label": "a(i)",
+          "question_text": "Identify a more appropriate way of representing the postal costs.",
+          "question_type": "short_answer",
+          "marks": 1,
+          "answer": "Use of constants",
+          "answer_conditions": [
+            "Postal rates are entered once only",
+            "Avoids input error / changing the cost accidentally // avoids different values for postal rates at different points in the program",
+            "When required, the constant representing the postal rate value is changed once only // easier to maintain the program when the postal rates change",
+            "Makes the program easier to understand"
+          ]
+        },
+        {
+          "subquestion_label": "a(ii)",
+          "question_text": "Describe the advantages of your answer to part (a)(i) with reference to this program.",
+          "question_type": "long_answer",
+          "marks": 3,
+          "answer": "",
+          "answer_conditions": [
+            "Postal rates are entered once only",
+            "Avoids input error / changing the cost accidentally // avoids different values for postal rates at different points in the program",
+            "When required, the constant representing the postal rate value is changed once only // easier to maintain the program when the postal rates change",
+            "Makes the program easier to understand"
+          ]
+        },
+        {
+          "subquestion_label": "b",
+          "question_text": "The lines of pseudocode contain features that make them easier to understand.\n\nState three of these features.",
+          "question_type": "short_answer",
+          "marks": 3,
+          "answer": "",
+          "answer_conditions": [
+            "Indentation",
+            "White space",
+            "Comments",
+            "Sensible / meaningful variable names // use of Camel Case",
+            "Capitalised keywords"
+          ]
+        },
+        {
+          "subquestion_label": "c",
+          "question_text": "Give the appropriate data types for the following variables:\n\nValidAddress \nItemPostalCost \nItemStatus",
+          "question_type": "short_answer",
+          "marks": 3,
+          "answer": "",
+          "answer_conditions": [
+            "BOOLEAN",
+            "REAL",
+            "STRING"
+          ]
+        }
+      ]
+    },
+    {
+      "question_number": "2",
+      "subquestions": [
+        {
+          "subquestion_label": "a",
+          "question_text": "Write a pseudocode statement, using a function from the insert, to assign the value corresponding to $17 / 11 / 2007$ to MyDOB.",
+          "question_type": "short_answer",
+          "marks": 1,
+          "answer": "$\u007b\\mathrm\u007bMyDOB\u007d \u005cleftarrow\u007b SETDATE \u007b(17,11,2007)\u007d\u007d\u007d$",
+          "answer_conditions": []
+        },
+        {
+          "subquestion_label": "b",
+          "question_text": "MyDOB has been assigned a valid value representing the user's date of birth.\n\nWrite a pseudocode statement to calculate the number of months from the month of the user's birth until the end of the year and to assign this to the variable NumMonths.\n\nFor example, if MyDOB contains a value representing 02/07/2008, the value 5 would be assigned to NumMonths.",
+          "question_type": "short_answer",
+          "marks": 2,
+          "answer": "$\u005cunderline\u007b\u005ctext \u007b { NumMonths }\u007d \u005cleftarrow 12-\u007b MONTH (MyDOB)\u007d\u007d$",
+          "answer_conditions": [
+            "One mark per underlined part"
+          ]
+        },
+        {
+          "subquestion_label": "c",
+          "question_text": "The program will output the day of the week corresponding to MyDOB.\n\nFor example, given the date 22/06/2023, the program will output \"Thursday\".\nAn algorithm is required. An array will be used to store the names of the days of the week.\nDefine the array and describe the algorithm in four steps.\nDo not use pseudocode statements in your answer.",
+          "question_type": "long_answer",
+          "marks": 6,
+          "answer": "Array definition\n\nStep 1\n\nStep 2\n\nStep 3\n\nStep 4",
+          "answer_conditions": [
+            "A (1D) array containing 7 elements",
+            "of type STRING",
+            "Assign value \"Sunday\" to first element, \"Monday\" to second element etc.",
+            "Use the function DAYINDEX () to return / find the day number from MyDoB",
+            "Use the returned value as the array index / to access the element that contains the name / string",
+            "Output the element / name / string"
+          ]
+        }
+      ]
+    },
+    {
+      "question_number": "3",
+      "subquestions": [
+        {
+          "subquestion_label": "a(i)",
+          "question_text": "Describe how the data items Orange and Yellow are added to the queue shown in the diagram.\n\n[Diagram: Queue Representation]\n\n| 0 |  |\n| :-- | :-- |\n| 1 |  |\n| 2 |  |\n| 3 |  |\n| 4 |  |\n| 5 | Red |\n| 6 | Green |\n| 7 | Blue |\n| 8 | Pink |\n| 9 |  |\n\n",
+          "question_type": "long_answer",
+          "marks": 4,
+          "answer": "",
+          "answer_conditions": [
+            "Check that the queue is not full",
+            "EoQ pointer will move to point to location 9",
+            "Data item Orange will be stored in location referenced by EoQ pointer",
+            "EoQ pointer will move to point to location 0",
+            "Data item Yellow will be stored in location referenced by EoQ pointer"
+          ]
+        },
+        {
+          "subquestion_label": "a(ii)",
+          "question_text": "The following diagram shows the state of the queue after several operations have been performed. All queue locations have been used at least once.\n\n[Diagram: Queue State]\n\n| 0 | D4 |\n| :-- | :-- |\n| 1 | D3 |\n| 2 | D27 |\n| 3 | D8 |\n| 4 | D33 |\n| 5 | D17 |\n| 6 | D2 |\n| 7 | D1 |\n| 8 | D45 |\n| 9 | D60 |\n\nState the number of data items in the queue.",
+          "question_type": "short_answer",
+          "marks": 1,
+          "answer": "7",
+          "answer_conditions": []
+        },
+        {
+          "subquestion_label": "b",
+          "question_text": "The design of the queue is completed and the number of locations is increased.\n\nA function AddToQueue () has been written. It takes a string as a parameter and adds this to the queue. The function will return TRUE if the string was added successfully.\n\nA procedure FileToQueue() will add each line from the file to the queue. This procedure will end when all lines have been added or when the queue is full.\n\nDescribe the algorithm for procedure FileToQueue ().\nDo not use pseudocode in your answer.",
+          "question_type": "long_answer",
+          "marks": 5,
+          "answer": "",
+          "answer_conditions": [
+            "Open file in READ mode",
+            "Loop to EOF () // read / process all the lines in file",
+            "Loop will end when return value from AddToQueue () is FALSE / queue is full",
+            "Read a line from the file in a loop",
+            "Pass string to AddToQueue () // AddToQueue () is executed with line as parameter"
+          ]
+        }
+      ]
+    },
+    {
+      "question_number": "4",
+      "subquestions": [
+        {
+          "subquestion_label": "",
+          "question_text": "A function GetNum () will:\n1. take two parameters: a string and a character\n2. count the number of times that the character occurs in the string\n3. return the count.\n\nAny comparison between characters needs to be case sensitive. For example, character 'a' and character 'A' are not identical.\n\nWrite pseudocode for function GetNum ().",
+          "question_type": "code_trace",
+          "marks": 6,
+          "answer": "Function GetNum(ThisString : STRING, ThisChar : CHAR) RETURNS INTEGER\nDECLARE Index, Count : INTEGER\n$\u007b\\operatorname\u007b\u005ctext\u007b{Count}\u007d \u005cleftarrow 0\u007d\u007d$\nFOR Index $\u005cleftarrow 1$ TO LENGTH(ThisString)\nIF MID(ThisString, Index, 1) = ThisChar THEN Count $\u005cleftarrow$ Count +1\nENDIF\nNEXT Index\nRETURN Count\nENDFUNCTION",
+          "answer_conditions": [
+            "Function heading and end, including parameters and return type",
+            "Declare local Integers for Index and Count",
+            "Loop for length of ThisString",
+            "Extract a character and compare with parameter in a loop",
+            "Increment Count if match in a loop",
+            "Return Count after loop"
+          ]
+        }
+      ]
+    },
+    {
+      "question_number": "5",
+      "subquestions": [
+        {
+          "subquestion_label": "a",
+          "question_text": "Explain why the program gives unexpected results.",
+          "question_type": "long_answer",
+          "marks": 3,
+          "answer": "",
+          "answer_conditions": [
+            "parameter / Num has been passed by reference // should have been passed by value",
+            "so when the value / ThisNum is modified (in procedure DisplaySqrt())",
+            "the new value will be used in the loop (lines 40-43) // Num will be changed to modified value"
+          ]
+        },
+        {
+          "subquestion_label": "b",
+          "question_text": "Explain why the compiler does not identify this error.",
+          "question_type": "short_answer",
+          "marks": 1,
+          "answer": "- The rules of the language have not been broken // there are no syntax errors",
+          "answer_conditions": []
+        },
+        {
+          "subquestion_label": "c",
+          "question_text": "Describe how a typical Integrated Development Environment (IDE) could be used to identify this error.",
+          "question_type": "long_answer",
+          "marks": 3,
+          "answer": "",
+          "answer_conditions": [
+            "Set a breakpoint to stop the program at a certain line / statement / point",
+            "Step through the program line by line / statement by statement",
+            "checking the value of 'num' / a variable using a report / watch window"
+          ]
+        },
+        {
+          "subquestion_label": "d",
+          "question_text": "During compilation, a complex statement generates an error.\n\nThe programmer does not want to delete the complex statement but wants to change the statement so that it is ignored by the compiler.\n\nState how this may be achieved.",
+          "question_type": "short_answer",
+          "marks": 1,
+          "answer": "",
+          "answer_conditions": [
+            "Change the statement into a comment",
+            "Change the statement to a string representing a literal value and assign it to a variable / output it"
+          ]
+        }
+      ]
+    },
+    {
+      "question_number": "6",
+      "subquestions": [
+        {
+          "subquestion_label": "",
+          "question_text": "A procedure Square () will take an integer value in the range 1 to 9 as a parameter and output a number square.\n\nThe boundary of a number square is made up of the character representing the parameter value. The inside of the number square is made up of the asterisk character (*).\n\n| Parameter value | 1 | 2 | 3 | 4 | ... | 9 |\n| :--: | :--: | :--: | :--: | :--: | :--: | :--: |\n| Output | 1 | 22 | 333 | 4444 | ... | 999999999 |\n|  |  |  | 333 | 4444 |  | 9 * * * * * * * 9 |\n|  |  |  |  |  |  | 9 * * * * * * * 9 |\n|  |  |  |  |  |  | 9 * * * * * * * 9 |\n|  |  |  |  |  |  | 9 * * * * * * * 9 |\n|  |  |  |  |  |  | 999999999 |\n\nWrite pseudocode for procedure Square(). Parameter validation is not required.",
+          "question_type": "code_trace",
+          "marks": 6,
+          "answer": "PROCEDURE Square(Dim : INTEGER)\nDECLARE Count : INTEGER\nCASE OF Dim\n1 : OUTPUT \"1\"\n2 : OUTPUT \"22\" OUTPUT \"22\"\n3 : OUTPUT \"333\" OUTPUT \"3*3\" OUTPUT \"333\"\n4 : OUTPUT \"4444\" FOR Count $\u005cleftarrow 1$ TO 2 OUTPUT \"4**4\" NEXT Count OUTPUT \"4444\"\n5 : OUTPUT \"55555\" FOR Count $\u005cleftarrow 1$ TO 3 OUTPUT \"5***5\" NEXT Count OUTPUT \"55555\"\n6 : OUTPUT \"666666\" FOR Count $\u005cleftarrow 1$ TO 4 OUTPUT \"6****6\" NEXT Count OUTPUT \"666666\"\n7 : OUTPUT \"7777777\" FOR Count $\u005cleftarrow 1$ TO 5 OUTPUT \"7*****7\" NEXT Count OUTPUT \"7777777\"\n8 : OUTPUT \"88888888\" FOR Count $\u005cleftarrow 1$ TO 6 OUTPUT \"8******8\" NEXT Count OUTPUT \"88888888\"\n9 : OUTPUT \"999999999\" FOR Count $\u005cleftarrow 1$ TO 7 OUTPUT \"9*******9\"\nNEXT Count OUTPUT \"999999999\"",
+          "answer_conditions": [
+            "Procedure heading and ending including parameter",
+            "Loop using parameter, containing attempt to construct first line / last line",
+            "Construct first line / last line",
+            "Attempt at loop to construct intermediate line",
+            "Output first / last line of square when Dim > 2",
+            "Output all intermediate lines in a loop",
+            "Correct output of first two squares"
+          ]
+        }
+      ]
+    },
+    {
+      "question_number": "7",
+      "subquestions": [
+        {
+          "subquestion_label": "a(i)",
+          "question_text": "State three items of information that the new module would need. Justify your choice in each case.",
+          "question_type": "short_answer",
+          "marks": 3,
+          "answer": "",
+          "answer_conditions": [
+            "Information: customer name\nJustification: to personalise / address the email",
+            "Information: email address\nJustification: so that the email can be delivered correctly",
+            "Information: product category preference\nJustification: to check that the customer would be interested in the product",
+            "Information: contact preference\nJustification: to check that the customer will accept contact via email",
+            "Information: order history\nJustification: to send details of product similar to that already bought // to identify frequent shoppers",
+            "Information: new product information\nJustification: to include information about the new product in the email"
+          ]
+        },
+        {
+          "subquestion_label": "a(ii)",
+          "question_text": "Identify two items of customer information that would not be required by the new module. Justify your choice in each case.",
+          "question_type": "short_answer",
+          "marks": 2,
+          "answer": "",
+          "answer_conditions": [
+            "postal address\nJustification: sending an email, not a letter",
+            "payment details\nJustification: Nothing being bought / sold at this stage",
+            "order history\nJustification: Customer preference used to decide if new product is relevant"
+          ]
+        },
+        {
+          "subquestion_label": "b",
+          "question_text": "!img-0.jpeg\n\nComplete the state-transition diagram to represent the information given in the table.",
+          "question_type": "diagram",
+          "marks": 4,
+          "answer": "[Diagram: State-transition Diagram]\n\n```\n+-----------------+\n|       S1        |\n+-----------------+\n          |\n          v\n+-----------------+\n|       S2        |\n+-----------------+\n          |\n          v\n+-----------------+\n|       S3        |\n+-----------------+\n          |\n          v\n+-----------------+\n|       S4        |\n+-----------------+\n```\n",
+          "answer_conditions": [
+            "Line from S1 to S2 and label",
+            "S2 loop label",
+            "S3 circle and label on incoming",
+            "S4 circle and label on incoming"
+          ]
+        }
+      ]
+    },
+    {
+      "question_number": "8",
+      "subquestions": [
+        {
+          "subquestion_label": "a",
+          "question_text": "Write pseudocode for module CheckInfo().\n\nModule OnlyAlpha() should be used as part of your solution.",
+          "question_type": "code_trace",
+          "marks": 7,
+          "answer": "FUNCTION CheckInfo(NewLine: STRING) RETURNS BOOLEAN\nDECLARE ThisNum : STRING\nDECLARE Index : INTEGER\nIF LENGTH(NewLine) < 19 THEN RETURN FALSE\nENDIF\nFOR Index $\u005cleftarrow 1$ TO 4\nIF NOT IS_NUM(MID(NewLine, Index, 1)) THEN RETURN FALSE\nENDIF\nNEXT Index\nThisNum $\u005cleftarrow$ LEFT (Newline, 4)\nIF ThisNum < \"0001\" OR ThisNum > \"5999\" THEN RETURN FALSE\nENDIF\nIF NOT OnlyAlpha(MID(Newline, 5, 3)) THEN RETURN FALSE\nENDIF\nRETURN TRUE\nENDFUNCTION",
+          "answer_conditions": [
+            "Test length of parameter",
+            "Extract first 4 characters of parameter (as ItemNum)",
+            "Test first four characters are all numeric",
+            "Test ItemNum in range \"0001\" to \"5999\"",
+            "Extract characters 5 to 7 of parameter (as SupplierCode)",
+            "Use of OnlyAlpha () with extracted SupplierCode",
+            "Return BOOLEAN value correctly in all cases, must have been declared as local"
+          ]
+        },
+        {
+          "subquestion_label": "b",
+          "question_text": "Write pseudocode for module AddItem ().",
+          "question_type": "code_trace",
+          "marks": 7,
+          "answer": "PROCEDURE AddItem(NewLine : STRING)\nDECLARE NewItemNum, ThisItemNum : STRING\nOPENFILE \"Stock.txt\" FOR READ\nOPENFILE \"NewStock.txt\" FOR WRITE\nNewItemNum $\u005cleftarrow$ LEFT (NewLine, 4)\nWHILE NOT EOF(\"Stock.txt\")\nREADFILE(\"Stock.txt\", ThisLine)\nThisItemNum $\u005cleftarrow$ LEFT (ThisLine, 4)\nIF ThisItemNum > NewItemNum THEN\nWRITEFILE(\"NewStock.txt\", NewLine) // write New\nNewItemNum $\u005cleftarrow$ \"9999\" // ...once only\nENDIF\nWRITEFILE(\"NewStock.txt\", ThisLine)\nENDWHILE\nIF NewItemNum <> \"9999\" THEN\nWRITEFILE(\"NewStock.txt\", NewLine) //New last line\nENDIF\nCLOSEFILE \"Stock.txt\"\nCLOSEFILE \"NewStock.txt\"\nENDPROCEDURE",
+          "answer_conditions": [
+            "Open both files, in correct modes, and subsequently close",
+            "Conditional loop until end of file Stock.txt",
+            "Read a line from Stock.txt AND extract ThisItemNum in a loop",
+            "Test ThisItemNum > NewItemNum then write NewLine to NewStock.txt",
+            "...including mechanism to only do this once only",
+            "Write line read from Stock to NewStock",
+            "Deal with the case where NewLine is the new last line"
+          ]
+        },
+        {
+          "subquestion_label": "c",
+          "question_text": "The program contains modules SuppExists () and CheckSupplier(). These have been written but contain errors. These modules are called from several places in the main program and testing of the main program (integration testing) has had to stop.\n\nIdentify a method that can be used to continue testing the main program before the errors in these modules have been corrected and describe how this would work.",
+          "question_type": "short_answer",
+          "marks": 3,
+          "answer": "",
+          "answer_conditions": [
+            "Method: Stub testing",
+            "The modules SuppExists() and CheckSupplier() are replaced by dummy modules",
+            "...which return a known result / contain an output statement to show they have been called"
+          ]
+        }
+      ]
+    }
+  ]
+}

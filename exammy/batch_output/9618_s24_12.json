@@ -1,0 +1,320 @@
+{
+  "subject_code": "9618",
+  "paper_code": "12",
+  "exam_session": "Summer",
+  "exam_year": "2024",
+  "context": "no insert provided",
+  "questions": [
+    {
+      "question_number": "1",
+      "subquestions": [
+        {
+          "subquestion_label": "a",
+          "question_text": "Describe the operation of each of the following logic gates:\n\nNAND\n\nNOR\n\nXOR\n\nOR",
+          "question_type": "short_answer",
+          "marks": 4,
+          "answer": "NAND: The output is 0 when both inputs are 1, otherwise the output is 1\n\nNOR: The output is 1 when both inputs are 0, otherwise the output is 0\n\nXOR: The output is 1 when one of the inputs is 1 and the other input is 0, otherwise the output is 0\n\nOR: The output is 0 when both inputs are 0, otherwise the output is 1",
+          "answer_conditions": [
+            "1 mark for each correct answer"
+          ]
+        },
+        {
+          "subquestion_label": "b",
+          "question_text": "Draw a logic circuit for this logic expression:\n\n$$X=\\text{{ NOT }}((\\text{{ A AND }} B) \\text{{ OR }}(\\text{{ C AND }} D))$$\n\n![img-1.jpeg](img-1.jpeg)",
+          "question_type": "diagram_completion",
+          "marks": 2,
+          "answer": "[Diagram: Logic circuit with two AND gates for (A AND B) and (C AND D), an OR gate combining their outputs, and a NOT gate for the final output]",
+          "answer_conditions": [
+            "1 mark for both AND gates with correct inputs",
+            "1 mark for correct OR and NOT gates with correct inputs and no superfluous gates"
+          ]
+        }
+      ]
+    },
+    {
+      "question_number": "2",
+      "subquestions": [
+        {
+          "subquestion_label": "a",
+          "question_text": "Complete the description of the principal operation of a VR headset.\n\nA headset can have one or two that output the image to the user. The headset has speakers that output surround sound to give a realistic experience.\n\nThe user's head movements are detected using a sensor.\nThis sensor is a\n.\nThe data is transmitted to a microprocessor that analyses the data to identify the\nof movement. Some headsets use\nthat record the user's eye movements for analysis.",
+          "question_type": "table_completion",
+          "marks": 4,
+          "answer": "A headset can have one or two LCD displays/screens/lenses that output the image to the user. The headset has speakers that output surround sound to give a realistic experience.\n\nThe user's head movements are detected using a sensor.\nThis sensor is a gyroscope/accelerometer. The data is transmitted to a microprocessor that analyses the data to identify the direction/speed of movement. Some headsets use digital cameras that record the user's eye movements for analysis.",
+          "answer_conditions": [
+            "1 mark for each correctly completed statement"
+          ]
+        },
+        {
+          "subquestion_label": "b",
+          "question_text": "Explain how a buffer is used when data is transmitted between the computer and the VR headset.",
+          "question_type": "long_answer",
+          "marks": 3,
+          "answer": "The buffer is used as a temporary store for data going to the headset.\nData is transferred into the buffer by the computer.\nData is retrieved from the buffer by the headset.\nWhen the buffer is empty/full an interrupt is sent to the computer requesting more data/stopping further data being sent.\nWhen the headset has enough data/needs more data, an interrupt is sent by the headset to the computer to stop sending data from buffer.",
+          "answer_conditions": [
+            "1 mark each to max 3"
+          ]
+        },
+        {
+          "subquestion_label": "c",
+          "question_text": "Explain the benefits of using EEPROM instead of other types of Read Only Memory (ROM) in the VR headset.",
+          "question_type": "long_answer",
+          "marks": 3,
+          "answer": "EEPROM allows frequent/multiple read/write/erase operations so the headset can take advantage of new features without fully erasing the contents of the firmware in the headset first // can erase a particular byte or the whole EEPROM without removing the chip(s)/firmware from the headset so the contents of the firmware in the headset can be changed by the user without technical expertise. Cheaper to manufacture so headset will be cheaper to purchase.",
+          "answer_conditions": [
+            "1 mark each to max 3"
+          ]
+        },
+        {
+          "subquestion_label": "d(i)",
+          "question_text": "Describe how the data for a bitmapped image is encoded.",
+          "question_type": "short_answer",
+          "marks": 3,
+          "answer": "Image is made of pixels and each pixel has one colour. Each colour has a unique binary code. Code for the colour of each pixel is stored in sequence.",
+          "answer_conditions": [
+            "1 mark each"
+          ]
+        },
+        {
+          "subquestion_label": "d(ii)",
+          "question_text": "Describe the contents of a vector graphic drawing list.",
+          "question_type": "short_answer",
+          "marks": 2,
+          "answer": "A list of objects in the drawing. A list that stores the command/description/equation required to draw each object. Properties of each object e.g. the fill colour, line weight/colour.",
+          "answer_conditions": [
+            "1 mark each to max 2"
+          ]
+        },
+        {
+          "subquestion_label": "d(iii)",
+          "question_text": "Give two reasons why the video does not need to be compressed.",
+          "question_type": "short_answer",
+          "marks": 2,
+          "answer": "Dedicated connection to the headset // not sharing bandwidth. Already fast connection that can transmit the data without slowing. Video may already be a small file size and does not need further. video is not saved so storage is not an issue in the headset.",
+          "answer_conditions": [
+            "1 mark each to max 2"
+          ]
+        }
+      ]
+    },
+    {
+      "question_number": "3",
+      "subquestions": [
+        {
+          "subquestion_label": "a(i)",
+          "question_text": "Identify one other security measure that helps to protect the server from hackers. Describe how the security measure works.\n\nSecurity measure\nDescription",
+          "question_type": "short_answer",
+          "marks": 3,
+          "answer": "Firewall: Checks incoming connections against criteria. Blocks data from entering specific ports. Blocks data that does not meet whitelist that meets blacklist.\nProxy server: Prevents devices accessing the web server directly. Intercepts any requests. Forwards the request using its own IP address. Screens returning data before sending it to the user.",
+          "answer_conditions": [
+            "1 mark for security measure",
+            "1 mark each to max 2 for how the chosen measure works"
+          ]
+        },
+        {
+          "subquestion_label": "a(ii)",
+          "question_text": "Identify one security measure that helps to protect the data when it is being transmitted to its destination. Describe how the security measure works.\n\nSecurity measure\nDescription",
+          "question_type": "short_answer",
+          "marks": 3,
+          "answer": "Encryption: Encodes/scrambles data so if it is intercepted it cannot be understood. Algorithm/key is required to decode the data.",
+          "answer_conditions": [
+            "1 mark for security measure",
+            "1 mark each to max 2 for description of the chosen measure"
+          ]
+        },
+        {
+          "subquestion_label": "b",
+          "question_text": "Complete the table by identifying two characteristics of a thin-client. Describe how each characteristic will be used in this software.\n\n|  | Thin-client characteristic | Description of use in this software |\n| :--: | :--: | :--: |\n| 1 |  |  |\n|  |      |  |\n|  |      |  |\n|  |      |  |\n| 2 |  |  |\n|  |      |  |\n|  |      |  |\n|  |      |  |",
+          "question_type": "table_completion",
+          "marks": 4,
+          "answer": "|  | Thin-client characteristic | Description of use in this software |\n| :--: | :--: | :--: |\n| 1 | Data is not stored on the client computer | Exam papers are stored on the server and not on the examiner's computer // exam papers are not permanently stored on the examiners' computers |\n| 2 | Client computer is reliant on access to server | Examiners cannot mark if their device cannot access the server / the server 'goes down' |",
+          "answer_conditions": [
+            "1 mark for characteristic",
+            "1 mark for description of application to examination software"
+          ]
+        },
+        {
+          "subquestion_label": "c(i)",
+          "question_text": "Describe the role of routers in the transmission of data through the internet.",
+          "question_type": "short_answer",
+          "marks": 2,
+          "answer": "Receives packets from internet. Analyses the destination IP address of each packet. Forwards the packet towards its destination using the routing table. Maintains/updates the routing table. Finds the most efficient route to the destination.",
+          "answer_conditions": [
+            "1 mark each to max 2"
+          ]
+        },
+        {
+          "subquestion_label": "c(ii)",
+          "question_text": "Describe the role of the PSTN (Public Switched Telephone Network) in the transmission of data through the internet.",
+          "question_type": "short_answer",
+          "marks": 2,
+          "answer": "The PSTN consists of many different types of communication lines therefore the digital data may need to be converted into a different form/analogue signal. Data is transmitted in both directions at the same time // duplex data transmission. Using a PSTN the communication passes through different switching centres/ISPs.",
+          "answer_conditions": [
+            "1 mark each to max 2"
+          ]
+        }
+      ]
+    },
+    {
+      "question_number": "4",
+      "subquestions": [
+        {
+          "subquestion_label": "a",
+          "question_text": "Identify the relationship between EXAM and EXAM_QUESTION.",
+          "question_type": "short_answer",
+          "marks": 1,
+          "answer": "1-to-many",
+          "answer_conditions": [
+            "1 mark for: 1-to-many"
+          ]
+        },
+        {
+          "subquestion_label": "b",
+          "question_text": "Write a Structured Query Language (SQL) script to define the table EXAM.",
+          "question_type": "code_trace",
+          "marks": 3,
+          "answer": "CREATE TABLE EXAM (\nExamID varchar NOT NULL,\nSubject varchar,\nLevel int,\nTotalMarks int,\nPRIMARY KEY(ExamID)\n);",
+          "answer_conditions": [
+            "1 mark each:\n- Creating table EXAM with opening and closing brackets",
+            "- All fields with appropriate data types and commas at end of lines",
+            "- ExamID as primary key"
+          ]
+        },
+        {
+          "subquestion_label": "c",
+          "question_text": "Write an SQL script to update EXAM_QUESTION and link the foreign key to EXAM.",
+          "question_type": "code_trace",
+          "marks": 2,
+          "answer": "ALTER TABLE EXAM_QUESTION\nADD FOREIGN KEY (ExamID) REFERENCES EXAM(ExamID);",
+          "answer_conditions": [
+            "1 mark each:\n- Altering table EXAM_QUESTION",
+            "- Linking ExamID to ExamID in EXAM"
+          ]
+        },
+        {
+          "subquestion_label": "d",
+          "question_text": "Describe the additional tables that will need to be included in the database and explain how all the tables in the database will be linked.",
+          "question_type": "long_answer",
+          "marks": 5,
+          "answer": "STUDENT table identified with suitable Primary Key. A linking table between STUDENT and EXAM with suitable Primary Key and appropriate name that includes the Primary Key of the STUDENT table as a Foreign Key to join with STUDENT and includes the Primary Key of the EXAM table as a Foreign Key to join with EXAM. A linking table between STUDENT and EXAM_QUESTION with suitable Primary Key and appropriate name that includes the Primary Key of Table 2 as a Foreign Key to join with Table 2 that stores the ExamQuestionID and the mark for that question.",
+          "answer_conditions": [
+            "1 mark each to max 5"
+          ]
+        }
+      ]
+    },
+    {
+      "question_number": "5",
+      "subquestions": [
+        {
+          "subquestion_label": "a",
+          "question_text": "Complete the table by writing the content of the ACC after each program has run.\n\n| Program number | Code | ACC content |\n| :--: | :--: | :--: |\n| 1 | LDI 15\nSUB #1 |  |\n| 2 | LDD 14\nADD 11 |  |\n| 3 | LDM #11\nADD #3\nSUB 16 |  |\n| 4 | LDR #2\nLDX 14\nADD #2 |  |",
+          "question_type": "table_completion",
+          "marks": 4,
+          "answer": "| Program number | Code | ACC content |\n| :--: | :--: | :--: |\n| 1 | LDI 15\nSUB #1 | 11 |\n| 2 | LDD 14\nADD 11 | 13 |\n| 3 | LDM #11\nADD #3\nSUB 16 | 2 |\n| 4 | LDR #2\nLDX 14\nADD #2 | 14 |",
+          "answer_conditions": [
+            "1 mark for each correct answer"
+          ]
+        },
+        {
+          "subquestion_label": "b",
+          "question_text": "Complete the table by writing the content of the ACC after each program has run. The binary number 01000110 is reloaded into the ACC before each program is run.\n\n| Program number | Code | ACC content |\n| :--: | :--: | :--: |\n| 1 | XOR 29 |  |\n| 2 | AND #29 |  |\n| 3 | OR B11111111 |  |",
+          "question_type": "table_completion",
+          "marks": 3,
+          "answer": "| Program number | Code | ACC content |\n| :--: | :--: | :--: |\n| 1 | XOR 29 | 01001001 |\n| 2 | AND #29 | 00000100 |\n| 3 | OR B11111111 | 11111111 |",
+          "answer_conditions": [
+            "1 mark for each correct answer"
+          ]
+        }
+      ]
+    },
+    {
+      "question_number": "6",
+      "subquestions": [
+        {
+          "subquestion_label": "",
+          "question_text": "Explain how memory management and process management support multi-tasking.",
+          "question_type": "long_answer",
+          "marks": 4,
+          "answer": "Memory management: Stores data from all currently running programs concurrently in RAM. Stops the data from overwriting each other in RAM/primary storage. Decides which processes should be in main memory. Makes efficient use of memory.\nProcess management: Allows one process to be paused whilst another process can be actioned. Decides which process is to be run next. Switches between processes to allow them to share the use of the processor. Identification/description of scheduling.",
+          "answer_conditions": [
+            "1 mark each to max 4",
+            "Max 3 marks for each management task"
+          ]
+        }
+      ]
+    },
+    {
+      "question_number": "7",
+      "subquestions": [
+        {
+          "subquestion_label": "a",
+          "question_text": "Tick $(\\checkmark)$ one box only to identify the largest file size.\n\n$\\square$ 3300 kibibytes\n$\\square$ 0.3 megabytes\n$\\square$ 3 mebibytes\n$\\square$ 3300 kilobytes",
+          "question_type": "mcq",
+          "marks": 1,
+          "answer": "3300 kibibytes",
+          "answer_conditions": [
+            "1 mark for: 3300 kibibytes"
+          ]
+        },
+        {
+          "subquestion_label": "b",
+          "question_text": "Subtract the denary number 10 from the denary number 100 using binary subtraction.\n\nShow your working.\n\nWorking",
+          "question_type": "calculation",
+          "marks": 3,
+          "answer": "Method 1: Converting to -10 and adding:\nBinary for +10 is 00001010\nBinary for -10 is 11110110\nBinary for 100 is 01100100\n$100+(-10)$ :\n$01100100$\n$+11110110$\n(1) 01011010\nCarries: 11001000\n\nMethod 2: Direct Subtraction\nBorrows:\n$00011010$\n01100100\n$-00001010$\n01011010",
+          "answer_conditions": [
+            "1 mark each:\n- Converting 100 to binary 01100100 and 10 to binary 00001010",
+            "- Subtraction method - converting 10 to -10 and adding // direct subtraction ...",
+            "- ... correct answer 01011010"
+          ]
+        },
+        {
+          "subquestion_label": "c",
+          "question_text": "Convert the hexadecimal number COF into denary.\n\nShow your working.\n\nWorking",
+          "question_type": "calculation",
+          "marks": 2,
+          "answer": "110000001111 / / 2048+1024+8+4+2+1 / /(12 * 16^{2})+15 / /(12 * 16 * 16)+15 / / 3072+15\n3087",
+          "answer_conditions": [
+            "1 mark for working:\n110000001111 / / 2048+1024+8+4+2+1 / /(12 * 16^{2})+15 / /(12 * 16 * 16)+15 / / 3072+15",
+            "1 mark for correct answer:\n3087"
+          ]
+        }
+      ]
+    },
+    {
+      "question_number": "8",
+      "subquestions": [
+        {
+          "subquestion_label": "a",
+          "question_text": "Describe the benefits of using the compiler during testing.",
+          "question_type": "short_answer",
+          "marks": 2,
+          "answer": "Creates an executable file so the code can be tested multiple times without having to recompile so repeated testing takes less time.",
+          "answer_conditions": [
+            "1 mark each to max 2"
+          ]
+        },
+        {
+          "subquestion_label": "b",
+          "question_text": "Complete the table by identifying one other common IDE feature that can be used for each purpose. Describe how each feature helps the user during program development.\n\nEach feature must be different. Do not give translator as one of your features.\n\n| Purpose | IDE feature | Description |\n| :--: | :--: | :--: |\n| for coding |  |  |\n|  |  |  |\n| for presentation |  |  |\n|  |  |  |\n| for debugging |  |  |",
+          "question_type": "table_completion",
+          "marks": 6,
+          "answer": "| Purpose | IDE feature | Description |\n| :--: | :--: | :--: |\n| for coding | Context-sensitive prompts | Gives suggestions for code as the user types instead of having to write/remember the code |\n| for coding | Auto-correct | Corrects spelling mistakes so that user has fewer errors to correct |\n| for presentation | Pretty-printing | Colour code keywords so the user can identify any errors |\n| for presentation | Expand/collapse (code) blocks | The user can hide code that they are not currently working on |\n| for debugging | Single stepping | Run the code one line at a time // shows the effect of each line of code |\n| for debugging | Breakpoints | Stop the code running at a set point to check the flow/variable contents |",
+          "answer_conditions": [
+            "1 mark for identification of each feature and 1 mark for matching description"
+          ]
+        },
+        {
+          "subquestion_label": "c",
+          "question_text": "Describe two benefits to the programmer of using program libraries.",
+          "question_type": "short_answer",
+          "marks": 2,
+          "answer": "Saves programming/testing time as code does not have to be written/rewritten from scratch // code does not have to be tested. Code is already tested so it is more robust/likely to work. The programmer does not need to maintain the library // library routines are updated automatically. Can perform complex calculations that the programmer may be unable to do. Makes code more easily readable.",
+          "answer_conditions": [
+            "1 mark each to max 2"
+          ]
+        }
+      ]
+    }
+  ]
+}

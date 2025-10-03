@@ -1,0 +1,417 @@
+ {
+  "subject_code": "9618",
+  "paper_code": "32",
+  "exam_session": "Winter",
+  "exam_year": "2023",
+  "context": "no insert provided",
+  "questions": [
+    {
+      "question_number": "1",
+      "subquestions": [
+        {
+          "subquestion_label": "a",
+          "question_text": "Real numbers are stored in a computer using floating point representation with:\n\n- 10 bits for the mantissa\n- 6 bits for the exponent\n- two's complement form for both the mantissa and the exponent.\n\nWrite the normalised floating-point representation of -96.75 in this system.\nShow your working.\n![img-1.jpeg](img-1.jpeg)",
+          "question_type": "calculation",
+          "marks": 3,
+          "answer": "One mark per mark point (Max 1)\n- conversion of -96.75 to binary e.g., positive 96.75 , flip the bits +1 to give\n10011111.01\n11-128+16+8+4+2+1+0.25 / 1 / 4\nseen\nOne mark per mark point (Max 2)\n- correct mantissa\n- correct exponent\n\n|  | Mantissa | Exponent |\n|  | 1 | 0 | 0 | 1 | 1 | 1 | 1 | 1 | 1 | 0 | 1 | 0 | 0 | 0 | 1 | 1 | 1 |\n",
+          "answer_conditions": [
+            "conversion of -96.75 to binary e.g., positive 96.75 , flip the bits +1 to give",
+            "10011111.01",
+            "11-128+16+8+4+2+1+0.25 / 1 / 4 seen",
+            "correct mantissa",
+            "correct exponent"
+          ]
+        },
+        {
+          "subquestion_label": "b",
+          "question_text": "Explain why a binary representation is sometimes only an approximation to the real number it represents.",
+          "question_type": "short_answer",
+          "marks": 3,
+          "answer": "One mark per mark point (Max 3)\nMP1 Real numbers (can) have a fractional part (such as 1 / 3 and 1 / 2 ) / (such as 0.4 and 0.25 )\nMP2 The fixed length of the storage means that you can't store very large / very small numbers\nMP3 Binary numbers represent numbers based on powers of 2, with limited fractional representations such as 1 / 2,1 / 4,1 / 8,1 / 16 , etc.\nMP4 It isn't possible to store all fractions with the level of precision provided by this system\nMP5 ...the fractional part of the number is as close as possible within these constraints.",
+          "answer_conditions": [
+            "Real numbers (can) have a fractional part (such as 1 / 3 and 1 / 2 ) / (such as 0.4 and 0.25 )",
+            "The fixed length of the storage means that you can't store very large / very small numbers",
+            "Binary numbers represent numbers based on powers of 2, with limited fractional representations such as 1 / 2,1 / 4,1 / 8,1 / 16 , etc.",
+            "It isn't possible to store all fractions with the level of precision provided by this system",
+            "...the fractional part of the number is as close as possible within these constraints."
+          ]
+        }
+      ]
+    },
+    {
+      "question_number": "2",
+      "subquestions": [
+        {
+          "subquestion_label": "",
+          "question_text": "Describe what is meant by composite and non-composite data types.\n\nComposite \u3000\u3000\u3000\u3000\u3000\u3000\n\nNon-composite \u3000\u3000\u3000\u3000\u3000\u3000\u3000\u3000\u3000",
+          "question_type": "short_answer",
+          "marks": 4,
+          "answer": "One mark per mark point - composite (Max 2)\nMP1 A (user defined) data type that is a collection of data that can consist\nMP2 ...of different or the same data types\nMP3 ...grouped under a single identifier.\nOne mark per mark point - non-composite (Max 2)\nMP4 It can be defined without referencing another data type.\nMP5 It can be a primitive type available in a programming language, or a user- defined type.",
+          "answer_conditions": [
+            "A (user defined) data type that is a collection of data that can consist",
+            "...of different or the same data types",
+            "...grouped under a single identifier.",
+            "It can be defined without referencing another data type.",
+            "It can be a primitive type available in a programming language, or a user- defined type."
+          ]
+        }
+      ]
+    },
+    {
+      "question_number": "3",
+      "subquestions": [
+        {
+          "subquestion_label": "a",
+          "question_text": "Outline what is meant by the term collision in this context.\n\u3000\u3000\u3000\u3000\u3000",
+          "question_type": "short_answer",
+          "marks": 2,
+          "answer": "One mark per mark point (Max 2)\nMP1 A collision is when the two values / data items in the key field for two records (pass through a hashing algorithm and) result in the same hash value\nMP2 ...so the location identified (by the hashing algorithm) may already be in use // two records cannot occupy the same address.",
+          "answer_conditions": [
+            "A collision is when the two values / data items in the key field for two records (pass through a hashing algorithm and) result in the same hash value",
+            "...so the location identified (by the hashing algorithm) may already be in use // two records cannot occupy the same address."
+          ]
+        },
+        {
+          "subquestion_label": "b",
+          "question_text": "Explain how a collision can be dealt with when writing records to a random file.\n\u3000\u3000\u3000\u3000\u3000\u3000\u3000",
+          "question_type": "long_answer",
+          "marks": 3,
+          "answer": "One mark per mark point (Max 3)\nMP1 A process of collision resolution is used\nMP2 Start at the original hashed storage space\nMP3 ...go through the following spaces in a linear fashion\nMP4 ...and store the data item in the first available slot.\nOR\nMP5 Search the overflow area\nMP6 ...go through the following spaces in a linear fashion\nMP7 ...and store the data item in the first available slot.\nOR\nMP8 Each storage space holds a reference to a collection / chain of items\nMP9 ...which can be searched individually.\nMP10 The data item is stored in the first available space in this chain.",
+          "answer_conditions": [
+            "A process of collision resolution is used",
+            "Start at the original hashed storage space",
+            "...go through the following spaces in a linear fashion",
+            "...and store the data item in the first available slot.",
+            "Search the overflow area",
+            "...go through the following spaces in a linear fashion",
+            "...and store the data item in the first available slot.",
+            "Each storage space holds a reference to a collection / chain of items",
+            "...which can be searched individually.",
+            "The data item is stored in the first available space in this chain."
+          ]
+        }
+      ]
+    },
+    {
+      "question_number": "4",
+      "subquestions": [
+        {
+          "subquestion_label": "",
+          "question_text": "Complete the following paragraph about a protocol suite, using words from the given list.\n\nSome words are not used.\n\n| BitTorrent | circuit switching | layered | link | list |\n| :-- | :--: | :--: | :--: | :--: |\n| peer-to-peer | queue | stack | star | TCP/IP |\n\nThe protocols in a determine the interconnectivity rules for a network model such as the model.",
+          "question_type": "short_answer",
+          "marks": 3,
+          "answer": "One mark for each correct word (Max 3)\nThe protocols in a stack determine the interconnectivity rules for a layered network model such as the TCP/IP model.",
+          "answer_conditions": [
+            "The protocols in a stack determine the interconnectivity rules for a layered network model such as the TCP/IP model."
+          ]
+        }
+      ]
+    },
+    {
+      "question_number": "5",
+      "subquestions": [
+        {
+          "subquestion_label": "a",
+          "question_text": "Outline the reasons why an operating system may need to use virtual memory.\n\u3000\u3000\u3000\u3000",
+          "question_type": "short_answer",
+          "marks": 2,
+          "answer": "One mark per mark point (Max 2)\nMP1 Virtual memory is used when RAM is running low\nMP2 ...such as when a computer is running many processes at once.\nMP3 Virtual memory may be used for efficient use of RAM / the processor\nMP4 ...such as if data / programs are not immediately needed, they can be moved from RAM to virtual memory",
+          "answer_conditions": [
+            "Virtual memory is used when RAM is running low",
+            "...such as when a computer is running many processes at once.",
+            "Virtual memory may be used for efficient use of RAM / the processor",
+            "...such as if data / programs are not immediately needed, they can be moved from RAM to virtual memory"
+          ]
+        },
+        {
+          "subquestion_label": "b",
+          "question_text": "Explain the circumstances in which disk thrashing could occur.\n\u3000\u3000\u3000\u3000\u3000\u3000\u3000",
+          "question_type": "long_answer",
+          "marks": 3,
+          "answer": "One mark per mark point (Max 3)\nMP1 Disk thrashing is a problem that may occur when frequent transfers between main memory and secondary memory take place // Disk thrashing is a problem that may occur when virtual memory is being used\nMP2 As main memory fills up, more pages need to be swapped in and out of secondary/virtual memory\nMP3 This swapping leads to a very high rate of hard disk head movements\nMP4 Eventually, more time is spent swapping the pages/data than processing the data.",
+          "answer_conditions": [
+            "Disk thrashing is a problem that may occur when frequent transfers between main memory and secondary memory take place // Disk thrashing is a problem that may occur when virtual memory is being used",
+            "As main memory fills up, more pages need to be swapped in and out of secondary/virtual memory",
+            "This swapping leads to a very high rate of hard disk head movements",
+            "Eventually, more time is spent swapping the pages/data than processing the data."
+          ]
+        }
+      ]
+    },
+    {
+      "question_number": "6",
+      "subquestions": [
+        {
+          "subquestion_label": "a",
+          "question_text": "The Reverse Polish Notation (RPN) expression:\n\n$$a b^{*} 2 / c d / *$$\n\nis to be evaluated where $a=20, b=3, c=10$ and $d=5$.\nShow the changing contents of the following stack as the RPN expression is evaluated.\n![img-2.jpeg](img-2.jpeg)",
+          "question_type": "table_completion",
+          "marks": 4,
+          "answer": "One mark per ring (Max 4).\n\n![img-0.jpeg](img-0.jpeg)",
+          "answer_conditions": [
+            "One mark per ring (Max 4)."
+          ]
+        },
+        {
+          "subquestion_label": "b",
+          "question_text": "Explain how an expression stored in RPN can be evaluated.\n\u3000\u3000\u3000\u3000\u3000",
+          "question_type": "long_answer",
+          "marks": 3,
+          "answer": "One mark per mark point (Max 3)\nMP1 The (RPN) expression is read from left to right, one item at a time\nMP2 Each element is checked to see if it as operator or a value\nMP3 Values are pushed onto a stack until an operator is found\nMP4 The operator is applied to the last two values on the stack and the result is pushed back onto the stack\nMP5 This repeats until a single value remains, which is the solution.",
+          "answer_conditions": [
+            "The (RPN) expression is read from left to right, one item at a time",
+            "Each element is checked to see if it as operator or a value",
+            "Values are pushed onto a stack until an operator is found",
+            "The operator is applied to the last two values on the stack and the result is pushed back onto the stack",
+            "This repeats until a single value remains, which is the solution."
+          ]
+        }
+      ]
+    },
+    {
+      "question_number": "7",
+      "subquestions": [
+        {
+          "subquestion_label": "a",
+          "question_text": "This logic circuit represents the Boolean expression: $\\mathbf{X}=\\overline{\\mathbf{A}+\\mathbf{B}+\\mathbf{C}}$\n\n![img-3.jpeg](img-3.jpeg)\n\nComplete this truth table for the given logic circuit.\n\n| $\\mathbf{A}$ | $\\mathbf{B}$ | $\\mathbf{C}$ | $\\mathbf{X}$ |\n| :--: | :--: | :--: | :--: |\n| 0 | 0 | 0 |  |\n| 0 | 0 | 1 |  |\n| 0 | 1 | 0 |  |\n| 0 | 1 | 1 |  |\n| 1 | 0 | 0 |  |\n| 1 | 0 | 1 |  |\n| 1 | 1 | 0 |  |\n| 1 | 1 | 1 |  |",
+          "question_type": "table_completion",
+          "marks": 1,
+          "answer": "| $\\mathbf{A}$ | $\\mathbf{B}$ | $\\mathbf{C}$ | $\\mathbf{X}$ |\n| :--: | :--: | :--: | :--: |\n| 0 | 0 | 0 | 0 |\n| 0 | 0 | 1 | 0 |\n| 0 | 1 | 0 | 0 |\n| 0 | 1 | 0 | 0 |\n| 0 | 1 | 1 | 0 |\n| 1 | 0 | 0 | 1 |\n| 1 | 0 | 1 | 1 |\n| 1 | 1 | 0 | 1 |\n| 1 | 1 | 0 | 1 |",
+          "answer_conditions": [
+            "| $\\mathbf{A}$ | $\\mathbf{B}$ | $\\mathbf{C}$ | $\\mathbf{X}$ |\n| :--: | :--: | :--: | :--: |\n| 0 | 0 | 0 | 0 |\n| 0 | 0 | 1 | 0 |\n| 0 | 1 | 0 | 0 |\n| 0 | 1 | 0 | 0 |\n| 0 | 1 | 1 | 0 |\n| 1 | 0 | 0 | 1 |\n| 1 | 0 | 1 | 1 |\n| 1 | 1 | 0 | 1 |\n| 1 | 1 | 0 | 1 |"
+          ]
+        },
+        {
+          "subquestion_label": "b",
+          "question_text": "Apply De Morgan's laws to the expression: $\\mathbf{X}=\\overline{\\mathbf{A}+\\mathbf{B}+\\mathbf{C}}$\n$\\mathbf{X}=$",
+          "question_type": "short_answer",
+          "marks": 1,
+          "answer": "$X=\\bar{A} . \\bar{B} . \\bar{C}$",
+          "answer_conditions": [
+            "$X=\\bar{A} . \\bar{B} . \\bar{C}$"
+          ]
+        },
+        {
+          "subquestion_label": "c",
+          "question_text": "Simplify the following expression using Boolean algebra.\n\nShow all the stages in your simplification.\n\n$\\mathbf{T}=\\mathbf{X} \\cdot \\mathbf{Y} \\cdot \\mathbf{Z}+\\mathbf{X} \\cdot \\overline{\\mathbf{Y}} \\cdot \\mathbf{Z}+\\overline{\\mathbf{X}}$\n\u3000\u3000\u3000\u3000\u3000",
+          "question_type": "calculation",
+          "marks": 3,
+          "answer": "(Max 2) for correct working from points shown\n(T =) X.Y.Z + X. $\\bar{Y} . Z+\\bar{X}$\nDistributive law\n(T=) X.Z. $(Y+\\bar{Y})+\\bar{X}$\nComplement law\n(T=) X.Z.(1) $+\\bar{X}$\nIdentity law\n(T=) X.Z $+\\bar{X}$\nRedundancy law (to get final answer)\nOne mark for correct answer\n(T=) $\\bar{X}+Z$",
+          "answer_conditions": [
+            "(T =) X.Y.Z + X. $\\bar{Y} . Z+\\bar{X}$",
+            "Distributive law",
+            "(T=) X.Z. $(Y+\\bar{Y})+\\bar{X}$",
+            "Complement law",
+            "(T=) X.Z.(1) $+\\bar{X}$",
+            "Identity law",
+            "(T=) X.Z $+\\bar{X}$",
+            "Redundancy law (to get final answer)",
+            "(T=) $\\bar{X}+Z$"
+          ]
+        }
+      ]
+    },
+    {
+      "question_number": "8",
+      "subquestions": [
+        {
+          "subquestion_label": "",
+          "question_text": "Calculate the shortest distance between the Start and each of the destinations in the diagram using Dijkstra's algorithm.\n\nShow your working and write your answers in the table provided.\n\n![img-4.jpeg](img-4.jpeg)\n\nWorking\n\u3000\u3000\u3000\u3000\u3000\n\nAnswers:\n\n| A | B | C | D | E | F |\n| :-- | :-- | :-- | :-- | :-- | :-- |\n|  |  |  |  |  |  |",
+          "question_type": "calculation",
+          "marks": 5,
+          "answer": "One mark per mark point - working (Max 3)\nMay be seen on diagram or in working section\nMP1 Initialisation - setting Start to 0\nMP2 ...and the rest of the towns to\nMP3 Evidence to show values at nodes being updated\nMP4 Evidence to show 'visited node(s)'\nMP5 Evidence to show a correct calculation of at least one route\nMP6 Evidence to show more than one route has been calculated for at least one town\nCorrect Answers (Max 2)\nTwo marks for all six correct values\nOne mark for four or five correct values.\n\n| A | B | C | D | E | F |\n| :-- | :-- | :-- | :-- | :-- | :-- |\n| 8 | 12 | 19 | 14 | 16 | 10 |",
+          "answer_conditions": [
+            "Initialisation - setting Start to 0",
+            "...and the rest of the towns to",
+            "Evidence to show values at nodes being updated",
+            "Evidence to show 'visited node(s)'",
+            "Evidence to show a correct calculation of at least one route",
+            "Evidence to show more than one route has been calculated for at least one town",
+            "| A | B | C | D | E | F |\n| :-- | :-- | :-- | :-- | :-- | :-- |\n| 8 | 12 | 19 | 14 | 16 | 10 |"
+          ]
+        }
+      ]
+    },
+    {
+      "question_number": "9",
+      "subquestions": [
+        {
+          "subquestion_label": "a(i)",
+          "question_text": "A 1D array Stack stores the contents of the stack.\n\n(i) Study the pseudocode in part (a)(ii) and complete the table of identifiers by writing the missing data types and descriptions.\n\n| Identifier | Data type | Description |\n| :--: | :--: | :--: |\n| BasePointer |  |\n| TopPointer |  |\n| Stack | REAL |\n",
+          "question_type": "table_completion",
+          "marks": 2,
+          "answer": "Two marks for all five empty boxes correct\nOne mark for any three or four empty boxes correct\n\n| Identifier | Data type | Description |\n| :--: | :--: | :--: |\n| BasePointer | INTEGER | Points to the bottom of the stack |\n| TopPointer | INTEGER | Points to the top of the stack |\n| Stack | REAL | List of decimal numbers stored in the stack |",
+          "answer_conditions": [
+            "| Identifier | Data type | Description |\n| :--: | :--: | :--: |\n| BasePointer | INTEGER | Points to the bottom of the stack |\n| TopPointer | INTEGER | Points to the top of the stack |\n| Stack | REAL | List of decimal numbers stored in the stack |"
+          ]
+        },
+        {
+          "subquestion_label": "a(ii)",
+          "question_text": "(ii) Complete the pseudocode.\n\n```\nCONSTANT MaxSize = 40\nDECLARE BasePointer : INTEGER\nDECLARE TopPointer : INTEGER\nDECLARE Stack : ARRAY[1:40] OF REAL\n// initialisation of stack\nPROCEDURE Initialise()\n    ← 1\n    ← 0\nENDPROCEDURE\n// push an item onto the stack\nPROCEDURE Push(NewItem : REAL)\n    MaxSize THEN\n    Stack[TopPointer] ←\n    ENDIF\nENDPROCEDURE\n```",
+          "question_type": "code_trace",
+          "marks": 5,
+          "answer": "One mark for each correctly completed line (Max 5)\nCONSTANT MaxSize $=40$\nDECLARE BasePointer : INTEGER\nDECLARE TopPointer : INTEGER\nDECLARE Stack : ARRAY[1:40] OF REAL\n// initialisation of stack\nPROCEDURE Initialise()\nBasePointer ← 1\nTopPointer ← 0\nENDPROCEDURE\n// adding an item to the stack\nPROCEDURE Push (NewItem)\nIF TopPointer < MaxSize THEN\nTopPointer ← TopPointer +1\nStack[TopPointer] ← NewItem\nENDIF\nENDPROCEDURE",
+          "answer_conditions": [
+            "CONSTANT MaxSize $=40$",
+            "DECLARE BasePointer : INTEGER",
+            "DECLARE TopPointer : INTEGER",
+            "DECLARE Stack : ARRAY[1:40] OF REAL",
+            "// initialisation of stack",
+            "PROCEDURE Initialise()",
+            "BasePointer ← 1",
+            "TopPointer ← 0",
+            "ENDPROCEDURE",
+            "// adding an item to the stack",
+            "PROCEDURE Push (NewItem)",
+            "IF TopPointer < MaxSize THEN",
+            "TopPointer ← TopPointer +1",
+            "Stack[TopPointer] ← NewItem",
+            "ENDIF",
+            "ENDPROCEDURE"
+          ]
+        },
+        {
+          "subquestion_label": "b",
+          "question_text": "Justify the use of a linked list instead of an array to implement a stack.\n\u3000\u3000\u3000\u3000",
+          "question_type": "short_answer",
+          "marks": 2,
+          "answer": "One mark for linked list and one mark for array (Max 2)\nLinked list\nMP1 A linked list is a dynamic data structure / not restricted in size\nMP2 Has greater freedom to expand or contract by adding or removing nodes as necessary\nMP3 Allows more efficient editing using pointers (instead of moving the data).\nArray\nMP4 An array is a static data structure1 generally fixed in size\nMP5 When the array is full, the stack cannot be extended any further.",
+          "answer_conditions": [
+            "A linked list is a dynamic data structure / not restricted in size",
+            "Has greater freedom to expand or contract by adding or removing nodes as necessary",
+            "Allows more efficient editing using pointers (instead of moving the data).",
+            "An array is a static data structure1 generally fixed in size",
+            "When the array is full, the stack cannot be extended any further."
+          ]
+        },
+        {
+          "subquestion_label": "c",
+          "question_text": "Explain how a compiler makes use of a stack when translating recursive programming code.\n\u3000\u3000\u3000\u3000\u3000\u3000\u3000\u3000\u3000",
+          "question_type": "long_answer",
+          "marks": 4,
+          "answer": "One mark per mark point (Max 1)\nMP1 The compiler must produce object code to\nOne mark per mark point (Max 3)\nMP2 ...push return addresses / values of local variables onto a stack\nMP3 ...with each recursive call // ... to set up winding\nMP4 ...pop return addresses / values of local variables off the stack ...\nMP5 ...after the base case is reached // ... to implement unwinding.",
+          "answer_conditions": [
+            "The compiler must produce object code to",
+            "...push return addresses / values of local variables onto a stack",
+            "...with each recursive call // ... to set up winding",
+            "...pop return addresses / values of local variables off the stack ...",
+            "...after the base case is reached // ... to implement unwinding."
+          ]
+        }
+      ]
+    },
+    {
+      "question_number": "10",
+      "subquestions": [
+        {
+          "subquestion_label": "",
+          "question_text": "Describe the features of the SIMD and MISD computer architectures.\n\nSIMD \u3000\u3000\u3000\u3000\n\nMISD \u3000\u3000\u3000\u3000\u3000",
+          "question_type": "short_answer",
+          "marks": 4,
+          "answer": "One mark per mark point - SIMD (Max 2)\nMP1 Single Instruction, Multiple Data (architecture) // Performs the same operation on multiple different data streams simultaneously.\nMP2 The instructions can be performed sequentially, taking advantage of pipelining.\nMP3 Parallel computers with multiple processors.\nOne mark per mark point - MISD (Max 2)\nMP4 Multiple Instruction, Single Data (architecture) // Performs different operations on the same data stream.\nMP5 Each processor works on the same data stream independently.\nMP6 Parallel computers with multiple processors.",
+          "answer_conditions": [
+            "Single Instruction, Multiple Data (architecture) // Performs the same operation on multiple different data streams simultaneously.",
+            "The instructions can be performed sequentially, taking advantage of pipelining.",
+            "Parallel computers with multiple processors.",
+            "Multiple Instruction, Single Data (architecture) // Performs different operations on the same data stream.",
+            "Each processor works on the same data stream independently.",
+            "Parallel computers with multiple processors."
+          ]
+        }
+      ]
+    },
+    {
+      "question_number": "11",
+      "subquestions": [
+        {
+          "subquestion_label": "a",
+          "question_text": "Carlos is a person who enjoys the hobby of cycling but does not like music.\n\nWrite additional clauses to represent this information.\n\n20 \u3000\n21 \u3000\n22 \u3000\n23 \u3000",
+          "question_type": "short_answer",
+          "marks": 4,
+          "answer": "One mark for each correctly completed clause (Max 4)\n20 person(carlos).\n21 hobby(cycling).\n22 enjoys(carlos, cycling).\n23 dislikes(carlos, music).",
+          "answer_conditions": [
+            "20 person(carlos).",
+            "21 hobby(cycling).",
+            "22 enjoys(carlos, cycling).",
+            "23 dislikes(carlos, music)."
+          ]
+        },
+        {
+          "subquestion_label": "b",
+          "question_text": "Using the variable P , the goal:\nenjoys (P, camping)\nreturns\nP = elijah, joseph\nWrite the result returned by the goal:\nenjoys (P, climbing)\n$\\mathrm{P}=$ \u3000",
+          "question_type": "short_answer",
+          "marks": 1,
+          "answer": "P = toby, nina",
+          "answer_conditions": [
+            "P = toby, nina"
+          ]
+        },
+        {
+          "subquestion_label": "c",
+          "question_text": "N is a person who might enjoy H if H is a hobby and N does not dislike H .\n\nWrite this as a rule.\n\nmight_enjoy (N, H)\nIF \u3000\u3000\u3000\u3000\u3000",
+          "question_type": "short_answer",
+          "marks": 4,
+          "answer": "One mark per mark point (Max 4)\n- person(N)\n- hobby(H)\n- dislikes(N, H)\n- all logical operators correct with no additional code (see example answers)\nExample answers:\nmight_enjoy(N, H)\nIF person(N) AND hobby(H) AND NOT dislikes(N, H)\nmight_enjoy(N, H)\nIF NOT dislikes(N, H), person(N), hobby(H)",
+          "answer_conditions": [
+            "- person(N)",
+            "- hobby(H)",
+            "- dislikes(N, H)",
+            "- all logical operators correct with no additional code (see example answers)",
+            "might_enjoy(N, H)\nIF person(N) AND hobby(H) AND NOT dislikes(N, H)",
+            "might_enjoy(N, H)\nIF NOT dislikes(N, H), person(N), hobby(H)"
+          ]
+        }
+      ]
+    },
+    {
+      "question_number": "12",
+      "subquestions": [
+        {
+          "subquestion_label": "a",
+          "question_text": "Describe, with an example, what is meant by an exception.\n\u3000\u3000\u3000\u3000",
+          "question_type": "short_answer",
+          "marks": 2,
+          "answer": "One mark for description, for example:\nAn exception is an event that occurs during the execution of a program that disrupts the normal flow of instructions / causes the program to halt execution\nOne mark for example:\n- Hardware failure // hard disk crash\n- Programming error // trying to access out-of-bounds array element // divide by zero error // runtime error\n- User error // typing incorrect filename / data type",
+          "answer_conditions": [
+            "An exception is an event that occurs during the execution of a program that disrupts the normal flow of instructions / causes the program to halt execution",
+            "- Hardware failure // hard disk crash",
+            "- Programming error // trying to access out-of-bounds array element // divide by zero error // runtime error",
+            "- User error // typing incorrect filename / data type"
+          ]
+        },
+        {
+          "subquestion_label": "b",
+          "question_text": "A pseudocode algorithm searches for a customer record in a random file AccountRecord.dat. A user inputs the name of the customer.\n\nThe records are stored using the user-defined data type TAccount.\n\n```\nTYPE TAccount\n    DECLARE AccountNumber : INTEGER\n    DECLARE Name : STRING\n    DECLARE Address : STRING\n    DECLARE Telephone : STRING\nENDTYPE\n```\n\nIf the record is found, it is output, otherwise an error message is displayed.\nComplete the file handling pseudocode.\n\n```\nDECLARE Customer : TAccount\nDECLARE Location : INTEGER\nDECLARE MaxSize : INTEGER\nDECLARE FoundFlag : BOOLEAN\nDECLARE SearchCustomer : STRING\nMaxSize \\leftarrow 1000\n```",
+          "question_type": "code_trace",
+          "marks": 7,
+          "answer": "One mark for each correctly completed blank (Max 7)\nDECLARE Customer : TAccount\nDECLARE Location : INTEGER\nDECLARE MaxSize : INTEGER\nDECLARE: FoundFlag : BOOLEAN\nDECLARE SearchCustomer : STRING\nMaxSize ← 1000\nOPENFILE \"AccountRecord.dat\" FOR RANDOM\nLocation ← 1\nFoundFlag ← FALSE\nOUTPUT \"Enter the customer's name\"\nINPUT SearchCustomer\nWHILE NOT FoundFlag AND Location <= MaxSize\nSEEK \"AccountRecord.dat\", Location\nGETRECORD \"AccountRecord.dat\", Customer\nIF SearchCustomer = Customer.Name THEN\nOUTPUT \"Customer found: \"\nOUTPUT Customer\nFoundFlag ← TRUE\nENDIF\nLocation ← Location +1\nENDWHILE\nIF NOT FoundFlag THEN\nOUTPUT \"Customer does not exist.\"\nENDIF",
+          "answer_conditions": [
+            "DECLARE Customer : TAccount",
+            "DECLARE Location : INTEGER",
+            "DECLARE MaxSize : INTEGER",
+            "DECLARE: FoundFlag : BOOLEAN",
+            "DECLARE SearchCustomer : STRING",
+            "MaxSize ← 1000",
+            "OPENFILE \"AccountRecord.dat\" FOR RANDOM",
+            "Location ← 1",
+            "FoundFlag ← FALSE",
+            "OUTPUT \"Enter the customer's name\"",
+            "INPUT SearchCustomer",
+            "WHILE NOT FoundFlag AND Location <= MaxSize",
+            "SEEK \"AccountRecord.dat\", Location",
+            "GETRECORD \"AccountRecord.dat\", Customer",
+            "IF SearchCustomer = Customer.Name THEN",
+            "OUTPUT \"Customer found: \"",
+            "OUTPUT Customer",
+            "FoundFlag ← TRUE",
+            "ENDIF",
+            "Location ← Location +1",
+            "ENDWHILE",
+            "IF NOT FoundFlag THEN",
+            "OUTPUT \"Customer does not exist.\"",
+            "ENDIF"
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,163 @@
+pipeline {
+    agent any
+    
+    environment {
+        DOCKER_REGISTRY = 'your-registry.com'
+        KUBECONFIG = credentials('kubeconfig')
+        GIT_COMMIT = sh(returnStdout: true, script: 'git rev-parse HEAD').trim()
+        BUILD_NUMBER = "${env.BUILD_NUMBER}"
+        IMAGE_TAG = "${GIT_COMMIT}-${BUILD_NUMBER}"
+    }
+    
+    stages {
+        stage('Checkout') {
+            steps {
+                checkout scm
+                script {
+                    env.GIT_COMMIT = sh(returnStdout: true, script: 'git rev-parse HEAD').trim()
+                }
+            }
+        }
+        
+        stage('Test Backend') {
+            steps {
+                dir('backend') {
+                    sh '''
+                        python -m pip install --upgrade pip
+                        pip install -r requirements.txt
+                        python -m pytest tests/ -v
+                    '''
+                }
+            }
+        }
+        
+        stage('Test Frontend') {
+            steps {
+                dir('frontend') {
+                    sh '''
+                        npm install
+                        npm run test
+                        npm run build
+                    '''
+                }
+            }
+        }
+        
+        stage('Build Docker Images') {
+            parallel {
+                stage('Build Backend') {
+                    steps {
+                        dir('backend') {
+                            sh '''
+                                docker build -t ${DOCKER_REGISTRY}/backend:${IMAGE_TAG} .
+                                docker build -t ${DOCKER_REGISTRY}/backend:latest .
+                            '''
+                        }
+                    }
+                }
+                stage('Build Frontend') {
+                    steps {
+                        dir('frontend') {
+                            sh '''
+                                docker build -t ${DOCKER_REGISTRY}/frontend:${IMAGE_TAG} .
+                                docker build -t ${DOCKER_REGISTRY}/frontend:latest .
+                            '''
+                        }
+                    }
+                }
+            }
+        }
+        
+        stage('Security Scan') {
+            parallel {
+                stage('Scan Backend Image') {
+                    steps {
+                        sh '''
+                            trivy image ${DOCKER_REGISTRY}/backend:${IMAGE_TAG}
+                        '''
+                    }
+                }
+                stage('Scan Frontend Image') {
+                    steps {
+                        sh '''
+                            trivy image ${DOCKER_REGISTRY}/frontend:${IMAGE_TAG}
+                        '''
+                    }
+                }
+            }
+        }
+        
+        stage('Push Images') {
+            steps {
+                script {
+                    docker.withRegistry("https://${DOCKER_REGISTRY}", 'docker-registry-credentials') {
+                        sh '''
+                            docker push ${DOCKER_REGISTRY}/backend:${IMAGE_TAG}
+                            docker push ${DOCKER_REGISTRY}/backend:latest
+                            docker push ${DOCKER_REGISTRY}/frontend:${IMAGE_TAG}
+                            docker push ${DOCKER_REGISTRY}/frontend:latest
+                        '''
+                    }
+                }
+            }
+        }
+        
+        stage('Deploy to Staging') {
+            when {
+                branch 'develop'
+            }
+            steps {
+                sh '''
+                    kubectl config use-context staging-cluster
+                    kubectl set image deployment/backend-deployment backend=${DOCKER_REGISTRY}/backend:${IMAGE_TAG} -n serverless-runner-staging
+                    kubectl set image deployment/frontend-deployment frontend=${DOCKER_REGISTRY}/frontend:${IMAGE_TAG} -n serverless-runner-staging
+                    kubectl rollout status deployment/backend-deployment -n serverless-runner-staging
+                    kubectl rollout status deployment/frontend-deployment -n serverless-runner-staging
+                '''
+            }
+        }
+        
+        stage('Deploy to Production') {
+            when {
+                branch 'main'
+            }
+            steps {
+                input message: 'Deploy to production?', ok: 'Deploy'
+                sh '''
+                    kubectl config use-context production-cluster
+                    kubectl set image deployment/backend-deployment backend=${DOCKER_REGISTRY}/backend:${IMAGE_TAG} -n serverless-runner
+                    kubectl set image deployment/frontend-deployment frontend=${DOCKER_REGISTRY}/frontend:${IMAGE_TAG} -n serverless-runner
+                    kubectl rollout status deployment/backend-deployment -n serverless-runner
+                    kubectl rollout status deployment/frontend-deployment -n serverless-runner
+                '''
+            }
+        }
+        
+        stage('Health Check') {
+            steps {
+                sh '''
+                    sleep 30
+                    kubectl get pods -n serverless-runner
+                    curl -f http://your-domain.com/health || exit 1
+                '''
+            }
+        }
+    }
+    
+    post {
+        always {
+            sh 'docker system prune -f'
+            cleanWs()
+        }
+        success {
+            slackSend channel: '#deployments', 
+                     color: 'good', 
+                     message: "✅ Deployment successful! Version: ${IMAGE_TAG}"
+        }
+        failure {
+            slackSend channel: '#deployments', 
+                     color: 'danger', 
+                     message: "❌ Deployment failed! Version: ${IMAGE_TAG}"
+        }
+    }
+}

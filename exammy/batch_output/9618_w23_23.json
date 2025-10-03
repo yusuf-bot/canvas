@@ -1,0 +1,317 @@
+{
+  "subject_code": "9618",
+  "paper_code": "23",
+  "exam_session": "October/November",
+  "exam_year": "2023",
+  "context": "Refer to the insert for the list of pseudocode functions and operators.\n1 A program is being developed in pseudocode before being converted into a programming language.\n(a) The following table shows four valid pseudocode assignment statements.\n\nComplete the table by giving the data type that should be used to declare the variable underlined in each assignment statement.\n\n| Assignment statement | Data type |\n| :-- | :-- |\n| MyVar1 $\\leftarrow$ Total1 / Total2 |  |\n| MyVar2 $\\leftarrow 27 / 10 / 2023$ |  |\n| MyVar3 $\\leftarrow$ \"Sum1 / Sum2\" |  |\n| MyVar4 $\\leftarrow$ Result1 AND Result2 |  |\n\n(b) Other variables in the program have example values as shown:\n\n| Variable | Value |\n| :-- | :-- |\n| Active | TRUE |\n| Fraction | 0.2 |\n| Code | \"Ab12345\" |\n\nComplete the table by evaluating each expression using the example values.\n\n| Expression | Evaluates to |\n| :-- | :-- |\n| Fraction >= 0.2 AND NOT Active |  |\n| INT((Fraction * 100) + 13.3) |  |\n| STR_TO_NUM(MID(Code, 4, 2)) + 5 |  |\n| LENGTH(\"TRUE\" & Code) |  |\n\n(c) The program makes use of complex statistical functions. The required functions are not built-in to the programming language and are too complicated for the programmer to write.\n\nOne solution would be to employ another programmer who has experience of writing these functions, as there is no time to train the existing programmer.\n\nState one other way that these functions may be provided for inclusion in the program.\n\n$\n\n(d) The hardware that runs the program is changed and the program needs to be modified so that it works with the new hardware.\n\nIdentify the type of maintenance that this represents and give one other reason why this type of maintenance may be needed.\n\nType $\\qquad$  \nReason $\\qquad$\n\n",
+  "questions": [
+    {
+      "question_number": "1",
+      "subquestions": [
+        {
+          "subquestion_label": "a",
+          "question_text": "| Assignment statement | Data type |\n| :-- | :-- |\n| MyVar1 $\\leftarrow$ Total1 / Total2 |  |\n| MyVar2 $\\leftarrow 27 / 10 / 2023$ |  |\n| MyVar3 $\\leftarrow$ \"Sum1 / Sum2\" |  |\n| MyVar4 $\\leftarrow$ Result1 AND Result2 |  |",
+          "question_type": "table_completion",
+          "marks": 4,
+          "answer": "| Assignment statement | Data type |\n| :-- | :-- |\n| MyVar1 $\\leftarrow$ Total1 / Total2 | REAL |\n| MyVar2 $\\leftarrow 27 / 10 / 2023$ | DATE |\n| MyVar3 $\\leftarrow$ \"Sum1 / Sum2\" | STRING |\n| MyVar4 $\\leftarrow$ Result1 AND Result2 | BOOLEAN |",
+          "answer_conditions": [
+            "MyVar1 $\\leftarrow$ Total1 / Total2 | REAL",
+            "MyVar2 $\\leftarrow 27 / 10 / 2023$ | DATE",
+            "MyVar3 $\\leftarrow$ \"Sum1 / Sum2\" | STRING",
+            "MyVar4 $\\leftarrow$ Result1 AND Result2 | BOOLEAN"
+          ]
+        },
+        {
+          "subquestion_label": "b",
+          "question_text": "| Variable | Value |\n| :-- | :-- |\n| Active | TRUE |\n| Fraction | 0.2 |\n| Code | \"Ab12345\" |\n\nComplete the table by evaluating each expression using the example values.\n\n| Expression | Evaluates to |\n| :-- | :-- |\n| Fraction >= 0.2 AND NOT Active |  |\n| INT((Fraction * 100) + 13.3) |  |\n| STR_TO_NUM(MID(Code, 4, 2)) + 5 |  |\n| LENGTH(\"TRUE\" & Code) |  |",
+          "question_type": "calculation",
+          "marks": 4,
+          "answer": "| Expression | Evaluates to |\n| :-- | :-- |\n| Fraction >= 0.2 AND NOT Active | FALSE |\n| INT((Fraction * 100) + 13.3) | 33 |\n| STR_TO_NUM(MID(Code, 4, 2)) + 5 | 28 |\n| LENGTH(\"TRUE\" & Code) | 11 |",
+          "answer_conditions": [
+            "Fraction >= 0.2 AND NOT Active | FALSE",
+            "INT((Fraction * 100) + 13.3) | 33",
+            "STR_TO_NUM(MID(Code, 4, 2)) + 5 | 28",
+            "LENGTH(\"TRUE\" & Code) | 11"
+          ]
+        },
+        {
+          "subquestion_label": "c",
+          "question_text": "The program makes use of complex statistical functions. The required functions are not built-in to the programming language and are too complicated for the programmer to write.\n\nOne solution would be to employ another programmer who has experience of writing these functions, as there is no time to train the existing programmer.\n\nState one other way that these functions may be provided for inclusion in the program.",
+          "question_type": "short_answer",
+          "marks": 1,
+          "answer": "The use of a program library (routines)",
+          "answer_conditions": [
+            "The use of a program library (routines)"
+          ]
+        },
+        {
+          "subquestion_label": "d",
+          "question_text": "The hardware that runs the program is changed and the program needs to be modified so that it works with the new hardware.\n\nIdentify the type of maintenance that this represents and give one other reason why this type of maintenance may be needed.\n\nType $\\qquad$  \nReason $\\qquad$",
+          "question_type": "short_answer",
+          "marks": 2,
+          "answer": "Type: Adaptive\nReason: The (user) requirement(s) changes // to accommodate legislative changes",
+          "answer_conditions": [
+            "Type: Adaptive",
+            "Reason: The (user) requirement(s) changes // to accommodate legislative changes"
+          ]
+        }
+      ]
+    },
+    {
+      "question_number": "2",
+      "subquestions": [
+        {
+          "subquestion_label": "a",
+          "question_text": "An algorithm will output the index of the element with the smallest value.\n\nDraw a program flowchart to represent the algorithm.",
+          "question_type": "calculation",
+          "marks": 5,
+          "answer": "[Diagram: flowchart with START → Set Min to Data[1], Set MinIndex to 1, Set Index to 2 → Loop through 29 more values → Compare element from Data[] with Min → Set new Min AND save MinIndex when element value < Min in a loop → Output MinIndex → STOP]",
+          "answer_conditions": [
+            "START",
+            "Set Min to Data[1], Set MinIndex to 1, Set Index to 2",
+            "Loop through 29 more values",
+            "Compare element from Data[] with Min",
+            "Set new Min AND save MinIndex when element value < Min in a loop",
+            "Output MinIndex",
+            "STOP"
+          ]
+        },
+        {
+          "subquestion_label": "b",
+          "question_text": "Explain the benefits of using an array when designing a solution to part (a).",
+          "question_type": "short_answer",
+          "marks": 2,
+          "answer": "Simplifies the algorithm // easier to write / understand / test / debug\nIt is possible to iterate through the values // can use a loop // allows the storage of many values using a single identifier",
+          "answer_conditions": [
+            "Simplifies the algorithm // easier to write / understand / test / debug",
+            "It is possible to iterate through the values // can use a loop // allows the storage of many values using a single identifier"
+          ]
+        },
+        {
+          "subquestion_label": "c",
+          "question_text": "Write a pseudocode statement to declare the modified array.",
+          "question_type": "short_answer",
+          "marks": 2,
+          "answer": "DECLARE Data : ARRAY[1:120] OF REAL",
+          "answer_conditions": [
+            "DECLARE Data : ARRAY[1:120] OF REAL"
+          ]
+        }
+      ]
+    },
+    {
+      "question_number": "3",
+      "subquestions": [
+        {
+          "subquestion_label": "a",
+          "question_text": "Index Array\n\n| 1 |  |\n| :-- | :-- |\n| 2 |  |\n| 3 |  |\n| 4 |  |\n| 5 |  |\n| 6 |  |\n| 7 |  |\n| 8 |  |\n\nVariable\nFrontOfQueue\nEndOfQueue\nNumItems 5",
+          "question_type": "table_completion",
+          "marks": 3,
+          "answer": "| Index | Array |\n| :-- | :-- |\n| 1 |  |\n| 2 | D3 |\n| 3 | D4 |\n| 4 | D1 |\n| 5 | D2 |\n| 6 | D5 |\n| 7 |  |\n| 8 |  |\n\nVariable\nFrontOfQueue = 3\nEndOfQueue = 6\nNumItems = 5",
+          "answer_conditions": [
+            "FrontOfQueue = 3",
+            "EndOfQueue = 6",
+            "NumItems = 5"
+          ]
+        },
+        {
+          "subquestion_label": "b",
+          "question_text": "Before a value can be added to the queue, it is necessary to check the queue is not full.\nThe algorithm to add a value to the queue is expressed in six steps.\nComplete the steps.",
+          "question_type": "short_answer",
+          "marks": 6,
+          "answer": "1. If NumItems = 8 then jump to step 6.\n2. Increment EndOfQueue\n3. If EndOfQueue = 9 then set EndOfQueue to 1\n4. Increment NumItems\n5. Set the Element at the index stored in EndOfQueue to the value being added.\n6. Stop.",
+          "answer_conditions": [
+            "If NumItems = 8 then jump to step 6.",
+            "Increment EndOfQueue",
+            "If EndOfQueue = 9 then set EndOfQueue to 1",
+            "Increment NumItems",
+            "Set the Element at the index stored in EndOfQueue to the value being added.",
+            "Stop."
+          ]
+        }
+      ]
+    },
+    {
+      "question_number": "4",
+      "subquestions": [
+        {
+          "subquestion_label": "a",
+          "question_text": "Write pseudocode for procedure RandList().",
+          "question_type": "code_trace",
+          "marks": 6,
+          "answer": "PROCEDURE RandList()\nDECLARE Count, BaseNum, ThisNum : INTEGER\nCONSTANT StepVal = 10\nBaseNum ← 0\nFOR Count ← 1 TO 25\nThisNum ← BaseNum + INT (RAND (StepVal))\nOUTPUT ThisNum\nBaseNum ← BaseNum + StepVal\nNEXT Count\nENDPROCEDURE",
+          "answer_conditions": [
+            "PROCEDURE RandList()",
+            "DECLARE Count, BaseNum, ThisNum : INTEGER",
+            "CONSTANT StepVal = 10",
+            "BaseNum ← 0",
+            "FOR Count ← 1 TO 25",
+            "ThisNum ← BaseNum + INT (RAND (StepVal))",
+            "OUTPUT ThisNum",
+            "BaseNum ← BaseNum + StepVal",
+            "NEXT Count",
+            "ENDPROCEDURE"
+          ]
+        },
+        {
+          "subquestion_label": "b",
+          "question_text": "Write a simplified version of the conditional clause.",
+          "question_type": "short_answer",
+          "marks": 1,
+          "answer": "Result[x + 1] < Result[x]",
+          "answer_conditions": [
+            "Result[x + 1] < Result[x]"
+          ]
+        }
+      ]
+    },
+    {
+      "question_number": "5",
+      "subquestions": [
+        {
+          "subquestion_label": "",
+          "question_text": "Complete the trace table on the opposite page by dry running the procedure when it is called as follows:\n\nCALL Process (2)",
+          "question_type": "table_completion",
+          "marks": 6,
+          "answer": "| Index | Value | Total | Mix[1] | Mix[2] | Mix[3] | Mix[4] |\n| :-- | :-- | :-- | :-- | :-- | :-- | :-- |\n|  |  |  | 4 | 2 | 3 | 5 |\n| 2 | 2 | 2 |  |  |  |  |\n|  |  |  |  | 5 |  |  |  |\n| 3 | 3 | 5 |  |  |  |  |  |\n|  |  |  |  |  | 8 |  |  |  |\n| 4 | 5 | 10 |  |  |  |  |  |\n|  |  |  |  |  |  | 9 |  |  |\n| 2 | 5 | 15 |  |  |  |  |  |\n|  |  |  |  | 13 |  |  |  |  |\n| 2 | 13 | 28 |  |  |  |  |  |\n|  |  |  |  |  | 21 |  |  |  |  |\n| 2 |  |  | 56 |  |  |  |  |",
+          "answer_conditions": [
+            "Row 1 (initialisation)",
+            "Each iteration (1-5)",
+            "1 - Total 2",
+            "2 - Total 5",
+            "3 - Total 10",
+            "4 - Total 15",
+            "5 - Total 28 and final Mix[1] = 56"
+          ]
+        }
+      ]
+    },
+    {
+      "question_number": "6",
+      "subquestions": [
+        {
+          "subquestion_label": "",
+          "question_text": "Write pseudocode for function TestNum().\nAssume that the parameter is valid.",
+          "question_type": "code_trace",
+          "marks": 6,
+          "answer": "FUNCTION TestNum(ThisNum : STRING) RETURNS INTEGER\nIF LEFT(ThisNum,3) = RIGHT(ThisNum 3) THEN\nRETURN 3\nENDIF\nIF RIGHT(ThisNum, 3) = \"000\" THEN\nRETURN 2\nENDIF\nIF MID(ThisNum, 4, 1) = MID(ThisNum, 5, 1) AND MID(ThisNum, 5, 1) = MID(ThisNum, 6, 1) THEN RETURN 1\nENDIF\nRETURN 0\nENDFUNCTION",
+          "answer_conditions": [
+            "FUNCTION TestNum(ThisNum : STRING) RETURNS INTEGER",
+            "IF LEFT(ThisNum,3) = RIGHT(ThisNum 3) THEN",
+            "RETURN 3",
+            "ENDIF",
+            "IF RIGHT(ThisNum, 3) = \"000\" THEN",
+            "RETURN 2",
+            "ENDIF",
+            "IF MID(ThisNum, 4, 1) = MID(ThisNum, 5, 1) AND MID(ThisNum, 5, 1) = MID(ThisNum, 6, 1) THEN RETURN 1",
+            "ENDIF",
+            "RETURN 0",
+            "ENDFUNCTION"
+          ]
+        }
+      ]
+    },
+    {
+      "question_number": "7",
+      "subquestions": [
+        {
+          "subquestion_label": "a",
+          "question_text": "Explain the meaning of the curved arrow symbol which begins and ends at Module-A().",
+          "question_type": "short_answer",
+          "marks": 2,
+          "answer": "iteration / looping\nnaming all four modules correctly in the correct sequence //_e.g.\nModule-A repeatedly calls Sub-Y1, then SubY2 then Sub-9",
+          "answer_conditions": [
+            "iteration / looping",
+            "naming all four modules correctly in the correct sequence //_e.g.\nModule-A repeatedly calls Sub-Y1, then SubY2 then Sub-9"
+          ]
+        },
+        {
+          "subquestion_label": "b(i)",
+          "question_text": "Write pseudocode to define MyType.",
+          "question_type": "short_answer",
+          "marks": 3,
+          "answer": "TYPE MyType\nDECLARE RA : INTEGER\nDECLARE RB : STRING\nDECLARE RC : BOOLEAN\nENDTYPE",
+          "answer_conditions": [
+            "TYPE MyType",
+            "DECLARE RA : INTEGER",
+            "DECLARE RB : STRING",
+            "DECLARE RC : BOOLEAN",
+            "ENDTYPE"
+          ]
+        },
+        {
+          "subquestion_label": "b(ii)",
+          "question_text": "Write the pseudocode header for procedure Sub-9().",
+          "question_type": "short_answer",
+          "marks": 2,
+          "answer": "PROCEDURE Sub-9(BYREF Param : MyType)",
+          "answer_conditions": [
+            "One mark for BYREF",
+            "One mark for the rest of the statement"
+          ]
+        }
+      ]
+    },
+    {
+      "question_number": "8",
+      "subquestions": [
+        {
+          "subquestion_label": "a",
+          "question_text": "Write pseudocode for module ReceiveFile().",
+          "question_type": "code_trace",
+          "marks": 7,
+          "answer": "PROCEDURE ReceiveFile(FileName : STRING)\nDECLARE FileData : STRING\nDECLARE CharCount : INTEGER\nCONSTANT Terminator = \"****\"\nOPENFILE FileName FOR WRITE\nFileData ← GetData()\nCharCount ← 0\nWHILE FileData <> Terminator\nWRITEFILE FileName, FileData\nCharCount ← CharCount + LENGTH(FileData)\nFileData ← GetData()\nENDWHILE\nCLOSEFILE FileName\nOUTPUT CharCount (, \" characters were written to \", FileName)\nENDPROCEDURE",
+          "answer_conditions": [
+            "OPEN file in WRITE mode and subsequently CLOSE",
+            "Conditional loop until terminator received",
+            "'Attempted' use of GetData() - Ignore CALL ...",
+            "Fully correct use GetData () to return the data in a loop",
+            "Maintain CharCount in a loop",
+            "Write each line to the file - except the terminator in a loop",
+            "Final output of message giving number of characters written outside loop"
+          ]
+        },
+        {
+          "subquestion_label": "b",
+          "question_text": "Explain the problem and suggest a solution.",
+          "question_type": "short_answer",
+          "marks": 3,
+          "answer": "Problem: If the file being sent contains a line of the string \"****\" then the file being written by ReceiveFile() will end at this point // subsequent file lines will be lost\nSolution: Read the file (at the sending end) to find the number of lines it contains\nSend an initial message which defines the number of lines in the file\nALTERNATIVE SOLUTION: (Transmitter program) chooses a different terminator string / character that doesn't occur in the file\nTransmitter program sends the terminator string / character before first line of file / before the transfer begins",
+          "answer_conditions": [
+            "If the file being sent contains a line of the string \"****\" then the file being written by ReceiveFile() will end at this point // subsequent file lines will be lost",
+            "Read the file (at the sending end) to find the number of lines it contains\nSend an initial message which defines the number of lines in the file",
+            "(Transmitter program) chooses a different terminator string / character that doesn't occur in the file\nTransmitter program sends the terminator string / character before first line of file / before the transfer begins"
+          ]
+        },
+        {
+          "subquestion_label": "c",
+          "question_text": "Write pseudocode for module Chat ( ).",
+          "question_type": "code_trace",
+          "marks": 7,
+          "answer": "PROCEDURE Chat(Destination : STRING, Port : INTEGER)\nDECLARE Data : STRING\nDECLARE Finished : BOOLEAN\nCONSTANT Terminator = \"Bye\"\nCONSTANT STX = CHR(2)\nCONSTANT ETX = CHR(3)\nFinished ← FALSE\nREPEAT\nData ← GetData()\nOUTPUT Data\nIF Data = Terminator THEN\nFinished ← TRUE\nENDIF\nIF NOT Finished THEN //about to reply\nINPUT Data\nTransmit(STX & Destination & MyID & Data & ETX, \nIF Data = Terminator THEN\nFinished ← TRUE\nENDIF\nENDIF\nUNTIL Finished = TRUE\nENDPROCEDURE",
+          "answer_conditions": [
+            "Conditional loop",
+            "Test for terminator in both cases",
+            "Use GetData() to get the data from the message",
+            "OUTPUT the data in a loop",
+            "INPUT the data reply",
+            "'Attempted ' use of Transmit to send it in a loop",
+            "Correct formation of parameters to Transmit()"
+          ]
+        },
+        {
+          "subquestion_label": "d",
+          "question_text": "Explain the limitation of this on module Chat () from part (c).\nDescribe a modification to GetData() to address this limitation.",
+          "question_type": "short_answer",
+          "marks": 3,
+          "answer": "Limitation: GetData() does not return a value until a message has been received\nSo once a message has been sent the user has to wait for a reply // chat is half-duplex\nModification: If no response allow the receiver to exit chat at any time ...\nGetData() should immediately return a suitable message // set a time limit\n... which Chat () can detect and respond by allowing the conversation to continue",
+          "answer_conditions": [
+            "GetData() does not return a value until a message has been received",
+            "So once a message has been sent the user has to wait for a reply // chat is half-duplex",
+            "If no response allow the receiver to exit chat at any time ..."
+          ]
+        }
+      ]
+    }
+  ]
+}

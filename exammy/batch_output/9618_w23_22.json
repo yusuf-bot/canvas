@@ -1,0 +1,330 @@
+ {
+  "subject_code": "9618",
+  "paper_code": "22",
+  "exam_session": "Winter",
+  "exam_year": "2023",
+  "context": "A shop sells car accessories. A customer order is created if an item cannot be supplied from current stock. A program is being developed to create and manage the customer orders.\n\nRefer to the insert for the list of pseudocode functions and operators.\n\nAn error will be generated if a function call is not properly formed or if the parameters are of an incorrect type or an incorrect value.\n\n# String and character functions\n- A string of length 1 may be considered to be either of type CHAR or STRING\n- A CHAR may be assigned to, or concatenated with, a STRING\n- A STRING of length greater than 1 cannot be assigned to a CHAR\nLEFT (ThisString : STRING, x : INTEGER) RETURNS STRING\nreturns leftmost $x$ characters from ThisString\nExample: LEFT (\"ABCDEFGH\", 3) returns \"ABC\"\nRIGHT (ThisString : STRING, x : INTEGER) RETURNS STRING\nreturns rightmost $x$ characters from ThisString\nExample: RIGHT (\"ABCDEFGH\", 3) returns \"FGH\"\nMID (ThisString : STRING, x : INTEGER, y : INTEGER) RETURNS STRING\nreturns a string of length $y$ starting at position $x$ from ThisString\nExample: MID (\"ABCDEFGH\", 2, 3) returns \"BCD\"\nLENGTH (ThisString : STRING) RETURNS INTEGER\nreturns the integer value representing the length of ThisString\nExample: LENGTH (\"Happy Days\") returns 10\nTO_UPPER (x : <datatype>) RETURNS <datatype>\n<datatype> may be CHAR or STRING\nreturns an object of type <datatype> formed by converting all characters of $x$ to upper case.\nExamples:\n- TO_UPPER(\"Error 803\") returns \"ERROR 803\"\n- TO_UPPER('a') returns 'A'\nTO_LOWER (x : <datatype>) RETURNS <datatype>\n<datatype> may be CHAR or STRING\nreturns an object of type <datatype> formed by converting all characters of $x$ to lower case.\nExamples:\n- TO_LOWER(\"JIM 803\") returns \"jim 803\"\n- TO_LOWER('W') returns 'w'\nNUM_TO_STR (x : <datatype1>) RETURNS <datatype2>\nreturns a string representation of a numeric value.\n<datatype1> may be REAL or INTEGER, <datatype2> may be CHAR or STRING\nExample: NUM_TO_STR (87.5) returns \"87.5\"\nIf $x$ is a negative value, the returned value will be a string beginning with the '-' character.\nSTR_TO_NUM (x : <datatype1>) RETURNS <datatype2>\nreturns a numeric representation of a string.\n<datatype1> may be CHAR or STRING, <datatype2> may be REAL or INTEGER\nExample: STR_TO_NUM (\"23.45\") returns 23.45\n\nIS_NUM (ThisString : <datatype>) RETURNS BOOLEAN\nreturns TRUE if ThisString represents a valid numeric value.\n<datatype> may be CHAR or STRING\nExample: IS_NUM (\"-12.36\") returns TRUE\nASC (ThisChar : CHAR) RETURNS INTEGER\nreturns an integer value (the ASCII value) of ThisChar\nExample: ASC('A') returns 65, ASC('B') returns 66, etc.\nCHR (x : INTEGER) RETURNS CHAR\nreturns the character whose integer value (the ASCII value) is $x$\nExample: CHR (65) returns 'A', CHR (66) returns 'B', etc.\n\n# Numeric functions\nINT (x : REAL) RETURNS INTEGER\nreturns the integer part of $x$\nExample: INT (27.5415) returns 27\nRAND (x : INTEGER) RETURNS REAL\nreturns a real number in the range 0 to $x$ (not inclusive of $x$ ).\nExample: RAND (87) could return 35.430729\n\n## Date functions\nDate format is assumed to be DD/MM/YYYY unless otherwise stated\n```\nDAY(ThisDate : DATE) RETURNS INTEGER\n```\nreturns the current day number from ThisDate\nExample: DAY $(04 / 10 / 2003)$ returns 4\n```\nMONTH (ThisDate : DATE) RETURNS INTEGER\n```\nreturns the current month number from ThisDate\nExample: MONTH $(04 / 10 / 2003)$ returns 10\n```\nYEAR(ThisDate : DATE) RETURNS INTEGER\n```\nreturns the current year number from ThisDate\nExample: YEAR $(04 / 10 / 2003)$ returns 2003\n```\nDAYINDEX(ThisDate : DATE) RETURNS INTEGER\n```\nreturns the day index number from ThisDate where Sunday $=1$, Monday $=2$ etc.\nExample: DAYINDEX $(07 / 11 / 2023)$ returns 3\n```\nSETDATE(Day, Month, Year : INTEGER) RETURNS DATE\n```\nreturns a value of type DATE with the value of <Day>/<Month>/<Year>\nExample: SETDATE $(26,10,2003)$ returns a date corresponding to 26/10/2003\n```\nTODAY() RETURNS DATE\n```\nreturns a value of type DATE corresponding to the current date.\n\n# Text file functions\n```\nEOF(FileName : STRING) RETURNS BOOLEAN\n```\nreturns TRUE if there are no more lines to be read from file FileName The function will generate an error if the file is not already open in READ mode.\n\n## Operators\nAn error will be generated if an operator is used with a value(s) of an incorrect type.\n\n| $\\&$ | concatenates (joins) two strings. <br> Example: \"Summer\" \\& \" \" \\& \"Pudding\" evaluates to \"Summer Pudding\" may also be used to concatenate a CHAR with a STRING |\n| :--: |\n| AND | performs a logical AND on two Boolean values. <br> Example: TRUE AND FALSE evaluates to FALSE |\n| OR | performs a logical OR on two Boolean values. <br> Example: TRUE OR FALSE evaluates to TRUE |\n| NOT | performs a logical NOT on a Boolean value. <br> Example: NOT TRUE evaluates to FALSE |\n| MOD | finds the remainder when one number is divided by another. <br> Example: 10 MOD 3 evaluates to 1 |\n| DIV | finds the quotient when one number is divided by another. <br> Example 10 DIV 3 evaluates to 3 |\n\n## Comparison operators\n\n| $=$ | used to compare two items of the same type. evaluates to TRUE if the condition is true, otherwise evaluates to FALSE <br> Notes: <br> - may be used to compare types REAL and INTEGER <br> - may be used to compare types CHAR and STRING <br> - case sensitive when used to compare types CHAR and / or STRING <br> - cannot be used to compare two records |\n| :--: |\n| $<=$ |\n| $<>$ | - \"Program\" = \"program\" evaluates to FALSE <br> - Count $=4$ evaluates to TRUE when Count contains the value 4 |\n[^0]\n[^0]:    Permission to reproduce items where third-party owned material protected by copyright is included has been sought and cleared where possible. Every reasonable effort has been made by the publisher (UCLES) to trace copyright holders, but if any items requiring clearance have unwittingly been included, the publisher will be pleased to make amends at the earliest possible opportunity.\nTo avoid the issue of disclosure of answer-related information to candidates, all copyright acknowledgements are reproduced online in the Cambridge Assessment International Education Copyright Acknowledgements Booklet. This is produced for each series of examinations and is freely available to download at www.cambridgeinternational.org after the live examination series.\n\nCambridge Assessment International Education is part of Cambridge Assessment. Cambridge Assessment is the brand name of the University of Cambridge Local Examinations Syndicate (UCLES), which is a department of the University of Cambridge.",
+  "questions": [
+    {
+      "question_number": "1",
+      "subquestions": [
+        {
+          "subquestion_label": "a",
+          "question_text": "The following identifier table shows some of the data that will be stored for each order.\n\nComplete the identifier table by adding meaningful variable names and appropriate data types.\n\n| Example <br> value | Explanation | Variable name | Data type |\n| :--: | :-- | :-- | :-- |\n| \"Mr Khan\" | The name of the customer |  |  |\n| 3 | The number of items in the order |  |  |\n| TRUE | To indicate whether this is a new customer |  |  |\n| 15.75 | The deposit paid by the customer |  |  |",
+          "question_type": "table_completion",
+          "marks": 4,
+          "answer": "| Example <br> value | Explanation | Variable name | Data type |\n| :--: | :-- | :-- | :-- |\n| \"Mr Khan\" | The name of the customer | CustomerName | STRING |\n| 3 | The number of items in the order | NumItems | INTEGER |\n| TRUE | To indicate whether this is a new customer | NewCustomer | BOOLEAN |\n| 15.75 | The deposit paid by the customer | Deposit | REAL |",
+          "answer_conditions": [
+            "One mark for each row with appropriate variable name and data type"
+          ]
+        },
+        {
+          "subquestion_label": "b",
+          "question_text": "Other variables in the program have example values as shown:\n\n| Variable | Example value |\n| :-- | :-- |\n| Total | 124.00 |\n| DepRate | 2.00 |\n| Description | \"AB12345:Cleaning Brush (small)\" |\n\nComplete the table by evaluating each expression using the example values.\n\n| Expression | Evaluates to |\n| :-- | :-- |\n| (Total * DepRate) + 1.5 |  |\n| RIGHT(Description, 7) |  |\n| (LENGTH(Description) - 8) > 16 |  |\n| NUM_TO_STR(INT(DepRate * 10)) & '\u0025' |  |",
+          "question_type": "calculation",
+          "marks": 4,
+          "answer": "| Expression | Evaluates to |\n| :-- | :-- |\n| (Total * DepRate) + 1.5 | 249.50 |\n| RIGHT(Description, 7) | \"(small)\" |\n| (LENGTH(Description) - 8) > 16 | TRUE |\n| NUM_TO_STR(INT(DepRate * 10)) & '\u0025' | \"20\u0025\" |",
+          "answer_conditions": [
+            "One mark per row"
+          ]
+        },
+        {
+          "subquestion_label": "c",
+          "question_text": "The data that needs to be stored for each customer order in part (a) is not all of the same type.\n\nDescribe an effective way of storing this data for many customer orders while the program is running.",
+          "question_type": "long_answer",
+          "marks": 3,
+          "answer": "An effective way of storing this data for many customer orders while the program is running is to use a composite or record data type to group all the related data items for one order together. Then, an array of this composite or record type can be used to store data for multiple orders. This allows for efficient access and manipulation of the data for each order.\n\n1. Declare a composite or record type that contains all the data items required for one order.\n2. Declare an array of this composite or record type, where each element of the array represents the data for one order.\n3. The composite or record type should include items of different data types to accommodate all the necessary information for an order.",
+          "answer_conditions": [
+            "One mark per point Max 3 marks",
+            "Declaration",
+            "1 Declare a composite / record (type)",
+            "2 Declare an array of the given composite / record (type)",
+            "Expansion of record:",
+            "3 ... containing all data items required // containing items of different data types",
+            "Expansion of array:",
+            "4 ... where each array element represents data for one order / customer (order)"
+          ]
+        }
+      ]
+    },
+    {
+      "question_number": "2",
+      "subquestions": [
+        {
+          "subquestion_label": "a",
+          "question_text": "An algorithm will:\n\n1. input a sequence of integer values, one at a time\n2. ignore all values until the value 27 is input, then sum the remaining values in the sequence\n3. stop summing values when the value 0 is input and then output the sum of the values.\n\n(a) Draw a program flowchart to represent the algorithm.\n\nSTART",
+          "question_type": "diagram",
+          "marks": 5,
+          "answer": "[Diagram: Flowchart starting with START and including steps for input, conditional checks, summing, and output]",
+          "answer_conditions": [
+            "One mark per point:",
+            "1 Initialise Total to zero",
+            "2 Check for only first input of 27 in a loop then attempt to sum values",
+            "3 Loop until 0 input",
+            "4 Sum values input (after input of first 27) in a loop",
+            "5 Output Total after a reasonable attempt"
+          ]
+        },
+        {
+          "subquestion_label": "b",
+          "question_text": "(b) The solution to the algorithm includes iteration.\n\nGive the name of a suitable loop structure that could be used. Justify your answer.\n\nName\nJustification",
+          "question_type": "short_answer",
+          "marks": 2,
+          "answer": "Name: (pre / post) conditional loop\nJustification: the number of iterations is not known // loop ends following a specific input (in the loop)",
+          "answer_conditions": [
+            "One mark per point:",
+            "1 Name: (pre / post) conditional loop",
+            "2 Justification: the number of iterations is not known // loop ends following a specific input (in the loop)"
+          ]
+        }
+      ]
+    },
+    {
+      "question_number": "3",
+      "subquestions": [
+        {
+          "subquestion_label": "a",
+          "question_text": "The diagram represents a linked list Abstract Data Type (ADT).\n\n- $\\quad \\mathrm{Ptr} 1$ is the start pointer. Ptr2 is the free list pointer.\n- Labels D40, D32, D11 and D100 represent the data items of nodes in the list.\n- Labels F1, F2, F3 and F4 represent the data items of nodes in the free list.\n- The symbol $\\varnothing$ represents a null pointer.\n\nPtr1\n![img-1.jpeg](img-1.jpeg)\n\nPtr2\n![img-2.jpeg](img-2.jpeg)\n\n(a) The linked list is implemented using two variables and two 1D arrays as shown. The pointer variables and the elements of the Pointer array store the indices (index numbers) of elements in the Data array.\n\nComplete the diagram to show how the linked list as shown above may be represented using the variables and arrays.\n\n| Variable | Value |\n| :--: | :--: |\n| Start_Pointer |  |\n| Free_List_Pointer | 5 |\n\n\n| Index | Data array | Pointer array |\n| :--: | :--: | :--: |\n| 1 | D32 | 2 |\n| 2 |  | 3 |\n| 3 |  |  |\n| 4 | D40 |  |\n| 5 |  |  |\n| 6 | F2 | 7 |\n| 7 |  |  |\n| 8 |  |  |",
+          "question_type": "table_completion",
+          "marks": 5,
+          "answer": "| Variable | Value |\n| :--: | :--: |\n| Start_Pointer | 4 |\n| Free_List_Pointer | 5 |\n\n\n| Index | Data array | Pointer array |\n| :--: | :--: | :--: |\n| 1 | D32 | 2 |\n| 2 | D11 | 3 |\n| 3 | D100 | 0 |\n| 4 | D40 | 1 |\n| 5 | F1 | 6 |\n| 6 | F2 | 7 |\n| 7 | F3 | 8 |\n| 8 | F4 | 0 |",
+          "answer_conditions": [
+            "Mark as follows:",
+            "- One mark for Start_Pointer value",
+            "- One mark each group of row(s):",
+            "- 2",
+            "- 3 and 4",
+            "- 5",
+            "- 7 and 8",
+            "For null pointer: accept $0 / \\varnothing /$ an out-of-bound index value less than 1, greater than 8"
+          ]
+        },
+        {
+          "subquestion_label": "b",
+          "question_text": "The original linked list is to be modified. A new node D6 is inserted between nodes D32 and D11.\n\nPtr1\n![img-3.jpeg](img-3.jpeg)\n\nPtr2\n![img-4.jpeg](img-4.jpeg)\n\nThe algorithm required is expressed in four steps as shown. Complete the steps.\n\n1. Assign the data item to $\\qquad$\n2. Set the $\\qquad$ of this node to point to $\\qquad$\n3. Set Ptr2 to point to $\\qquad$\n4. Set pointer of $\\qquad$ to point to $\\qquad$",
+          "question_type": "short_answer",
+          "marks": 4,
+          "answer": "1. Assign the data item D6 to F1\n2. Set the pointer of this node to point to D11\n3. Set Ptr2 to point to F2\n4. Set pointer of D32 to point to D6",
+          "answer_conditions": [
+            "One mark per step:",
+            "1 Assign the data item D6 to F1",
+            "2 Set the pointer of this node to point to D11",
+            "3 Set Ptr2 to point to F2",
+            "4 Set pointer of D32 to point to D6"
+          ]
+        }
+      ]
+    },
+    {
+      "question_number": "4",
+      "subquestions": [
+        {
+          "subquestion_label": "a",
+          "question_text": "A procedure Count () will:\n\n1. input a value (all values will be positive integers)\n2. count the number of odd values and count the number of even values\n3. repeat from step 1 until the value input is 99\n4. output the two count values, with a suitable message.\n\nThe value 99 must not be counted.\n\n(a) Write pseudocode for the procedure Count ().",
+          "question_type": "code_trace",
+          "marks": 6,
+          "answer": "PROCEDURE Count()\nDECLARE COdd, CEven, ThisNum : INTEGER\nCOdd \\leftarrow 0\nCEven \\leftarrow 0\nINPUT ThisNum\nWHILE ThisNum <> 99\nIF ThisNum MOD 2=1 THEN\nCOdd \\leftarrow COdd +1\nELSE\nCEven \\leftarrow CEven +1\nENDIF\nINPUT ThisNum\nENDWHILE\nOUTPUT \"Count of odd and even numbers: \", COdd, CEven\nENDPROCEDURE",
+          "answer_conditions": [
+            "Mark as follows Max 6 marks:",
+            "1 Procedure heading and ending",
+            "2 Local COdd, CEven and ThisNum declared as integers",
+            "3 Conditional loop while ThisNum <> 99",
+            "4 Input ThisNum in a loop",
+            "5 Check ThisNum is odd or even in a loop",
+            "6 Increment appropriate count in a loop, both counts must have been initialised before loop",
+            "7 After the loop output COdd and CEven with a suitable message following a reasonable attempt at counting"
+          ]
+        },
+        {
+          "subquestion_label": "b",
+          "question_text": "(b) The procedure count () is to be tested.\n\nTypical test data would consist of odd and even values, for example:\n$23,5,64,100,2002,1,8,900,99$\nThe purpose of this test would be to test a typical mix of even and odd values and check the totals.\n\nGive three test data sequences that may be used to test different aspects of the procedure. Do not include invalid data.\n\n# Sequence 1:\n\nTest data\nPurpose of test.\n\nSequence 2:\nTest data\nPurpose of test.\n\nSequence 3:\nTest data\nPurpose of test.",
+          "question_type": "short_answer",
+          "marks": 3,
+          "answer": "Sequence 1:\nTest data: 1, 3, 5, 7, 9, 99\nPurpose of test: Test with only odd values.\n\nSequence 2:\nTest data: 2, 4, 6, 8, 10, 99\nPurpose of test: Test with only even values.\n\nSequence 3:\nTest data: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 99\nPurpose of test: Test with a mix of odd and even values.",
+          "answer_conditions": [
+            "One mark per set, including stated purpose. Max 3 marks",
+            "Example answers:",
+            "1 data set with (only) odd values, terminated with 99",
+            "2 data set with (only) even values, terminated with 99",
+            "3 data sets with same number of odd and even values, terminated with 99",
+            "4 data sets with all even / all odd with just one odd/even value, terminated with 99",
+            "5 data sets with no values just final 99",
+            "6 data sets without (terminating) 99 // missing or incorrectly placed 99"
+          ]
+        }
+      ]
+    },
+    {
+      "question_number": "5",
+      "subquestions": [
+        {
+          "subquestion_label": "",
+          "question_text": "A global 1D array of integers contains four elements, which are assigned values as shown:\n\n```\nMix[1] \\leftarrow 1\nMix[2] \\leftarrow 3\nMix[3] \\leftarrow 4\nMix[4] \\leftarrow 2\n```\n\nA procedure Process() manipulates the values in the array. The procedure is written in pseudocode:\n\n```\nPROCEDURE Process(Start : INTEGER)\n    DECLARE Value, Index, Count : INTEGER\n    Index \\leftarrow Start\n    Count \\leftarrow 0\n    REPEAT\n        Value \\leftarrow Mix[Index]\n        Mix[Index] \\leftarrow Mix[Index] - 1\n        Index \\leftarrow Value\n        Count \\leftarrow Count + 1\n    UNTIL Count = 5\n    Mix[4] \\leftarrow Count * Index\n```\n\n# ENDPROCEDURE\n\nComplete the trace table on the opposite page by dry running the procedure when it is called as follows:\n\nCALL Process (3)",
+          "question_type": "table_completion",
+          "marks": 6,
+          "answer": "| Index | Value | Count | Mix[1] | Mix[2] | Mix[3] | Mix[4] |\n| :-- | :-- | :-- | :-- | :-- | :-- | :-- |\n| 3 |  | 0 | 1 | 3 | 4 | 2 |\n|  | 4 |  |  |  | 3 |  | |\n| 4 |  | 1 |  |  |  |  | |\n|  | 2 |  |  |  |  | 1 | |\n| 2 |  | 2 |  |  |  |  | |\n|  | 3 |  |  | 2 |  |  | |\n| 3 |  | 3 |  |  |  |  | |\n|  | 3 |  |  |  | 2 |  | |\n| 3 |  | 4 |  |  |  |  | |\n|  | 2 |  |  |  |  | 1 | |\n| 2 |  | 5 |  |  |  |  | |\n|  |  |  |  |  |  |  | |\n|  |  |  |  |  |  | 10 | |",
+          "answer_conditions": [
+            "One mark for:",
+            "- Initialisation row",
+            "- Each iteration of Count 1 to 4 with correct Index, Count and array Mix as shown",
+            "- Final iteration, Count $=5$, correct Index, Count and array Mix as shown plus Mix [4] assignment"
+          ]
+        }
+      ]
+    },
+    {
+      "question_number": "6",
+      "subquestions": [
+        {
+          "subquestion_label": "a",
+          "question_text": "(a) A procedure CreateFiles () will take two parameters:\n\n- a string representing a file name\n- an integer representing the number of files to be created.\n\nThe procedure will create the number of text files specified. Each file is given a different name. Each file name is formed by concatenating the file name with a suffix based on the file number. The suffix is always three characters.\n\nFor example, the call CreateFiles(\"TestData\", 3) would result in the creation of the three files, TestData.001, TestData. 002 and TestData. 003.\n\nEach file will contain a single line. For example, file TestData. 002 would contain the string:\nThis is File TestData. 002\n\nWrite pseudocode for CreateFiles(). Assume both parameters are valid and that the integer value is between 1 and 999, inclusive.",
+          "question_type": "code_trace",
+          "marks": 6,
+          "answer": "PROCEDURE CreateFiles (NameRoot : STRING, NumFiles : INTEGER)\nDECLARE FileName, Suffix : STRING\nDECLARE Count : INTEGER\nFOR Count \\leftarrow 1 TO NumFiles\nSuffix \\leftarrow NUM_TO_STR (Count)\nWHILE LENGTH (Suffix) <> 3\nSuffix \\leftarrow '0' & Suffix\nENDWHILE\nFileName \\leftarrow NameRoot & '.' & Suffix\nOPENFILE FileName FOR WRITE\nWRITEFILE FileName, \"This is File \" & FileName\nCLOSEFILE FileName\nNEXT Count\nENDPROCEDURE",
+          "answer_conditions": [
+            "1 Procedure heading, including parameters, and ending",
+            "2 Loop for NumFiles iterations",
+            "3 Attempt to create filename suffix using NUM_TO_STR() in a loop",
+            "4 Completely correct filename",
+            "5 OPENFILE in WRITE mode and subsequent CLOSE in a loop",
+            "6 WRITE initial first line to the file in a loop"
+          ]
+        },
+        {
+          "subquestion_label": "b(i)",
+          "question_text": "(i) Identify the type of module that should be used for CheckFiles().",
+          "question_type": "short_answer",
+          "marks": 1,
+          "answer": "Function",
+          "answer_conditions": [
+            "Function"
+          ]
+        },
+        {
+          "subquestion_label": "b(ii)",
+          "question_text": "(ii) Write the module header for CheckFiles().",
+          "question_type": "short_answer",
+          "marks": 1,
+          "answer": "FUNCTION CheckFiles (NameRoot : STRING) RETURNS INTEGER",
+          "answer_conditions": [
+            "FUNCTION CheckFiles (NameRoot : STRING) RETURNS INTEGER"
+          ]
+        },
+        {
+          "subquestion_label": "b(iii)",
+          "question_text": "(iii) State the file mode that should be used in CheckFiles().",
+          "question_type": "short_answer",
+          "marks": 1,
+          "answer": "Read",
+          "answer_conditions": [
+            "Read"
+          ]
+        }
+      ]
+    },
+    {
+      "question_number": "7",
+      "subquestions": [
+        {
+          "subquestion_label": "a",
+          "question_text": "[Diagram: Structure chart with modules and their interactions]",
+          "question_type": "diagram",
+          "marks": 4,
+          "answer": "![img-0.jpeg](img-0.jpeg)",
+          "answer_conditions": [
+            "One mark per point:",
+            "1 Module names",
+            "2 Parameters with labels to Module-X and between Module-X and Reset",
+            "3 Parameter (with label) to Module-Z and return from Module-Z",
+            "4 Parameters with labels to Module-Y and Restore and return values from Module-Y"
+          ]
+        },
+        {
+          "subquestion_label": "b",
+          "question_text": "Explain the meaning of the diamond symbol as used in the diagram in part (a).",
+          "question_type": "short_answer",
+          "marks": 2,
+          "answer": "Means that Module-A calls either one of Module-X, Module-Y or Module-Z (which one is called is decided at runtime).",
+          "answer_conditions": [
+            "One mark for reference to selection",
+            "One mark for naming all four modules correctly"
+          ]
+        }
+      ]
+    },
+    {
+      "question_number": "8",
+      "subquestions": [
+        {
+          "subquestion_label": "a",
+          "question_text": "Write pseudocode for module GetPort (). Assume DestinationID contains a valid three-digit string.",
+          "question_type": "code_trace",
+          "marks": 7,
+          "answer": "FUNCTION GetPort(ThisDest : STRING) RETURNS INTEGER\nDECLARE Index, DNum, Port : INTEGER\nDNum \\leftarrow STR_TO_NUM(ThisDest)\nIndex \\leftarrow 1\nPort \\leftarrow-1\nREPEAT\nIF RouteTable[Index, 1] <> -1 THEN\nIF DNum >= RouteTable[Index, 1] AND \nDNum <= RouteTable[Index, 2] THEN\nPort \\leftarrow RouteTable[Index, 3]\nENDIF\nENDIF\nIndex \\leftarrow Index +1\nUNTIL Index $=7$ OR Port $<>-$1 // end of array or \n\nRETURN Port\nENDFUNCTION",
+          "answer_conditions": [
+            "1. Function heading and ending including parameter and return type",
+            "2 Convert parameter to a number",
+            "3 (Conditional) loop through array",
+            "4 Skip unused element in a loop",
+            "5 Attempt to check one range with destination in a loop",
+            "6 Test all ranges correctly with destination in a loop",
+            "7 Store port value if destination matched in a loop (and exit loop)",
+            "8 Return port value including -1 if no match found"
+          ]
+        },
+        {
+          "subquestion_label": "b",
+          "question_text": "Write pseudocode for module ProcessMsg (). Module StackMsg () must be used.",
+          "question_type": "code_trace",
+          "marks": 7,
+          "answer": "PROCEDURE ProcessMsg (ThisMsg : STRING)\nDECLARE ThisDest : STRING\nDECLARE Response : BOOLEAN\nDECLARE StackNum : INTEGER\nIF LENGTH (ThisMsg) >= 4 THEN\nThisDest \\leftarrow LEFT (ThisMsg, 3)\nIF ThisDest = MyID THEN // It's for this computer StackNum \\leftarrow 1\nELSE\nStackNum \\leftarrow 2\nENDIF\nResponse \\leftarrow StackMsg (ThisMsg, StackNum)\nIF Response = FALSE THEN\nOUTPUT \"Message discarded - no room on stack\" ENDIF\nENDIF\nENDPROCEDURE",
+          "answer_conditions": [
+            "1. Ignore message if data field is empty",
+            "2. Extract ThisDest from ThisMsg",
+            "3. Test if destination is this computer",
+            "4. Attempt to use StackMsg ()",
+            "5. Fully correct use of StackMsg () for both cases / stacks",
+            "6. Test StackMsg () return value for both cases",
+            "7. Following a reasonable attempt at MP6 output warning if StackMsg () returns FALSE"
+          ]
+        },
+        {
+          "subquestion_label": "c(i)",
+          "question_text": "(i) Describe the circumstances and explain the problem.",
+          "question_type": "short_answer",
+          "marks": 3,
+          "answer": "If more than one line is / all lines are stored on the stack (before line(s) are removed)\nThe stack operates as a FILO device // Last item added to stack will be in first item out\nSo lines in the file appear out of sequence",
+          "answer_conditions": [
+            "Decide on scenario and mark accordingly.",
+            "Scenario one:",
+            "- If more than one line is / all lines are stored on the stack (before line(s) are removed)",
+            "- The stack operates as a FILO device // Last item added to stack will be in first item out",
+            "- So lines in the file appear out of sequence",
+            "Scenario two:",
+            "- Stack is Full",
+            "- Not all lines can be stored on the stack",
+            "- so resulting file will not contain all the original lines",
+            "Scenario three:",
+            "- (All) the data in a line read can't be stored on the stack",
+            "- Stack elements have not been allocated enough memory",
+            "- so only part of each line is stored in the file",
+            "Scenario four:",
+            "- Stack is empty",
+            "- The stack is being read faster than it is being written to",
+            "- so blank lines may be inserted into the file"
+          ]
+        },
+        {
+          "subquestion_label": "c(ii)",
+          "question_text": "(ii) Suggest a more appropriate Abstract Data Type that could be used to store the messages that would not have the same problem.",
+          "question_type": "short_answer",
+          "marks": 1,
+          "answer": "Queue",
+          "answer_conditions": [
+            "Queue"
+          ]
+        }
+      ]
+    }
+  ]
+}

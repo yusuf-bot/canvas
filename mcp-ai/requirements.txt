@@ -1,0 +1,36 @@
+# Core MCP and Mistral
+mcp
+mistralai
+python-dotenv
+
+# Git server support
+mcp-server-git
+
+# Vision/image processing
+Pillow
+opencv-python-headless
+
+# Web and HTTP
+requests
+aiohttp
+
+# Data processing
+pandas
+numpy
+
+# Additional common libraries
+pydantic
+click
+typing-extensions
+pathlib
+
+# Development tools
+pytest
+black
+flake8
+
+# System utilities
+psutil
+
+# Async support
+asyncio-mqtt

@@ -1,0 +1,155 @@
+{
+  "subject_code": "9618",
+  "paper_code": "13",
+  "exam_session": "Winter",
+  "exam_year": "2024",
+  "context": "no insert provided",
+  "questions": [
+    {
+      "question_number": "1",
+      "subquestions": [
+        {
+          "subquestion_label": "a",
+          "question_text": "Describe the operation of a 2-input XOR gate.",
+          "question_type": "long_answer",
+          "marks": 1,
+          "answer": "1 mark for: \n Output is only 1 if one input is 1 and the other is 0 \n Output is only 1 if both inputs are different \n Output is only 0 if both inputs are the same",
+          "answer_conditions": [
+            "Output is only 1 if one input is 1 and the other is 0",
+            "Output is only 1 if both inputs are different",
+            "Output is only 0 if both inputs are the same"
+          ]
+        },
+        {
+          "subquestion_label": "b",
+          "question_text": "Write the logic expression for the following logic circuit.\n![img-1.jpeg](img-1.jpeg)\n\\mathbf{X}=",
+          "question_type": "short_answer",
+          "marks": 2,
+          "answer": "1 mark each:\n- ((A NOR B) AND (A OR B))\n- NAND (B AND C)\n\n\\mathbf{X}=((A NOR B) AND (A OR B)) NAND (B AND C)",
+          "answer_conditions": [
+            "((A NOR B) AND (A OR B))",
+            "NAND (B AND C)",
+            "\\mathbf{X}=((A NOR B) AND (A OR B)) NAND (B AND C)"
+          ]
+        },
+        {
+          "subquestion_label": "c",
+          "question_text": "Draw the logic circuit for the logic expression:\n\n$$\\mathbf{X}=((\\text { NOT } \\mathbf{A} \\text { AND }(\\mathbf{B} \\text { AND } \\mathbf{C})) \\text { OR }(\\mathbf{B} \\text { NAND } \\mathbf{C})) \\text { AND NOT } \\mathbf{A}$$\n\n![img-2.jpeg](img-2.jpeg)",
+          "question_type": "diagram",
+          "marks": 2,
+          "answer": "1 mark for NOT gate, 2 correct AND gates and the NAND gate\n1 mark for OR gate and the final AND gate",
+          "answer_conditions": [
+            "NOT gate",
+            "2 correct AND gates and the NAND gate",
+            "OR gate and the final AND gate"
+          ]
+        }
+      ]
+    },
+    {
+      "question_number": "2",
+      "subquestions": [
+        {
+          "subquestion_label": "a",
+          "question_text": "Identify two differences between DRAM and Static RAM (SRAM).\n\nDifference 1\n\nDifference 2",
+          "question_type": "short_answer",
+          "marks": 2,
+          "answer": "1 mark for each difference\ne.g.\n- DRAM requires constant refreshing, but SRAM does not need to be constantly refreshed\n- DRAM generally has greater capacities per chip, but SRAM generally has lower capacities per chip\n- DRAM has slower access times than SRAM",
+          "answer_conditions": [
+            "DRAM requires constant refreshing, but SRAM does not need to be constantly refreshed",
+            "DRAM generally has greater capacities per chip, but SRAM generally has lower capacities per chip",
+            "DRAM has slower access times than SRAM"
+          ]
+        },
+        {
+          "subquestion_label": "b",
+          "question_text": "Explain how a memory buffer is used when a computer is transferring data to its magnetic hard disk drive.",
+          "question_type": "long_answer",
+          "marks": 4,
+          "answer": "1 mark for each bullet point (max 4)\n- The computer and the hard disk drive transmit and receive at different speeds\n- The computer transfers data faster than the HDD can receive\n- The buffer is used for temporary storage\n- ... so that the computer can transfer data to the buffer at the higher speed\n- ... and is not held up waiting for data to transfer\n- ... and so that data is transferred to hard disk drive from the buffer at the slower rate",
+          "answer_conditions": [
+            "The computer and the hard disk drive transmit and receive at different speeds",
+            "The computer transfers data faster than the HDD can receive",
+            "The buffer is used for temporary storage",
+            "... so that the computer can transfer data to the buffer at the higher speed",
+            "... and is not held up waiting for data to transfer",
+            "... and so that data is transferred to hard disk drive from the buffer at the slower rate"
+          ]
+        }
+      ]
+    },
+    {
+      "question_number": "3",
+      "subquestions": [
+        {
+          "subquestion_label": "",
+          "question_text": "Explain the reasons why the automatic braking system of the car is a control system.",
+          "question_type": "long_answer",
+          "marks": 3,
+          "answer": "1 mark for each bullet point (max 3)\n- The system uses feedback\n- The system acts independently\n- Input data causes the car to brake\n- ... braking decreases the/changes the distance to the object\n- ... this new distance is used to determine whether/how hard the car needs to brake",
+          "answer_conditions": [
+            "The system uses feedback",
+            "The system acts independently",
+            "Input data causes the car to brake",
+            "... braking decreases the/changes the distance to the object",
+            "... this new distance is used to determine whether/how hard the car needs to brake"
+          ]
+        }
+      ]
+    },
+    {
+      "question_number": "4",
+      "subquestions": [
+        {
+          "subquestion_label": "a",
+          "question_text": "Identify two foreign keys in the table SALE and the table that each foreign key references.\n\nForeign key 1\nTable name 1\nForeign key 2\nTable name 2",
+          "question_type": "short_answer",
+          "marks": 2,
+          "answer": "1 mark each:\n- Foreign key: BatchID, table BATCH\n- Foreign key: CustomerID, table CUSTOMER",
+          "answer_conditions": [
+            "Foreign key: BatchID, table BATCH",
+            "Foreign key: CustomerID, table CUSTOMER"
+          ]
+        },
+        {
+          "subquestion_label": "b",
+          "question_text": "Write an SQL script to return the total quantity of ice cream sold to the customer with the ID of 0034E in the year 2023.",
+          "question_type": "code_trace",
+          "marks": 3,
+          "answer": "1 mark each:\n- SELECT SUM(Quantity)\n- FROM SALE WHERE and one correct condition\n- AND with remainder correct conditions\ne.g.\nSELECT SUM(Quantity)\nFROM SALE\nWHERE CustomerID = \"0034E\"\nAND Date >= \\#01/01/2023\\# AND Date <= \\#31/12/2023\\#",
+          "answer_conditions": [
+            "SELECT SUM(Quantity)",
+            "FROM SALE WHERE and one correct condition",
+            "AND with remainder correct conditions"
+          ]
+        },
+        {
+          "subquestion_label": "c(i)",
+          "question_text": "Write an SQL script to define the table BATCH.\n\nInclude constraints (restrictions) on the data that can be entered into each field where appropriate.\n\n| BatchID | Type | Flavour | Size | SellingPrice | EndDate |\n| :--: | :--: | :--: | :--: | :--: | :--: |\n| KIV12 | Plain | Vanilla | 1 | 2.20 | $12 / 12 / 2024$ |\n| RIC14 | Plain | Chocolate | 0.5 | 1.80 | $12 / 12 / 2024$ |\n| TYL1 | Non-dairy | Lemon | 0.5 | 2.10 | $01 / 02 / 2025$ |\n| FYV2 | Non-dairy | Vanilla | 0.25 | 1.50 | $02 / 02 / 2025$ |\n| BIV13 | Plain | Vanilla | 1 | 2.20 | $02 / 02 / 2024$ |",
+          "question_type": "code_trace",
+          "marks": 5,
+          "answer": "1 mark for each bullet point\n- Create table BATCH with opening and closing brackets, all statements within brackets\n- BatchID, Type and Flavour as varchar or equivalent\n- ...with suitable constraint(s)\n- Size as decimal, SellingPrice as currency, EndDate as date (or equivalent)\n- Primary key identified as BatchID\ne.g.\nCREATE TABLE BATCH(\nBatchID VARCHAR(6) NOT NULL,\nType VARCHAR (20) NOT NULL,\nFlavour VARCHAR (20) NOT NULL,\nSize FLOAT,\nSellingPrice CURRENCY,\nEndDate DATE,\nPRIMARY KEY(BatchID)\n)",
+          "answer_conditions": [
+            "Create table BATCH with opening and closing brackets, all statements within brackets",
+            "BatchID, Type and Flavour as varchar or equivalent",
+            "...with suitable constraint(s)",
+            "Size as decimal, SellingPrice as currency, EndDate as date (or equivalent)",
+            "Primary key identified as BatchID"
+          ]
+        },
+        {
+          "subquestion_label": "c(ii)",
+          "question_text": "Normalise the database table BATCH.\n\nWrite the table definitions for your new tables.\n\nIdentify any primary and foreign keys in your tables.\n\nDo **not** change or include the tables CUSTOMER and SALE.",
+          "question_type": "table_completion",
+          "marks": 4,
+          "answer": "1 mark for each bullet point each (max 4)\ne.g.\n- Ice cream table with an appropriate name\n- ... containing type, flavour, size, selling price\n- ... with suitable primary key\n- ... foreign key identified in BATCH that links to the primary key in ICECREAM\nExample table definitions - not example answer:\nBATCH (BatchID, IceCreamID, EndDate)\nICE CREAM (IceCreamID, Type, Flavour, Size, SellingPrice)",
+          "answer_conditions": [
+            "Ice cream table with an appropriate name",
+            "... containing type, flavour, size, selling price",
+            "... with suitable primary key",
+            "... foreign key identified in BATCH that links to the primary key in ICECREAM"
+          ]
+        },
+        {
+          "subquestion_label": "d",
+          "question_text": "|  Database term | Definition  |\n| --- | --- |\n|  Entity | ................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................

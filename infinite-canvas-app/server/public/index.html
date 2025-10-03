@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infinite Canvas</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-100 overflow-hidden">
+    <canvas id="canvas" class="absolute top-0 left-0 cursor-crosshair"></canvas>
+    
+    <!-- Clear Button -->
+    <button id="clearBtn" class="fixed top-4 left-4 bg-red-500 text-white px-3 py-2 rounded-md text-sm shadow-lg hover:bg-red-600">
+        <i class="fas fa-trash mr-1"></i>Clear
+    </button>
+
+    <!-- Zoom Controls -->
+    <div class="fixed top-4 right-4 bg-gray-800 rounded-lg px-3 py-2 flex items-center space-x-2 shadow-lg">
+        <button id="zoomOut" class="text-gray-300 hover:text-white p-1 text-sm">
+            <i class="fas fa-minus"></i>
+        </button>
+        <input id="zoomInput" type="text" class="w-12 text-center text-xs bg-gray-700 text-white rounded px-1 py-1" value="100">
+        <span class="text-gray-300 text-xs">%</span>
+        <button id="zoomIn" class="text-gray-300 hover:text-white p-1 text-sm">
+            <i class="fas fa-plus"></i>
+        </button>
+    </div>
+    
+    <!-- Main Toolbar -->
+    <div id="toolbar" class="fixed bottom-4 left-1/2 transform -translate-x-1/2 bg-gray-800 rounded-lg px-3 py-2 flex items-center space-x-2 shadow-lg overflow-x-auto max-w-[95vw]">
+        <button id="penTool" class="tool-btn active bg-blue-500 text-white p-1.5 rounded-md text-sm">
+            <i class="fas fa-pen"></i>
+        </button>
+        
+        <button id="eraserTool" class="tool-btn text-gray-300 hover:text-white p-1.5 rounded-md text-sm">
+            <i class="fas fa-eraser"></i>
+        </button>
+        
+        <div class="w-px h-4 bg-gray-600 flex-shrink-0"></div>
+        
+        <button id="decreaseSize" class="text-gray-300 hover:text-white p-1.5 text-sm">
+            <i class="fas fa-minus"></i>
+        </button>
+        
+        <input id="sizeInput" type="text" class="w-8 text-center text-xs bg-gray-700 text-white rounded px-1 py-1" value="3">
+        
+        <button id="increaseSize" class="text-gray-300 hover:text-white p-1.5 text-sm">
+            <i class="fas fa-plus"></i>
+        </button>
+        
+        <div class="w-px h-4 bg-gray-600 flex-shrink-0"></div>
+        
+        <button id="colorPicker" class="w-5 h-5 rounded-full bg-blue-500 border border-white flex-shrink-0"></button>
+        
+        <div class="w-px h-4 bg-gray-600 flex-shrink-0"></div>
+        
+        <button id="undo" class="text-gray-300 hover:text-white p-1.5 text-sm">
+            <i class="fas fa-undo"></i>
+        </button>
+        
+        <button id="download" class="text-gray-300 hover:text-white p-1.5 text-sm">
+            <i class="fas fa-download"></i>
+        </button>
+    </div>
+
+    <!-- Pen Tools Palette -->
+    <div id="penToolsPalette" class="fixed bottom-20 left-1/2 transform -translate-x-1/2 bg-gray-800 rounded-xl p-3 hidden">
+        <div class="grid grid-cols-4 gap-2">
+            <button id="inkPenTool" class="pen-tool-btn active bg-blue-500 text-white p-2 rounded-lg" data-tool="inkPen">
+                <i class="fas fa-pen-fancy"></i>
+            </button>
+            <button id="brushTool" class="pen-tool-btn text-gray-300 hover:text-white p-2 rounded-lg" data-tool="brush">
+                <i class="fas fa-paint-brush"></i>
+            </button>
+            <button id="markerTool" class="pen-tool-btn text-gray-300 hover:text-white p-2 rounded-lg" data-tool="marker">
+                <i class="fas fa-highlighter"></i>
+            </button>
+            <button id="calligraphyTool" class="pen-tool-btn text-gray-300 hover:text-white p-2 rounded-lg" data-tool="calligraphy">
+                <i class="fas fa-feather-alt"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- Eraser Palette -->
+    <div id="eraserPalette" class="fixed bottom-20 left-1/2 transform -translate-x-1/2 bg-gray-800 rounded-xl p-3 hidden">
+        <div class="grid grid-cols-2 gap-2">
+            <button id="penEraser" class="eraser-btn active bg-red-500 text-white p-2 rounded-lg" data-mode="pen">
+                <i class="fas fa-eraser"></i>
+                <div class="text-xs">Pen</div>
+            </button>
+            <button id="objectEraser" class="eraser-btn text-gray-300 hover:text-white p-2 rounded-lg" data-mode="object">
+                <i class="fas fa-cut"></i>
+                <div class="text-xs">Object</div>
+            </button>
+        </div>
+    </div>
+    
+    <!-- Color Palette -->
+    <div id="colorPalette" class="fixed bottom-20 left-1/2 transform -translate-x-1/2 bg-gray-800 rounded-xl p-4 hidden">
+        <div class="grid grid-cols-4 gap-2 mb-3">
+            <div class="color-option w-8 h-8 rounded-full bg-black border-2 border-transparent cursor-pointer" data-color="#000000"></div>
+            <div class="color-option w-8 h-8 rounded-full bg-white border-2 border-gray-400 cursor-pointer" data-color="#ffffff"></div>
+            <div class="color-option w-8 h-8 rounded-full bg-red-500 border-2 border-transparent cursor-pointer" data-color="#ef4444"></div>
+            <div class="color-option w-8 h-8 rounded-full bg-orange-500 border-2 border-transparent cursor-pointer" data-color="#f97316"></div>
+            <div class="color-option w-8 h-8 rounded-full bg-yellow-500 border-2 border-transparent cursor-pointer" data-color="#eab308"></div>
+            <div class="color-option w-8 h-8 rounded-full bg-green-500 border-2 border-transparent cursor-pointer" data-color="#22c55e"></div>
+            <div class="color-option w-8 h-8 rounded-full bg-blue-500 border-2 border-white cursor-pointer" data-color="#3b82f6"></div>
+            <div class="color-option w-8 h-8 rounded-full bg-purple-500 border-2 border-transparent cursor-pointer" data-color="#a855f7"></div>
+        </div>
+        <div id="customColorBtn" class="flex items-center space-x-2 cursor-pointer p-2 rounded hover:bg-gray-700">
+            <div class="w-6 h-4 bg-blue-500 rounded border border-gray-500"></div>
+            <span class="text-white text-sm">Custom</span>
+        </div>
+    </div>
+
+    <!-- Custom Color Picker -->
+    <div id="customColorPicker" class="fixed bottom-20 left-1/2 transform -translate-x-1/2 bg-white rounded-xl p-4 shadow-lg hidden" style="width: 280px;">
+        <div class="relative mb-4">
+            <canvas id="colorSpectrum" width="240" height="240" class="cursor-crosshair rounded border"></canvas>
+            <div id="spectrumIndicator" class="absolute w-3 h-3 border-2 border-white rounded-full pointer-events-none" style="transform: translate(-50%, -50%);"></div>
+        </div>
+        <div class="relative mb-4">
+            <canvas id="hueSlider" width="240" height="20" class="cursor-pointer rounded"></canvas>
+            <div id="hueIndicator" class="absolute w-4 h-6 bg-white border border-gray-300 rounded pointer-events-none" style="top: -3px; transform: translateX(-50%);"></div>
+        </div>
+        <div class="flex items-center justify-between">
+            <div class="flex space-x-2">
+                <input type="text" id="rgbR" class="w-12 h-8 text-center border rounded text-sm" maxlength="3" placeholder="59">
+                <input type="text" id="rgbG" class="w-12 h-8 text-center border rounded text-sm" maxlength="3" placeholder="130">
+                <input type="text" id="rgbB" class="w-12 h-8 text-center border rounded text-sm" maxlength="3" placeholder="246">
+            </div>
+            <div class="flex space-x-2">
+                <button id="cancelColorPicker" class="px-3 py-1 bg-gray-200 rounded text-sm">Cancel</button>
+                <button id="confirmColorPicker" class="px-3 py-1 bg-blue-500 text-white rounded text-sm">OK</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Confirmation Modal -->
+    <div id="confirmModal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50">
+        <div class="bg-white rounded-lg p-6 max-w-sm mx-4">
+            <h3 class="text-lg font-semibold mb-4">Clear Canvas?</h3>
+            <p class="text-gray-600 mb-6">This will permanently delete all drawings. Are you sure?</p>
+            <div class="flex space-x-3 justify-end">
+                <button id="cancelClear" class="px-4 py-2 bg-gray-200 rounded hover:bg-gray-300">Cancel</button>
+                <button id="confirmClear" class="px-4 py-2 bg-red-500 text-white rounded hover:bg-red-600">Clear</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

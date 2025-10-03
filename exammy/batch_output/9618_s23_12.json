@@ -1,0 +1,459 @@
+{
+  "subject_code": "not provided",
+  "paper_code": "not provided",
+  "exam_session": "not provided",
+  "exam_year": "not provided",
+  "context": "no insert provided",
+  "questions": [
+    {
+      "question_number": "1",
+      "subquestions": [
+        {
+          "subquestion_label": "a",
+          "question_text": "Give two benefits of connecting computers to a LAN.",
+          "question_type": "short_answer",
+          "marks": 2,
+          "answer": "Allows the sharing of files/data // Allows communication between the devices\nAllows the sharing of resources e.g. hardware / software (applications)\nAllows central management // by example, backup, security, etc.",
+          "answer_conditions": [
+            "1 mark each to max 2",
+            "Allows the sharing of files/data",
+            "Allows communication between the devices",
+            "Allows the sharing of resources e.g. hardware",
+            "Allows the sharing of resources e.g. software (applications)",
+            "Allows central management",
+            "By example, backup",
+            "By example, security",
+            "etc."
+          ]
+        },
+        {
+          "subquestion_label": "b",
+          "question_text": "Give two characteristics of a LAN.",
+          "question_type": "short_answer",
+          "marks": 2,
+          "answer": "Covers a small geographical area\nThe infrastructure is privately owned // not controlled by external organisations",
+          "answer_conditions": [
+            "1 mark each to max 2",
+            "Covers a small geographical area",
+            "The infrastructure is privately owned",
+            "The infrastructure is not controlled by external organisations"
+          ]
+        },
+        {
+          "subquestion_label": "c",
+          "question_text": "One of the company's offices has one server and four computers connected in a star topology.\n\nDraw a diagram to show the layout of the office's star topology.",
+          "question_type": "diagram",
+          "marks": 2,
+          "answer": "[Diagram: Star topology with one server connected to four computers]",
+          "answer_conditions": [
+            "1 mark each to max 2",
+            "Each computer directly connected only to the server ...",
+            "... all components correctly labelled"
+          ]
+        },
+        {
+          "subquestion_label": "d",
+          "question_text": "Computers can be connected using Ethernet.\n\nDescribe what is meant by Ethernet.",
+          "question_type": "short_answer",
+          "marks": 3,
+          "answer": "A protocol (suite)\nFor data transmission over standard / universal wired / cabled network connections\nUses Carrier Sense Multiple Access / Collision Detection (CSMA/CD)\nData is transmitted in frames\n... each frame has a source and destination (IP/MAC) address\n... and error checking data (so damaged frames can be resent)",
+          "answer_conditions": [
+            "1 mark each to max 3",
+            "A protocol (suite)",
+            "For data transmission over standard / universal wired / cabled network connections",
+            "Uses Carrier Sense Multiple Access / Collision Detection (CSMA/CD)",
+            "Data is transmitted in frames",
+            "... each frame has a source and destination (IP/MAC) address",
+            "... and error checking data (so damaged frames can be resent)"
+          ]
+        },
+        {
+          "subquestion_label": "e",
+          "question_text": "The network runs as a thick-client model.\n\nDescribe what is meant by a thick-client model.",
+          "question_type": "short_answer",
+          "marks": 2,
+          "answer": "The server performs minimal / some processing for the client\nThe clients also do most of their own processing/work independently // most of the resources are installed locally",
+          "answer_conditions": [
+            "1 mark each",
+            "The server performs minimal / some processing for the client",
+            "The clients also do most of their own processing/work independently",
+            "Most of the resources are installed locally"
+          ]
+        }
+      ]
+    },
+    {
+      "question_number": "2",
+      "subquestions": [
+        {
+          "subquestion_label": "a",
+          "question_text": "The table contains names and descriptions of DBMS features and tools.\n\nComplete the table by writing down the missing names and descriptions.\n\n| Name | Description |\n| :-- | :-- |\n| Data dictionary |  |\n| Query processor |  |\n|  |  |\n|  |  |",
+          "question_type": "table_completion",
+          "marks": 4,
+          "answer": "| Name | Description |\n| :-- | :-- |\n| Data dictionary | Data about the data in the database // data about the structure of the database // metadata for a database |\n| Query processor | Software that allows the user to enter criteria, then finds and returns the appropriate result // software that processes and executes queries written in SQL |\n| Logical schema | A model of a database that is not specific to one DBMS |\n| Developer interface | A software tool that allows the user to create items such as tables, forms and reports |",
+          "answer_conditions": [
+            "1 mark for each correct feature or description",
+            "Feature",
+            "Data dictionary",
+            "Description",
+            "Data about the data in the database // data about the structure of the database // metadata for a database",
+            "Feature",
+            "Query processor",
+            "Description",
+            "Software that allows the user to enter criteria, then finds and returns the appropriate result // software that processes and executes queries written in SQL",
+            "Feature",
+            "Logical schema",
+            "Description",
+            "A model of a database that is not specific to one DBMS",
+            "Feature",
+            "Developer interface",
+            "Description",
+            "A software tool that allows the user to create items such as tables, forms and reports"
+          ]
+        },
+        {
+          "subquestion_label": "b",
+          "question_text": "Explain the reasons why referential integrity is important in a database.",
+          "question_type": "long_answer",
+          "marks": 3,
+          "answer": "Referential Integrity makes sure data is consistent\nReferential Integrity makes sure all data is up-to-date\nReferential integrity ensures that every foreign key has a corresponding primary key\nReferential Integrity prevents records from being added / deleted / modified incorrectly\nReferential Integrity makes sure that if data is changed in one place the change is reflected in all related records\nReferential Integrity makes sure that any queries return accurate and complete results",
+          "answer_conditions": [
+            "1 mark each to max 3",
+            "Referential Integrity makes sure data is consistent",
+            "Referential Integrity makes sure all data is up-to-date",
+            "Referential integrity ensures that every foreign key has a corresponding primary key",
+            "Referential Integrity prevents records from being added / deleted / modified incorrectly",
+            "Referential Integrity makes sure that if data is changed in one place the change is reflected in all related records",
+            "Referential Integrity makes sure that any queries return accurate and complete results"
+          ]
+        },
+        {
+          "subquestion_label": "c(i)",
+          "question_text": "The database Lessons has the following tables:\n\n```\nHORSE(HorseID, Name, Height, Age, HorseLevel)\nSTUDENT(StudentID, FirstName, LastName, RiderLevel, PreferredHorseID)\nLESSON(LessonID, Date, Time, StudentID, HorseID, LessonContent)\n```\nDates in this database are stored in the format #DD/MM/YYYY#.\nThe fields RiderLevel and HorseLevel can only have the values: Beginner, Intermediate or Advanced.\n\n(i) Describe two methods of validating the field RiderLevel.",
+          "question_type": "short_answer",
+          "marks": 2,
+          "answer": "Presence check to make sure that the (rider level) is entered\nLook-up / Existence check to make sure the rider level is only Beginner, Intermediate or Advanced\nLength check to make sure the rider level entered is either 8 or 12 characters\nType check to make sure the rider level is alphanumeric",
+          "answer_conditions": [
+            "1 mark each to max 2",
+            "Presence check to make sure that the (rider level) is entered",
+            "Look-up / Existence check to make sure the rider level is only Beginner, Intermediate or Advanced",
+            "Length check to make sure the rider level entered is either 8 or 12 characters",
+            "Type check to make sure the rider level is alphanumeric"
+          ]
+        },
+        {
+          "subquestion_label": "c(ii)",
+          "question_text": "(ii) Write a Structured Query Language (SQL) script to return the names of all the horses that have the horse level intermediate or beginner.",
+          "question_type": "code_trace",
+          "marks": 4,
+          "answer": "SELECT field Name\nFROM table HORSE\nWHERE with Intermediate / Beginner\nOR with Beginner / Intermediate\n\nExample answer:\nSELECT Name\nFROM HORSE\nWHERE HorseLevel = \"Intermediate\"\nOR HorseLevel = \"Beginner\";",
+          "answer_conditions": [
+            "1 mark each",
+            "SELECT field Name",
+            "FROM table HORSE",
+            "WHERE with Intermediate / Beginner",
+            "OR with Beginner / Intermediate"
+          ]
+        },
+        {
+          "subquestion_label": "c(iii)",
+          "question_text": "(iii) The following SQL script should return the number of riders that have the rider level beginner and have a lesson booked on 09/09/2023.\n\nSELECT SUM(STUDENT.RiderLevel) AS NumberOfRiders\n\nFROM STUDENT, LESSON\n\nWHERE StudentID = StudentID\nOR Date = \nAND STUDENT.RiderLevel = Beginner;\n\nThere are four errors in the script. Identify and correct each error.",
+          "question_type": "code_trace",
+          "marks": 4,
+          "answer": "SUM should be COUNT // SELECT COUNT(STUDENT.RiderLevel)\nThe WHERE statement needs the table names before each field name // WHERE STUDENT.StudentID = LESSON.StudentID\nThe OR should be AND // AND Date = \nBeginner is missing the speech marks // STUDENT.RiderLevel = \"Beginner\";",
+          "answer_conditions": [
+            "1 mark each",
+            "SUM should be COUNT // SELECT COUNT(STUDENT.RiderLevel)",
+            "The WHERE statement needs the table names before each field name // WHERE STUDENT.StudentID = LESSON.StudentID",
+            "The OR should be AND // AND Date = \n",
+            "Beginner is missing the speech marks // STUDENT.RiderLevel = \"Beginner\";"
+          ]
+        }
+      ]
+    },
+    {
+      "question_number": "3",
+      "subquestions": [
+        {
+          "subquestion_label": "a",
+          "question_text": "The program is converted into machine code by a two-pass assembler.\n\nDraw one or more lines to identify the pass or passes in which each action takes place.\n\n# Action\n\nPass\ngenerates object code\nreads the source code one line at a time\nremoves white space\nadds labels to the symbol table",
+          "question_type": "table_completion",
+          "marks": 2,
+          "answer": "Action\nPass\ngenerates object code\n$\nreads the source code one line at a time\nremoves white space\nadds labels to the symbol table",
+          "answer_conditions": [
+            "1 mark for generates object code to second pass",
+            "1 mark for reads source code one line at a time to both boxes",
+            "1 mark for removes white space and adds labels to first pass"
+          ]
+        },
+        {
+          "subquestion_label": "b",
+          "question_text": "Assembly language statements can use different modes of addressing.\n\nComplete the following description of addressing modes.\n\naddressing is when the operand holds the memory address of the data.\n\naddressing is when the operand holds a memory address that\nstores the memory address of the data.\n\naddressing is when the operand is the data.",
+          "question_type": "short_answer",
+          "marks": 3,
+          "answer": "Direct addressing is when the operand holds the memory address of the data.\nIndirect addressing is when the operand holds a memory address that stores the memory address of the data.\nImmediate addressing is when the operand is the data.",
+          "answer_conditions": [
+            "1 mark for each complete statement"
+          ]
+        }
+      ]
+    },
+    {
+      "question_number": "4",
+      "subquestions": [
+        {
+          "subquestion_label": "a",
+          "question_text": "State the number of unique binary values that can be represented in 16 bits.",
+          "question_type": "short_answer",
+          "marks": 1,
+          "answer": "65536",
+          "answer_conditions": [
+            "1 mark for the correct answer"
+          ]
+        },
+        {
+          "subquestion_label": "b",
+          "question_text": "Give the 8-bit one's complement representation of the denary number -120 .\n\nShow your working.\n\nWorking\n\nAnswer",
+          "question_type": "calculation",
+          "marks": 2,
+          "answer": "Working\n-120 in binary: 10001100\nInvert all bits: 01110011\n\nAnswer\n01110011",
+          "answer_conditions": [
+            "1 mark for correct working",
+            "1 mark for correct answer"
+          ]
+        },
+        {
+          "subquestion_label": "c",
+          "question_text": "Convert the hexadecimal number A04 into denary.\n\nShow your working.\n\nWorking\n\nAnswer",
+          "question_type": "calculation",
+          "marks": 2,
+          "answer": "Working\nA04 = (10 * 16^2) + (0 * 16^1) + (4 * 16^0)\nA04 = (10 * 256) + (0 * 16) + (4 * 1)\nA04 = 2560 + 0 + 4\nA04 = 2564\n\nAnswer\n2564",
+          "answer_conditions": [
+            "1 mark for working",
+            "1 mark for answer"
+          ]
+        },
+        {
+          "subquestion_label": "d",
+          "question_text": "Show the result of a 2-place left logical shift on the binary number:\n\n01001111",
+          "question_type": "short_answer",
+          "marks": 1,
+          "answer": "00111100",
+          "answer_conditions": [
+            "1 mark for the correct answer"
+          ]
+        }
+      ]
+    },
+    {
+      "question_number": "5",
+      "subquestions": [
+        {
+          "subquestion_label": "a",
+          "question_text": "The laptop is designed using the Von Neumann model for a computer system.\n\nIdentify two types of signal that a control bus can transfer.",
+          "question_type": "short_answer",
+          "marks": 2,
+          "answer": "Interrupt\nTiming\nRead\nWrite",
+          "answer_conditions": [
+            "1 mark each to max 2",
+            "Interrupt",
+            "Timing",
+            "Read",
+            "Write"
+          ]
+        },
+        {
+          "subquestion_label": "b",
+          "question_text": "Describe two ways the hardware of a laptop can be upgraded to improve the performance and explain how each upgrade improves the performance.",
+          "question_type": "long_answer",
+          "marks": 4,
+          "answer": "Increase number of cores\nEach core can independently carry out a process at the same time // so that more instructions are performed in parallel\nIncrease RAM capacity\nAllowing more applications to reside in memory at the same time, saving disk access times\nIncrease cache memory\nMore data can be stored in fast access so less time is spent accessing from RAM\nIncrease clock speed\nMore Fetch-Decode-Execute (FDE) cycles can run each second / per unit time",
+          "answer_conditions": [
+            "1 mark for description",
+            "1 mark for corresponding explanation",
+            "Increase number of cores",
+            "Each core can independently carry out a process at the same time // so that more instructions are performed in parallel",
+            "Increase RAM capacity",
+            "Allowing more applications to reside in memory at the same time, saving disk access times",
+            "Increase cache memory",
+            "More data can be stored in fast access so less time is spent accessing from RAM",
+            "Increase clock speed",
+            "More Fetch-Decode-Execute (FDE) cycles can run each second / per unit time"
+          ]
+        },
+        {
+          "subquestion_label": "c(i)",
+          "question_text": "(i) A printer is connected to a Universal Serial Bus (USB) port.\n\nDescribe how data is transmitted through a USB port.",
+          "question_type": "short_answer",
+          "marks": 1,
+          "answer": "1 bit is transferred at a time\nCan be synchronous or asynchronous\nUSB-3 is full duplex and earlier versions are half-duplex",
+          "answer_conditions": [
+            "1 mark for a correct answer",
+            "1 bit is transferred at a time",
+            "Can be synchronous or asynchronous",
+            "USB-3 is full duplex and earlier versions are half-duplex"
+          ]
+        },
+        {
+          "subquestion_label": "c(ii)",
+          "question_text": "(ii) A monitor is connected to the laptop using a different type of port.\n\nIdentify one other type of port that can be used to connect the monitor.",
+          "question_type": "short_answer",
+          "marks": 1,
+          "answer": "HDMI\nDisplayPort",
+          "answer_conditions": [
+            "1 mark for identification of a suitable port",
+            "HDMI",
+            "DisplayPort"
+          ]
+        },
+        {
+          "subquestion_label": "d(i)",
+          "question_text": "(i) The laptop has systems software.\n\nDescribe how the Operating System (OS) manages processes in the computer.",
+          "question_type": "long_answer",
+          "marks": 5,
+          "answer": "Manages the scheduling of processes // decides which order to run processes\nManages which resources the processes require\nsuch as allocating memory\nEnables processes to share data\nPrevents interference between processes // resolution of conflicts\nHandles the process queue\nIt allows multi-tasking / multi-processing\nby ensuring fair access, handling priorities and handling interrupts",
+          "answer_conditions": [
+            "1 mark each to max 5",
+            "Manages the scheduling of processes // decides which order to run processes",
+            "Manages which resources the processes require",
+            "Such as allocating memory",
+            "Enables processes to share data",
+            "Prevents interference between processes // resolution of conflicts",
+            "Handles the process queue",
+            "It allows multi-tasking / multi-processing",
+            "By ensuring fair access, handling priorities and handling interrupts"
+          ]
+        },
+        {
+          "subquestion_label": "d(ii)",
+          "question_text": "(ii) Describe the purpose of utility software in a computer.",
+          "question_type": "short_answer",
+          "marks": 2,
+          "answer": "To help users to set-up / configure / analyse / optimise / maintain the computer ...\nBy for example, making memory allocation more efficient\nBy for example, checking the system for faults",
+          "answer_conditions": [
+            "1 mark each to max 2",
+            "To help users to set-up / configure / analyse / optimise / maintain the computer ...",
+            "By for example, making memory allocation more efficient",
+            "By for example, checking the system for faults"
+          ]
+        }
+      ]
+    },
+    {
+      "question_number": "6",
+      "subquestions": [
+        {
+          "subquestion_label": "a",
+          "question_text": "Draw the logic circuit for this logic expression:\n\n$$\\mathbf{Z}=(\\mathbf{R} \\text { XOR } \\mathbf{S}) \\text { AND (NOT } \\mathbf{T} \\text { NOR } \\mathbf{P})$$\n\n![img-1.jpeg](img-1.jpeg)",
+          "question_type": "diagram",
+          "marks": 2,
+          "answer": "[Diagram: Logic circuit with XOR, AND, NOT, and NOR gates]",
+          "answer_conditions": [
+            "1 mark for correct XOR and AND gates, with correct inputs",
+            "1 mark for correct NOT and NOR gates with correct inputs"
+          ]
+        },
+        {
+          "subquestion_label": "b",
+          "question_text": "Complete the truth table for this logic expression:\n\n$$\\mathbf{Z}=(\\text { NOT } \\mathbf{P} \\text { OR } \\mathbf{Q}) \\text { XOR }(\\mathbf{R} \\text { NOR } \\mathbf{Q})$$\n\n| $\\mathbf{P}$ | $\\mathbf{Q}$ | $\\mathbf{R}$ | Working space | $\\mathbf{Z}$ |\n| :--: | :--: | :--: | :--: | :--: |\n| 0 | 0 | 0 |  | 0 |\n| 0 | 0 | 1 |  | 1 |\n| 0 | 1 | 0 |  | 1 |\n| 0 | 1 | 1 |  | 1 |\n| 1 | 0 | 0 |  | 1 |\n| 1 | 0 | 1 |  | 0 |\n| 1 | 1 | 0 |  | 1 |\n| 1 | 1 | 1 |  | 1 |",
+          "question_type": "table_completion",
+          "marks": 2,
+          "answer": "| P | Q | R | Working space | Z |\n| :--: | :--: | :--: | :--: | :--: |\n| 0 | 0 | 0 |  | 0 |\n| 0 | 0 | 1 |  | 1 |\n| 0 | 1 | 0 |  | 1 |\n| 0 | 1 | 1 |  | 1 |\n| 1 | 0 | 0 |  | 1 |\n| 1 | 0 | 1 |  | 0 |\n| 1 | 1 | 0 |  | 1 |\n| 1 | 1 | 1 |  | 1 |",
+          "answer_conditions": [
+            "1 mark for first 4 rows",
+            "1 mark for last 4 rows"
+          ]
+        }
+      ]
+    },
+    {
+      "question_number": "7",
+      "subquestions": [
+        {
+          "subquestion_label": "a(i)",
+          "question_text": "The developer is writing a new program library to be used by the other team members.\n\n(i) Define the term program library.",
+          "question_type": "short_answer",
+          "marks": 2,
+          "answer": "Set of pre-written / pre-compiled / pre-tested subroutines\n... which can be called in other programs\n... by installing/importing the library",
+          "answer_conditions": [
+            "1 mark each to max 2",
+            "Set of pre-written / pre-compiled / pre-tested subroutines",
+            "... which can be called in other programs",
+            "... by installing/importing the library"
+          ]
+        },
+        {
+          "subquestion_label": "a(ii)",
+          "question_text": "(ii) Explain two benefits to the developer of choosing to create a Dynamic Link Library (DLL).",
+          "question_type": "short_answer",
+          "marks": 4,
+          "answer": "(main) memory requirements for program is reduced\n... as dynamic link library is loaded only once / when required\nThe executable file size of the program using the DLL will be smaller\n... because the executable does not contain (all) the library routines\nMaintenance not needed to be done by the programmer\n... because the DLL is separate from program\nNo need to recompile the main program when changes are made to DLL\n... because changes / improvements/ error correction to the DLL file code are done independently of the main program\nA single DLL file can be made available to several application programs\nSaving space in memory / easing the pressure on memory",
+          "answer_conditions": [
+            "1 mark for each bullet point. Mark in pairs",
+            "(main) memory requirements for program is reduced",
+            "... as dynamic link library is loaded only once / when required",
+            "The executable file size of the program using the DLL will be smaller",
+            "... because the executable does not contain (all) the library routines",
+            "Maintenance not needed to be done by the programmer",
+            "... because the DLL is separate from program",
+            "No need to recompile the main program when changes are made to DLL",
+            "... because changes / improvements/ error correction to the DLL file code are done independently of the main program",
+            "A single DLL file can be made available to several application programs",
+            "Saving space in memory / easing the pressure on memory"
+          ]
+        },
+        {
+          "subquestion_label": "b",
+          "question_text": "The development team needs to use a translator whilst writing the program for the client.\n\nIdentify whether an interpreter or a compiler would be more appropriate at this stage of the program development.\n\nJustify your choice.",
+          "question_type": "short_answer",
+          "marks": 3,
+          "answer": "No mark for choice.\nInterpreter\nAllows the developer to make real-time changes\n... so the program can be debugged at each stage\n... the effect of any changes made by the developer can be seen immediately\nThe developer can test when incomplete\n... so small parts can be tested without having to test the rest of the program\n... if one section does not work others can still be tested\nTo avoid dependent errors\n\nCompiler\nThe developer can debug multiple errors simultaneously\nProduces an executable file\n... so that the developer can test the program multiple times without recompiling",
+          "answer_conditions": [
+            "No mark for choice",
+            "1 mark each to max 3 for justification",
+            "Interpreter",
+            "Allows the developer to make real-time changes",
+            "... so the program can be debugged at each stage",
+            "... the effect of any changes made by the developer can be seen immediately",
+            "The developer can test when incomplete",
+            "... so small parts can be tested without having to test the rest of the program",
+            "... if one section does not work others can still be tested",
+            "To avoid dependent errors",
+            "Compiler",
+            "The developer can debug multiple errors simultaneously",
+            "Produces an executable file",
+            "... so that the developer can test the program multiple times without recompiling"
+          ]
+        },
+        {
+          "subquestion_label": "c",
+          "question_text": "The development team uses an Integrated Development Environment (IDE).\n\nComplete the table by describing the typical features found in an IDE.\n\n| Feature | Description |\n| :-- | :-- |\n|  | .......................................................................................... |\n| Breakpoints | .......................................................................................... |\n|  | .......................................................................................... |\n| Dynamic syntax checks | .......................................................................................... |\n|  | .......................................................................................... |\n|  | .......................................................................................... |\n| Context-sensitive prompts | .......................................................................................... |\n|  | .......................................................................................... |\n|  | .......................................................................................... |\n| Single stepping | .......................................................................................... |\n|  | .......................................................................................... |",
+          "question_type": "table_completion",
+          "marks": 4,
+          "answer": "| Feature | Description |\n| :-- | :-- |\n| Breakpoints | Stop the code at a specific line to check the current progress / values |\n| Dynamic syntax checks | Highlight / underline / colour syntax errors as the code is entered |\n| Context-sensitive prompts | Suggest the code to add // automatically complete statements |\n| Single stepping | Run the code one line at a time so the values can be checked |",
+          "answer_conditions": [
+            "1 mark each",
+            "Breakpoints: Stop the code at a specific line to check the current progress / values",
+            "Dynamic syntax checks: Highlight / underline / colour syntax errors as the code is entered",
+            "Context-sensitive prompts: Suggest the code to add // automatically complete statements",
+            "Single stepping: Run the code one line at a time so the values can be checked"
+          ]
+        },
+        {
+          "subquestion_label": "d",
+          "question_text": "One section of the program being developed will convert user's speech into commands.\n\nExplain how Artificial Intelligence (AI) can be used in this program.",
+          "question_type": "short_answer",
+          "marks": 3,
+          "answer": "Uses speech recognition\n... which identifies key phrases / words spoken\n... and matches these to a database\n... and generates the most likely sentence / command / word",
+          "answer_conditions": [
+            "1 mark each to max 3",
+            "Uses speech recognition",
+            "... which identifies key phrases / words spoken",
+            "... and matches these to a database",
+            "... and generates the most likely sentence / command / word"
+          ]
+        }
+      ]
+    }
+  ]
+}

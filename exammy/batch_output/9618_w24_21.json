@@ -1,0 +1,8 @@
+{
+  "subject_code": "Error processing PDF",
+  "paper_code": "Error processing PDF",
+  "exam_session": "Error processing PDF",
+  "exam_year": "Error processing PDF",
+  "context": "Error processing PDF: 6 validation errors for Unmarshaller\nbody.FileChunk.file_id\n  Field required [type=missing, input_value={'type': 'pdf', 'pdf_base...VmCjExOTA4NgolJUVPRgo='}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.11/v/missing\nbody.FileChunk.type\n  Input should be 'file' [type=literal_error, input_value='pdf', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.11/v/literal_error\nbody.ImageURLChunk.image_url\n  Field required [type=missing, input_value={'type': 'pdf', 'pdf_base...VmCjExOTA4NgolJUVPRgo='}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.11/v/missing\nbody.ImageURLChunk.type\n  Input should be 'image_url' [type=literal_error, input_value='pdf', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.11/v/literal_error\nbody.DocumentURLChunk.document_url\n  Field required [type=missing, input_value={'type': 'pdf', 'pdf_base...VmCjExOTA4NgolJUVPRgo='}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.11/v/missing\nbody.DocumentURLChunk.type\n  Input should be 'document_url' [type=literal_error, input_value='pdf', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.11/v/literal_error",
+  "questions": []
+}

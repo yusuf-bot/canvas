@@ -3,6 +3,7 @@ const http = require('http');
 const socketIo = require('socket.io');
 const path = require('path');
 const fs = require('fs').promises;
+const admin = require('firebase-admin');
 
 const app = express();
 const server = http.createServer(app);
@@ -13,13 +14,31 @@ const io = socketIo(server, {
     }
 });
 
+// ------------------- FCM Setup -------------------
+const serviceAccount = require('./fcm-service-account.json'); // Place your JSON here
+admin.initializeApp({
+    credential: admin.credential.cert(serviceAccount)
+});
 
+async function sendFCMUpdate() {
+    const message = {
+        data: { type: 'canvas_update' },
+        topic: 'canvas_updates'
+    };
+    try {
+        await admin.messaging().send(message);
+        console.log('FCM canvas update sent');
+    } catch (err) {
+        console.error('FCM send error:', err);
+    }
+}
+
+// ------------------- Global variables -------------------
 global.lastResetDate = new Date().toDateString();
-// Middleware
 app.use(express.json({ limit: '50mb' }));
 app.use(express.static(path.join(__dirname, 'public')));
 
-// Security headers for PWA
+// Security headers
 app.use((req, res, next) => {
     res.setHeader('X-Content-Type-Options', 'nosniff');
     res.setHeader('X-Frame-Options', 'DENY');
@@ -35,39 +54,37 @@ app.get('/manifest.json', (req, res) => {
     res.setHeader('Content-Type', 'application/json');
     res.sendFile(path.join(__dirname, 'public', 'manifest.json'));
 });
-
 app.get('/sw.js', (req, res) => {
     res.setHeader('Content-Type', 'application/javascript');
     res.sendFile(path.join(__dirname, 'public', 'sw.js'));
 });
 
-// Store canvas data with persistence
+// Canvas persistence
 let canvasData = [];
 const MAX_STROKES = 2000;
 const CANVAS_DATA_FILE = path.join(__dirname, 'canvas-data.json');
 
-// Load existing canvas data on startup
+// Load canvas data
 async function loadCanvasData() {
     try {
         const data = await fs.readFile(CANVAS_DATA_FILE, 'utf8');
         canvasData = JSON.parse(data);
         console.log(`Loaded ${canvasData.length} canvas strokes from disk`);
-                // Check if data is from previous day
         const today = new Date().toDateString();
         if (canvasData.length > 0 && canvasData[0].timestamp) {
             const dataDate = new Date(canvasData[0].timestamp).toDateString();
-    if (dataDate !== today) {
-        console.log('Canvas data from previous day, clearing...');
-        canvasData = [];
-    }
-}
+            if (dataDate !== today) {
+                console.log('Canvas data from previous day, clearing...');
+                canvasData = [];
+            }
+        }
     } catch (error) {
         console.log('No existing canvas data found, starting fresh');
         canvasData = [];
     }
 }
 
-// Save canvas data to disk
+// Save canvas data
 async function saveCanvasData() {
     try {
         await fs.writeFile(CANVAS_DATA_FILE, JSON.stringify(canvasData));
@@ -77,42 +94,36 @@ async function saveCanvasData() {
     }
 }
 
-// Periodic save every 30 seconds
+// Periodic save every 30s
 setInterval(saveCanvasData, 30000);
 
-// Save on process exit
+// Save on exit
 process.on('SIGINT', async () => {
     console.log('Shutting down server...');
     await saveCanvasData();
     process.exit(0);
 });
-
 process.on('SIGTERM', async () => {
     console.log('Server terminated');
     await saveCanvasData();
     process.exit(0);
 });
 
-// Socket.IO connection handling
+// ------------------- Socket.IO -------------------
 io.on('connection', (socket) => {
     console.log(`User connected: ${socket.id} (Total: ${io.engine.clientsCount})`);
     
-    // Send existing canvas data to new user with delay to ensure connection is stable
     setTimeout(() => {
         console.log(`Sending ${canvasData.length} strokes to ${socket.id}`);
         socket.emit('canvas-data', canvasData);
     }, 200);
-    
-    // Handle drawing events
-    socket.on('draw', (data) => {
+
+    // Draw event
+    socket.on('draw', async (data) => {
         try {
-            // Validate incoming data
             if (!data || typeof data.x0 !== 'number' || typeof data.y0 !== 'number' || 
-                typeof data.x1 !== 'number' || typeof data.y1 !== 'number') {
-                console.log('Invalid draw data received from', socket.id);
-                return;
-            }
-            
+                typeof data.x1 !== 'number' || typeof data.y1 !== 'number') return;
+
             const strokeData = { 
                 ...data, 
                 timestamp: Date.now(), 
@@ -120,49 +131,46 @@ io.on('connection', (socket) => {
                 userId: socket.id,
                 type: 'draw'
             };
-            
+
             canvasData.push(strokeData);
-            console.log(`Draw stroke added: ${canvasData.length} total strokes`);
-            
-            // Broadcast to all other clients (not sender)
             socket.broadcast.emit('stroke-added', strokeData);
-            
-            // Limit strokes to prevent memory issues
+
             if (canvasData.length > MAX_STROKES) {
                 const removed = canvasData.length - MAX_STROKES;
                 canvasData = canvasData.slice(-MAX_STROKES);
                 console.log(`Trimmed ${removed} old strokes`);
             }
+
+            await sendFCMUpdate();
         } catch (error) {
             console.error('Error handling draw event:', error);
             socket.emit('error', { message: 'Failed to process draw event' });
         }
     });
-    socket.on('daily-reset', () => {
+
+    // Daily reset
+    socket.on('daily-reset', async () => {
         try {
             const today = new Date().toDateString();
-            // Check if we've already reset today
             if (!global.lastResetDate || global.lastResetDate !== today) {
                 global.lastResetDate = today;
                 canvasData = [];
-                console.log(`Daily canvas reset triggered for ${today}`);
                 io.emit('canvas-cleared');
-                saveCanvasData();
+                await saveCanvasData();
+                await sendFCMUpdate();
+                console.log(`Daily canvas reset triggered for ${today}`);
             }
         } catch (error) {
             console.error('Error handling daily reset:', error);
         }
     });
-    // Handle erase events
-    socket.on('erase', (data) => {
+
+    // Erase event
+    socket.on('erase', async (data) => {
         try {
-            // Validate incoming data
             if (!data || typeof data.x0 !== 'number' || typeof data.y0 !== 'number' ||
-                typeof data.x1 !== 'number' || typeof data.y1 !== 'number') {
-                console.log('Invalid erase data received from', socket.id);
-                return;
-            }
-            
+                typeof data.x1 !== 'number' || typeof data.y1 !== 'number') return;
+
             const strokeData = { 
                 ...data, 
                 timestamp: Date.now(), 
@@ -170,80 +178,72 @@ io.on('connection', (socket) => {
                 userId: socket.id,
                 type: 'erase'
             };
-            
+
             canvasData.push(strokeData);
-            console.log(`Erase stroke added: ${canvasData.length} total strokes`);
-            
-            // Broadcast to all other clients
             socket.broadcast.emit('stroke-added', strokeData);
-            
-            if (canvasData.length > MAX_STROKES) {
-                canvasData = canvasData.slice(-MAX_STROKES);
-            }
+
+            if (canvasData.length > MAX_STROKES) canvasData = canvasData.slice(-MAX_STROKES);
+
+            await sendFCMUpdate();
         } catch (error) {
             console.error('Error handling erase event:', error);
             socket.emit('error', { message: 'Failed to process erase event' });
         }
     });
-    
-    // Handle clear events
-    socket.on('clear', () => {
+
+    // Clear canvas
+    socket.on('clear', async () => {
         try {
             const previousCount = canvasData.length;
             canvasData = [];
-            console.log(`Canvas cleared by ${socket.id} - removed ${previousCount} strokes`);
-            
-            // Broadcast to all clients including sender
             io.emit('canvas-cleared');
-            
-            // Save cleared state immediately
-            saveCanvasData();
+            await saveCanvasData();
+            await sendFCMUpdate();
+            console.log(`Canvas cleared by ${socket.id} - removed ${previousCount} strokes`);
         } catch (error) {
             console.error('Error handling clear event:', error);
             socket.emit('error', { message: 'Failed to clear canvas' });
         }
     });
-    
-    // Handle undo events
-    socket.on('undo', (data) => {
+
+    // Undo
+    socket.on('undo', async (data) => {
         try {
             if (data && data.targetLength && typeof data.targetLength === 'number') {
                 if (data.targetLength >= 0 && data.targetLength < canvasData.length) {
                     const removedCount = canvasData.length - data.targetLength;
                     canvasData = canvasData.slice(0, data.targetLength);
-                    console.log(`Undo by ${socket.id} - removed ${removedCount} strokes`);
-                    
-                    // Broadcast full canvas state to all clients
                     io.emit('canvas-data', canvasData);
+                    await sendFCMUpdate();
+                    console.log(`Undo by ${socket.id} - removed ${removedCount} strokes`);
                 }
             }
         } catch (error) {
             console.error('Error handling undo event:', error);
         }
     });
-    
-    // Handle canvas sync request
+
+    // Request sync
     socket.on('request-sync', () => {
         try {
-            console.log(`Sync requested by ${socket.id} - sending ${canvasData.length} strokes`);
             socket.emit('canvas-data', canvasData);
         } catch (error) {
             console.error('Error handling sync request:', error);
         }
     });
-    
-    // Handle disconnection
+
+    // Disconnect
     socket.on('disconnect', (reason) => {
         console.log(`User disconnected: ${socket.id} (${reason}) - Remaining: ${Math.max(0, io.engine.clientsCount - 1)}`);
     });
-    
-    // Handle connection errors
+
+    // Socket errors
     socket.on('error', (error) => {
         console.error(`Socket error from ${socket.id}:`, error);
     });
 });
 
-// API Routes
+// ------------------- API Endpoints -------------------
 app.get('/api/health', (req, res) => {
     res.json({ 
         status: 'healthy', 
@@ -265,26 +265,21 @@ app.get('/api/canvas/stats', (req, res) => {
         oldestStroke: null,
         newestStroke: null
     };
-    
+
     if (canvasData.length > 0) {
-        // Analyze strokes
         canvasData.forEach(stroke => {
-            // Count by tool
             stats.strokesByTool[stroke.tool] = (stats.strokesByTool[stroke.tool] || 0) + 1;
-            
-            // Count by hour
             const hour = new Date(stroke.timestamp).getHours();
             stats.strokesByHour[hour] = (stats.strokesByHour[hour] || 0) + 1;
         });
-        
         stats.oldestStroke = new Date(canvasData[0].timestamp).toISOString();
         stats.newestStroke = new Date(canvasData[canvasData.length - 1].timestamp).toISOString();
     }
-    
+
     res.json(stats);
 });
 
-// Canvas data backup endpoint
+// Backup
 app.get('/api/canvas/backup', async (req, res) => {
     try {
         res.setHeader('Content-Type', 'application/json');
@@ -300,50 +295,33 @@ app.get('/api/canvas/backup', async (req, res) => {
     }
 });
 
-// Canvas data restore endpoint
+// Restore
 app.post('/api/canvas/restore', async (req, res) => {
     try {
         const { data } = req.body;
-        if (!Array.isArray(data)) {
-            return res.status(400).json({ error: 'Invalid data format' });
-        }
-        
+        if (!Array.isArray(data)) return res.status(400).json({ error: 'Invalid data format' });
+
         canvasData = data;
         await saveCanvasData();
-        
-        // Notify all connected clients
         io.emit('canvas-data', canvasData);
-        
-        res.json({ 
-            success: true, 
-            strokeCount: canvasData.length,
-            message: 'Canvas restored successfully' 
-        });
+        await sendFCMUpdate();
+
+        res.json({ success: true, strokeCount: canvasData.length, message: 'Canvas restored successfully' });
     } catch (error) {
         res.status(500).json({ error: 'Failed to restore canvas data' });
     }
 });
 
-// Sync endpoint for offline data
+// Offline sync
 app.post('/api/sync-canvas', async (req, res) => {
     try {
         const offlineStrokes = req.body;
         if (Array.isArray(offlineStrokes)) {
-            // Add offline strokes to canvas data
             canvasData.push(...offlineStrokes);
-            
-            // Trim if necessary
-            if (canvasData.length > MAX_STROKES) {
-                canvasData = canvasData.slice(-MAX_STROKES);
-            }
-            
-            // Notify all clients
+            if (canvasData.length > MAX_STROKES) canvasData = canvasData.slice(-MAX_STROKES);
             io.emit('canvas-data', canvasData);
-            
-            res.json({ 
-                success: true, 
-                syncedStrokes: offlineStrokes.length 
-            });
+            await sendFCMUpdate();
+            res.json({ success: true, syncedStrokes: offlineStrokes.length });
         } else {
             res.status(400).json({ error: 'Invalid sync data' });
         }
@@ -352,12 +330,12 @@ app.post('/api/sync-canvas', async (req, res) => {
     }
 });
 
-// Generate unique ID for strokes
+// ------------------- Helper -------------------
 function generateId() {
     return Date.now().toString(36) + Math.random().toString(36).substr(2, 9);
 }
 
-// Start server
+// ------------------- Start Server -------------------
 const PORT = process.env.PORT || 3000;
 
 loadCanvasData().then(() => {

@@ -1,0 +1,69 @@
+body {
+    margin: 0;
+    padding: 0;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    touch-action: none;
+}
+
+#canvas {
+    background: white;
+    image-rendering: auto;
+}
+
+.tool-btn.active {
+    @apply bg-blue-500 text-white;
+}
+
+.tool-btn:not(.active) {
+    @apply hover:bg-gray-700;
+}
+
+.color-option.selected {
+    @apply border-white;
+}
+
+.tool-option:hover {
+    @apply bg-gray-700;
+}
+
+/* Toolbar scrolling on mobile */
+#toolbar {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+#toolbar::-webkit-scrollbar {
+    display: none;
+}
+
+#toolbar .flex-shrink-0 {
+    flex-shrink: 0;
+}
+
+/* Custom color picker styling */
+#colorSpectrum {
+    border: 1px solid #ccc;
+}
+
+#hueSlider {
+    border: 1px solid #ccc;
+}
+
+/* Prevent scrolling on mobile */
+html, body {
+    height: 100vh;
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+}
+
+/* High DPI canvas */
+canvas {
+    image-rendering: -moz-crisp-edges;
+    image-rendering: -webkit-crisp-edges;
+    image-rendering: pixelated;
+    image-rendering: crisp-edges;
+}

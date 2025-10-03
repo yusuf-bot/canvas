@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: backend-config
+  namespace: serverless-runner
+data:
+  database-url: "postgresql://user:pass@db:5432/mydb"
+  redis-url: "redis://redis:6379"
+  log-level: "INFO"

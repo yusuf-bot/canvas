@@ -1,0 +1,175 @@
+{
+  "subject_code": "9608",
+  "paper_code": "31",
+  "exam_session": "Summer",
+  "exam_year": "2024",
+  "context": "no insert provided",
+  "questions": [
+    {
+      "question_number": "1",
+      "subquestions": [
+        {
+          "subquestion_label": "a",
+          "question_text": "Describe the effect of changing the allocation of bits used for the mantissa and for the exponent in a floating-point number with a fixed total number of bits.",
+          "question_type": "long_answer",
+          "marks": 2,
+          "answer": "When the number of bits in the mantissa is raised, the precision/accuracy of the number represented increases; when the number of bits in the mantissa is lowered, the precision/accuracy of the number represented reduces. When the number of bits in the exponent is reduced, the range of numbers that can be represented is reduced; when the number of bits in the exponent is increased, the range of possible numbers that can be represented increases. When the range increases the accuracy decreases; when the range decreases the accuracy increases.",
+          "answer_conditions": [
+            "When the number of bits in the mantissa is raised, the precision/accuracy of the number represented increases",
+            "When the number of bits in the mantissa is lowered, the precision/accuracy of the number represented reduces",
+            "When the number of bits in the exponent is reduced, the range of numbers that can be represented is reduced",
+            "When the number of bits in the exponent is increased, the range of possible numbers that can be represented increases",
+            "When the range increases the accuracy decreases",
+            "When the range decreases the accuracy increases"
+          ]
+        },
+        {
+          "subquestion_label": "b",
+          "question_text": "Real numbers are stored in a computer, using floating-point representation with:\n- 12 bits for the mantissa\n- 4 bits for the exponent\n- two's complement form for both the mantissa and exponent.\n\nCalculate the normalised floating-point representation of +54.8125 in this system. Show your working.",
+          "question_type": "calculation",
+          "marks": 3,
+          "answer": "number converted to binary e.g. 54.8125 = 00110110.1101 / Fractions method 1/2 + 1/4 + 1/16 + 1/32 + 1/128 + 1/256 + 1/1024 = 877/1024 / 32 + 16 + 4 + 2 + 0.5 + 0.25 + 0.0625 /(1/2 + 1/4 + 1/16)\nexponent = 6 / Moving binary point the correct number of places\n\nMantissa: 0110 1101 1010\nExponent: 0110",
+          "answer_conditions": [
+            "number converted to binary",
+            "exponent = 6",
+            "Mantissa: 0110 1101 1010\nExponent: 0110"
+          ]
+        }
+      ]
+    },
+    {
+      "question_number": "2",
+      "subquestions": [
+        {
+          "subquestion_label": "a",
+          "question_text": "Outline why protocols are essential for communication between computers.",
+          "question_type": "short_answer",
+          "marks": 2,
+          "answer": "Protocols provide a standard set of rules that enables successful data transfer between devices. Allows communication between devices on different platforms. Makes communications independent of software and hardware.",
+          "answer_conditions": [
+            "Protocols provide a standard set of rules that enables successful data transfer between devices",
+            "Allows communication between devices on different platforms",
+            "Makes communications independent of software and hardware"
+          ]
+        },
+        {
+          "subquestion_label": "b",
+          "question_text": "State the names of two different protocols associated with the sending and receiving of emails between computers.\n\nSending\n\nReceiving",
+          "question_type": "short_answer",
+          "marks": 2,
+          "answer": "Sending - SMTP\nReceiving - POP3 / IMAP",
+          "answer_conditions": [
+            "Sending - SMTP",
+            "Receiving - POP3 / IMAP"
+          ]
+        },
+        {
+          "subquestion_label": "c",
+          "question_text": "Explain the meaning of the phrase:\n\nBitTorrent protocol provides peer-to-peer file sharing.",
+          "question_type": "long_answer",
+          "marks": 3,
+          "answer": "BitTorrent allows the sharing of files between thousands of users who are connected together over the internet. It allows more users to share files with each other than would be the case with a peer-to-peer network. Users share files directly with each other; the users' computers are acting as peers. No web server/central device is used; all users are of equal status.",
+          "answer_conditions": [
+            "BitTorrent allows the sharing of files between thousands of users who are connected together over the internet",
+            "It allows more users to share files with each other than would be the case with a peer-to-peer network",
+            "Users share files directly with each other; the users' computers are acting as peers",
+            "No web server/central device is used; all users are of equal status"
+          ]
+        }
+      ]
+    },
+    {
+      "question_number": "3",
+      "subquestions": [
+        {
+          "subquestion_label": "a",
+          "question_text": "Explain what is meant by the term non-composite data type and give an example of a non-composite data type.\n\nExample",
+          "question_type": "long_answer",
+          "marks": 3,
+          "answer": "A data type that is defined without referencing another data type. It can be a primitive data type found in a programming language or a user-defined data type. Example - enumerated data type / pointer data type / allow a correct example of an enumerated or pointer data type declaration.",
+          "answer_conditions": [
+            "A data type that is defined without referencing another data type",
+            "It can be a primitive data type found in a programming language or a user-defined data type",
+            "Example - enumerated data type / pointer data type / allow a correct example of an enumerated or pointer data type declaration"
+          ]
+        },
+        {
+          "subquestion_label": "b",
+          "question_text": "Write pseudocode statements to declare the set data type EvenNumbers to hold this set of even numbers between 2 and 12: 2, 4, 6, 8, 10, 12",
+          "question_type": "code_trace",
+          "marks": 4,
+          "answer": "TYPE Numbers = SET OF INTEGER\nDEFINE EvenNumbers (2, 4, 6, 8, 10, 12): Numbers",
+          "answer_conditions": [
+            "Type statement fully correct",
+            "DEFINE EvenNumbers",
+            "Correct list of values in brackets",
+            ": Numbers"
+          ]
+        }
+      ]
+    },
+    {
+      "question_number": "4",
+      "subquestions": [
+        {
+          "subquestion_label": "",
+          "question_text": "Sheila has a customer called Fred. Fred wants to send Sheila a confidential document as part of a transaction.\n\nExplain how Fred uses asymmetric encryption to send his document securely.",
+          "question_type": "long_answer",
+          "marks": 4,
+          "answer": "Sheila's computer uses an algorithm to generate a matching pair of keys private and public. Sheila's computer sends Fred's computer Sheila's public key. Fred's computer encrypts the document/plain text using Sheila's public key to create cipher text. Fred's computer sends the cipher text to Sheila's computer. The cipher text can only be decrypted using Sheila's private key. Sheila's computer uses Sheila's private key to decrypt the cipher text.",
+          "answer_conditions": [
+            "Sheila's computer uses an algorithm to generate a matching pair of keys private and public",
+            "Sheila's computer sends Fred's computer Sheila's public key",
+            "Fred's computer encrypts the document/plain text using Sheila's public key to create cipher text",
+            "Fred's computer sends the cipher text to Sheila's computer. The cipher text can only be decrypted using Sheila's private key. Sheila's computer uses Sheila's private key to decrypt the cipher text"
+          ]
+        }
+      ]
+    },
+    {
+      "question_number": "5",
+      "subquestions": [
+        {
+          "subquestion_label": "a",
+          "question_text": "Write this infix expression in Reverse Polish Notation (RPN):\n\n(7−2+8)/(9−5)",
+          "question_type": "short_answer",
+          "marks": 2,
+          "answer": "7 2 - 8 + 9 5 - /",
+          "answer_conditions": [
+            "7 2 -",
+            "9 5 - /"
+          ]
+        },
+        {
+          "subquestion_label": "b",
+          "question_text": "Evaluate this RPN expression:\n\na d+a b+c−∗\n\nwhen\n\na=6, b=3, c=7 and d=9\n\nShow the changing contents of the stack as the RPN expression is evaluated.",
+          "question_type": "calculation",
+          "marks": 4,
+          "answer": "6 9 + 6 3 + 7 - * = 30",
+          "answer_conditions": [
+            "6 9 +",
+            "6 3 +",
+            "7 -",
+            "* = 30"
+          ]
+        },
+        {
+          "subquestion_label": "c",
+          "question_text": "Write this RPN expression in infix form:\n\nb a c - + d b + * c /",
+          "question_type": "short_answer",
+          "marks": 3,
+          "answer": "(a - c + b) * (d + b) / c",
+          "answer_conditions": [
+            "(a - c + b)",
+            "* (d + b)",
+            "/ c"
+          ]
+        }
+      ]
+    },
+    {
+      "question_number": "6",
+      "subquestions": [
+        {
+          "subquestion_label": "a",
+          "question_text": "The diagram shows a logic circuit.\n\n![Diagram: logic circuit with gates and inputs A, B, C leading to output Z]\n\n```\n   A ────┬────┐\n   B ──┬─┤ AND ├──┐\n   C ──┴─┘    └─┤ OR ├── Z\n```\n\nComplete the truth table for the given logic circuit.\n\nShow your working.\n\n| Working space |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 

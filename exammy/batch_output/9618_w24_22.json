@@ -1,0 +1,291 @@
+{
+  "subject_code": "9618",
+  "paper_code": "22",
+  "exam_session": "Winter",
+  "exam_year": "2024",
+  "context": "Cambridge Assessment International Education\n## Cambridge International AS & A Level\n**COMPUTER SCIENCE**\nPaper 2 Fundamental Problem-solving and Programming Skills\nINSERT\n9618/22\nOctober/November 2024\n2 hours\n## INFORMATION\n- This insert contains all the resources referred to in the questions.\n- You may annotate this insert and use the blank spaces for planning. **Do not write your answers** on the insert.\nThis document has 4 pages.\nDC (CE) 349038\n© UCLES 2024\n[Turn over]\n--- Page 2 ---\nAn error will be generated if a function call is not properly formed or if the parameters are of an incorrect type or an incorrect value.\n# String and character functions\n- A string of length 1 may be considered to be either of type CHAR or STRING\n- A CHAR may be assigned to, or concatenated with, a STRING\n- A STRING of length greater than 1 cannot be assigned to a CHAR\n```\nLEFT(ThisString : STRING, x : INTEGER) RETURNS STRING\nreturns leftmost x characters from ThisString\nExample: LEFT (\"ABCDEFGH\", 3) returns \"ABC\"\n```\n```\nRIGHT(ThisString : STRING, x : INTEGER) RETURNS STRING\nreturns rightmost x characters from ThisString\nExample: RIGHT (\"ABCDEFGH\", 3) returns \"FGH\"\n```\n```\nMID(ThisString : STRING, x : INTEGER, y : INTEGER) RETURNS STRING\nreturns a string of length y starting at position x from ThisString\nExample: MID (\"ABCDEFGH\", 2, 3) returns \"BCD\"\n```LENGTH (ThisString : STRING) RETURNS INTEGER\nreturns the integer value representing the length of ThisString\nExample: LENGTH (\"Happy Days\") returns 10\n```\nTO_UPPER(x : <datatype>) RETURNS <datatype>\n<datatype> may be CHAR or STRING\n```\nreturns an object of type <datatype> formed by converting all characters of $x$ to upper case.\n## Examples:\n- TO_UPPER(\"Error 803\") returns \"ERROR 803\"\n- TO_UPPER('a') returns 'A'\nTO_LOWER (x : <datatype>) RETURNS <datatype>\n<datatype> may be CHAR or STRING\nreturns an object of type <datatype> formed by converting all characters of $x$ to lower case.\n## Examples:\n- TO_LOWER(\"JIM 803\") returns \"jim 803\"\n- TO_LOWER('W') returns 'w'\n```\nNUM_TO_STR(x : <datatype1>) RETURNS <datatype2>\n```\nreturns a string representation of a numeric value.\n<datatype1> may be REAL or INTEGER, <datatype2> may be CHAR or STRING\nExample: NUM_TO_STR(87.5) returns \"87.5\"\nIf $x$ is a negative value, the returned value will be a string beginning with the ' - ' character.\n```\nSTR_TO_NUM(x : <datatype1>) RETURNS <datatype2>\n```\nreturns a numeric representation of a string.\n<datatype1> may be CHAR or STRING, <datatype2> may be REAL or INTEGER\nExample: STR_TO_NUM(\"23.45\") returns 23.45\nIf the string begins with the minus character ' - ', the returned value will be negative.\n--- Page 3 ---\nIS_NUM (ThisString : <datatype>) RETURNS BOOLEAN\nreturns TRUE if ThisString represents a valid numeric value.\n<datatype> may be CHAR or STRING\nExample: IS_NUM (\"-12.36\") returns TRUE\nASC (ThisChar : CHAR) RETURNS INTEGER\nreturns an integer value (the ASCII value) of ThisChar\nExample: ASC('A') returns 65, ASC('B') returns 66\nCHR (x : INTEGER) RETURNS CHAR\nreturns the character whose integer value (the ASCII value) is $x$\nExample: CHR (65) returns 'A', CHR (66) returns 'B'\n# Numeric functions\nINT (x : REAL) RETURNS INTEGER\nreturns the integer part of $x$\nExample: INT (27.5415) returns 27\nRAND (x : INTEGER) RETURNS REAL\nreturns a real number in the range 0 to $x$ (not inclusive of $x$ ).\nExample: RAND (87) could return 35.430729\n## Date functions\nDate format is assumed to be DD/MM/YYYY unless otherwise stated.\nDAY (ThisDate : DATE) RETURNS INTEGER\nreturns the day number from ThisDate\nExample: DAY (04/10/2003) returns 4\nMONTH (ThisDate : DATE) RETURNS INTEGER\nreturns the month number from ThisDate\nExample: MONTH (04/10/2003) returns 10\nYEAR (ThisDate : DATE) RETURNS INTEGER\nreturns the year number from ThisDate\nExample: YEAR (04/10/2003) returns 2003\nDAYINDEX (ThisDate : DATE) RETURNS INTEGER\nreturns the day index number from ThisDate where Sunday $=1$, Monday $=2$ etc.\nExample: DAYINDEX (07/11/2023) returns 3\nSETDATE (Day, Month, Year : INTEGER) RETURNS DATE\nreturns a value of type DATE with the value of <Day>/<Month>/<Year>\nExample: SETDATE (26, 10, 2003) returns a date corresponding to 26/10/2003\nTODAY () RETURNS DATE\nreturns a value of type DATE corresponding to the current date.\n--- Page 4 ---\n# Text file functions\nEOF (FileName : STRING) RETURNS BOOLEAN\nreturns TRUE if there are no more lines to be read from file FileName will generate an error if the file is not already open in READ mode.\n## Operators\nAn error will be generated if an operator is used with a value or values of an incorrect type.\n| $\\&$ | concatenates (joins) two strings. <br> Example: \"Summer\" \\& \" \" \\& \"Pudding\" evaluates to \"Summer Pudding\" may also be used to concatenate a CHAR with a STRING |\n| :--: | :--: |\n| AND | performs a logical AND on two Boolean values. <br> Example: TRUE AND FALSE evaluates to FALSE |\n| OR | performs a logical OR on two Boolean values. <br> Example: TRUE OR FALSE evaluates to TRUE |\n| NOT | performs a logical NOT on a Boolean value. <br> Example: NOT TRUE evaluates to FALSE |\n| MOD | finds the remainder when one number is divided by another. <br> Example: 10 MOD 3 evaluates to 1 |\n| DIV | finds the quotient when one number is divided by another. <br> Example 10 DIV 3 evaluates to 3 |\n## Comparison operators\n| $=$ | used to compare two items of the same type. evaluates to TRUE if the condition is true, otherwise evaluates to FALSE |\n| :--: | :--: |\n| $>$ | Notes: <br> - may be used to compare types REAL and INTEGER <br> - may be used to compare types CHAR and STRING <br> - case sensitive when used to compare types CHAR and/or STRING <br> - cannot be used to compare two records |\n| $<=$ | Examples: <br> - \"Program\" = \"program\" evaluates to FALSE <br> - Count $=4$ evaluates to TRUE when Count contains the value 4 |\n[^0]\n[^0]:    Permission to reproduce items where third-party owned material protected by copyright is included has been sought and cleared where possible. Every reasonable effort has been made by the publisher (UCLES) to trace copyright holders, but if any items requiring clearance have unwittingly been included, the publisher will be pleased to make amends at the earliest possible opportunity.\nTo avoid the issue of disclosure of answer-related information to candidates, all copyright acknowledgements are reproduced online in the Cambridge Assessment International Education Copyright Acknowledgements Booklet. This is produced for each series of examinations and is freely available to download at www.cambridgeinternational.org after the live examination series.\nCambridge Assessment International Education is part of Cambridge Assessment. Cambridge Assessment is the brand name of the University of Cambridge Local Examinations Syndicate (UCLES), which is a department of the University of Cambridge.",
+  "questions": [
+    {
+      "question_number": "1",
+      "subquestions": [
+        {
+          "subquestion_label": "a",
+          "question_text": "The error in the program needs to be corrected.\n\nIdentify the stage of the program development life cycle that this correction is made in.",
+          "question_type": "short_answer",
+          "marks": 1,
+          "answer": "(Corrective) Maintenance",
+          "answer_conditions": [
+            "Identify the correct stage of the program development life cycle for error correction"
+          ]
+        },
+        {
+          "subquestion_label": "b",
+          "question_text": "The program contains a function Lookup ( ). After investigation, it is found that this is the function that sometimes returns an incorrect value.\n\nAn Integrated Development Environment (IDE) is used to help locate the error.\nThe IDE features of watch window, single stepping and breakpoint will be used.\nExplain these features including the order that they will be used in to locate the error in Lookup ().",
+          "question_type": "long_answer",
+          "marks": 3,
+          "answer": "For example:\n- Set a breakpoint at the start of / within Lookup, to stop execution at a given statement\n- then use single stepping to execute one statement / instruction at a time\n- to display the value of variables using a watch window\nOne mark for each:\nMP1 Order starting with a breakpoint and an explanation - 'stop execution at this statement / line'\nMP2 Explanation of single stepping - execute 'line by line' / statements\nMP3 Explanation of watch window - displaying the value of variable(s)",
+          "answer_conditions": [
+            "Explain the use of breakpoint to stop execution at a specific statement",
+            "Explain the use of single stepping to execute one statement at a time",
+            "Explain the use of watch window to display the value of variables"
+          ]
+        },
+        {
+          "subquestion_label": "c",
+          "question_text": "To solve the error a programmer decides to create a new module.\n\nThe design of the new module has been completed and the module is being coded.\nIdentify two features of an IDE that will help during the coding of this new module.",
+          "question_type": "short_answer",
+          "marks": 2,
+          "answer": "Features include:\nMP1 Editor\nMP2 Auto- (syntax) complete / auto correction // identify undeclared variables(s)\nMP3 Prettyprint / auto-indentation / auto (structure) highlighter\nMP4 Dynamic syntax checking\nMP5 Expand / collapse code blocks\nMP6 Context sensitive prompts\nMax 2 marks",
+          "answer_conditions": [
+            "Identify two features of an IDE that will help during the coding of a new module"
+          ]
+        },
+        {
+          "subquestion_label": "d",
+          "question_text": "The new module referred to in part (c) introduces three new variables.\n\nComplete the following table by giving the appropriate data type for each.\n\n| Variable name | Used to store | Data type |\n| :-- | :-- | :-- |\n| Name | A customer name. |  |\n| Index | An array index. |  |\n| Result | The result of the division of any two non-zero numbers. |  |",
+          "question_type": "table_completion",
+          "marks": 3,
+          "answer": "One mark per row:\n\n| Variable name | Used to store | Data type |\n| :-- | :-- | :-- |\n| Name | a customer name | STRING |\n| Index | an array index | INTEGER |\n| Result | the result of the division of any two non-zero numbers | REAL |",
+          "answer_conditions": [
+            "Identify the appropriate data type for each variable"
+          ]
+        }
+      ]
+    },
+    {
+      "question_number": "2",
+      "subquestions": [
+        {
+          "subquestion_label": "a",
+          "question_text": "The function Conceal () will:\n\n- take a numeric string as a parameter representing the card number\n- return a string in which the asterisk character replaces all except the last four characters of the card number parameter.\n\nWrite pseudocode for the function Conceal ().",
+          "question_type": "code_trace",
+          "marks": 6,
+          "answer": "Example 'loop solution':\nFUNCTION Conceal (CardNumber : STRING) RETURNS STRING\nDECLARE MaskedString : STRING\nDECLARE Count : INTEGER\nCONSTANT Asterisk = '*'\nMaskedString ← RIGHT (CardNumber, 4)\nFOR Count ← 1 TO LENGTH (CardNumber) - 4\nMaskedString ← Asterisk & MaskedString\nNEXT Count\nRETURN MaskedString\nENDFUNCTION\nMark as follows:\nMP1 Function heading and parameter and ending and return type\nMP2 Declaration of all local variables used - including the loop counter\nMP3 Calculate number of digits to mask / number of asterisks required\nMP4 use of a 'relevant' Loop\nMP5 Correct number of iterations\nMP6 Concatenate asterisk to start/end of MaskedString in a loop\nMP7 Assign last four characters to MaskedString / / Concatenate the retained original last four digits\nMP8 Return masked string\nMax 6 marks\nALTERNATIVE 'non loop' solution:\nFUNCTION Conceal (CardNumber : STRING) RETURNS STRING\nDECLARE MaskedString : STRING\nDECLARE Count : INTEGER\nCONSTANT Asterisks = \"********************* //20 asterisks\nCount ← LENGTH (CardNumber) - 4\nMaskedString ← LEFT (Asterisks, Count) & RIGHT (CardNumber, 4)\nRETURN MaskedString\nENDFUNCTION\nMark as follows:\nMP1 Function heading and parameter and ending and return type\nMP2 Declaration of all local variables used\nMP3 Calculate number of digits to mask / number of asterisks required\nMP4 Trim asterisk string to number calculated in MP3\nMP5 Extract the last four characters\nMP6 Concatenate trimmed asterisk string with last four characters of CardNumber\nMP7 Return masked string\nMax 6 marks",
+          "answer_conditions": [
+            "Write pseudocode for the function Conceal () that replaces all except the last four characters of the card number with asterisks"
+          ]
+        },
+        {
+          "subquestion_label": "b(i)",
+          "question_text": "The new procedure Conceal() will process 100 card numbers each time it is called.\n\nThe card numbers will be stored in a 2D array CardNumber. The original string will be stored in column one and the modified string in column two.\n\n(i) Write pseudocode to declare the array.",
+          "question_type": "code_trace",
+          "marks": 2,
+          "answer": "DECLARE CardNumber : ARRAY [1:100, 1:2] OF STRING\nMP1 Correct dimensions\nMP2 All other parts of the statement correct",
+          "answer_conditions": [
+            "Write pseudocode to declare the array CardNumber with the correct dimensions and data type"
+          ]
+        },
+        {
+          "subquestion_label": "b(ii)",
+          "question_text": "(ii) The new procedure Conceal() will write the modified string to the corresponding element in column two.\n\nThe array CardNumber is passed as a parameter to the new procedure Conceal ().\nIdentify how this parameter should be specified in the new procedure header.",
+          "question_type": "short_answer",
+          "marks": 1,
+          "answer": "Any reference to BYREF // 'by reference'",
+          "answer_conditions": [
+            "Identify how the parameter should be specified in the new procedure header"
+          ]
+        }
+      ]
+    },
+    {
+      "question_number": "3",
+      "subquestions": [
+        {
+          "subquestion_label": "a(i)",
+          "question_text": "A program uses a stack to hold up to 60 numeric values.\n\nThe stack is implemented using two integer variables and a 1D array.\n\nThe array is declared in pseudocode as shown:\nDECLARE ThisStack : ARRAY[1:60] OF REAL\nThe stack operates as follows:\n\n- Global variable SP acts as a stack pointer that points to the next available stack location. The value of SP represents an array index.\n- Global variable OnStack represents the number of values currently on the stack.\n- The stack grows upwards from array element index 1.\n\n(i) Give the initial values that should be assigned to the two variables.",
+          "question_type": "short_answer",
+          "marks": 1,
+          "answer": "SP: 1\nOnStack: 0\nOne mark for both correct values",
+          "answer_conditions": [
+            "Give the initial values that should be assigned to the variables SP and OnStack"
+          ]
+        },
+        {
+          "subquestion_label": "a(ii)",
+          "question_text": "(ii) Explain why it is not necessary to initialise the array elements before the stack is used.",
+          "question_type": "long_answer",
+          "marks": 2,
+          "answer": "MP1 Unused values cannot be popped / taken off the stack // initialised values would never be used / unused elements cannot be accessed\nMP2 ... until a value has first been pushed / written // overwrites previous value",
+          "answer_conditions": [
+            "Explain why it is not necessary to initialise the array elements before the stack is used"
+          ]
+        },
+        {
+          "subquestion_label": "b",
+          "question_text": "A function to add a value to ThisStack is expressed in pseudocode as shown. The function will return a value to indicate whether the operation was successful or not.\n\nComplete the pseudocode by filling in the gaps.\n\nFUNCTION Push(ThisValue : REAL) RETURNS BOOLEAN\nDECLARE ReturnValue : BOOLEAN\nIF  THEN\nRETURN // stack is already full\nENDIF\n$\u2190$ ThisValue\nSP $\u2190$\nOnStack $\u2190$ OnStack +1\nRETURN TRUE\nENDFUNCTION",
+          "question_type": "code_trace",
+          "marks": 4,
+          "answer": "Example solution:\nFUNCTION Push(ThisValue : REAL) RETURNS BOOLEAN\nDECLARE ReturnValue : BOOLEAN\nIF OnStack =60 /59 / / S P=61 / S P>60 / /$  THEN\nRETURN FALSE // Stack is already full\nENDIF\nThisStack[SP] ← ThisValue\nSP ← SP + 1\nOnStack ← OnStack +1\nRETURN TRUE\nENDFUNCTION\nMark as follows:\nOne mark per gap",
+          "answer_conditions": [
+            "Complete the pseudocode for the function Push() that adds a value to the stack"
+          ]
+        }
+      ]
+    },
+    {
+      "question_number": "4",
+      "subquestions": [
+        {
+          "subquestion_label": "",
+          "question_text": "A global integer variable Tick is always incremented every millisecond (1000 times per second) regardless of the other programs running.\n\nThe value of Tick can be read by any program but the value should not be changed.\nAssume that the value of Tick does not overflow.\nAs an example, the following pseudocode algorithm would output \"Goodbye\" 40 seconds after outputting \"Hello\".\n\nDECLARE Start : INTEGER\nOUTPUT \"Hello\"\nStart ← Tick\nREPEAT\n//do nothing\nUNTIL Tick = Start +40000\nOUTPUT \"Goodbye\"\nA program is needed to help a user to time an event such as boiling an egg.\nThe time taken for the event is known as the elapsed time.\nThe program contains a procedure Timer () which will:\n\n- take two integer values representing an elapsed time in minutes and seconds\n- use the value of variable Tick to calculate the elapsed time\n- output a warning message 30 seconds before the elapsed time is up\n- output a final message when the total time has elapsed.\n\nFor example, to set an alarm for 5 minutes and 45 seconds the program makes the following call:\nCALL Timer (5,45)\nWhen 5 minutes and 15 seconds have elapsed, the program will output:\n\"30 seconds to go\"\nWhen 5 minutes and 45 seconds have elapsed, the program will output:\n\"The time is up!\"\n\nWrite pseudocode for the procedure Timer().",
+          "question_type": "code_trace",
+          "marks": 6,
+          "answer": "Example solution:\nPROCEDURE Timer(Mins, Secs : INTEGER)\nDECLARE WarningTick, EndTick : INTEGER\nEndTick ← Tick +1000 * ((Mins * 60) + Secs)\nWarningTick ← EndTick - (30 * 1000)\nREPEAT\n//do nothing\nUNTIL Tick = WarningTick\nOUTPUT \"30 seconds to go\"\nREPEAT\n//do nothing\nUNTIL Tick = EndTick\nOUTPUT \"The time is up!\"\nENDPROCEDURE\nMark as follows:\nMP1 Procedure heading and parameters and ending\nMP2 'Attempt' to calculate 'total time'/EndTick // 'elapsed time' // WarningTick\nMP3 Correct calculation of EndTick and WarningTick\nMP4 (Design mark)\n- Two separate loops - checking warning time then the final time, OR ...\n- Single loop checking the final time with an IF statement to check for warning time, OR ...\n- Single loop with two IF statements checking the warning time and final time\nMP5 Completely correct MP4\nMP6 Output both messages (must be meaningful and follow successful MP4)",
+          "answer_conditions": [
+            "Write pseudocode for the procedure Timer() that calculates the elapsed time and outputs the warning and final messages"
+          ]
+        }
+      ]
+    },
+    {
+      "question_number": "5",
+      "subquestions": [
+        {
+          "subquestion_label": "a",
+          "question_text": "The pseudocode contains three statements that could generate a run-time error.\n\nWrite the three statements and explain how each could generate a run-time error.",
+          "question_type": "long_answer",
+          "marks": 3,
+          "answer": "MP1 Count ← INT (100 / Number)\nNumber could be zero (giving a divide by zero)\nMP2 Index ← Data[Number]\nPotential error: Value Number could be outside the range of array indices\nMP3 ReturnValue ← TO_UPPER(RIGHT (Label, Count))\nPotential Error: Number to extract may be too big / negative / out of range for use in the RIGHT function // Label has insufficient characters\nMP4 RETURN RetVal\nPotential Error: There is no value to be returned // there is no variable named RetVal\nMark as follows:\n1 mark for each statement and description\nMax 3 marks",
+          "answer_conditions": [
+            "Identify three statements that could generate a run-time error and explain how each could generate the error"
+          ]
+        },
+        {
+          "subquestion_label": "b",
+          "question_text": "One type of run-time error can cause a program to stop responding ('freezing').\n\nIdentify a particular type of programming construct that can generate this type of error and explain why it occurs.",
+          "question_type": "short_answer",
+          "marks": 2,
+          "answer": "MP1 Construct: A (pre/post) conditional loop\nMP2 Explanation: The terminating condition is never satisfied",
+          "answer_conditions": [
+            "Identify a programming construct that can generate a run-time error causing the program to freeze and explain why it occurs"
+          ]
+        },
+        {
+          "subquestion_label": "c",
+          "question_text": "The function Process () contains a selection construct using a CASE structure.\n\nWrite pseudocode using a single selection construct with the same functionality without using a CASE structure.",
+          "question_type": "code_trace",
+          "marks": 2,
+          "answer": "Example solution:\nIF Index Mod 2=0 THEN\nReturnValue ← TO_UPPER(RIGHT (Label, Count))\nELSE\nReturnValue ← \"****\"\nENDIF\nMark as follows:\nMP1 IF...THEN...ELSE...ENDIF\nMP2 Both correct assignments and the correct test/logic",
+          "answer_conditions": [
+            "Write pseudocode using a single selection construct with the same functionality as the CASE structure"
+          ]
+        }
+      ]
+    },
+    {
+      "question_number": "6",
+      "subquestions": [
+        {
+          "subquestion_label": "a",
+          "question_text": "The shop sells sandwiches and snacks. The owner chooses a 'daily special' sandwich which is displayed on a board outside the shop. Each 'daily special' has two different fillings and is made with one type of bread.\n\nThe owner wants a program to randomly choose the 'daily special' sandwich. The program designer decides to store the possible sandwich fillings in a 1D array of type string.\n\nThe array is declared in pseudocode as follows:\nDECLARE Filling : ARRAY [1:35] OF STRING\nEach element contains the name of one filling.\nAn example of the first five elements is as follows:\n\n| Index | Element value |\n| :--: | :-- |\n| 1 | \"Cheese\" |\n| 2 | \"Onion\" |\n| 3 | \"Salmon\" |\n| 4 | \"Anchovies\" |\n| 5 | \"Peanut Butter\" |\n\nA second 1D array stores the possible bread used:\nDECLARE Bread : ARRAY [1:10] OF STRING\nEach element contains the name of one type of bread.\nAn example of the first three elements is as follows:\n\n| Index | Element value |\n| :--: | :-- |\n| 1 | \"White\" |\n| 2 | \"Brown\" |\n| 3 | \"Pitta\" |\n\nBoth arrays may contain unused elements. The value of these will be an empty string and they may occur anywhere in each array.\n\nA procedure Special () will output a message giving the 'daily special' sandwich made from two randomly selected different fillings and one randomly selected bread.\n\nUnused array elements must not be used when creating the 'daily special' sandwich.\n\nUsing the above examples, the output could be:\n\"The daily special is Cheese and Onion on Brown bread.\"\n\nComplete the pseudocode for the procedure Special().\n\nAssume that both arrays are global.",
+          "question_type": "code_trace",
+          "marks": 7,
+          "answer": "Example solution:\nPROCEDURE Special()\nDECLARE Index : INTEGER\nDECLARE Filling1, Filling2 : STRING\nREPEAT\nIndex ← INT (RAND (35)) + 1\nUNTIL Filling[Index] <> \"\"\nFilling1 ← Filling[Index]\nREPEAT\nIndex ← INT (RAND (35)) + 1\nUNTIL Filling[Index] <> \"\" AND Filling1 <> Filling[Index]\nFilling2 ← Filling[Index]\nREPEAT\nIndex ← INT (RAND (10) + 1)\nUNTIL Bread[Index] <> \"\"\nOUTPUT \"The daily special is \", Filling1, \" and \", Filling2, \" on \", Bread[Index], \" bread.\"\nENDPROCEDURE\nMark as follows:\nMP1 Loop for Filling 1, avoiding unused elements\nMP2 Loop for Filling 2 avoiding unused elements\nMP3 Check Filling 2 is different from Filling 1 - could correctly compare either the indices or the array contents\nMP4 Loop for Bread, avoiding unused elements\nMP5 Using RAND (10) / RAND (35)\nMP6 Completely correct use of RAND () - including INT () and +1 in all cases\nMP7 Correct output - once only - following a reasonable attempt at selection of filings and bread",
+          "answer_conditions": [
+            "Complete the pseudocode for the procedure Special() that selects two different fillings and one bread for the daily special sandwich"
+          ]
+        },
+        {
+          "subquestion_label": "b",
+          "question_text": "The owner decides that some combinations of fillings do not go well together. For example, anchovies and peanut butter.\n\nDescribe how the design could be changed to prevent certain combinations being selected.",
+          "question_type": "long_answer",
+          "marks": 2,
+          "answer": "Answers include:\nMP1 For each filling, create a list of acceptable / incompatible fillings/indexes\nMP2 When selecting the second filling, (as well as checking for an unused element) check that the filling / index is / is not on the list\nALTERNATIVE:\nMP1 Create a list of 'good' combinations\nMP2 Randomly select from this list",
+          "answer_conditions": [
+            "Describe how the design could be changed to prevent certain combinations of fillings being selected"
+          ]
+        }
+      ]
+    },
+    {
+      "question_number": "7",
+      "subquestions": [
+        {
+          "subquestion_label": "a",
+          "question_text": "A coffee shop runs a computerised loyalty card system. Customers are issued with a loyalty card with their name together with a unique customer ID. Loyalty points are added to their card each time they spend money at the shop.\n\nThe following information is stored for each customer: ID, name, home address, email address, mobile phone number, date of birth, number of points, date of last visit and amount of money spent at last visit.\n\nA new module will generate a personalised email message to each loyalty card customer who has not visited the coffee shop in the last three months. The message will include a unique voucher code which can be used to authorise a discount if the customer goes to the shop within the next two weeks.\n\nIdentify three items of customer information that will be used by the new module and justify your choices.",
+          "question_type": "short_answer",
+          "marks": 3,
+          "answer": "- Customer ID - to reference the other customer details\n- Email address - to send the email\n- Name - to personalise the email\n- Date of last visit - to select which customers should receive an email\n- Unique voucher code (or method of code generation) - to include in the email\nMark as follows:\nOne mark per item and justification\nMax 3 marks",
+          "answer_conditions": [
+            "Identify three items of customer information that will be used by the new module and justify your choices"
+          ]
+        },
+        {
+          "subquestion_label": "b",
+          "question_text": "Identify the computational thinking skill that you needed to use to answer part (a).",
+          "question_type": "short_answer",
+          "marks": 1,
+          "answer": "Abstraction",
+          "answer_conditions": [
+            "Identify the computational thinking skill used to answer part (a)"
+          ]
+        },
+        {
+          "subquestion_label": "c",
+          "question_text": "It is decided to adopt a formal program development life cycle model for the development of the new module. The analysis of the new module is complete and the project moves on to the design stage. During this stage all the necessary algorithms and module designs will be defined.\n\nState three other items that will be defined for the new module during the design stage.",
+          "question_type": "short_answer",
+          "marks": 3,
+          "answer": "MP1 Data structures // data dictionary // identifier table(s) // validation rules\nMP2 Data-flow diagram // state-transition diagram\nMP3 User interface // Format for the email\nMP4 Testing method / Test plan / Test data / Trace tables\nMP5 Choice of email protocol to be used // Programming language to be used // Development environment\nMP6 Use of library routines // program to send the email\nMax 3 marks",
+          "answer_conditions": [
+            "State three other items that will be defined for the new module during the design stage"
+          ]
+        },
+        {
+          "subquestion_label": "d",
+          "question_text": "Part of the coffee shop program contains three program modules as follows:\n\n- Module Init() has no parameters and returns a Boolean.\n- Module Reset () takes a string as a parameter and returns an Integer.\n- Module Check() repeatedly calls Init() followed by Reset().\n\nDraw a structure chart to represent the relationship between the three modules, including all parameters and return values.",
+          "question_type": "diagram",
+          "marks": 3,
+          "answer": "[Diagram: structure chart showing relationship between modules Init(), Reset() and Check()\n\n```\nInit()\n|   \n|   \n|\nReset(String) --> Check()\n```\nMark as follows:\nMP1 Three boxes correctly labelled and correct hierarchy\nMP2 Parameter and return values\nMP3 Iteration arrow\n```",
+          "answer_conditions": [
+            "Draw a structure chart to represent the relationship between the three modules, including all parameters and return values"
+          ]
+        }
+      ]
+    },
+    {
+      "question_number": "8",
+      "subquestions": [
+        {
+          "subquestion_label": "a",
+          "question_text": "A program is being developed to implement a game for up to six players. During the game, each player assembles a team of characters. At the start of the game there are 45 characters available.\n\nEach character has four attributes, as follows:\n\n| Attribute | Examples | Comment |\n| :-- | :-- | :-- |\n| Player | $0,1,3$ | The player the character is assigned to. |\n| Role | Builder, Teacher, Doctor | The job that the character will perform in the game. |\n| Name | Bill, Lee, Farah, Mo | The name of the character. Several characters may perform the same role, but they will each have a unique name. |\n| Level | $14,23,76$ | The skill level of the character. An integer in the range 0 to 100 inclusive. |\n\nThe programmer has defined a record type to define each character. The record type definition is shown in pseudocode as follows:\n\n```\nTYPE CharacterType\n    DECLARE Player : INTEGER\n    DECLARE Role : STRING\n    DECLARE Name : STRING\n    DECLARE Level : INTEGER\nENDTYPE\n```\n\nThe Player field indicates the player to which the character is assigned (1 to 6). The field value is 0 if the character is not assigned to any player.\n\nThe programmer has defined a global array to store the character data as follows:\nDECLARE Character : ARRAY[1:45] OF CharacterType\nAt the start of the game all record fields are initialised, and all Player field values are set to 0\n\nThe programmer has defined a program module as follows:\n\n| Module | Description |\n| :-- | :-- |\n| Assign() | - called with two parameters: <br> - an integer representing a player <br> - a string representing a character role <br> - search the Character array for an unassigned character with the required role <br> - If found, assign the character to the given player and output a confirmation message, for example: <br> \"Bill the Builder has been assigned to player 3\" <br> - If no unassigned character with the required role is found, output a suitable message. |\n\nWrite pseudocode for module Assign ().",
+          "question_type": "code_trace",
+          "marks": 7,
+          "answer": "Example solution:\nPROCEDURE Assign(ThisRole : STRING, ThisPlayer : INTEGER)\nDECLARE Index : INTEGER\nDECLARE Done : BOOLEAN\nDone ← FALSE\nIndex ← 1\nWHILE Index < 46 AND Done = FALSE\nIF Character[Index].Player =0 AND Character[Index].Role = ThisRole THEN\nCharacter[Index].Player ← ThisPlayer\nDone ← TRUE\nELSE\nIndex ← Index +1\nENDIF\nENDWHILE\nIF Done = TRUE THEN\nOUTPUT Character[Index].Name, \" the \", Character[Index].Role, \" has been assigned to player \", ThisPlayer\nELSE\nOUTPUT \"No characters with this role are available\"\nENDIF\nENDPROCEDURE\nMark as follows:\nMP1 Loop until 'found' or all 45 elements considered\nMP2 Test of Player field - i.e. not value in a loop\nMP3 ... AND Role - i.e. match for ThisRole parameter in a loop\nMP4 If available character found, assign ThisPlayer to the character in a loop\nMP5 When character found set termination condition/flag\nMP6 Both OUTPUT messages logically correctly placed\nMP7 Both OUTPUT statements correctly formed",
+          "answer_conditions": [
+            "Write pseudocode for module Assign() that searches for an unassigned character with the required role and assigns it to the given player"
+          ]
+        },
+        {
+          "subquestion_label": "b",
+          "question_text": "A new module will store the contents of the Character array in a text file. The module is defined as follows:\n\n| Module | Description |\n| :-- | :-- |\n| Save () | - form a string from each record with fields separated by the character ' \" <br> write each string to a separate line of the new file named SaveFile.txt |\n\nComplete the pseudocode for module Save ().\n\nPROCEDURE Save ()",
+          "question_type": "code_trace",
+          "marks": 7,
+          "answer": "Example solution:\nPROCEDURE Save()\nDECLARE Index : INTEGER\nDECLARE Line : STRING\nCONSTANT SEP = '^'\nOPENFILE \"SaveFile.txt\" FOR WRITE\nFOR Index ← 1 TO 45\nLine ← NUM_TO_STR(Character[Index].Player) & SEP\nLine ← Line & Character[Index].Role & SEP\nLine ← Line & Character[Index].Name & SEP\nLine ← Line & NUM_TO_STR(Character[Index].Level)\nWRITEFILE \"SaveFile.txt\", Line\nNEXT Index\nCLOSEFILE \"SaveFile.txt\"\nENDPROCEDURE\nMark as follows:\nMP1 Declaration of local integer for Index (and string type for Line)\nMP2 Open \"SaveFile.txt\" in write mode and subsequently close\nMP3 Loop through 45 elements\nMP4 Attempt to form Line - four fields in a loop\nMP5 Correct use of NUM_TO_STR()x2 (Player and Level) in a loop\nMP6 Correct use of three &<separator>& strings in a loop\nMP7 Line from MP4 written to file in a loop",
+          "answer_conditions": [
+            "Complete the pseudocode for module Save() that stores the contents of the Character array in a text file"
+          ]
+        },
+        {
+          "subquestion_label": "c",
+          "question_text": "The program is changed and the record type definition is modified as follows:\n\n```\nTYPE CharacterType\n    DECLARE Player : INTEGER\n    DECLARE Role : STRING\n    DECLARE Name : STRING\n    DECLARE Level : INTEGER\n    DECLARE Status : BOOLEAN\nENDTYPE\n```\n\nDescribe how the additional Boolean field may be stored with the rest of the fields on one line of a text file.",
+          "question_type": "short_answer",
+          "marks": 2,
+          "answer": "MP1 Encode Status as a character / string\nMP2 Append the '^' separator and the character/string",
+          "answer_conditions": [
+            "Describe how the additional Boolean field may be stored with the rest of the fields on one line of a text file"
+          ]
+        },
+        {
+          "subquestion_label": "d",
+          "question_text": "The save operation is to be extended so that multiple files may be saved as the game progresses. This will allow the user to restore the game from any saved position. The filename must reflect the sequence in which the files are saved.\n\nDescribe a method that would allow multiple files to be saved and give an example of two consecutive filenames.",
+          "question_type": "short_answer",
+          "marks": 2,
+          "answer": "MP1 Method:\nCreate a filename suffix which is incremented for each file save\nMP2 Example:\nSaveFile01.txt, SaveFile02.txt",
+          "answer_conditions": [
+            "Describe a method that would allow multiple files to be saved and give an example of two consecutive filenames"
+          ]
+        }
+      ]
+    }
+  ]
+}

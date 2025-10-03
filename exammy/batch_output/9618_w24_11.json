@@ -1,0 +1,305 @@
+{
+  "subject_code": "9618",
+  "paper_code": "11",
+  "exam_session": "Winter",
+  "exam_year": "2024",
+  "context": "no context required",
+  "questions": [
+    {
+      "question_number": "1",
+      "subquestions": [
+        {
+          "subquestion_label": "a",
+          "question_text": "State one difference between a tebibyte and a gigabyte.",
+          "question_type": "short_answer",
+          "marks": 1,
+          "answer": "A tebibyte = 1024 gibibytes / 1048576 kibibytes / 2^40 bytes whereas a gigabyte = 1000 megabytes / 1000000 kilobytes / 10^9 bytes\n- Tebi is binary prefix giga is denary prefix",
+          "answer_conditions": []
+        },
+        {
+          "subquestion_label": "b(i)",
+          "question_text": "Convert the unsigned binary integer into hexadecimal.\n\n110001100111",
+          "question_type": "short_answer",
+          "marks": 1,
+          "answer": "C67",
+          "answer_conditions": []
+        },
+        {
+          "subquestion_label": "b(ii)",
+          "question_text": "Convert the two's complement binary number into denary.\n\n100110010111",
+          "question_type": "short_answer",
+          "marks": 1,
+          "answer": "-1641",
+          "answer_conditions": []
+        },
+        {
+          "subquestion_label": "b(iii)",
+          "question_text": "Convert the Binary Coded Decimal (BCD) into denary.\n\n010101110011",
+          "question_type": "short_answer",
+          "marks": 1,
+          "answer": "573",
+          "answer_conditions": []
+        },
+        {
+          "subquestion_label": "c",
+          "question_text": "Subtract the denary number 23 from the two's complement binary number 01001010\n\nPerform this calculation using binary subtraction.\nShow your working.",
+          "question_type": "calculation",
+          "marks": 2,
+          "answer": "Working\nUsing the two's complement and adding:\n23 in binary = 00010111 so minus 23 is 11101001\n01001010\n± 11101001\n(1)00110011\nDirect subtraction:\n01001010\n-00010111\n00110011\nAnswer: 00110011",
+          "answer_conditions": []
+        },
+        {
+          "subquestion_label": "d",
+          "question_text": "State one reason why binary addition and subtraction can result in overflow.",
+          "question_type": "short_answer",
+          "marks": 1,
+          "answer": "- The answer cannot be represented in the number of bits available\n- The answer is larger than the maximum positive number that can be stored in the register\n- The answer is smaller than the most negative number that can be stored in the register",
+          "answer_conditions": []
+        }
+      ]
+    },
+    {
+      "question_number": "2",
+      "subquestions": [
+        {
+          "subquestion_label": "a",
+          "question_text": "Give one limitation of using a file-based approach to store the data and explain how a relational database addresses this limitation.",
+          "question_type": "long_answer",
+          "marks": 3,
+          "answer": "- Data redundancy // data duplication\n  - Separate linked tables are used\n  - Data items are stored once so reduces data duplication / data redundancy\n- Data inconsistency / Poor data integrity\n  - Data changed once in one place will automatically update elsewhere\n  - Linked data cannot be entered differently in two tables\n  - Referential integrity can be enforced\n- The data structure used depends on the application\n  - Changes to the data structure are managed by the DBMS\n  - ... and queries are not dependent on the structure of the data\n  - ... and changes to the data do not require programs to be re-written",
+          "answer_conditions": []
+        },
+        {
+          "subquestion_label": "b(i)",
+          "question_text": "Complete the entity-relationship (E-R) diagram for the given tables.",
+          "question_type": "diagram_completion",
+          "marks": 3,
+          "answer": "[Diagram: E-R diagram with entities REPAIR, CUSTOMER, PART, REPAIR_PART, SUPPLIER; relationships between REPAIR and CUSTOMER, REPAIR and REPAIR_PART, PART and REPAIR_PART, SUPPLIER and PART]",
+          "answer_conditions": []
+        },
+        {
+          "subquestion_label": "b(ii)",
+          "question_text": "Write a Structured Query Language (SQL) script to define the table REPAIR_PART. Include constraints (restrictions) on the data that can be entered into each field where appropriate.",
+          "question_type": "code_trace",
+          "marks": 5,
+          "answer": "CREATE TABLE REPAIR_PART(\nPartID VARCHAR(20) NOT NULL,\nRepairNumber VARCHAR(4) NOT NULL,\nQuantity INT NOT NULL,\nPRIMARY KEY (PartID, RepairNumber)\n);",
+          "answer_conditions": []
+        },
+        {
+          "subquestion_label": "b(iii)",
+          "question_text": "Write an SQL script to return the total amount due to the supplier with the ID of JK675 for all the invoices that have not currently been paid.",
+          "question_type": "code_trace",
+          "marks": 3,
+          "answer": "SELECT SUM (AmountDue)\nFROM INVOICE\nWHERE SupplierID = \"JK675\" AND Paid = FALSE;",
+          "answer_conditions": []
+        },
+        {
+          "subquestion_label": "c",
+          "question_text": "Complete the table by writing a definition for each of the database terms.\n\n| Term | Definition |\n| :--: | :--: |\n| Referential Integrity |  |\n| Candidate Key |  |\n|  |  |\n|  |  |\n|  |  |",
+          "question_type": "table_completion",
+          "marks": 3,
+          "answer": "| Database Term | Definition |\n| --- | --- |\n| Referential Integrity | All duplicate entries of data between tables are consistent // all foreign keys are matched to an appropriate primary key |\n| Candidate Key | A field that could be a primary key but is not // an attribute or smallest set of attributes in a table where no tuple has the same value |\n| Tuple | A row / record in a table // one instance of an entity in a table |",
+          "answer_conditions": []
+        }
+      ]
+    },
+    {
+      "question_number": "3",
+      "subquestions": [
+        {
+          "subquestion_label": "a",
+          "question_text": "State the purpose of the system clock and the Control Unit (CU) in a CPU.",
+          "question_type": "short_answer",
+          "marks": 2,
+          "answer": "- System clock\n  - To synchronise operations\n  - ... by creating and transmitting timing signals on the control bus\n- Control Unit\n  - Sends/receives control signals along control bus\n  - Reads an instruction from the contents of the memory location whose address is stored in PC\n  - Coordinates/synchronises the activity of other components in the CPU\n  - Manages the execution of instructions\n  - Controls communication between the components in the CPU",
+          "answer_conditions": []
+        },
+        {
+          "subquestion_label": "b(i)",
+          "question_text": "Identify one other feature of a processor that can affect the performance of a computer system and state why it affects the performance.",
+          "question_type": "short_answer",
+          "marks": 2,
+          "answer": "- Feature: clock speed\n  - Higher clock speed means that more F-E cycles are executed per second\n  // Higher clock speed results in more throughput\n- Feature: bus width\n  - Larger bus width means that more data transferred at the same time",
+          "answer_conditions": []
+        },
+        {
+          "subquestion_label": "b(ii)",
+          "question_text": "Identify an appropriate type of port to connect the solid state memory drive to the computer.\n\nExplain how this port provides an automatic connection.",
+          "question_type": "short_answer",
+          "marks": 3,
+          "answer": "- Port: USB / Universal Serial Bus\n- Explanation:\n  - A voltage change occurs when the drive is plugged in\n  - The computer detects this voltage change\n  - The code of the device is transferred to computer\n  - ... the OS finds the code of the device in the list of devices\n  - ... and loads the appropriate device driver",
+          "answer_conditions": []
+        },
+        {
+          "subquestion_label": "c",
+          "question_text": "Identify two disadvantages of using Dynamic RAM (DRAM) instead of Static RAM (SRAM) in a computer system.",
+          "question_type": "short_answer",
+          "marks": 2,
+          "answer": "- DRAM requires constant refresh cycles unlike SRAM\n- DRAM has lower access speed than SRAM",
+          "answer_conditions": []
+        },
+        {
+          "subquestion_label": "d(i)",
+          "question_text": "Describe the principal operation of an optical disc reader/writer.",
+          "question_type": "long_answer",
+          "marks": 4,
+          "answer": "- The disc is spun at high speed\n- A laser is shone onto the disc to read / write\n  - ... using optical head to move it into position\n  - ... it follows the spiral track from the centre outwards\n- When writing the laser burns pits to represent the data\n- When reading the laser reflects from pits and lands\n- The reflection from a pit and a land is different\n- ... the differences are interpreted as 1 or 0",
+          "answer_conditions": []
+        },
+        {
+          "subquestion_label": "d(ii)",
+          "question_text": "Explain the use of a buffer when writing data to the optical disc.",
+          "question_type": "short_answer",
+          "marks": 3,
+          "answer": "- The computer and optical disc reader/writer send and receive at different speeds\n- A buffer allows temporary storage of the data\n  - ... so that the computer can transfer data to the buffer at the higher speed\n  - ... and is not held up waiting for data to transfer // so the computer can carry on with other tasks\n  - ... so the optical disc reader/writer is not overloaded\n  - ... and so that data is transferred to optical disc reader/writer from the buffer at the slower rate",
+          "answer_conditions": []
+        }
+      ]
+    },
+    {
+      "question_number": "4",
+      "subquestions": [
+        {
+          "subquestion_label": "a(i)",
+          "question_text": "Describe the file management tasks carried out by an OS.",
+          "question_type": "long_answer",
+          "marks": 2,
+          "answer": "- Secondary storage space is divided into file allocation units\n- Space on secondary storage is allocated to particular files\n- Maintains/creates directory structures\n- Specifies the logical method of file storage e.g. FAT or NTFS\n- Provides file naming conventions\n- Controls user access // implements access rights //implements password protection // Makes file sharing possible\n- Controls access to the file by other software\n- Specifies tasks that can be performed on a file e.g. open, close, delete, copy, create, move, etc\n- Allows searching for a file",
+          "answer_conditions": []
+        },
+        {
+          "subquestion_label": "a(ii)",
+          "question_text": "Explain the need for back-up software.",
+          "question_type": "short_answer",
+          "marks": 2,
+          "answer": "- To allow data to be retrieved / restored when lost\n- To automatically make a duplicate copy of data...\n  - ...so the user does not have to remember to backup data\n- To make regular duplicate copies of data",
+          "answer_conditions": []
+        },
+        {
+          "subquestion_label": "b(i)",
+          "question_text": "Explain the benefits to the teacher of the attachment being a compressed file.",
+          "question_type": "short_answer",
+          "marks": 3,
+          "answer": "- Less of the teacher's storage space is used\n  - ... so more student work can be stored\n- Transmission time is reduced\n  - ... so the teacher does not have to wait as long for it to arrive\n- Bandwidth usage is reduced\n  - ... so other transmissions are not adversely affected\n- Less data allowance is used on the teacher's email system",
+          "answer_conditions": []
+        },
+        {
+          "subquestion_label": "b(ii)",
+          "question_text": "Describe one lossless method of compressing a text file.",
+          "question_type": "short_answer",
+          "marks": 3,
+          "answer": "- Run-Length Encoding // RLE\n- Repeated sequences of the same characters are replaced by\n  - ... a single copy of the character\n  - ... and a count of the number of characters",
+          "answer_conditions": []
+        },
+        {
+          "subquestion_label": "c",
+          "question_text": "Explain the benefits to the student of using library files when writing a program.",
+          "question_type": "short_answer",
+          "marks": 3,
+          "answer": "- It saves development time for the student\n  - ... by using pre-written code\n- There is less testing to do // the routines are more likely to work correctly\n  - ... because they have already been tested and are error-free\n- It results in a more robust program\n- Subroutines can be used that they do not have the skill to write\n  - ... which enables a more complex program to be written",
+          "answer_conditions": []
+        },
+        {
+          "subquestion_label": "d(i)",
+          "question_text": "One presentation feature found in a typical IDE is prettyprint.\n\nIdentify and describe one other presentation feature found in a typical IDE.",
+          "question_type": "short_answer",
+          "marks": 2,
+          "answer": "- Expand/collapse code blocks...\n  - ... sections of source code that are part of the same block can be expanded to see the content or collapsed so that the overall code is seen\n- Auto-indentation // auto-formatting...\n  - ... automatically indents/formats code as the user types so that the structure is clear // aids readability",
+          "answer_conditions": []
+        },
+        {
+          "subquestion_label": "d(ii)",
+          "question_text": "One debugging feature found in a typical IDE is single stepping.\n\nIdentify and describe one other debugging feature found in a typical IDE.",
+          "question_type": "short_answer",
+          "marks": 2,
+          "answer": "- Breakpoints ...\n  - ... stops the code running on a set line to view the current status/variable contents/program flow\n- Report window // variable watch window ...\n  - ... shows the values in variables/data structures and how they change when each line is run",
+          "answer_conditions": []
+        }
+      ]
+    },
+    {
+      "question_number": "5",
+      "subquestions": [
+        {
+          "subquestion_label": "a",
+          "question_text": "Complete the table to identify the most appropriate type of sensor for each scenario.\n\n| Scenario | Type of sensor |\n| --- | --- |\n| A door is open. |   |\n| The external daylight level is below a set amount. |   |\n| A person is detected within 2 metres. |   |",
+          "question_type": "table_completion",
+          "marks": 1,
+          "answer": "| Scenario | Type of sensor |\n| --- | --- |\n| A door is open. | Pressure sensor // Infra-red |\n| The external daylight level is below a set amount. | Light sensor |\n| A person is detected within 2 metres. | Infra-red |",
+          "answer_conditions": []
+        },
+        {
+          "subquestion_label": "b",
+          "question_text": "Write logic expressions for the security system.\n\n| Parameter | Description of parameter | Binary value | Condition |\n| :--: | :--: | :--: | :--: |\n| A | external daylight level | 1 | Low |\n|  |  | 0 | High |\n| B | front door | 1 | Open |\n|  |  | 0 | Closed |\n| C | person is within 2 m | 1 | Detected |\n|  |  | 0 | Not detected |\n| D | back door | 1 | Open |\n|  |  | 0 | Closed |\n| E | security system | 1 | Switched on |\n|  |  | 0 | Switched off |\n\nThe floodlight turns on (X=1) if:\n\n- the security system is switched on\n\nand\n\n- the external daylight level is low and\n- a person is detected within 2 m .\n\nThe audio alarm turns on (Y=1) if:\n\n- the security system is switched on\n\nand\n\n- one or more doors are open, or a person is detected within 2 m .",
+          "question_type": "short_answer",
+          "marks": 2,
+          "answer": "X = E AND A AND C\nY = E AND (B OR C OR D)",
+          "answer_conditions": []
+        },
+        {
+          "subquestion_label": "c",
+          "question_text": "Explain whether the security system is an example of a monitoring system or a control system.",
+          "question_type": "short_answer",
+          "marks": 3,
+          "answer": "- Monitoring system\n  - There is no use of feedback // The light and the alarm are just warnings\n  - The output of the floodlight or the audio alarm does not affect the input of data from the sensors\n  - The system does not have any actuators",
+          "answer_conditions": []
+        }
+      ]
+    },
+    {
+      "question_number": "6",
+      "subquestions": [
+        {
+          "subquestion_label": "",
+          "question_text": "Explain how artificial intelligence is used in the car park system to identify the car's registration number.",
+          "question_type": "long_answer",
+          "marks": 4,
+          "answer": "- It uses image recognition\n  - The pixels of each image from the camera are stored\n  - ... and matched to the expected shape/size/colour of registration number\n- It uses optical character recognition\n  - The pixels within the registration number area identified are analysed\n  - ... and compared to expected characters/letters/numbers",
+          "answer_conditions": []
+        }
+      ]
+    },
+    {
+      "question_number": "7",
+      "subquestions": [
+        {
+          "subquestion_label": "a",
+          "question_text": "Give two benefits of distributing software using a shareware software licence.",
+          "question_type": "short_answer",
+          "marks": 2,
+          "answer": "- The user can test/trial the program before purchasing to see whether it meets needs\n- There is no initial cost\n- Users who try the software may spread the word so the developer gets more custom\n- The developer can get feedback to improve the program",
+          "answer_conditions": []
+        },
+        {
+          "subquestion_label": "b",
+          "question_text": "Give two benefits of distributing software using a commercial software licence.",
+          "question_type": "short_answer",
+          "marks": 2,
+          "answer": "- The owner/developer can earn a fee\n- Comprehensive support is usually offered so problems can be easily solved\n- The software is usually well tested so few bugs",
+          "answer_conditions": []
+        }
+      ]
+    },
+    {
+      "question_number": "8",
+      "subquestions": [
+        {
+          "subquestion_label": "a",
+          "question_text": "Describe the purpose of the Status Register (SR).",
+          "question_type": "short_answer",
+          "marks": 2,
+          "answer": "- To store the value of flags/bits\n  - ... that can be changed/set/cleared after arithmetic / logical operations\n- To allow flags to be checked\n  - ... to change instruction sequence",
+          "answer_conditions": []
+        },
+        {
+          "subquestion_label": "b",
+          "question_text": "Identify two differences between general purpose registers and special purpose registers.",
+          "question_type": "short_answer",
+          "marks": 2,
+          "answer": "- Special purpose registers have a specified role in the machine whereas general purpose registers can be used for all purposes defined by the programmer\n- Special purpose registers hold the state of the program's execution while general purpose registers hold the program's data during operations",
+          "answer_conditions": []
+        }
+      ]
+    }
+  ]
+}

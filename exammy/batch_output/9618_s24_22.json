@@ -1,0 +1,388 @@
+{
+  "subject_code": "9618",
+  "paper_code": "22",
+  "exam_session": "Summer",
+  "exam_year": "2024",
+  "context": "An error will be generated if a function call is not properly formed or if the parameters are of an incorrect type or an incorrect value.\n\n# String and character functions\n- A string of length 1 may be considered to be either of type CHAR or STRING\n- A CHAR may be assigned to, or concatenated with, a STRING\n- A STRING of length greater than 1 cannot be assigned to a CHAR\n\n```\nLEFT(ThisString : STRING, x : INTEGER) RETURNS STRING\nreturns leftmost x characters from ThisString\nExample: LEFT(\"ABCDEFGH\", 3) returns \"ABC\"\nRIGHT(ThisString : STRING, x : INTEGER) RETURNS STRING\nreturns rightmost x characters from ThisString\nExample: RIGHT (\"ABCDEFGH\", 3) returns \"FGH\"\nMID(ThisString : STRING, x : INTEGER, y : INTEGER) RETURNS STRING\nreturns a string of length y starting at position x from ThisString\nExample: MID (\"ABCDEFGH\", 2, 3) returns string \"BCD\"\nLENGTH (ThisString : STRING) RETURNS INTEGER\nreturns the integer value representing the length of ThisString\nExample: LENGTH (\"Happy Days\") returns 10\nTO_UPPER(x : <datatype>) RETURNS <datatype>\n<datatype> may be CHAR or STRING\nreturns an object of type <datatype> formed by converting all characters of x to upper case.\nExamples:\n- TO_UPPER(\"Error 803\") returns \"ERROR 803\"\n- TO_UPPER('a') returns 'A'\nTO_LOWER(x : <datatype>) RETURNS <datatype>\n<datatype> may be CHAR or STRING\nreturns an object of type <datatype> formed by converting all characters of x to lower case.\nExamples:\n- TO_LOWER(\"JIM 803\") returns \"jim 803\"\n- TO_LOWER('W') returns 'w'\nNUM_TO_STR(x : <datatype1>) RETURNS <datatype2>\nreturns a string representation of a numeric value.\n<datatype1> may be REAL or INTEGER, <datatype2> may be CHAR or STRING\nExample: NUM_TO_STR(87.5) returns \"87.5\"\nIf x is a negative value, the returned value will be a string beginning with the ' - ' character.\nSTR_TO_NUM (x : <datatype1>) RETURNS <datatype2>\nreturns a numeric representation of a string.\n<datatype1> may be CHAR or STRING, <datatype2> may be REAL or INTEGER\nExample: STR_TO_NUM(\"23.45\") returns 23.45\nIf the string begins with the ' - ' character, the returned value will be negative.\n```\n\nIS_NUM (ThisString : <datatype>) RETURNS BOOLEAN\nreturns TRUE if ThisString represents a valid numeric value.\n<datatype> may be CHAR or STRING\nExample: IS_NUM (\"-12.36\") returns TRUE\nASC (ThisChar : CHAR) RETURNS INTEGER\nreturns an integer value (the ASCII value) of character ThisChar\nExample: ASC('A') returns 65, ASC('B') returns 66\nCHR (x : INTEGER) RETURNS CHAR\nreturns the character whose integer value (the ASCII value) is $x$\nExample: CHR (65) returns 'A', CHR (66) returns 'B'\n\n# Numeric functions\nINT (x : REAL) RETURNS INTEGER\nreturns the integer part of $x$\nExample: INT (27.5415) returns 27\nRAND (x : INTEGER) RETURNS REAL\nreturns a real number in the range 0 to $x$ (not inclusive of $x$ ).\nExample: RAND (87) could return 35.430729\n\n## Date functions\nDate format is assumed to be DD/MM/YYYY unless otherwise stated.\n\n```\nDAY (ThisDate : DATE) RETURNS INTEGER\nreturns the day number from ThisDate\nExample: DAY(04/10/2003) returns 4\nMONTH (ThisDate : DATE) RETURNS INTEGER\nreturns the month number from ThisDate\nExample: MONTH(04/10/2003) returns 10\nYEAR (ThisDate : DATE) RETURNS INTEGER\nreturns the year number from ThisDate\nExample: YEAR(04/10/2003) returns 2003\nDAYINDEX(ThisDate : DATE) RETURNS INTEGER\nreturns the day index number from ThisDate where Sunday = 1, Monday = 2 etc.\nExample: DAYINDEX(09/05/2023) returns 3\nSETDATE (Day, Month, Year : INTEGER) RETURNS DATE\nreturns a value of type DATE with the value of <Day>/<Month>/<Year>\nExample: SETDATE(26, 10, 2003) returns a date corresponding to 26/10/2003\nTODAY() RETURNS DATE\nreturns a value of type DATE corresponding to the current date.\n```\n\n# Text file functions\n## EOF (FileName : STRING) RETURNS BOOLEAN\nreturns TRUE if there are no more lines to be read from file FileName will generate an error if the file is not already open in READ mode.\n\n## Operators\nAn error will be generated if an operator is used with a value or values of an incorrect type.\n\n| $\\&$ | concatenates (joins) two strings. <br> Example: \"Summer\" \\& \" \" \\& \"Pudding\" evaluates to \"Summer Pudding\" may also be used to concatenate a CHAR with a STRING |\n| :--: | :--: |\n| AND | performs a logical AND on two Boolean values. <br> Example: TRUE AND FALSE evaluates to FALSE |\n| OR | performs a logical OR on two Boolean values. <br> Example: TRUE OR FALSE evaluates to TRUE |\n| NOT | performs a logical NOT on a Boolean value. <br> Example: NOT TRUE evaluates to FALSE |\n| MOD | finds the remainder when one number is divided by another. <br> Example: 10 MOD 3 evaluates to 1 |\n| DIV | finds the quotient when one number is divided by another. <br> Example 10 DIV 3 evaluates to 3 |\n\n## Comparison operators\n\n| $=$ | used to compare two items of the same type. evaluates to TRUE if the condition is true, otherwise evaluates to FALSE |\n| :--: | :--: |\n| $>$ | Notes: \n- may be used to compare types REAL and INTEGER \n- may be used to compare types CHAR and STRING \n- case sensitive when used to compare types CHAR and/or STRING \n- cannot be used to compare two records |\n| $<$ |\n| $<=$ |\n| $<>$ |\n| Examples: \n- \"Program\" = \"program\" evaluates to FALSE \n- Count $=4$ evaluates to TRUE when Count contains the value 4 |\n\n\n[^0]\n\n[^0]:    Permission to reproduce items where third-party owned material protected by copyright is included has been sought and cleared where possible. Every reasonable effort has been made by the publisher (UCLES) to trace copyright holders, but if any items requiring clearance have unwittingly been included, the publisher will be pleased to make amends at the earliest possible opportunity.\nTo avoid the issue of disclosure of answer-related information to candidates, all copyright acknowledgements are reproduced online in the Cambridge Assessment International Education Copyright Acknowledgements Booklet. This is produced for each series of examinations and is freely available to download at www.cambridgeinternational.org after the live examination series.\nCambridge Assessment International Education is part of Cambridge Assessment. Cambridge Assessment is the brand name of the University of Cambridge Local Examinations Syndicate (UCLES), which is a department of the University of Cambridge.",
+    "questions": [
+    {
+      "question_number": "1",
+      "subquestions": [
+        {
+          "subquestion_label": "a",
+          "question_text": "The following table contains pseudocode examples. Each example may contain statements that relate to one or more of the following:\n\n- selection\n- iteration (repetition)\n- input/output.\n\nComplete the table by placing one or more ticks (\\u2713) in each row.\n\n| Pseudocode example | Selection | Iteration | Input/Output |\n| :-- | :-- | :-- | :-- |\n| FOR Index \\u2190 1 TO 10 <br> Data[Index] \\u2190 0 <br> NEXT Index |  |  |  |\n| WRITEFILE ThisFile, \"****\" |  |  |  |\n| UNTIL Level > 25 |  |  |  |\n| IF Mark > 74 THEN <br> READFILE OldFile, Data <br> ENDIF |  |  |  |",
+          "question_type": "table_completion",
+          "marks": 4,
+          "answer": "| Pseudocode example | Selection | Iteration | Input/Output |\n| :-- | :-- | :-- | :-- |\n| FOR Index \\u2190 1 TO 10 <br> Data[Index] \\u2190 0 <br> NEXT Index |  | \\u2713 |  |\n| WRITEFILE ThisFile, \"****\" |  |  | \\u2713 |\n| UNTIL Level > 25 |  | \\u2713 |  |\n| IF Mark > 74 THEN <br> READFILE OldFile, Data <br> ENDIF | \\u2713 |  | \\u2713 |",
+          "answer_conditions": [
+            "One mark per row."
+          ]
+        },
+        {
+          "subquestion_label": "b",
+          "question_text": "Program variables have data types as follows:\n\n| Variable | Data type |\n| :-- | :-- |\n| MyChar | CHAR |\n| MyString | STRING |\n| MyInt | INTEGER |\n\nComplete the table by filling in each gap with a function (from the insert) so that each expression is valid.\n\n| Expression |\n| :--: |\n| MyInt \\u2190 (3.1415926) |\n| MyChar \\u2190 ( \"Elwood\", 3, 1) |\n| MyString \\u2190 ( (27.509)) |\n| MyInt \\u2190 ( (ABC123\", 3)) |",
+          "question_type": "short_answer",
+          "marks": 4,
+          "answer": "| Expression |\n| :--: |\n| MyInt \\u2190 INT(3.1415926) |\n| MyChar \\u2190 MID(\"Elwood\", 3, 1) |\n| MyString \\u2190 NUM_TO_STR(27.509) |\n| MyInt \\u2190 STR_TO_NUM(RIGHT(\"ABC123\", 3)) |",
+          "answer_conditions": [
+            "MyInt \\u2190 INT(3.1415926)",
+            "MyChar \\u2190 MID(\"Elwood\", 3, 1)",
+            "MyString \\u2190 NUM_TO_STR(27.509)",
+            "MyInt \\u2190 STR_TO_NUM(RIGHT(\"ABC123\", 3))"
+          ]
+        },
+        {
+          "subquestion_label": "c",
+          "question_text": "The variables given in part (b) are chosen during the design stage of the program development life cycle.\n\nThe choices are to be documented to simplify program maintenance. State a suitable way of documenting the variables and give one piece of information that should be recorded, in addition to the data type.",
+          "question_type": "short_answer",
+          "marks": 2,
+          "answer": "A suitable way of documenting the variables is to use an identifier table. One piece of information that should be recorded, in addition to the data type, is an explanation of what each variable is used for.",
+          "answer_conditions": [
+            "Identifier table",
+            "Explanation of what each variable is used for"
+          ]
+        }
+      ]
+    },
+    {
+      "question_number": "2",
+      "subquestions": [
+        {
+          "subquestion_label": "a",
+          "question_text": "An algorithm for part of the program will:\n\n- input three numeric values and assign them to identifiers Num1, Num2 and Num3\n- assign the largest value to variable Ans\n- output a message giving the largest value and the average of the three numeric values.\n\nAssume the values are all different and are input in no particular order.\n\nComplete the program flowchart on page 5 to represent the algorithm.\n\n[Diagram: Flowchart with steps for input, comparison, assignment, and output]",
+          "question_type": "calculation",
+          "marks": 5,
+          "answer": "START\nINPUT Num1, Num2, Num3\nIF Num1 > Num2 AND Num1 > Num3 THEN\n    Ans \\u2190 Num1\nELSE\n    IF Num2 > Num3 THEN\n        Ans \\u2190 Num2\n    ELSE\n        Ans \\u2190 Num3\n    ENDIF\nENDIF\nAverage \\u2190 (Num1 + Num2 + Num3) / 3\nOUTPUT \"The largest is \", Ans, \" and the average is \", Average\nEND",
+          "answer_conditions": [
+            "START",
+            "INPUT Num1, Num2, Num3",
+            "IF Num1 > Num2 AND Num1 > Num3 THEN",
+            "Ans \\u2190 Num1",
+            "ELSE",
+            "IF Num2 > Num3 THEN",
+            "Ans \\u2190 Num2",
+            "ELSE",
+            "Ans \\u2190 Num3",
+            "ENDIF",
+            "ENDIF",
+            "Average \\u2190 (Num1 + Num2 + Num3) / 3",
+            "OUTPUT \"The largest is \", Ans, \" and the average is \", Average",
+            "END"
+          ]
+        },
+        {
+          "subquestion_label": "b",
+          "question_text": "A different part of the program contains an algorithm represented by the following program flowchart:\n\n[Diagram: Flowchart with steps for a loop and conditional checks]\n\nWrite pseudocode for the algorithm.",
+          "question_type": "code_trace",
+          "marks": 5,
+          "answer": "Flag \\u2190 GetStat()\nWHILE Flag <> TRUE\n    FOR Port \\u2190 1 TO 3\n        CALL Reset(Port)\n    NEXT Port\n    Flag \\u2190 GetStat()\nENDWHILE",
+          "answer_conditions": [
+            "Flag \\u2190 GetStat()",
+            "WHILE Flag <> TRUE",
+            "FOR Port \\u2190 1 TO 3",
+            "CALL Reset(Port)",
+            "NEXT Port",
+            "Flag \\u2190 GetStat()",
+            "ENDWHILE"
+          ]
+        }
+      ]
+    },
+    {
+      "question_number": "3",
+      "subquestions": [
+        {
+          "subquestion_label": "a(i)",
+          "question_text": "Write pseudocode to declare the record structure for type Component.",
+          "question_type": "short_answer",
+          "marks": 4,
+          "answer": "TYPE Component\nDECLARE Item_Num : INTEGER\nDECLARE Reject : BOOLEAN\nDECLARE Stage : CHAR\nDECLARE Limit_1 : REAL\nDECLARE Limit_2 : REAL\nENDTYPE",
+          "answer_conditions": [
+            "TYPE Component",
+            "DECLARE Item_Num : INTEGER",
+            "DECLARE Reject : BOOLEAN",
+            "DECLARE Stage : CHAR",
+            "DECLARE Limit_1 : REAL",
+            "DECLARE Limit_2 : REAL",
+            "ENDTYPE"
+          ]
+        },
+        {
+          "subquestion_label": "a(ii)",
+          "question_text": "A 1D array Item of 2000 elements will store the data for all items.\n\nWrite pseudocode to declare the Item array.",
+          "question_type": "short_answer",
+          "marks": 2,
+          "answer": "DECLARE Item : ARRAY[1:2000] OF Component",
+          "answer_conditions": [
+            "DECLARE Item : ARRAY[1:2000] OF Component"
+          ]
+        },
+        {
+          "subquestion_label": "b",
+          "question_text": "State three benefits of using an array of records to store the data for all items.",
+          "question_type": "short_answer",
+          "marks": 3,
+          "answer": "1. Use of index to directly access a record in the array.\n2. Simplifies the code/algorithm.\n3. Program easier to write/understand/maintain/test/debug.",
+          "answer_conditions": [
+            "Use of index to directly access a record in the array.",
+            "Simplifies the code/algorithm.",
+            "Program easier to write/understand/maintain/test/debug."
+          ]
+        }
+      ]
+    },
+    {
+      "question_number": "4",
+      "subquestions": [
+        {
+          "subquestion_label": "",
+          "question_text": "A triangle has sides of length $A, B$ and $C$.\n\n[Diagram: Triangle with sides A, B, and C]\n\nIn this example, $A$ is the length of the longest side. This triangle is said to be right-angled if the following equation is true:\n\n$$A \\times A = (B \\times B) + (C \\times C)$$\n\nA procedure will be written to check whether three lengths represent a right-angled triangle. The lengths will be input in any sequence.\n\nThe procedure IsRA() will:\n\n- prompt and input three integer values representing the three lengths\n- test whether the three lengths correspond to the sides of a right-angled triangle\n- output a suitable message.\n\nThe length of the longest side may not be the first value input.\n\nWrite pseudocode for the procedure IsRA().",
+          "question_type": "code_trace",
+          "marks": 5,
+          "answer": "PROCEDURE IsRA()\nDECLARE a, b, c : INTEGER\nOUTPUT \"Input length of the first side\"\nINPUT a\nOUTPUT \"Input length of the second side\"\nINPUT b\nOUTPUT \"Input length of the third side\"\nINPUT c\nIF (a * a = (b * b) + (c * c)) OR (b * b = (a * a) + (c * c)) OR (c * c = (a * a) + (b * b)) THEN\nOUTPUT \"It is right-angled\"\nELSE\nOUTPUT \"Not right-angled\"\nENDIF\nENDPROCEDURE",
+          "answer_conditions": [
+            "PROCEDURE IsRA()",
+            "DECLARE a, b, c : INTEGER",
+            "OUTPUT \"Input length of the first side\"",
+            "INPUT a",
+            "OUTPUT \"Input length of the second side\"",
+            "INPUT b",
+            "OUTPUT \"Input length of the third side\"",
+            "INPUT c",
+            "IF (a * a = (b * b) + (c * c)) OR (b * b = (a * a) + (c * c)) OR (c * c = (a * a) + (b * b)) THEN",
+            "OUTPUT \"It is right-angled\"",
+            "ELSE",
+            "OUTPUT \"Not right-angled\"",
+            "ENDIF",
+            "ENDPROCEDURE"
+          ]
+        }
+      ]
+    },
+    {
+      "question_number": "5",
+      "subquestions": [
+        {
+          "subquestion_label": "a(i)",
+          "question_text": "The pseudocode contains two syntax errors and one other error.\n\nIdentify the errors.",
+          "question_type": "short_answer",
+          "marks": 3,
+          "answer": "Syntax error 1: NEXT Index (should be ENDWHILE)\nSyntax error 2: '&' used to concatenate an integer (in OUTPUT statement)\nOther error: Accesses element outside range // Accesses element 0",
+          "answer_conditions": [
+            "NEXT Index (should be ENDWHILE)",
+            "'&' used to concatenate an integer (in OUTPUT statement)",
+            "Accesses element outside range // Accesses element 0"
+          ]
+        },
+        {
+          "subquestion_label": "a(ii)",
+          "question_text": "The procedure contains a statement that is not needed.\n\nIdentify the pseudocode statement and explain why it is not needed.",
+          "question_type": "short_answer",
+          "marks": 2,
+          "answer": "Statement: The OTHERWISE statement\nExplanation: The result of MOD 2 can only be 0 or 1",
+          "answer_conditions": [
+            "The OTHERWISE statement",
+            "The result of MOD 2 can only be 0 or 1"
+          ]
+        },
+        {
+          "subquestion_label": "b",
+          "question_text": "When the program is executed it unexpectedly stops responding.\n\nIdentify the type of error that has occurred.",
+          "question_type": "short_answer",
+          "marks": 1,
+          "answer": "Run-time",
+          "answer_conditions": [
+            "Run-time"
+          ]
+        }
+      ]
+    },
+    {
+      "question_number": "6",
+      "subquestions": [
+        {
+          "subquestion_label": "a",
+          "question_text": "A function Trim() will:\n\n- take a string representing the original title\n- return the string to be displayed.\n\nAssume:\n\n- Words in the original title are separated by a single space character.\n- There are no spaces before the first word or after the last word of the original title.\n- The first word of the original title is less than 14 characters.\n\nWrite pseudocode for the function Trim().",
+          "question_type": "code_trace",
+          "marks": 7,
+          "answer": "FUNCTION Trim(Name : STRING) RETURNS STRING\nCONSTANT Dots = \"...\"\nCONSTANT Space = \" \"\nIF LENGTH(Name) <= 16 THEN\nRETURN Name\nENDIF\nWHILE LENGTH(Name) > 13\nREPEAT\nName \\u2190 LEFT(Name, LENGTH(Name) - 1)\nUNTIL RIGHT(Name, 1) = Space\nName \\u2190 LEFT(Name, LENGTH(Name) - 1)\nName \\u2190 Name & Dots\nRETURN Name\nENDFUNCTION",
+          "answer_conditions": [
+            "FUNCTION Trim(Name : STRING) RETURNS STRING",
+            "CONSTANT Dots = \"...\"",
+            "CONSTANT Space = \" \"",
+            "IF LENGTH(Name) <= 16 THEN",
+            "RETURN Name",
+            "ENDIF",
+            "WHILE LENGTH(Name) > 13",
+            "REPEAT",
+            "Name \\u2190 LEFT(Name, LENGTH(Name) - 1)",
+            "UNTIL RIGHT(Name, 1) = Space",
+            "Name \\u2190 LEFT(Name, LENGTH(Name) - 1)",
+            "Name \\u2190 Name & Dots",
+            "RETURN Name",
+            "ENDFUNCTION"
+          ]
+        },
+        {
+          "subquestion_label": "b(i)",
+          "question_text": "Identify one drawback of adding leading ' 0 ' characters to each numeric string.",
+          "question_type": "short_answer",
+          "marks": 1,
+          "answer": "A (very) large file is created // redundant zeroes are stored in the file",
+          "answer_conditions": [
+            "A (very) large file is created // redundant zeroes are stored in the file"
+          ]
+        },
+        {
+          "subquestion_label": "b(ii)",
+          "question_text": "Suggest an alternative method of storing the samples which does not involve adding leading ' 0 ' characters but which would still allow each individual sample to be extracted.",
+          "question_type": "short_answer",
+          "marks": 1,
+          "answer": "Values are delimited by a special character / a separator character",
+          "answer_conditions": [
+            "Values are delimited by a special character / a separator character"
+          ]
+        },
+        {
+          "subquestion_label": "b(iii)",
+          "question_text": "State one drawback of the alternative method given in part (b)(ii).",
+          "question_type": "short_answer",
+          "marks": 1,
+          "answer": "The algorithm to store / extract / separate the individual values is more complex / takes longer to execute / run / process",
+          "answer_conditions": [
+            "The algorithm to store / extract / separate the individual values is more complex / takes longer to execute / run / process"
+          ]
+        }
+      ]
+    },
+    {
+      "question_number": "7",
+      "subquestions": [
+        {
+          "subquestion_label": "a",
+          "question_text": "Identify three sub-modules that could be used in the design and describe their use.",
+          "question_type": "short_answer",
+          "marks": 3,
+          "answer": "Sub-module 1: IdentifyMember()\nUse: Identifies a club member who has expressed an interest in a given class\n\nSub-module 2: GetMemberPhoneNumber()\nUse: Gets the mobile phone number of a member\n\nSub-module 3: CreateMessage()\nUse: Generates a text message to a member",
+          "answer_conditions": [
+            "IdentifyMember()",
+            "Identifies a club member who has expressed an interest in a given class",
+            "GetMemberPhoneNumber()",
+            "Gets the mobile phone number of a member",
+            "CreateMessage()",
+            "Generates a text message to a member"
+          ]
+        },
+        {
+          "subquestion_label": "b(i)",
+          "question_text": "Complete the table to show the inputs, outputs and next states.\n\nAssume that the current state for each row is given by the 'Next state' on the previous row. For example, the first Input-A is made when in state S1.\n\nIf there is no output for a given transition, then the output cell should contain 'none'.\n\nThe first two rows have been completed.\n\n| Input | Output | Next state |\n| :--: | :--: | :--: |\n|  |  | S1 |\n| Input-A | none | S3 |\n|  | Output-W |  |\n|  | none |  |\n| Input-B |  |  |\n| Input-A |  |  |\n|  |  | S4 |",
+          "question_type": "table_completion",
+          "marks": 5,
+          "answer": "| Input | Output | Next state |\n| :--: | :--: | :--: |\n|  |  | S1 |\n| Input-A | none | S3 |\n| Input-A | Output-W | S3 |\n| Input-B | none | S2 |\n| Input-B | none | S5 |\n| Input-A | none | S2 |\n| Input-A | Output-X | S4 |",
+          "answer_conditions": [
+            "Input-A",
+            "none",
+            "S3",
+            "Input-A",
+            "Output-W",
+            "S3",
+            "Input-B",
+            "none",
+            "S2",
+            "Input-B",
+            "none",
+            "S5",
+            "Input-A",
+            "none",
+            "S2",
+            "Input-A",
+            "Output-X",
+            "S4"
+          ]
+        },
+        {
+          "subquestion_label": "b(ii)",
+          "question_text": "Identify the input sequence that will cause the minimum number of state changes in the transition from S1 to S4.",
+          "question_type": "short_answer",
+          "marks": 1,
+          "answer": "Input-B, Input-A",
+          "answer_conditions": [
+            "Input-B, Input-A"
+          ]
+        }
+      ]
+    },
+    {
+      "question_number": "8",
+      "subquestions": [
+        {
+          "subquestion_label": "a",
+          "question_text": "Suggest a reason why the teacher's program has been split into a number of stages and give the benefit of producing a different file from each stage.",
+          "question_type": "short_answer",
+          "marks": 2,
+          "answer": "Reason: (Program is) easier to design / implement / test / debug / modify\nBenefit: Easier to check that each stage works as expected",
+          "answer_conditions": [
+            "(Program is) easier to design / implement / test / debug / modify",
+            "Easier to check that each stage works as expected"
+          ]
+        },
+        {
+          "subquestion_label": "b",
+          "question_text": "Complete the pseudocode for module DeleteSpaces ().\n\nFUNCTION DeleteSpaces (Line : STRING) RETURNS STRING",
+          "question_type": "code_trace",
+          "marks": 6,
+          "answer": "FUNCTION DeleteSpaces (Line : STRING) RETURNS STRING\nDECLARE NewLine : STRING\nDECLARE EndOfLeading : BOOLEAN\nDECLARE Count, NumSpaces : INTEGER\nDECLARE NextChar : CHAR\nCONSTANT Space = \" \"\nNumSpaces \\u2190 0\nEndOfLeading \\u2190 FALSE\nFOR Count \\u2190 1 TO LENGTH (Line)\nNextChar \\u2190 MID (Line, Count, 1)\nIF NextChar <> Space AND EndOfLeading = FALSE THEN\nNumSpaces \\u2190 Count - 1\nEndOfLeading \\u2190 TRUE\nENDIF\nNEXT Count\nNewLine \\u2190 RIGHT (Line, LENGTH (Line) - NumSpaces)\nRETURN NewLine\nENDFUNCTION",
+          "answer_conditions": [
+            "FUNCTION DeleteSpaces (Line : STRING) RETURNS STRING",
+            "DECLARE NewLine : STRING",
+            "DECLARE EndOfLeading : BOOLEAN",
+            "DECLARE Count, NumSpaces : INTEGER",
+            "DECLARE NextChar : CHAR",
+            "CONSTANT Space = \" \"",
+            "NumSpaces \\u2190 0",
+            "EndOfLeading \\u2190 FALSE",
+            "FOR Count \\u2190 1 TO LENGTH (Line)",
+            "NextChar \\u2190 MID (Line, Count, 1)",
+            "IF NextChar <> Space AND EndOfLeading = FALSE THEN",
+            "NumSpaces \\u2190 Count - 1",
+            "EndOfLeading \\u2190 TRUE",
+            "ENDIF",
+            "NEXT Count",
+            "NewLine \\u2190 RIGHT (Line, LENGTH (Line) - NumSpaces)",
+            "RETURN NewLine",
+            "ENDFUNCTION"
+          ]
+        },
+        {
+          "subquestion_label": "c",
+          "question_text": "Write pseudocode for module Stage_2().\n\nModules DeleteComment() and DeleteSpaces() must be used in your solution.",
+          "question_type": "code_trace",
+          "marks": 8,
+          "answer": "PROCEDURE Stage_2(F1, F2 : STRING)\nDECLARE Line : STRING\nDECLARE Count : INTEGER\nCount \\u2190 0\nOPEN F1 FOR READ\nOPEN F2 FOR APPEND\nWHILE NOT EOF(F1)\nREADFILE F1, Line\nLine \\u2190 DeleteSpaces (Line)\nLine \\u2190 DeleteComment (Line)\nIF Line <> \"\" THEN\nWRITEFILE F2, Line\nELSE\nCount \\u2190 Count +1\nENDIF\nENDWHILE\nCLOSEFILE F1\nCLOSEFILE F2\nOUTPUT Count, \" blank lines were removed\"\nENDPROCEDURE",
+          "answer_conditions": [
+            "PROCEDURE Stage_2(F1, F2 : STRING)",
+            "DECLARE Line : STRING",
+            "DECLARE Count : INTEGER",
+            "Count \\u2190 0",
+            "OPEN F1 FOR READ",
+            "OPEN F2 FOR APPEND",
+            "WHILE NOT EOF(F1)",
+            "READFILE F1, Line",
+            "Line \\u2190 DeleteSpaces (Line)",
+            "Line \\u2190 DeleteComment (Line)",
+            "IF Line <> \"\" THEN",
+            "WRITEFILE F2, Line",
+            "ELSE",
+            "Count \\u2190 Count +1",
+            "ENDIF",
+            "ENDWHILE",
+            "CLOSEFILE F1",
+            "CLOSEFILE F2",
+            "OUTPUT Count, \" blank lines were removed\"",
+            "ENDPROCEDURE"
+          ]
+        }
+      ]
+    }
+  ]
+}

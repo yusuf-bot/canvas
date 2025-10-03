@@ -1,0 +1,455 @@
+{
+  "subject_code": "COMPUTER SCIENCE",
+  "paper_code": "9618",
+  "exam_session": "Winter",
+  "exam_year": "2023",
+  "context": "no insert provided",
+  "questions": [
+    {
+      "question_number": "1",
+      "subquestions": [
+        {
+          "subquestion_label": "a",
+          "question_text": "Write the normalised floating-point representation of +65.25 in this system. Show your working.",
+          "question_type": "calculation",
+          "marks": 3,
+          "answer": "One mark for working (Max 1)\n- conversion of 65.25 to binary seen e.g. $1000001.01=65.25 // 64+1+0.25 // 1 // 4$\nOne mark per mark point (Max 2)\n- correct mantissa\n- correct exponent\n\n|  | Mantissa |  | Exponent |\n| :--: | :--: | :--: | :--: |\n|  | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 1 | 0 | 0 | 0 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 2 | 2 | 2 | 2 | 2 | 2 | 2 | 2 | 2 | 2 | 2 | 2 | 2 | 2 | 2 | 2 | 2 | 2 | 2 | 2 | 2 | 2 | 2 | 2 | 2 | 2 | 2 | 2 | 2 | 2 | 2 | 2 | 2 |",
+          "answer_conditions": [
+            "One mark for working (Max 1)",
+            "- conversion of 65.25 to binary seen e.g. $1000001.01=65.25 // 64+1+0.25 // 1 // 4$",
+            "One mark per mark point (Max 2)",
+            "- correct mantissa",
+            "- correct exponent"
+          ]
+        },
+        {
+          "subquestion_label": "b",
+          "question_text": "Explain the problem that will occur in storing the normalised floating-point representation of +65.20 in this system.",
+          "question_type": "short_answer",
+          "marks": 2,
+          "answer": "One mark per mark point (Max 2)\nMP1 the decimal fraction 0.20 cannot be represented exactly (the closest\nis $0.25 // 0.1875$ )\nMP2 therefore, there will be a loss of precision due to a rounding\nerror/truncation",
+          "answer_conditions": [
+            "One mark per mark point (Max 2)",
+            "MP1 the decimal fraction 0.20 cannot be represented exactly (the closest is $0.25 // 0.1875$ )",
+            "MP2 therefore, there will be a loss of precision due to a rounding error/truncation"
+          ]
+        }
+      ]
+    },
+    {
+      "question_number": "2",
+      "subquestions": [
+        {
+          "subquestion_label": "a",
+          "question_text": "Draw one line to connect each protocol to its most appropriate use.\n\nProtocol\nHTTP\n## BitTorrent\nSMTP\nIMAP\n\nUse\nto provide peer-to-peer file sharing\nwhen retrieving email messages from a mail server over a TCP/IP connection\nwhen transmitting hypertext documents\nto map MAC addresses onto IP addresses\nwhen sending email messages towards the intended destination",
+          "question_type": "table_completion",
+          "marks": 5,
+          "answer": "One mark per correct line (Max 5)\n- BitTorrent$\nleftrightarrow$ to provide peer-to-peer file sharing\n- IMAP$\nleftrightarrow$ when retrieving email messages from a mail server over a TCP/IP connection\n- HTTP$\nleftrightarrow$ when transmitting hypertext documents\n- SMTP$\nleftrightarrow$ when sending email messages towards the intended destination",
+          "answer_conditions": [
+            "One mark per correct line (Max 5)",
+            "- BitTorrent$\nleftrightarrow$ to provide peer-to-peer file sharing",
+            "- IMAP$\nleftrightarrow$ when retrieving email messages from a mail server over a TCP/IP connection",
+            "- HTTP$\nleftrightarrow$ when transmitting hypertext documents",
+            "- SMTP$\nleftrightarrow$ when sending email messages towards the intended destination"
+          ]
+        },
+        {
+          "subquestion_label": "b",
+          "question_text": "Outline the purpose of the Link layer in the TCP/IP protocol suite.",
+          "question_type": "short_answer",
+          "marks": 2,
+          "answer": "The Link layer is responsible for transmitting data over a physical medium. It handles tasks such as framing, addressing, error detection, and flow control to ensure reliable communication between devices on the same network segment.",
+          "answer_conditions": [
+            "One mark for each correct mark point (Max 2)",
+            "MP1 The Link layer is responsible for transmitting data over a physical medium.",
+            "MP2 It handles tasks such as framing, addressing, error detection, and flow control to ensure reliable communication between devices on the same network segment."
+          ]
+        }
+      ]
+    },
+    {
+      "question_number": "3",
+      "subquestions": [
+        {
+          "subquestion_label": "",
+          "question_text": "Describe what is meant by enumerated and pointer data types.",
+          "question_type": "short_answer",
+          "marks": 4,
+          "answer": "One mark per mark point (Max 4)\n\nEnumerated\n- MP1 A user-defined non-composite (data type) (only award once)\n- MP2 ...with a list of all possible values\n- MP3 ...that is ordered.\n\nPointer\n- MP4 A user-defined non-composite (data type) (only award once)\n- MP5 ...that stores addresses/memory locations only\n- MP6 ...and indicates the type of data stored in the memory location.",
+          "answer_conditions": [
+            "One mark per mark point (Max 4)",
+            "Enumerated",
+            "MP1 A user-defined non-composite (data type) (only award once)",
+            "MP2 ...with a list of all possible values",
+            "MP3 ...that is ordered.",
+            "Pointer",
+            "MP4 A user-defined non-composite (data type) (only award once)",
+            "MP5 ...that stores addresses/memory locations only",
+            "MP6 ...and indicates the type of data stored in the memory location."
+          ]
+        }
+      ]
+    },
+    {
+      "question_number": "4",
+      "subquestions": [
+        {
+          "subquestion_label": "a",
+          "question_text": "Describe sequential and random methods of file organisation.",
+          "question_type": "short_answer",
+          "marks": 4,
+          "answer": "One mark per mark point (Max 4)\n\nSequential file organisation\n- MP1 Records (in the file) are ordered\n- MP2 ...based on the key field\n- MP3 A new version (of the file) has to be created to update the file\n\nRandom file organisation\n- MP4 Records are stored in no particular order within the file // There is no\nsequencing in the placement of the records\n- MP5 There is a relationship between the key of the record and its location\nwithin the file // a hashing algorithm is used to find the location of the\nrecord\n- MP6 Updates to the file can be carried out directly.",
+          "answer_conditions": [
+            "One mark per mark point (Max 4)",
+            "Sequential file organisation",
+            "MP1 Records (in the file) are ordered",
+            "MP2 ...based on the key field",
+            "MP3 A new version (of the file) has to be created to update the file",
+            "Random file organisation",
+            "MP4 Records are stored in no particular order within the file // There is no sequencing in the placement of the records",
+            "MP5 There is a relationship between the key of the record and its location within the file // a hashing algorithm is used to find the location of the record",
+            "MP6 Updates to the file can be carried out directly."
+          ]
+        },
+        {
+          "subquestion_label": "b",
+          "question_text": "Outline the process of sequential access for serial and sequential files.",
+          "question_type": "short_answer",
+          "marks": 2,
+          "answer": "One mark per mark point (Max 2) MP1 Start at the beginning of the file MP2 ...check records linearly MP3 ...until the desired record is found // ... processing / updating records as required //... EOF found.",
+          "answer_conditions": [
+            "One mark per mark point (Max 2)",
+            "MP1 Start at the beginning of the file",
+            "MP2 ...check records linearly",
+            "MP3 ...until the desired record is found // ... processing / updating records as required //... EOF found."
+          ]
+        }
+      ]
+    },
+    {
+      "question_number": "5",
+      "subquestions": [
+        {
+          "subquestion_label": "",
+          "question_text": "Describe the features of SISD and MIMD computer architectures.",
+          "question_type": "short_answer",
+          "marks": 4,
+          "answer": "One mark per mark point (Max 4)\n\nSISD\n- MP1 Single Instruction, Single Data (architecture). // Data is taken from a\n    single source and a single instruction is performed on the data.\n- MP2 Contains one processor, a control unit and a memory unit.\n- MP3 ...that executes instructions sequentially.\n\nMIMD\n- MP4 Multiple Instruction, Multiple Data (architecture). // At any time, any\n    processor can execute different instructions on different sets of data.\n- MP5 Contains many processors\n- MP6 ...that operate asynchronously / independently.",
+          "answer_conditions": [
+            "One mark per mark point (Max 4)",
+            "SISD",
+            "MP1 Single Instruction, Single Data (architecture). // Data is taken from a single source and a single instruction is performed on the data.",
+            "MP2 Contains one processor, a control unit and a memory unit.",
+            "MP3 ...that executes instructions sequentially.",
+            "MIMD",
+            "MP4 Multiple Instruction, Multiple Data (architecture). // At any time, any processor can execute different instructions on different sets of data.",
+            "MP5 Contains many processors",
+            "MP6 ...that operate asynchronously / independently."
+          ]
+        }
+      ]
+    },
+    {
+      "question_number": "6",
+      "subquestions": [
+        {
+          "subquestion_label": "a",
+          "question_text": "Complete the truth table for the given logic circuit.\n\n```\n[Diagram: logic circuit with AND, OR, NOT gates]\n```\n\n| A | B | C | D | Working space | Z |\n| :--: | :--: | :--: | :--: | :--: | :--: |\n| 0 | 0 | 0 | 0 |  |  |\n| 0 | 0 | 0 | 1 |  |  |\n| 0 | 0 | 1 | 0 |  |  |\n| 0 | 0 | 1 | 1 |  |  |\n| 0 | 1 | 0 | 0 |  |  |\n| 0 | 1 | 0 | 1 |  |  |\n| 0 | 1 | 1 | 0 |  |  |\n| 0 | 1 | 1 | 1 |  |  |\n| 1 | 0 | 0 | 0 |  |  |\n| 1 | 0 | 0 | 1 |  |  |\n| 1 | 0 | 1 | 0 |  |  |\n| 1 | 0 | 1 | 1 |  |  |\n| 1 | 1 | 0 | 0 |  |  |\n| 1 | 1 | 0 | 1 |  |  |\n| 1 | 1 | 1 | 0 |  |  |\n| 1 | 1 | 1 | 1 |  |  |",
+          "question_type": "table_completion",
+          "marks": 3,
+          "answer": "One mark for every shaded block of rows for column Z correct (Max 3)\n\n| A | B | C | D | Z |\n| :--: | :--: | :--: | :--: | :--: |\n| 0 | 0 | 0 | 0 | 1 |\n| 0 | 0 | 0 | 1 | 0 |\n| 0 | 0 | 1 | 0 | 1 |\n| 0 | 0 | 1 | 1 | 0 |\n| 0 | 1 | 0 | 0 | 1 |\n| 0 | 1 | 0 | 1 | 0 |\n| 0 | 1 | 1 | 0 | 1 |\n| 0 | 1 | 1 | 1 | 0 |\n| 1 | 0 | 0 | 0 | 1 |\n| 1 | 0 | 0 | 1 | 0 |\n| 1 | 0 | 1 | 0 | 1 |\n| 1 | 0 | 1 | 1 | 0 |\n| 1 | 1 | 0 | 0 | 1 |\n| 1 | 1 | 0 | 1 | 0 |\n| 1 | 1 | 1 | 0 | 0 |\n| 1 | 1 | 1 | 1 | 0 |",
+          "answer_conditions": [
+            "One mark for every shaded block of rows for column Z correct (Max 3)",
+            "\n| A | B | C | D | Z |\n| :--: | :--: | :--: | :--: | :--: |\n| 0 | 0 | 0 | 0 | 1 |\n| 0 | 0 | 0 | 1 | 0 |\n| 0 | 0 | 1 | 0 | 1 |\n| 0 | 0 | 1 | 1 | 0 |\n| 0 | 1 | 0 | 0 | 1 |\n| 0 | 1 | 0 | 1 | 0 |\n| 0 | 1 | 1 | 0 | 1 |\n| 0 | 1 | 1 | 1 | 0 |\n| 1 | 0 | 0 | 0 | 1 |\n| 1 | 0 | 0 | 1 | 0 |\n| 1 | 0 | 1 | 0 | 1 |\n| 1 | 0 | 1 | 1 | 0 |\n| 1 | 1 | 0 | 0 | 1 |\n| 1 | 1 | 0 | 1 | 0 |\n| 1 | 1 | 1 | 0 | 0 |\n| 1 | 1 | 1 | 1 | 0 |"
+          ]
+        },
+        {
+          "subquestion_label": "b",
+          "question_text": "Simplify the given Boolean expression using Boolean algebra. Show your working.\n\n$Y=\\bar{A} . \\bar{B} . \\bar{C} . \\bar{D}+\\bar{A} . \\bar{B} . C . \\bar{D}+\\bar{A} . B . \\bar{C} . \\bar{D}+\\bar{A} . B . C . \\bar{D}$",
+          "question_type": "calculation",
+          "marks": 3,
+          "answer": "One mark for correct working from points (Max 2), for example:\n$(Y=) \\overline{\\mathrm{A}} \\cdot \\overline{\\mathrm{B}} \\cdot \\overline{\\mathrm{C}} \\cdot \\overline{\\mathrm{D}}+\\overline{\\mathrm{A}} \\cdot \\overline{\\mathrm{B}} \\cdot \\mathrm{C} \\cdot \\overline{\\mathrm{D}}+\\overline{\\mathrm{A}} \\cdot \\mathrm{B} \\cdot \\overline{\\mathrm{C}} \\cdot \\overline{\\mathrm{D}}+\\overline{\\mathrm{A}} \\cdot \\mathrm{B} \\cdot \\mathrm{C} \\cdot \\overline{\\mathrm{D}}$\n$(Y=) \\overline{\\mathrm{A}} \\cdot \\overline{\\mathrm{D}} \\cdot(\\overline{\\mathrm{B}} \\cdot \\overline{\\mathrm{C}}+\\overline{\\mathrm{B}} \\cdot \\mathrm{C}+\\mathrm{B} \\cdot \\overline{\\mathrm{C}}+\\mathrm{B} \\cdot \\mathrm{C})$\n$(Y=) \\overline{\\mathrm{A}} \\cdot \\overline{\\mathrm{D}} \\cdot(\\overline{\\mathrm{B}} \\cdot(\\overline{\\mathrm{C}}+\\mathrm{C})+\\mathrm{B} \\cdot(\\overline{\\mathrm{C}}+\\mathrm{C}))$\n$(Y=) \\overline{\\mathrm{A}} \\cdot \\overline{\\mathrm{D}} \\cdot(\\overline{\\mathrm{B}} \\cdot(1)+\\mathrm{B} \\cdot(1))$\n$(Y=) \\overline{\\mathrm{A}} \\cdot \\overline{\\mathrm{D}} \\cdot(\\overline{\\mathrm{B}}+\\mathrm{B})$\n$(Y=) \\overline{\\mathrm{A}} \\cdot \\overline{\\mathrm{D}} \\cdot(1)$\nOne mark for correct answer $(Y=) \\overline{\\mathrm{A}} \\cdot \\overline{\\mathrm{D}}$",
+          "answer_conditions": [
+            "One mark for correct working from points (Max 2), for example:",
+            "$(Y=) \\overline{\\mathrm{A}} \\cdot \\overline{\\mathrm{B}} \\cdot \\overline{\\mathrm{C}} \\cdot \\overline{\\mathrm{D}}+\\overline{\\mathrm{A}} \\cdot \\overline{\\mathrm{B}} \\cdot \\mathrm{C} \\cdot \\overline{\\mathrm{D}}+\\overline{\\mathrm{A}} \\cdot \\mathrm{B} \\cdot \\overline{\\mathrm{C}} \\cdot \\overline{\\mathrm{D}}+\\overline{\\mathrm{A}} \\cdot \\mathrm{B} \\cdot \\mathrm{C} \\cdot \\overline{\\mathrm{D}}$",
+            "$(Y=) \\overline{\\mathrm{A}} \\cdot \\overline{\\mathrm{D}} \\cdot(\\overline{\\mathrm{B}} \\cdot \\overline{\\mathrm{C}}+\\overline{\\mathrm{B}} \\cdot \\mathrm{C}+\\mathrm{B} \\cdot \\overline{\\mathrm{C}}+\\mathrm{B} \\cdot \\mathrm{C})$",
+            "$(Y=) \\overline{\\mathrm{A}} \\cdot \\overline{\\mathrm{D}} \\cdot(\\overline{\\mathrm{B}} \\cdot(\\overline{\\mathrm{C}}+\\mathrm{C})+\\mathrm{B} \\cdot(\\overline{\\mathrm{C}}+\\mathrm{C}))$",
+            "$(Y=) \\overline{\\mathrm{A}} \\cdot \\overline{\\mathrm{D}} \\cdot(\\overline{\\mathrm{B}} \\cdot(1)+\\mathrm{B} \\cdot(1))$",
+            "$(Y=) \\overline{\\mathrm{A}} \\cdot \\overline{\\mathrm{D}} \\cdot(\\overline{\\mathrm{B}}+\\mathrm{B})$",
+            "$(Y=) \\overline{\\mathrm{A}} \\cdot \\overline{\\mathrm{D}} \\cdot(1)$",
+            "One mark for correct answer $(Y=) \\overline{\\mathrm{A}} \\cdot \\overline{\\mathrm{D}}$"
+          ]
+        }
+      ]
+    },
+    {
+      "question_number": "7",
+      "subquestions": [
+        {
+          "subquestion_label": "a",
+          "question_text": "A student buys a new computer. State one benefit to the student of a user interface and give an example.",
+          "question_type": "short_answer",
+          "marks": 2,
+          "answer": "One mark for a benefit (Max 1) e.g.\nMP1 The user interface hides the complexities of the computer hardware/operating system from the user\nMP2 It provides appropriate access systems for users with differing needs\nMP3 Complex commands involving memory locations/buses/computer hardware/ are avoided\nOne mark for a valid example (Max 1) e.g.\nClicking on icon rather than writing code\nUsing a graphical user interface / icons for navigation",
+          "answer_conditions": [
+            "One mark for a benefit (Max 1)",
+            "MP1 The user interface hides the complexities of the computer hardware/operating system from the user",
+            "MP2 It provides appropriate access systems for users with differing needs",
+            "MP3 Complex commands involving memory locations/buses/computer hardware/ are avoided",
+            "One mark for a valid example (Max 1)",
+            "Clicking on icon rather than writing code",
+            "Using a graphical user interface / icons for navigation"
+          ]
+        },
+        {
+          "subquestion_label": "b",
+          "question_text": "Identify one other process state.",
+          "question_type": "short_answer",
+          "marks": 1,
+          "answer": "Blocked (state)",
+          "answer_conditions": [
+            "Blocked (state)"
+          ]
+        },
+        {
+          "subquestion_label": "c",
+          "question_text": "Outline conditions under which a process could change from the running state to the ready state.",
+          "question_type": "short_answer",
+          "marks": 2,
+          "answer": "One mark per mark point (Max 2)\nMP1 When the time slice of the running process expires (round robin).\nMP2 ...and there is a process with a higher priority in the ready queue, the running process is pre-empted\nMP3 When an interrupt arrives at the CPU, (the process running on the CPU gets pre-empted).",
+          "answer_conditions": [
+            "One mark per mark point (Max 2)",
+            "MP1 When the time slice of the running process expires (round robin).",
+            "MP2 ...and there is a process with a higher priority in the ready queue, the running process is pre-empted",
+            "MP3 When an interrupt arrives at the CPU, (the process running on the CPU gets pre-empted)."
+          ]
+        }
+      ]
+    },
+    {
+      "question_number": "8",
+      "subquestions": [
+        {
+          "subquestion_label": "a",
+          "question_text": "A pseudocode algorithm finds a customer account record in a random file and outputs it. The records are stored using the user-defined data type TAccount.\n\n```\nTYPE TAccount\n    DECLARE AccountNumber : INTEGER\n    DECLARE LastName : STRING\n    DECLARE FirstName : STRING\n    DECLARE Address : STRING\n    DECLARE ContactNumber : STRING\nENDTYPE\n```\n\nComplete the file handling pseudocode. The function Hash () takes the customer account number as a parameter, calculates and returns the hash value.\n\n```\nDECLARE Customer : TAccount\nDECLARE Location : INTEGER\nDECLARE AccountFile : STRING\n```\n\n$\t$ $\\leftarrow$ \"AccountRecords.dat\"\nAccountFile\nOUTPUT \"Please enter an account number\"\nINPUT Customer.AccountNumber\n\nLocation $\\leftarrow$ Hash( $\t$ )\nSEEK $\t$ , Location\nAccountFile, $\t$ OUTPUT Customer $\t$ / / output customer record\nCLOSEFILE AccountFile\n```",
+          "question_type": "code_trace",
+          "marks": 5,
+          "answer": "One mark for each correctly completed line (Max 5)\nDECLARE Customer : TAccount\nDECLARE Location : INTEGER\nDECLARE AccountFile : STRING\n\nAccountFile $\\leftarrow$ \"AccountRecords.dat\"\nOPENFILE AccountFile FOR RANDOM\nOUTPUT \"Please enter an account number\"\nINPUT Customer.AccountNumber\n\nLocation $\\leftarrow$ Hash(Customer.AccountNumber)\nSEEK AccountFile, Location\nGETRECORD AccountFile, Customer\nOUTPUT Customer\nCLOSEFILE AccountFile",
+          "answer_conditions": [
+            "One mark for each correctly completed line (Max 5)",
+            "DECLARE Customer : TAccount",
+            "DECLARE Location : INTEGER",
+            "DECLARE AccountFile : STRING",
+            "AccountFile $\\leftarrow$ \"AccountRecords.dat\"",
+            "OPENFILE AccountFile FOR RANDOM",
+            "OUTPUT \"Please enter an account number\"",
+            "INPUT Customer.AccountNumber",
+            "Location $\\leftarrow$ Hash(Customer.AccountNumber)",
+            "SEEK AccountFile, Location",
+            "GETRECORD AccountFile, Customer",
+            "OUTPUT Customer",
+            "CLOSEFILE AccountFile"
+          ]
+        },
+        {
+          "subquestion_label": "b",
+          "question_text": "Define the term exception handling.",
+          "question_type": "short_answer",
+          "marks": 1,
+          "answer": "One mark for correct definition\n(Exception handling is the process of) responding to an unexpected event when the program is running so it does not halt unexpectedly",
+          "answer_conditions": [
+            "One mark for correct definition",
+            "(Exception handling is the process of) responding to an unexpected event when the program is running so it does not halt unexpectedly"
+          ]
+        },
+        {
+          "subquestion_label": "c",
+          "question_text": "State two possible causes of an exception.",
+          "question_type": "short_answer",
+          "marks": 2,
+          "answer": "One mark per mark point (Max 2), for example:\n- Programming errors\n- User errors\n- Hardware failure\n- Runtime errors",
+          "answer_conditions": [
+            "One mark per mark point (Max 2)",
+            "- Programming errors",
+            "- User errors",
+            "- Hardware failure",
+            "- Runtime errors"
+          ]
+        }
+      ]
+    },
+    {
+      "question_number": "9",
+      "subquestions": [
+        {
+          "subquestion_label": "a(i)",
+          "question_text": "Write the infix expression for this Reverse Polish Notation (RPN) expression:\n\n$$52-54+* 9$$",
+          "question_type": "calculation",
+          "marks": 2,
+          "answer": "One mark per mark point (Max 2)\n- $(5-2)$\n- $(5+4) // 9$\nFinal correct expression\n$(5-2) *(5+4) // 9$",
+          "answer_conditions": [
+            "One mark per mark point (Max 2)",
+            "- $(5-2)$",
+            "- $(5+4) // 9$",
+            "Final correct expression",
+            "$(5-2) *(5+4) // 9$"
+          ]
+        },
+        {
+          "subquestion_label": "a(ii)",
+          "question_text": "Show how the contents of the following stack will change as the RPN expression in part (a)(i) is evaluated.\n\n```\n[Diagram: empty stack]\n```",
+          "question_type": "table_completion",
+          "marks": 4,
+          "answer": "One mark per ring (Max 4)\n\n| Operation | Stack |\n| :--: | :--: |\n| 5 | 5 |\n| 2 | 5, 2 |\n| - | 3 |\n| 5 | 3, 5 |\n| 4 | 3, 5, 4 |\n| + | 3, 9 |\n| * | 27 |\n| 9 | 27, 9 |\n| / | 3 |",
+          "answer_conditions": [
+            "One mark per ring (Max 4)",
+            "\n| Operation | Stack |\n| :--: | :--: |\n| 5 | 5 |\n| 2 | 5, 2 |\n| - | 3 |\n| 5 | 3, 5 |\n| 4 | 3, 5, 4 |\n| + | 3, 9 |\n| * | 27 |\n| 9 | 27, 9 |\n| / | 3 |"
+          ]
+        },
+        {
+          "subquestion_label": "b",
+          "question_text": "Explain how a stack can be used to evaluate RPN expressions.",
+          "question_type": "short_answer",
+          "marks": 3,
+          "answer": "One mark per mark point (Max 3)\nMP1 Evaluate the RPN expression from left to right\nMP2 Push each element of the RPN expression onto the stack in order until an operator is reached\nMP3 Pop the last two elements from the stack and apply the operator\nMP4 Push the result of the operation onto the stack\nMP5 Repeat the process until the whole expression is evaluated.",
+          "answer_conditions": [
+            "One mark per mark point (Max 3)",
+            "MP1 Evaluate the RPN expression from left to right",
+            "MP2 Push each element of the RPN expression onto the stack in order until an operator is reached",
+            "MP3 Pop the last two elements from the stack and apply the operator",
+            "MP4 Push the result of the operation onto the stack",
+            "MP5 Repeat the process until the whole expression is evaluated."
+          ]
+        }
+      ]
+    },
+    {
+      "question_number": "10",
+      "subquestions": [
+        {
+          "subquestion_label": "a",
+          "question_text": "A stack is to be set up using the information in the table.\n\n| Identifier | Data type | Description |\n| :--: | :--: | :-- |\n| BasePointer | INTEGER | points to the bottom of the stack |\n| TopPointer | INTEGER | points to the top of the stack |\n| Stack | REAL | 1D array to implement the stack |\n\nA constant, with identifier Capacity, limits the size of the stack to 25 items.\n\nWrite the pseudocode for the required declarations.",
+          "question_type": "code_trace",
+          "marks": 3,
+          "answer": "One mark per mark point (Max 3)\nMP1 Correct constant declaration\nMP2 Two correct variable declarations\nMP3 Correct array declaration\n\nExample answer:\nCONSTANT Capacity $=25$\nDECLARE BasePointer : INTEGER\nDECLARE TopPointer : INTEGER\nDECLARE Stack : ARRAY[1:25] OF REAL",
+          "answer_conditions": [
+            "One mark per mark point (Max 3)",
+            "MP1 Correct constant declaration",
+            "MP2 Two correct variable declarations",
+            "MP3 Correct array declaration",
+            "Example answer:",
+            "CONSTANT Capacity $=25$",
+            "DECLARE BasePointer : INTEGER",
+            "DECLARE TopPointer : INTEGER",
+            "DECLARE Stack : ARRAY[1:25] OF REAL"
+          ]
+        },
+        {
+          "subquestion_label": "b",
+          "question_text": "Complete the pseudocode function Pop () to pop an item from Stack.\n\n// popping an item from the stack\nFUNCTION Pop() $\t$\nDECLARE Item : REAL\nItem $\\leftarrow 0$\n$\t$ BasePointer THEN\n\n$$Item \\leftarrow \\quad \\square$$\n\nTopPointer $\\leftarrow$\nELSE\nOUTPUT \"The stack is empty - error\"\nENDIF\nENDFUNCTION",
+          "question_type": "code_trace",
+          "marks": 5,
+          "answer": "One mark for each correctly completed line (Max 5)\n// popping an item from the stack\nFUNCTION Pop() RETURNS REAL\nDECLARE Item : REAL\nItem $\\leftarrow 0$\nIF TopPointer >= BasePointer THEN\nItem $\\leftarrow$ Stack[TopPointer]\nTopPointer $\\leftarrow$ TopPointer - 1\nELSE\nOUTPUT \"The stack is empty - error\"\nENDIF\nRETURN Item\nENDFUNCTION",
+          "answer_conditions": [
+            "One mark for each correctly completed line (Max 5)",
+            "// popping an item from the stack",
+            "FUNCTION Pop() RETURNS REAL",
+            "DECLARE Item : REAL",
+            "Item $\\leftarrow 0$",
+            "IF TopPointer >= BasePointer THEN",
+            "Item $\\leftarrow$ Stack[TopPointer]",
+            "TopPointer $\\leftarrow$ TopPointer - 1",
+            "ELSE",
+            "OUTPUT \"The stack is empty - error\"",
+            "ENDIF",
+            "RETURN Item",
+            "ENDFUNCTION"
+          ]
+        },
+        {
+          "subquestion_label": "c",
+          "question_text": "Compare and contrast the queue and stack Abstract Data Types (ADT).",
+          "question_type": "short_answer",
+          "marks": 2,
+          "answer": "One mark per mark point (Max 2)\nMP1 A queue is a first in first out / FIFO data structure and a stack is a first in last out / FILO / LIFO data structure // Data is removed from a queue in the order it is received and removed from a stack in the reverse order to which it is received\nMP2 Both ADTs can vary in size / are of indeterminate length\nMP3 Data is popped and pushed (onto/from a stack) at the same end but it is enqueued and dequeued (to/from a queue) at different/opposite ends // a queue has two accessible ends and a stack has only one\nMP4 A stack has only one moveable pointer whereas a queue has two.",
+          "answer_conditions": [
+            "One mark per mark point (Max 2)",
+            "MP1 A queue is a first in first out / FIFO data structure and a stack is a first in last out / FILO / LIFO data structure // Data is removed from a queue in the order it is received and removed from a stack in the reverse order to which it is received",
+            "MP2 Both ADTs can vary in size / are of indeterminate length",
+            "MP3 Data is popped and pushed (onto/from a stack) at the same end but it is enqueued and dequeued (to/from a queue) at different/opposite ends // a queue has two accessible ends and a stack has only one",
+            "MP4 A stack has only one moveable pointer whereas a queue has two."
+          ]
+        }
+      ]
+    },
+    {
+      "question_number": "11",
+      "subquestions": [
+        {
+          "subquestion_label": "a",
+          "question_text": "Anthony is a student who would like to study history and geography.\n\nWrite additional clauses to represent this information.",
+          "question_type": "code_trace",
+          "marks": 3,
+          "answer": "One mark for each correctly completed clause (Max 3)\n$(22)$ student(anthony).\n$(23)$ choice1(anthony, history).\n$(24)$ choice2(anthony, geography).",
+          "answer_conditions": [
+            "One mark for each correctly completed clause (Max 3)",
+            "$(22)$ student(anthony).",
+            "$(23)$ choice1(anthony, history).",
+            "$(24)$ choice2(anthony, geography)."
+          ]
+        },
+        {
+          "subquestion_label": "b",
+          "question_text": "Using the variable $X$, the goal:\nchoice1(X, chemistry)\nreturns\n$\\mathrm{X}=$ teresa, elspeth\n\nWrite the result returned by the goal:\nchoice1(X, mathematics)",
+          "question_type": "short_answer",
+          "marks": 1,
+          "answer": "X = tomaz, pietre, nico",
+          "answer_conditions": [
+            "X = tomaz, pietre, nico"
+          ]
+        },
+        {
+          "subquestion_label": "c",
+          "question_text": "Students must choose two different subjects such that:\n\nN may choose S , if N is a student and S is a subject and N has not chosen S as the first choice.\n\nWrite this as a rule.",
+          "question_type": "short_answer",
+          "marks": 4,
+          "answer": "One mark per mark point (Max 4)\n- student (N)\n- subject (S)\n- choicel (N, S)\n- all logical operators correct with no additional code (see example answers)\n\nExample answers:\nmay_choose_subject (N, S)\nIF student(N) AND subject(S) AND NOT choicel(N, S)\n\nmay_choose_subject (N, S)\nIF NOT choicel(N, S), student(N), subject(S)",
+          "answer_conditions": [
+            "One mark per mark point (Max 4)",
+            "- student (N)",
+            "- subject (S)",
+            "- choicel (N, S)",
+            "- all logical operators correct with no additional code (see example answers)",
+            "Example answers:",
+            "may_choose_subject (N, S)",
+            "IF student(N) AND subject(S) AND NOT choicel(N, S)",
+            "may_choose_subject (N, S)",
+            "IF NOT choicel(N, S), student(N), subject(S)"
+          ]
+        }
+      ]
+    },
+    {
+      "question_number": "12",
+      "subquestions": [
+        {
+          "subquestion_label": "",
+          "question_text": "Explain what is meant by the term artificial neural network.",
+          "question_type": "short_answer",
+          "marks": 4,
+          "answer": "One mark per mark point (Max 4)\nMP1 An artificial neural network is the component of artificial intelligence that is meant to simulate the functioning of a biological brain.\nMP2 Artificial neural networks are a key component of machine learning.\nMP3 They can solve problems that would prove impossible or difficult for humans // Artificial neural networks have self-learning capabilities that enable them to produce better results as more data becomes available\nMP4 Artificial neural networks can be layered (input, hidden and output layers) // Artificial neural networks have many interconnected layers, some / many of which are hidden\nMP5 Weights are assigned between nodes\nMP6 Weights are adjusted through training to give a more accurate result\nMP7 More complex learning capabilities / more accurate results are available with larger numbers of hidden layers",
+          "answer_conditions": [
+            "One mark per mark point (Max 4)",
+            "MP1 An artificial neural network is the component of artificial intelligence that is meant to simulate the functioning of a biological brain.",
+            "MP2 Artificial neural networks are a key component of machine learning.",
+            "MP3 They can solve problems that would prove impossible or difficult for humans // Artificial neural networks have self-learning capabilities that enable them to produce better results as more data becomes available",
+            "MP4 Artificial neural networks can be layered (input, hidden and output layers) // Artificial neural networks have many interconnected layers, some / many of which are hidden",
+            "MP5 Weights are assigned between nodes",
+            "MP6 Weights are adjusted through training to give a more accurate result",
+            "MP7 More complex learning capabilities / more accurate results are available with larger numbers of hidden layers"
+          ]
+        }
+      ]
+    }
+  ]
+}

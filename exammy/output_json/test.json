@@ -1,0 +1,404 @@
+{
+  "subject_code": "9618",
+  "paper_code": "3",
+  "exam_session": "Summer",
+  "exam_year": "2023",
+  "questions": [
+    {
+      "question_number": "1",
+      "subquestions": [
+        {
+          "subquestion_label": "a",
+          "question_text": "Write the normalised floating-point representation of the following binary number using this system: 0101010.111. Show your working.",
+          "question_type": "calculation",
+          "marks": 2,
+          "answer": "Mantissa: 0101010111000, Exponent: 000110",
+          "answer_conditions": [
+            "Mantissa: 0101010111000",
+            "Exponent: 000110"
+          ]
+        },
+        {
+          "subquestion_label": "b",
+          "question_text": "Explain the limitations of the floating-point representation system described.",
+          "question_type": "explanation",
+          "marks": 3,
+          "answer": "The mantissa of the number would need to be 0.101011111001 / 13 bits / digits; it can only store 10 bits / digits; The 3 least significant digits would be truncated; causing a loss of precision",
+          "answer_conditions": [
+            "The mantissa of the number would need to be 0.101011111001 / 13 bits / digits",
+            "it can only store 10 bits / digits",
+            "The 3 least significant digits would be truncated",
+            "causing a loss of precision"
+          ]
+        }
+      ]
+    },
+    {
+      "question_number": "2",
+      "subquestions": [
+        {
+          "subquestion_label": "a",
+          "question_text": "Describe how records are organised and accessed in a sequential file.",
+          "question_type": "explanation",
+          "marks": 3,
+          "answer": "Records are stored in a particular order; the order is determined based on the value in a key field; records are accessed one after the other; records can be found by searching from the beginning of the file, record by record, until the required record is found or key field value is exceeded.",
+          "answer_conditions": [
+            "Records are stored in a particular order",
+            "the order is determined based on the value in a key field",
+            "records are accessed one after the other",
+            "records can be found by searching from the beginning of the file, record by record, until the required record is found or key field value is exceeded."
+          ]
+        },
+        {
+          "subquestion_label": "b",
+          "question_text": "Complete the table to show the remaining hash values.",
+          "question_type": "fill_in_the_blank",
+          "marks": 2,
+          "answer": "1029: 4, 7630: 0",
+          "answer_conditions": [
+            "1029: 4",
+            "7630: 0"
+          ]
+        }
+      ]
+    },
+    {
+      "question_number": "3",
+      "subquestions": [
+        {
+          "subquestion_label": "a",
+          "question_text": "State whether each variable is valid or invalid and give a reason for your choice in each case.",
+          "question_type": "short_answer",
+          "marks": 2,
+          "answer": "9SW - Invalid, Reason - This begins with a digit and a variable must begin with a letter; UWY - Valid, Reason - This begins with a letter and is followed by two other letters.",
+          "answer_conditions": [
+            "9SW - Invalid, Reason - This begins with a digit and a variable must begin with a letter",
+            "UWY - Valid, Reason - This begins with a letter and is followed by two other letters."
+          ]
+        },
+        {
+          "subquestion_label": "b",
+          "question_text": "Complete the Backus-Naur Form (BNF) for <word> and use this to complete the BNF for <variable>.",
+          "question_type": "short_answer",
+          "marks": 3,
+          "answer": "<word> ::= <letter><word><letter>; <variable> ::= <word><word><digit>; Example answers: <word> ::= <letter><word><letter>; <word> ::= <letter><word><; <variable> ::= <word><; <variable> ::= <word><digit><",
+          "answer_conditions": [
+            "<word> ::= <letter><word><letter>",
+            "<word> ::= <letter><word><",
+            "<variable> ::= <word><",
+            "<variable> ::= <word><digit><"
+          ]
+        },
+        {
+          "subquestion_label": "c(i)",
+          "question_text": "State an example of a valid vehicle registration.",
+          "question_type": "short_answer",
+          "marks": 3,
+          "answer": "AC768",
+          "answer_conditions": [
+            "AC768"
+          ]
+        }
+      ]
+    },
+    {
+      "question_number": "4",
+      "subquestions": [
+        {
+          "subquestion_label": "",
+          "question_text": "Draw one line from each Object-Oriented Programming (OOP) term to its most appropriate description.",
+          "question_type": "match",
+          "marks": 4,
+          "answer": "Encapsulation: the process of putting data and methods together as a single unit; Getters: methods used to return the value of a property; Polymorphism: allows methods to be redefined for derived classes; Setters: methods used to update the value of a property; Inheritance: enables the defining of a new class that inherits from a parent class",
+          "answer_conditions": [
+            "Encapsulation: the process of putting data and methods together as a single unit",
+            "Getters: methods used to return the value of a property",
+            "Polymorphism: allows methods to be redefined for derived classes",
+            "Setters: methods used to update the value of a property",
+            "Inheritance: enables the defining of a new class that inherits from a parent class"
+          ]
+        }
+      ]
+    },
+    {
+      "question_number": "5",
+      "subquestions": [
+        {
+          "subquestion_label": "a",
+          "question_text": "Describe the purpose of quantum cryptography.",
+          "question_type": "explanation",
+          "marks": 2,
+          "answer": "To produce a virtually unbreakable encryption system / send virtually un-hackable secure messages ...; using the laws / principles of quantum mechanics / properties of photons; detects eavesdropping ...; because the properties of photons change; to protect security of data transmitted over fibre optic cables; to enable the use of longer keys.",
+          "answer_conditions": [
+            "To produce a virtually unbreakable encryption system / send virtually un-hackable secure messages ...",
+            "using the laws / principles of quantum mechanics / properties of photons",
+            "detects eavesdropping ...",
+            "because the properties of photons change",
+            "to protect security of data transmitted over fibre optic cables",
+            "to enable the use of longer keys."
+          ]
+        },
+        {
+          "subquestion_label": "b",
+          "question_text": "Explain the differences between symmetric and asymmetric cryptography when encrypting and decrypting data.",
+          "question_type": "explanation",
+          "marks": 3,
+          "answer": "Symmetric cryptography uses a single key to encrypt and decrypt messages, Asymmetric cryptography uses two.; The symmetric key is shared, whereas with asymmetric, only the public key is shared (and the private key isn't).; the risk of compromise is higher with symmetric encryption and asymmetric encryption is more secure.; Symmetric cryptography is a simple process that can be carried out quickly, but asymmetric is much more complex, so slower.; The length of the keys in symmetric encryption are (usually) shorter than those for asymmetric (128/256 bits v 2048 bits).",
+          "answer_conditions": [
+            "Symmetric cryptography uses a single key to encrypt and decrypt messages, Asymmetric cryptography uses two.",
+            "The symmetric key is shared, whereas with asymmetric, only the public key is shared (and the private key isn't).",
+            "the risk of compromise is higher with symmetric encryption and asymmetric encryption is more secure.",
+            "Symmetric cryptography is a simple process that can be carried out quickly, but asymmetric is much more complex, so slower.",
+            "The length of the keys in symmetric encryption are (usually) shorter than those for asymmetric (128/256 bits v 2048 bits)."
+          ]
+        }
+      ]
+    },
+    {
+      "question_number": "6",
+      "subquestions": [
+        {
+          "subquestion_label": "a",
+          "question_text": "Write pseudocode statements to declare the composite data type, TAppointments, to hold data about patients for a dental clinic.",
+          "question_type": "short_answer",
+          "marks": 4,
+          "answer": "TYPE TAppointments; DECLARE Name : STRING; DECLARE DateOfBirth : DATE; DECLARE Telephone : STRING; DECLARE LastAppointment : DATE; DECLARE NextAppointment : DATE; DECLARE TreatmentsComplete : BOOLEAN; ENDTYPE",
+          "answer_conditions": [
+            "TYPE TAppointments",
+            "DECLARE Name : STRING",
+            "DECLARE DateOfBirth : DATE",
+            "DECLARE Telephone : STRING",
+            "DECLARE LastAppointment : DATE",
+            "DECLARE NextAppointment : DATE",
+            "DECLARE TreatmentsComplete : BOOLEAN",
+            "ENDTYPE"
+          ]
+        },
+        {
+          "subquestion_label": "b",
+          "question_text": "Complete this file handling pseudocode:",
+          "question_type": "short_answer",
+          "marks": 5,
+          "answer": "DECLARE DentalRecord : ARRAY[1:250] OF TAppointments; DECLARE DentalFile : STRING; DECLARE Count : INTEGER; DentalFile \u2190 \"DentalFile.dat\"; OUTPUT \"The file \", DentalFile, \" contains these records:\"; OPENFILE DentalFile FOR RANDOM; Count \u2190 1; REPEAT; SEEK DentalFile, Count; GETRECORD DentalFile, DentalRecord[Count]; OUTPUT DentalRecord[Count]; Count \u2190 Count + 1; UNTIL EOF (DentalFile); CLOSEFILE DentalFile",
+          "answer_conditions": [
+            "DECLARE DentalRecord : ARRAY[1:250] OF TAppointments",
+            "DECLARE DentalFile : STRING",
+            "DECLARE Count : INTEGER",
+            "DentalFile \u2190 \"DentalFile.dat\"",
+            "OUTPUT \"The file \", DentalFile, \" contains these records:\"",
+            "OPENFILE DentalFile FOR RANDOM",
+            "Count \u2190 1",
+            "REPEAT",
+            "SEEK DentalFile, Count",
+            "GETRECORD DentalFile, DentalRecord[Count]",
+            "OUTPUT DentalRecord[Count]",
+            "Count \u2190 Count + 1",
+            "UNTIL EOF (DentalFile)",
+            "CLOSEFILE DentalFile"
+          ]
+        }
+      ]
+    },
+    {
+      "question_number": "7",
+      "subquestions": [
+        {
+          "subquestion_label": "a",
+          "question_text": "State two examples of where it would be appropriate to use packet switching.",
+          "question_type": "short_answer",
+          "marks": 2,
+          "answer": "Packet switching is most commonly used on data networks such as the internet to send large data files that don't need to be live streamed; Packet switching is used when it is necessary to be able to overcome failed/faulty lines by rerouting.",
+          "answer_conditions": [
+            "Packet switching is most commonly used on data networks such as the internet to send large data files that don't need to be live streamed",
+            "Packet switching is used when it is necessary to be able to overcome failed/faulty lines by rerouting."
+          ]
+        },
+        {
+          "subquestion_label": "b",
+          "question_text": "Give four differences between circuit switching and packet switching.",
+          "question_type": "short_answer",
+          "marks": 4,
+          "answer": "Circuit switching uses a dedicated channel to make communication, whereas packet switching forms data into packets to transmit over a digital network.; The dedicated path for circuit switching must be established before the transfer of data can commence, which is not the case with packet switching (as it doesn't require a dedicated path).; Data in packet switching is split into packets, in circuit switching the message remains intact.; All of the transmission in circuit switching follows the same path whereas different packets in packet switching can take different routes.",
+          "answer_conditions": [
+            "Circuit switching uses a dedicated channel to make communication, whereas packet switching forms data into packets to transmit over a digital network.",
+            "The dedicated path for circuit switching must be established before the transfer of data can commence, which is not the case with packet switching (as it doesn't require a dedicated path).",
+            "Data in packet switching is split into packets, in circuit switching the message remains intact.",
+            "All of the transmission in circuit switching follows the same path whereas different packets in packet switching can take different routes."
+          ]
+        }
+      ]
+    },
+    {
+      "question_number": "8",
+      "subquestions": [
+        {
+          "subquestion_label": "a",
+          "question_text": "Describe the use of pipelining in Reduced Instruction Set Computers (RISC).",
+          "question_type": "explanation",
+          "marks": 2,
+          "answer": "Pipelining allows several instructions to be processed simultaneously / concurrently.; therefore, increasing the CPU instruction throughput / the number of instructions completed per unit of time.; Each instruction stage / subtask is completed during one clock cycle; No two instructions can execute their same stage of instruction / subtask at the same clock cycle.; e.g., while one instruction is being decoded, the next instruction can be fetched, etc.",
+          "answer_conditions": [
+            "Pipelining allows several instructions to be processed simultaneously / concurrently.",
+            "therefore, increasing the CPU instruction throughput / the number of instructions completed per unit of time.",
+            "Each instruction stage / subtask is completed during one clock cycle",
+            "No two instructions can execute their same stage of instruction / subtask at the same clock cycle.",
+            "e.g., while one instruction is being decoded, the next instruction can be fetched, etc."
+          ]
+        },
+        {
+          "subquestion_label": "b",
+          "question_text": "Complete the table to show how a program consisting of six instructions would be completed using pipelining.",
+          "question_type": "table_completion",
+          "marks": 4,
+          "answer": "First stage of first instruction in first clock cycle; First instruction successfully completed over five clock cycles; Remaining instructions completed over ten clock cycles ...; ... with no extra instruction sections added on any row.",
+          "answer_conditions": [
+            "First stage of first instruction in first clock cycle",
+            "First instruction successfully completed over five clock cycles",
+            "Remaining instructions completed over ten clock cycles ...",
+            "... with no extra instruction sections added on any row."
+          ]
+        }
+      ]
+    },
+    {
+      "question_number": "9",
+      "subquestions": [
+        {
+          "subquestion_label": "a",
+          "question_text": "Write the Boolean logic expression that corresponds to the given truth table as the sum-of-products.",
+          "question_type": "short_answer",
+          "marks": 3,
+          "answer": "(Z=) ¬A¬B¬C¬D+¬A¬B¬CD+¬A¬BC¬D+¬A¬BCD+¬ABC¬D+¬ABCD",
+          "answer_conditions": [
+            "(Z=) ¬A¬B¬C¬D+¬A¬B¬CD+¬A¬BC¬D+¬A¬BCD+¬ABC¬D+¬ABCD"
+          ]
+        },
+        {
+          "subquestion_label": "b",
+          "question_text": "Complete the Karnaugh map (K-map) for the given truth table.",
+          "question_type": "table_completion",
+          "marks": 2,
+          "answer": "",
+          "answer_conditions": []
+        },
+        {
+          "subquestion_label": "c",
+          "question_text": "Draw loop(s) around appropriate group(s) in the K-map to produce an optimal sum-of-products.",
+          "question_type": "short_answer",
+          "marks": 2,
+          "answer": "",
+          "answer_conditions": []
+        },
+        {
+          "subquestion_label": "d",
+          "question_text": "Write the Boolean logic expression from your answer to part (c) as a simplified sum-of-products.",
+          "question_type": "short_answer",
+          "marks": 2,
+          "answer": "(Z=) ¬A¬B+¬AC",
+          "answer_conditions": [
+            "(Z=) ¬A¬B+¬AC"
+          ]
+        },
+        {
+          "subquestion_label": "e",
+          "question_text": "Use Boolean algebra to give your answer to part (d) in its simplest form.",
+          "question_type": "short_answer",
+          "marks": 1,
+          "answer": "(Z=) ¬A(¬B+C)",
+          "answer_conditions": [
+            "(Z=) ¬A(¬B+C)"
+          ]
+        }
+      ]
+    },
+    {
+      "question_number": "10",
+      "subquestions": [
+        {
+          "subquestion_label": "a",
+          "question_text": "State one category of machine learning.",
+          "question_type": "mcq",
+          "marks": 1,
+          "answer": "Supervised (learning); Unsupervised (learning); Reinforcement (learning); Deep (learning)",
+          "answer_conditions": [
+            "Supervised (learning)",
+            "Unsupervised (learning)",
+            "Reinforcement (learning)",
+            "Deep (learning)"
+          ]
+        },
+        {
+          "subquestion_label": "b",
+          "question_text": "Calculate the path that takes the shortest time to travel from the Begin node to the End node, using the A* algorithm.",
+          "question_type": "calculation",
+          "marks": 5,
+          "answer": "Begin => C => G => F => End",
+          "answer_conditions": [
+            "Begin => C => G => F => End"
+          ]
+        }
+      ]
+    },
+    {
+      "question_number": "11",
+      "subquestions": [
+        {
+          "subquestion_label": "a(i)",
+          "question_text": "Insert the identifiers to complete this table.",
+          "question_type": "table_completion",
+          "marks": 2,
+          "answer": "Queue: An array to store the contents of the queue.; RearPointer: Points to the last term of the queue.; Length: Indicates the number of items in the queue.; FrontPointer: Points to the first term of the queue.",
+          "answer_conditions": [
+            "Queue: An array to store the contents of the queue.",
+            "RearPointer: Points to the last term of the queue.",
+            "Length: Indicates the number of items in the queue.",
+            "FrontPointer: Points to the first term of the queue."
+          ]
+        },
+        {
+          "subquestion_label": "a(ii)",
+          "question_text": "Complete the given pseudocode.",
+          "question_type": "short_answer",
+          "marks": 5,
+          "answer": "CONSTANT MaxLength = 50; DECLARE FrontPointer : INTEGER; DECLARE RearPointer : INTEGER; DECLARE Length : INTEGER; DECLARE Queue : ARRAY[0:MaxLength - 1] OF STRING; // Initialisation of queue; PROCEDURE Initialise; FrontPointer \u2190-1; RearPointer \u2190-1; Length \u2190 0; ENDPROCEDURE; // Adding a new item to the queue; PROCEDURE Enqueue(NewItem : STRING); IF Length < MaxLength THEN // IF Length <= MaxLength - 1 THEN; RearPointer \u2190 RearPointer +1; IF RearPointer > MaxLength - 1 THEN; RearPointer \u2190 0; ENDIF; Queue[RearPointer] \u2190 NewItem; Length \u2190 Length +1; ENDIF; ENDPROCEDURE",
+          "answer_conditions": [
+            "CONSTANT MaxLength = 50",
+            "DECLARE FrontPointer : INTEGER",
+            "DECLARE RearPointer : INTEGER",
+            "DECLARE Length : INTEGER",
+            "DECLARE Queue : ARRAY[0:MaxLength - 1] OF STRING",
+            "// Initialisation of queue",
+            "PROCEDURE Initialise",
+            "FrontPointer \u2190-1",
+            "RearPointer \u2190-1",
+            "Length \u2190 0",
+            "ENDPROCEDURE",
+            "// Adding a new item to the queue",
+            "PROCEDURE Enqueue(NewItem : STRING)",
+            "IF Length < MaxLength THEN // IF Length <= MaxLength - 1 THEN",
+            "RearPointer \u2190 RearPointer +1",
+            "IF RearPointer > MaxLength - 1 THEN",
+            "RearPointer \u2190 0",
+            "ENDIF",
+            "Queue[RearPointer] \u2190 NewItem",
+            "Length \u2190 Length +1",
+            "ENDIF",
+            "ENDPROCEDURE"
+          ]
+        },
+        {
+          "subquestion_label": "b",
+          "question_text": "Explain the reasons why a queue ADT works better than a stack ADT in organising print jobs.",
+          "question_type": "explanation",
+          "marks": 3,
+          "answer": "Print jobs are expected to be actioned by the printer in the order they are received; because the printer queue is a queue, the first job to be sent to the printer would be the first job printed.; If the printer queue was on a stack, the first job the printer received would not be printed until all the other jobs have been printed.",
+          "answer_conditions": [
+            "Print jobs are expected to be actioned by the printer in the order they are received",
+            "because the printer queue is a queue, the first job to be sent to the printer would be the first job printed.",
+            "If the printer queue was on a stack, the first job the printer received would not be printed until all the other jobs have been printed."
+          ]
+        }
+      ]
+    }
+  ]
+}

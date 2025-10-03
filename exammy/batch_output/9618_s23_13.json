@@ -1,0 +1,252 @@
+{
+  "subject_code": "9608",
+  "paper_code": "11",
+  "exam_session": "Summer",
+  "exam_year": "2023",
+  "context": "no insert provided",
+  "questions": [
+    {
+      "question_number": "1",
+      "subquestions": [
+        {
+          "subquestion_label": "a",
+          "question_text": "Write the logic expression for this truth table:\n\n| $\\mathbf{A}$ | $\\mathbf{B}$ | $\\mathbf{C}$ | $\\mathbf{X}$ |\n| :--: | :--: | :--: | :--: |\n| 0 | 0 | 0 | 1 |\n| 0 | 0 | 1 | 1 |\n| 0 | 1 | 0 | 0 |\n| 0 | 1 | 1 | 0 |\n| 1 | 0 | 0 | 1 |\n| 1 | 0 | 1 | 1 |\n| 1 | 1 | 0 | 0 |\n| 1 | 1 | 1 | 0 |",
+          "question_type": "short_answer",
+          "marks": 1,
+          "answer": "NOT B",
+          "answer_conditions": ["The answer should identify the correct logic gate or expression corresponding to the given truth table."]
+        },
+        {
+          "subquestion_label": "b",
+          "question_text": "Complete the truth table for this logic circuit:\n\n| $\\mathbf{A}$ | $\\mathbf{B}$ | $\\mathbf{C}$ | Working space | $\\mathbf{X}$ |\n| :--: | :--: | :--: | :--: | :--: |\n| 0 | 0 | 0 |  |  |\n| 0 | 0 | 1 |  |  |\n| 0 | 1 | 0 |  |  |\n| 0 | 1 | 1 |  |  |\n| 1 | 0 | 0 |  |  |\n| 1 | 0 | 1 |  |  |\n| 1 | 1 | 0 |  |  |\n| 1 | 1 | 1 |  |  |",
+          "question_type": "table_completion",
+          "marks": 2,
+          "answer": "| A | B | C | X |\n| :--: | :--: | :--: | :--: |\n| 0 | 0 | 0 | 1 |\n| 0 | 0 | 1 | 0 |\n| 0 | 1 | 0 | 1 |\n| 0 | 1 | 1 | 0 |\n| 1 | 0 | 0 | 1 |\n| 1 | 0 | 1 | 0 |\n| 1 | 1 | 0 | 0 |\n| 1 | 1 | 1 | 1 |",
+          "answer_conditions": ["1 mark for first 4 rows correct; 1 mark for second 4 rows correct"]
+        }
+      ]
+    },
+    {
+      "question_number": "2",
+      "subquestions": [
+        {
+          "subquestion_label": "a",
+          "question_text": "Identify two differences between a WAN and a LAN (local area network).\n\n1 \u3000\u3000\u3000\n\n2 \u3000\u3000\u3000",
+          "question_type": "short_answer",
+          "marks": 2,
+          "answer": "",
+          "answer_conditions": []
+        },
+        {
+          "subquestion_label": "b(i)",
+          "question_text": "Describe what is meant by a mesh topology.",
+          "question_type": "short_answer",
+          "marks": 1,
+          "answer": "A mesh topology is a network arrangement where each node is connected to every other node in the network, creating a web-like structure.",
+          "answer_conditions": []
+        },
+        {
+          "subquestion_label": "b(ii)",
+          "question_text": "Give two advantages of using a mesh topology instead of a bus topology.",
+          "question_type": "short_answer",
+          "marks": 2,
+          "answer": "- If one line goes down there are more routes available\n- Improved security as not using one main line",
+          "answer_conditions": ["1 mark each to max 2"]
+        },
+        {
+          "subquestion_label": "c",
+          "question_text": "The computers in one room are set up as thin-clients in a client-server model.\n\nDescribe the role of the different computers in this model.",
+          "question_type": "short_answer",
+          "marks": 2,
+          "answer": "- Server performs all processes required by the task and/or data storage\n- Clients only sends requests to the server and displays the returned results",
+          "answer_conditions": ["1 mark each to max 2"]
+        },
+        {
+          "subquestion_label": "d",
+          "question_text": "Students can connect their devices to the university network using cables or a wireless connection.\n\nExplain the benefits to the students of allowing them to use both wired and wireless connections.",
+          "question_type": "short_answer",
+          "marks": 4,
+          "answer": "- Some students might only have one sort of connection on their device\n- Wired provides better performance for the student's device\n- There will be less interference if students connect via a cable\n- Students can transmit private/confidential data/work securely",
+          "answer_conditions": ["1 mark each to max 4"]
+        },
+        {
+          "subquestion_label": "e",
+          "question_text": "One site has split the network into several subnetworks.\n\nAn IP address in a subnetwork is divided into two parts.\n\nIdentify and describe the two parts of an IP address in a subnetwork.",
+          "question_type": "short_answer",
+          "marks": 3,
+          "answer": "- IP address is made up of a network ID and a host ID\n- Each device in a subnetwork has the same network ID\n- Every device in each subnetwork has a different host ID but the same network ID",
+          "answer_conditions": ["1 mark for identification, 1 mark each to max 2 for description"]
+        }
+      ]
+    },
+    {
+      "question_number": "3",
+      "subquestions": [
+        {
+          "subquestion_label": "a",
+          "question_text": "The mobile telephone has a touchscreen. There are different types of touchscreen.\n\nComplete the description of the principal operation of touchscreens.\n\nA \u3000 touchscreen has two layers. When the user touches the screen, the layers touch and a \u3000 is completed.\n\nA \u3000 touchscreen has several layers. When the top layer is touched, there is a \u3000 in the electric current.\n\nA microprocessor identifies the \u3000 of the touch.",
+          "question_type": "short_answer",
+          "marks": 5,
+          "answer": "- Resistive\n- Circuit\n- Capacitive\n- Change\n- Coordinates\n\nA resistive touchscreen has two layers. When the user touches the screen, the layers touch and a circuit is completed.\n\nA capacitive touchscreen has several layers. When the top layer is touched, there is a change in the electric current.\n\nA microprocessor identifies the coordinates of the touch.",
+          "answer_conditions": ["1 mark for each term"]
+        },
+        {
+          "subquestion_label": "b",
+          "question_text": "The mobile telephone uses a built-in digital camera to record the video.\n\nThe digital camera automatically focuses on the faces of people.\n\nExplain how Artificial Intelligence (AI) is used by the camera to automatically focus on the faces of people.",
+          "question_type": "short_answer",
+          "marks": 3,
+          "answer": "- Scans the scene in real time\n- Identifies if there are faces in the image\n- Uses facial recognition",
+          "answer_conditions": ["1 mark each to max 3"]
+        },
+        {
+          "subquestion_label": "c(i)",
+          "question_text": "Describe how sound is represented in a computer.",
+          "question_type": "short_answer",
+          "marks": 3,
+          "answer": "- The amplitude is recorded a set number of times a second\n- Each amplitude is given a corresponding binary number\n- The binary number is saved in sequence",
+          "answer_conditions": ["1 mark each"]
+        },
+        {
+          "subquestion_label": "c(ii)",
+          "question_text": "A second video is recorded. The sound in the second video needs to be more precise.\n\nExplain the reasons why increasing the sampling rate and the sampling resolution will improve the precision of the second recording.\n\nSampling rate\n\nSampling resolution",
+          "question_type": "short_answer",
+          "marks": 4,
+          "answer": "Sampling rate\n- There are smaller 'gaps' in the sound wave\n- Digital waveform is closer to the analogue waveform\n\nSampling resolution\n- There are more bits per sample\n- Each binary amplitude is closer to the analogue amplitude",
+          "answer_conditions": ["1 mark each; max 2 for rate and max 2 for resolution"]
+        }
+      ]
+    },
+    {
+      "question_number": "4",
+      "subquestions": [
+        {
+          "subquestion_label": "a",
+          "question_text": "Describe two ways in which a relational database addresses the limitations of a file-based approach.",
+          "question_type": "short_answer",
+          "marks": 4,
+          "answer": "- Reduces data redundancy\n- Reduces program-data dependency",
+          "answer_conditions": ["1 mark for each bullet point. Mark in pairs. Max 2 for each description."]
+        },
+        {
+          "subquestion_label": "b",
+          "question_text": "Complete the table by writing the missing term or description for each database feature.\n\n| Term | Description |\n| :-- | :-- |\n|  | An object that data is stored about. |\n|  |  |\n|  | \u3000 |\n|  | \u3000 |\n|  | \u3000 |\n| Secondary key |  |\n|  | \u3000 |\n|  | \u3000 |\n\nA field in one table that is linked to a primary key in another table.",
+          "question_type": "table_completion",
+          "marks": 4,
+          "answer": "| Term | Description |\n| :-- | :-- |\n| Entity | An object that data is stored about. |\n| Tuple | A row of data in a table about one instance of an object. |\n| Secondary key | An additional/alternative key used as well as the primary key to locate specific data |\n| Foreign key | A field in one table that is linked to a primary key in another table.",
+          "answer_conditions": ["1 mark each"]
+        },
+        {
+          "subquestion_label": "c",
+          "question_text": "The car rental database is not normalised. The current database design is:\n\nBOOKING (CarRegistration, StartDate, EndDate, CarModel, CarColour, CustomerFirstName)\n\nCUSTOMER (CustomerFirstName, CustomerLastName, EmailAddress, TelephoneNumber)\n\nWrite a normalised database design for this database. All tables must be in Third Normal Form (3NF). Use the field names given and underline the primary key fields.",
+          "question_type": "short_answer",
+          "marks": 4,
+          "answer": "BOOKING (BookingID, CarRegistration, CustomerID, StartDate, EndDate)\n\nCAR (CarRegistration, CarModel, CarColour)\n\nCUSTOMER (CustomerID, CustomerFirstName, CustomerLastName, EmailAddress, TelephoneNumber)",
+          "answer_conditions": ["1 mark each\n- Only 3 tables with appropriate identifiers\n- Appropriate Primary key in each table underlined\n- Booking table includes Primary key from car and Primary key from customer as Foreign keys\n- All original fields are in correct tables"]
+        },
+        {
+          "subquestion_label": "d(i)",
+          "question_text": "The car registration number must be: 1 letter, followed by 3 numbers, followed by 2 letters.\n\nFor example, A123AA is valid but A12AA is invalid. One way that a registration number can be validated is by using a presence check to make sure the registration number has been entered.\n\nDescribe two other ways that the car registration number can be validated.",
+          "question_type": "short_answer",
+          "marks": 2,
+          "answer": "- Length check: the registration number must be 6 characters long\n- Format check: the registration number must be in the format letter-digit-digit-digit-letter-letter",
+          "answer_conditions": ["1 mark each to max 2"]
+        },
+        {
+          "subquestion_label": "d(ii)",
+          "question_text": "Describe two ways that the car registration number can be verified when it is entered into the database.",
+          "question_type": "short_answer",
+          "marks": 2,
+          "answer": "- Visual check: Manually compare the registration number entered with the source document\n- Double entry: Enter the registration number twice and the computer compares to check they are the same",
+          "answer_conditions": ["1 mark each"]
+        },
+        {
+          "subquestion_label": "d(iii)",
+          "question_text": "State why the car registration number might be incorrect even after it has been validated and verified.",
+          "question_type": "short_answer",
+          "marks": 1,
+          "answer": "The registration number on the original document might be in the correct format but may be the incorrect registration number for that car.",
+          "answer_conditions": []
+        }
+      ]
+    },
+    {
+      "question_number": "5",
+      "subquestions": [
+        {
+          "subquestion_label": "a(i)",
+          "question_text": "Explain the reasons why the programmer uses an interpreter while writing the program code.",
+          "question_type": "short_answer",
+          "marks": 2,
+          "answer": "- Programmer can test sections of the code without every part working\n- Programmer can debug in real time",
+          "answer_conditions": ["1 mark each to max 2"]
+        },
+        {
+          "subquestion_label": "a(ii)",
+          "question_text": "Explain the reasons why the programmer uses a compiler when the program has been written.",
+          "question_type": "short_answer",
+          "marks": 3,
+          "answer": "- The compiler produces an executable file\n- The game can be compiled for different hardware specifications\n- The program can be tested multiple times without having to retranslate each time",
+          "answer_conditions": ["1 mark each to max 3"]
+        },
+        {
+          "subquestion_label": "b",
+          "question_text": "The programmer needs to publish the game under a software licence so that it can be sold to the public.\n\nIdentify the most appropriate type of software licence for the game and justify your choice.\n\nLicence\n\nJustification",
+          "question_type": "short_answer",
+          "marks": 4,
+          "answer": "- Commercial software licence\n\n- User has to pay for the product so the programmer can gain an income\n- Enables the program to be copyrighted\n- The programmer retains control over product",
+          "answer_conditions": ["1 mark for appropriate licence; 1 mark for each point to max 3"]
+        }
+      ]
+    },
+    {
+      "question_number": "6",
+      "subquestions": [
+        {
+          "subquestion_label": "a",
+          "question_text": "Explain how a digital signature is used to authenticate a digital document during transmission over a network.",
+          "question_type": "short_answer",
+          "marks": 5,
+          "answer": "- The sender hashes the document to produce a digest\n- The sender encrypts the digest to create the digital signature\n- The message and the signature are sent to the receiver\n- The receiver decrypts the signature to reproduce the digest\n- The receiver uses the same hashing algorithm on the document received to produce a second digest\n- The receiver compares this digest with the one from the digital signature\n- If both of the receiver's digests are the same the document is authentic",
+          "answer_conditions": ["1 mark each to max 5"]
+        },
+        {
+          "subquestion_label": "b",
+          "question_text": "Complete the table by identifying and describing two types of software that can be installed on a computer to prevent threats over a network.\n\n| Type of software | Description |\n| :-- | :-- |\n|  |  |\n|  |  |",
+          "question_type": "table_completion",
+          "marks": 2,
+          "answer": "| Type of software | Description |\n| :-- | :-- |\n| Antivirus | scans the computer for viruses and checks against a stored database of viruses, that needs to be updated regularly and then deletes / quarantines them |\n| Firewall | monitors incoming and outgoing traffic and compares it to criteria that are set by the user such as through a whitelist/blacklist/identifying allowed / blocked IP addresses",
+          "answer_conditions": ["1 mark each for identification and appropriate description of 2 pieces of software, max 2"]
+        }
+      ]
+    },
+    {
+      "question_number": "7",
+      "subquestions": [
+        {
+          "subquestion_label": "a",
+          "question_text": "Draw one line from each description to its matching denary value.\n\nDescription\n\nThe smallest integer that can be represented in 8-bit two's complement.\n\nThe largest integer that can be represented in 8-bit two's complement.\n\nThe largest unsigned integer that can be represented in 8 bits.\n\nDenary value\n\n$-127$\n\n127\n\n$-255$\n\n$-128$\n\n$-256$\n\n256\n\n128\n\n255",
+          "question_type": "short_answer",
+          "marks": 3,
+          "answer": "The smallest integer that can be represented in 8-bit two's complement. $-128$\n\nThe largest integer that can be represented in 8-bit two's complement. $127$\n\nThe largest unsigned integer that can be represented in 8 bits. $255$",
+          "answer_conditions": ["1 mark for each correct line"]
+        },
+        {
+          "subquestion_label": "b",
+          "question_text": "The computer has a Control Unit (CU), system clock and control bus.\n\nExplain how the CU, system clock and control bus operate to transfer data between the components of the computer system.",
+          "question_type": "short_answer",
+          "marks": 4,
+          "answer": "- The system clock gives out timing signals which are sent on the control bus to synchronise the other system components\n- The Control Unit initiates data transfer by generating signals that are sent on the control bus to other components",
+          "answer_conditions": ["1 mark each to max 4"]
+        },
+        {
+          "subquestion_label": "c",
+          "question_text": "Complete the table by writing the register transfer notation for each stage of the Fetch-Execute (F-E) cycle given in the table.\n\n| Stage description | Register transfer notation |\n| :-- | :-- |\n| The Program Counter (PC) is incremented |\n| The data in the address stored in the Memory Address Register (MAR) is copied to the Memory Data Register (MDR) |",
+          "question_type": "short_answer",
+          "marks": 2,
+          "answer": "| Stage description | Register transfer notation |\n| :-- | :-- |\n| The Program Counter (PC) is incremented | $\\mathrm{PC} \\leftarrow[\\mathrm{PC}]+1$ |\n| The data in the address stored in the Memory Address Register (MAR) is copied to the Memory Data Register (MDR) | $\\mathrm{MDR} \\leftarrow[[$ MAR $]]$ |",
+          "answer_conditions": ["1 mark for each Register transfer notation"]
+        }
+      ]
+    }
+  ]
+}

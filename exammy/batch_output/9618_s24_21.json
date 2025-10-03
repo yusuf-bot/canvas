@@ -1,0 +1,274 @@
+{
+  "subject_code": "9618",
+  "paper_code": "9618/21",
+  "exam_session": "Summer",
+  "exam_year": "2024",
+  "context": "COMPUTER SCIENCE 9618/21 Paper 2 Fundamental Problem-solving and Programming Skills May/June 2024 2 hours INSERT This insert contains all the resources referred to in the questions. You may annotate this insert and use the blank spaces for planning. Do not write your answers on the insert. This document has 4 pages. DC (PQ) 329349/3 © UCLES 2024 Turn over An error will be generated if a function call is not properly formed or if the parameters are of an incorrect type or an incorrect value. String and character functions A string of length 1 may be considered to be either of type CHAR or STRING A CHAR may be assigned to, or concatenated with, a STRING A STRING of length greater than 1 cannot be assigned to a CHAR LEFT(ThisString : STRING, x : INTEGER) RETURNS STRING returns leftmost x characters from ThisString Example: LEFT(\"ABCDEFGH\", 3) returns \"ABC\" RIGHT(ThisString : STRING, x : INTEGER) RETURNS STRING returns rightmost x characters from ThisString Example: RIGHT (\"ABCDEFGH\", 3) returns \"FGH\" MID(ThisString : STRING, x : INTEGER, y : INTEGER) RETURNS STRING returns a string of length y starting at position x from ThisString Example: MID (\"ABCDEFGH\", 2, 3) returns string \"BCD\" LENGTH (ThisString : STRING) RETURNS INTEGER returns the integer value representing the length of ThisString Example: LENGTH (\"Happy Days\") returns 10 TO_UPPER(x : <datatype>) RETURNS <datatype> <datatype> may be CHAR or STRING returns an object of type <datatype> formed by converting all characters of x to upper case. Examples: TO_UPPER(\"Error 803\") returns \"ERROR 803\" TO_UPPER('a') returns 'A' TO_LOWER(x : <datatype>) RETURNS <datatype> <datatype> may be CHAR or STRING returns an object of type <datatype> formed by converting all characters of x to lower case. Examples: TO_LOWER(\"JIM 803\") returns \"jim 803\" TO_LOWER('W') returns 'w' NUM_TO_STR(x : <datatype1>) RETURNS <datatype2> returns a string representation of a numeric value. <datatype1> may be REAL or INTEGER, <datatype2> may be CHAR or STRING Example: NUM_TO_STR(87.5) returns \"87.5\" If x is a negative value, the returned value will be a string beginning with the ' - ' character. STR_TO_NUM (x : <datatype1>) RETURNS <datatype2> returns a numeric representation of a string. <datatype1> may be CHAR or STRING, <datatype2> may be REAL or INTEGER Example: STR_TO_NUM(\"23.45\") returns 23.45 If the string begins with the ' - ' character, the returned value will be negative. IS_NUM(ThisString : <datatype>) RETURNS BOOLEAN returns TRUE if ThisString represents a valid numeric value. <datatype> may be CHAR or STRING Example: IS_NUM(\"-12.36\") returns TRUE ASC(ThisChar : CHAR) RETURNS INTEGER returns an integer value (the ASCII value) of character ThisChar Example: ASC('A') returns 65, ASC('B') returns 66 CHR (x : INTEGER) RETURNS CHAR returns the character whose integer value (the ASCII value) is $x$ Example: CHR (65) returns 'A', CHR (66) returns 'B' Numeric functions INT (x : REAL) RETURNS INTEGER returns the integer part of $x$ Example: INT (27.5415) returns 27 RAND (x : INTEGER) RETURNS REAL returns a real number in the range 0 to $x$ (not inclusive of $x$ ). Example: RAND (87) could return 35.430729 Date functions Date format is assumed to be DD/MM/YYYY unless otherwise stated. DAY(ThisDate : DATE) RETURNS INTEGER returns the day number from ThisDate Example: DAY(04/10/2003) returns 4 MONTH(ThisDate : DATE) RETURNS INTEGER returns the month number from ThisDate Example: MONTH(04/10/2003) returns 10 YEAR(ThisDate : DATE) RETURNS INTEGER returns the year number from ThisDate Example: YEAR(04/10/2003) returns 2003 DAYINDEX(ThisDate : DATE) RETURNS INTEGER returns the day index number from ThisDate where Sunday = 1, Monday = 2 etc. Example: DAYINDEX(09/05/2023) returns 3 SETDATE (Day, Month, Year : INTEGER) RETURNS DATE returns a value of type DATE with the value of <Day>/<Month>/<Year> Example: SETDATE(26, 10, 2003) returns a date corresponding to 26/10/2003 TODAY() RETURNS DATE returns a value of type DATE corresponding to the current date. Text file functions EOF (FileName : STRING) RETURNS BOOLEAN returns TRUE if there are no more lines to be read from file FileName will generate an error if the file is not already open in READ mode. Operators An error will be generated if an operator is used with a value or values of an incorrect type. $\\&$ concatenates (joins) two strings. Example: \"Summer\" \\& \" \" \\& \"Pudding\" evaluates to \"Summer Pudding\" may also be used to concatenate a CHAR with a STRING AND performs a logical AND on two Boolean values. Example: TRUE AND FALSE evaluates to FALSE OR performs a logical OR on two Boolean values. Example: TRUE OR FALSE evaluates to TRUE NOT performs a logical NOT on a Boolean value. Example: NOT TRUE evaluates to FALSE MOD finds the remainder when one number is divided by another. Example: 10 MOD 3 evaluates to 1 DIV finds the quotient when one number is divided by another. Example 10 DIV 3 evaluates to 3 Comparison operators $=$ used to compare two items of the same type. evaluates to TRUE if the condition is true, otherwise evaluates to FALSE $>$ Notes: - may be used to compare types REAL and INTEGER - may be used to compare types CHAR and STRING - case sensitive when used to compare types CHAR and/or STRING - cannot be used to compare two records $<=$ Examples: - \"Program\" = \"program\" evaluates to FALSE - Count $=4$ evaluates to TRUE when Count contains the value 4 Permission to reproduce items where third-party owned material protected by copyright is included has been sought and cleared where possible. Every reasonable effort has been made by the publisher (UCLES) to trace copyright holders, but if any items requiring clearance have unwittingly been included, the publisher will be pleased to make amends at the earliest possible opportunity. To avoid the issue of disclosure of answer-related information to candidates, all copyright acknowledgements are reproduced online in the Cambridge Assessment International Education Copyright Acknowledgements Booklet. This is produced for each series of examinations and is freely available to download at www.cambridgeinternational.org after the live examination series. Cambridge Assessment International Education is part of Cambridge Assessment. Cambridge Assessment is the brand name of the University of Cambridge Local Examinations Syndicate (UCLES), which is a department of the University of Cambridge.",
+  "questions": [
+    {
+      "question_number": "1",
+      "subquestions": [
+        {
+          "subquestion_label": "a",
+          "question_text": "The following table shows four valid pseudocode assignment statements. Complete the table by giving an appropriate data type to declare each of the variables A, B, C and D.\n\n| Assignment statement | Data type |\n| :-- | :-- |\n| A ← LEFT (MyName, 1) |  |\n| B ← Total * 2 |  |\n| C ← INT (ItemCost) / 3 |  |\n| D ← \"Odd OR Even\" |  |",
+          "question_type": "table_completion",
+          "marks": 4,
+          "answer": "| Assignment statement | Data type |\n| :-- | :-- |\n| A ← LEFT (MyName, 1) | CHAR/STRING |\n| B ← Total * 2 | INTEGER/REAL |\n| C ← INT (ItemCost) / 3 | REAL |\n| D ← \"Odd OR Even\" | STRING |",
+          "answer_conditions": [
+            "One mark per row"
+          ]
+        },
+        {
+          "subquestion_label": "b",
+          "question_text": "Complete the table by evaluating each expression, using the example values.\n\n| Expression | Evaluates to |\n| :-- | :-- |\n| Tries < 10 AND NOT Sorted |  |\n| Tries MOD 4 |  |\n| TO_LOWER(MID(ID, 3, 1)) |  |\n| LENGTH(ID & \"xx\") >= Tries |  |",
+          "question_type": "calculation",
+          "marks": 4,
+          "answer": "| Expression | Evaluates to |\n| :-- | :-- |\n| Tries < 10 AND NOT Sorted | TRUE |\n| Tries MOD 4 | 1 |\n| TO_LOWER(MID(ID, 3, 1)) | 'a' // \"a\" |\n| LENGTH(ID & \"xx\") >= Tries | TRUE |",
+          "answer_conditions": [
+            "One mark per row"
+          ]
+        },
+        {
+          "subquestion_label": "c(i)",
+          "question_text": "State why these variable names are not suitable.",
+          "question_type": "short_answer",
+          "marks": 1,
+          "answer": "The names do not reflect/indicate the purpose of the variable // the names are not meaningful",
+          "answer_conditions": []
+        },
+        {
+          "subquestion_label": "c(ii)",
+          "question_text": "Identify one problem that these variable names might cause.",
+          "question_type": "short_answer",
+          "marks": 1,
+          "answer": "They make the program more difficult to understand/debug/maintain",
+          "answer_conditions": []
+        },
+        {
+          "subquestion_label": "c(iii)",
+          "question_text": "Give one other example of good programming practice.",
+          "question_type": "short_answer",
+          "marks": 1,
+          "answer": "Indentation/use of white space/Capitalisation of keywords/Use of comments/Use of modular programming/Use of local variables",
+          "answer_conditions": [
+            "max 1 mark"
+          ]
+        }
+      ]
+    },
+    {
+      "question_number": "2",
+      "subquestions": [
+        {
+          "subquestion_label": "a",
+          "question_text": "Complete the program flowchart.\n[Diagram: flowchart with outlined regions for initialisation, incrementing tries, comparing A > B, testing for Count = 10, and outputting Tries]",
+          "question_type": "code_trace",
+          "marks": 5,
+          "answer": "[Diagram: flowchart with outlined regions for initialisation, incrementing tries, comparing A > B, testing for Count = 10, and outputting Tries]",
+          "answer_conditions": [
+            "One mark per outlined region: 1 Initialise both counts",
+            "2 Increment Tries every time a pair is input",
+            "3 Compare A > B and increment Count if TRUE",
+            "4 Test for Count = 10 (10th time A > B) - MUST include Yes/No labels",
+            "5 If so output Tries, otherwise loop"
+          ]
+        },
+        {
+          "subquestion_label": "b",
+          "question_text": "A variable ThisSequence is used to enter a sequence of 10 pairs of numeric values, using a single input statement.\nFollowing the input of ThisSequence the revised algorithm will extract the pairs of numbers.\nDescribe the variable ThisSequence and how the numbers are extracted.",
+          "question_type": "long_answer",
+          "marks": 2,
+          "answer": "A variable of type string will be input // by example e.g. \"67,72\" A special/identified character would need to be used to separate each numeric value // all numbers are fixed length",
+          "answer_conditions": []
+        }
+      ]
+    },
+    {
+      "question_number": "3",
+      "subquestions": [
+        {
+          "subquestion_label": "a",
+          "question_text": "Describe the linked list immediately after initialisation, before any data items are added.",
+          "question_type": "short_answer",
+          "marks": 3,
+          "answer": "The PS contains a null pointer The PF points to the first element on the free list All the nodes are on the free list",
+          "answer_conditions": []
+        },
+        {
+          "subquestion_label": "b",
+          "question_text": "Complete the statements.",
+          "question_type": "table_completion",
+          "marks": 5,
+          "answer": "Integer The two variables will be used as pointers/indexes to the arrays. The values stored in the two variables will indicate the first element in each list String The first 1D array will be used to store the values//data items//User IDs Integer The second 1D array will be used to store the pointers//point to next item",
+          "answer_conditions": [
+            "One mark for each of the first three rows",
+            "One mark for both Array 1 rows",
+            "One mark for both Array 2 rows"
+          ]
+        }
+      ]
+    },
+    {
+      "question_number": "4",
+      "subquestions": [
+        {
+          "subquestion_label": "",
+          "question_text": "Write pseudocode for the function Check().",
+          "question_type": "code_trace",
+          "marks": 6,
+          "answer": "FUNCTION Check() RETURNS STRING DECLARE Odd, Even, Index : INTEGER Odd ← 0 Even ← 0 FOR Index ← 1 TO 100 IF Index MOD 2 = 0 THEN Even ← Even + Data[Index] ELSE Odd ← Odd + Data[Index] ENDIF NEXT Index IF Odd > Even THEN RETURN \"Odd\" ELSE IF Even > Odd THEN RETURN \"Even\" ELSE RETURN \"Same\" ENDIF ENDIF ENDFUNCTION",
+          "answer_conditions": [
+            "1. Function heading, ending and return type",
+            "2. Declare local variables Odd, Even and Index as integers",
+            "3. Initialise Odd and Even",
+            "4. Loop for 100 iterations//through array",
+            "5. Sum Odd and Even element values in a loop",
+            "6. Compare Odd and Even after the loop and Return appropriate string"
+          ]
+        }
+      ]
+    },
+    {
+      "question_number": "5",
+      "subquestions": [
+        {
+          "subquestion_label": "a",
+          "question_text": "Complete the trace table by dry running the procedure when it is called as follows: CALL Process(\"X3Y2W4\")\n\n| Count | C | L | Index | Result | Data[1] | Data[2] | Data[3] |\n| :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |",
+          "question_type": "table_completion",
+          "marks": 0,
+          "answer": "| Count | C | L | Index | Result | Data[1] | Data[2] | Data[3] |\n| 1 | 'X' | 3 | 1 | \"****\" | \"aaaaaa\" | \"bbbbbb\" | \"cccccc\" |\n|  |  |  |  | \"AAAAA A\" | \"AAA\" |  |   |\n| 3 | 'Y' | 2 | 2 |  |  |  |   |\n|  |  |  |  | \"bbbbb b\" |  | \"bb\" |   |\n| 5 | 'W' | 4 | 3 |  |  |  |   |",
+          "answer_conditions": []
+        },
+        {
+          "subquestion_label": "b(i)",
+          "question_text": "Write the single line of pseudocode.",
+          "question_type": "short_answer",
+          "marks": 1,
+          "answer": "OTHERWISE : CALL Error (C)",
+          "answer_conditions": []
+        },
+        {
+          "subquestion_label": "b(ii)",
+          "question_text": "State where this new line should be placed.",
+          "question_type": "short_answer",
+          "marks": 1,
+          "answer": "After the ' $z$ ' clause in the CASE construct//before the ENDCASE",
+          "answer_conditions": []
+        }
+      ]
+    },
+    {
+      "question_number": "6",
+      "subquestions": [
+        {
+          "subquestion_label": "a",
+          "question_text": "Complete the pseudocode for the function IsRA().\n\n[Diagram: quadratic graph y = ax²+bx+c opening upward, vertex (-b/2a, -Δ/4a), y-intercept c]",
+          "question_type": "code_trace",
+          "marks": 6,
+          "answer": "FUNCTION IsRA(x1, y1, x2, y2, x3, y3 : INTEGER) RETURNS BOOLEAN DECLARE Len1, Len2, Len3 : INTEGER Len1 ← (x1 - x2) ∧ 2 + (y1 - y2) ∧ 2 Len2 ← (x1 - x3) ∧ 2 + (y1 - y3) ∧ 2 Len3 ← (x2 - x3) ∧ 2 + (y2 - y3) ∧ 2 IF (Len1 = Len2 + Len3) OR (Len2 = Len1 + Len3) OR (Len3 = Len1 + Len2) THEN RETURN TRUE ELSE RETURN FALSE ENDIF ENDFUNCTION",
+          "answer_conditions": [
+            "1 Calculate the square of the length of at least one side",
+            "2 Calculation of all three lengths squared correctly",
+            "3 One correct comparison of square of three lengths",
+            "4 All three comparisons...",
+            "5 combined using logical operators/nested IF//completely correct selection",
+            "6 Return result correctly in both cases"
+          ]
+        },
+        {
+          "subquestion_label": "b",
+          "question_text": "Describe a problem that might occur when using the modified IsRA() function and suggest a solution that still allows the SQRT() function to be used.",
+          "question_type": "long_answer",
+          "marks": 2,
+          "answer": "Problem: The function will return an incorrect value//the test will fail Solution: Round the calculated values (to a known number of decimal places) Define a threshold below which any difference can be ignored",
+          "answer_conditions": []
+        }
+      ]
+    },
+    {
+      "question_number": "7",
+      "subquestions": [
+        {
+          "subquestion_label": "a(i)",
+          "question_text": "State one advantage of applying abstraction to this problem.",
+          "question_type": "short_answer",
+          "marks": 1,
+          "answer": "To make the solution easier to design/implement/solve",
+          "answer_conditions": []
+        },
+        {
+          "subquestion_label": "a(ii)",
+          "question_text": "Identify three items of information that will be required by the new module.",
+          "question_type": "short_answer",
+          "marks": 3,
+          "answer": "Item: mobile phone number Justification: to send the text message Item: name Justification: to personalise the text message Item: exercise interest Justification: to determine whether this member would be interested",
+          "answer_conditions": []
+        },
+        {
+          "subquestion_label": "a(iii)",
+          "question_text": "Identify two operations that would be required to process data when the new module receives a text message back from a member.",
+          "question_type": "short_answer",
+          "marks": 2,
+          "answer": "Add a member to a list of those interested in the new class Remove the member from future SMS messages Read/process Message Identify who from",
+          "answer_conditions": [
+            "Max 2 marks"
+          ]
+        },
+        {
+          "subquestion_label": "b(i)",
+          "question_text": "Explain the meaning of the diamond symbol (labelled with the letter A) in the chart.",
+          "question_type": "short_answer",
+          "marks": 2,
+          "answer": "Means that Update calls (one of) either Sub-A, Sub-B or Sub-C",
+          "answer_conditions": []
+        },
+        {
+          "subquestion_label": "b(ii)",
+          "question_text": "Write the pseudocode module headers for Sub-A and Sub-B.",
+          "question_type": "short_answer",
+          "marks": 4,
+          "answer": "PROCEDURE Sub-A (Name : STRING, BYREF P2 : BOOLEAN) FUNCTION Sub-B (P1 : REAL) RETURNS REAL",
+          "answer_conditions": []
+        }
+      ]
+    },
+    {
+      "question_number": "8",
+      "subquestions": [
+        {
+          "subquestion_label": "a",
+          "question_text": "Complete the pseudocode for module DeleteComment().",
+          "question_type": "code_trace",
+          "marks": 8,
+          "answer": "FUNCTION DeleteComment (Line : STRING) RETURNS STRING DECLARE NewLine, TwoChars : STRING DECLARE Count, TrimTo : INTEGER CONSTANT Comment = \"//\" NewLine ← Line TrimTo ← 0 Count ← 1 WHILE Count < LENGTH (Line) AND TrimTo = 0 TwoChars ← MID (Line, Count, 2) // extract 2 chars IF TwoChars = Comment THEN TrimTo ← Count ENDIF Count ← Count + 1 ENDWHILE IF TrimTo <> 0 THEN NewLine ← LEFT (Line, TrimTo - 1) ENDIF RETURN NewLine ENDFUNCTION",
+          "answer_conditions": [
+            "1 Loop to length of Line (parameter)//length of Line -1",
+            "2 Terminate loop on first double slash",
+            "3 Attempt to extract one/two characters in a loop",
+            "4 Check for \"//\" after attempt at extraction in a loop",
+            "5 Record start position of comment//Calculate amount of trim required",
+            "6 Attempt to trim Line from start of comment",
+            "7 Completely correct trimmed Line from start of comment",
+            "8 Return Line after a reasonable overall attempt"
+          ]
+        },
+        {
+          "subquestion_label": "b",
+          "question_text": "Write pseudocode for module Stage_1().",
+          "question_type": "code_trace",
+          "marks": 7,
+          "answer": "FUNCTION Stage_1(StudentName : STRING) RETURNS INTEGER DECLARE OldFile, NewFile, Line : STRING DECLARE Count : INTEGER OldFile ← StudentName & \"_src.txt\" NewFile ← StudentName & \"_S1.txt\" OPENFILE OldFile FOR READ OPENFILE NewFile FOR WRITE Count ← 0 WHILE NOT EOF(OldFile) READFILE OldFile, Line Line ← DeleteComment (Line) IF LENGTH (Line) <> 0 THEN WRITEFILE NewFile, Line Count ← Count + 1 ENDIF ENDWHILE CLOSEFILE OldFile CLOSEFILE NewFile RETURN Count ENDFUNCTION",
+          "answer_conditions": [
+            "1 Generate filenames condone missing \"...\"",
+            "2 Open both files in correct modes and subsequently close",
+            "3 Loop to EOF (OldFile)",
+            "4 Read a line from OldFile and execute DeleteComment () in a loop",
+            "5 Skip blank lines after DeleteComment () in a loop",
+            "6 Write Line to stage 1 file and increment Count",
+            "7 Return the number of lines after a reasonable attempt at counting"
+          ]
+        }
+      ]
+    }
+  ]
+}
